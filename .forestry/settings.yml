@@ -4,21 +4,17 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
-- type: jekyll-pages
+- type: heading
   label: Pages
-  create: all
 - type: document
   path: index.html
   label: Home
-  match: "**/*"
 - type: document
   path: film.html
   label: Film
-  match: "**/*"
 - type: document
   path: photo.html
   label: Photo
-  match: "**/*"
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
