@@ -29,43 +29,22 @@
                 <h1>Rental</h1>
             </nav>
         </div>
-        <div class="line-flex">
-    <div class="logo-line"></div>
+        <div class="nav-logo">
+    <img src="/av82/assets/img/logo_branco.png" alt="" class="logo-img">
 </div>
 
-<div class="square-flex">
-    <div class="logo-square"></div>
-</div>
-
-<div class="index-navbar-container">
-    <img src="/av82/assets/img/production.jpg" alt="" class="navbar-img left-img">
-    <img src="/av82/assets/img/rental.jpg" alt="" class="navbar-img right-img">
-    <div class="index-line-container">
-        <div class="line"></div>
+<div class="prod-navigation">
+    <div class="selection-flex">
+        <h1 class="selection-title active">Film</h1>
+        <h1 class="selection-title">Photo</h1>
     </div>
-    <nav class="index-navbar">
-        <h1 class="prod-title"><a href="/av82/film">Production</a></h1>
-        <h1 class="rental-title"><a href="/av82/rental">Rental</a></h1>
-    </nav>
+    <div class="filters">
+        <span>All,</span>
+        <span>Commercial,</span>
+        <span>Music Videos,</span>
+        <span>Fashion,</span>
+        <span>Films</span>
+    </div>
 </div>
-
-
-<script>
-// init controller
-
-var controller = new ScrollMagic.Controller();
-
-
-// create a scene
-new ScrollMagic.Scene({
-    duration: 1000, // the scene should last for a scroll distance of 100px
-    offset: 0 // start this scene after scrolling for 50px
-})
-
-    .setPin('.logo-line') // pins the element for the the scene's duration
-    .addTo(controller); // assign the scene to the controller
-
-
-</script>
     </body>
 </html>

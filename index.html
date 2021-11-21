@@ -1,3 +1,41 @@
 ---
-layout: default
+layout: black
 ---
+<div class="line-flex">
+    <div class="logo-line"></div>
+</div>
+
+<div class="square-flex">
+    <div class="logo-square"></div>
+</div>
+
+<div class="index-navbar-container">
+    <img src="{{ site.baseurl }}/assets/img/production.jpg" alt="" class="navbar-img left-img">
+    <img src="{{ site.baseurl }}/assets/img/rental.jpg" alt="" class="navbar-img right-img">
+    <div class="index-line-container">
+        <div class="line"></div>
+    </div>
+    <nav class="index-navbar">
+        <h1 class="prod-title"><a href="{{site.baseurl}}/film">Production</a></h1>
+        <h1 class="rental-title"><a href="{{site.baseurl}}/rental">Rental</a></h1>
+    </nav>
+</div>
+
+
+<script>
+// init controller
+
+var controller = new ScrollMagic.Controller();
+
+
+// create a scene
+new ScrollMagic.Scene({
+    duration: 1000, // the scene should last for a scroll distance of 100px
+    offset: 0 // start this scene after scrolling for 50px
+})
+
+    .setPin('.logo-line') // pins the element for the the scene's duration
+    .addTo(controller); // assign the scene to the controller
+
+
+</script>

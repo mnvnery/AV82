@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+    </head>
+    <body class="black-background">
+        <div class="burger-container">
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                <span class="hamburger-inner white-background"></span>
+                </span>
+            </button>
+        </div>
+
+        <div class="navbar-container">
+            <div class="line-container">
+                <div class="line border-white"></div>
+            </div>
+            <nav class="navbar">
+                <h1>Production</h1>
+                <h1>Rental</h1>
+            </nav>
+        </div>
+        {{ content }}
+    </body>
+</html>

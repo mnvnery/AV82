@@ -1,0 +1,70 @@
+.line-flex, .square-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100vw
+    height: 100vh
+    position: absolute
+    top: 0
+
+.logo-square
+    border: 2px solid white
+    height: 200px
+    width: 200px
+    position: absolute
+
+.logo-line
+    border-left: 2px solid white
+    height: 350px
+    transform: rotate(-45deg)
+    position: absolute
+    width: 0
+
+.index-navbar-container
+    height: 100vh
+    background-color: black
+    width: 100%
+    color: white
+    margin-top: 100vh
+    position: relative
+    
+.navbar-img
+    position: absolute
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    object-fit: cover
+    opacity: 0
+    z-index: 1
+    transition: 0.4s
+
+.opacity
+    opacity: 1
+
+.prod-title, .rental-title
+    z-index: 2
+
+.left-img
+    clip-path: polygon(0 0, 25.5% 0, 74.5% 100%, 0% 100%)
+
+.right-img
+    clip-path: polygon(25.5% 0, 100% 0%, 100% 100%, 74.5% 100%)
+
+
+.index-line-container
+    height: 100vh
+    width: 100vw
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0
+    pointer-events: none
+
+.index-navbar
+    height: 100vh
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
