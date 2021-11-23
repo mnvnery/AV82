@@ -1,4 +1,31 @@
 ---
 label: Film
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: synopsis
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Synopsis
+- name: stills
+  type: image_gallery
+  config: {}
+  label: Stills
+- name: video_embed
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Video Embed
