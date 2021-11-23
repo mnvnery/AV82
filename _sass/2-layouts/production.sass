@@ -21,14 +21,19 @@
 
 .selection-title
     opacity: 0.2
-    color: white
     margin-right: 1vw
 
+.black-background .selection-title
+    opacity: 0.2 
+    
 .selection-title:hover 
+    opacity: 1
+
+.black-background .selection-title.active
     opacity: 1
 
 .active
     opacity: 1
 
-.filters
-    color: white
+.filters span:hover
+    text-decoration: underline
