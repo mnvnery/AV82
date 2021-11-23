@@ -32,7 +32,6 @@ sections:
 - type: document
   path: rental.html
   label: Rental
-  match: "**/*"
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
