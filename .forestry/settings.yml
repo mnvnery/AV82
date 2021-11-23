@@ -11,13 +11,13 @@ sections:
   label: Film
   create: all
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
 - type: directory
   path: _photo
   label: Photo
   create: all
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
 - type: heading
   label: Pages
 - type: document
@@ -29,6 +29,10 @@ sections:
 - type: document
   path: photo.html
   label: Photo
+- type: document
+  path: rental.html
+  label: Rental
+  match: "**/*"
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
