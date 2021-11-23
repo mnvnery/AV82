@@ -12,12 +12,16 @@ sections:
   create: all
   match: "**/*"
   new_doc_ext: html
+  templates:
+  - film
 - type: directory
   path: _photo
   label: Photo
   create: all
   match: "**/*"
   new_doc_ext: html
+  templates:
+  - photo
 - type: heading
   label: Pages
 - type: document
