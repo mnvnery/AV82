@@ -25,3 +25,18 @@ fields:
   config:
     maxSize: 64
   label: Main Still
+- name: category
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Fashion
+    - Commercial
+    - Portraits
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
