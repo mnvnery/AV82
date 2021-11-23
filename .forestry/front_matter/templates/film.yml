@@ -45,3 +45,5 @@ fields:
       file: 
       path: 
   label: Category
+pages:
+- _film/alma-gemea.html
