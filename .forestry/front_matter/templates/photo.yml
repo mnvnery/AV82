@@ -16,3 +16,12 @@ fields:
     schema:
       format: html-blocks
   label: Credits
+- name: stills
+  type: image_gallery
+  config: {}
+  label: Stills
+- name: main_still
+  type: file
+  config:
+    maxSize: 64
+  label: Main Still
