@@ -29,3 +29,19 @@ fields:
     schema:
       format: markdown
   label: Video Embed
+- name: category
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Films
+    - Commercial
+    - Fashion
+    - Music Videos
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
