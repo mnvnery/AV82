@@ -12,7 +12,7 @@ film_projects:
   - "/assets/img/2B 2.webp"
   - "/assets/img/2B 3.webp"
   video_embed: ''
-  video_thumbnail: ''
+  video_thumbnail: '/assets/img/2B.webm'
   still_thumbnail: "/assets/img/2B 2.webp"
   highlight: false
 - title: Alma Gémea
@@ -122,8 +122,8 @@ film_projects:
   - "/assets/img/Dia da procissão 3.webp"
   - "/assets/img/Dia da procissão 4.webp"
   video_embed: ''
-  video_thumbnail: "/assets/img/Dia da Procissão 2.webp"
-  still_thumbnail: ''
+  video_thumbnail: ''
+  still_thumbnail: '/assets/img/Dia da Procissão 2.webp'
   highlight: false
 - title: Nuno Ribeiro – Por Ti
   category: Music Videos
@@ -214,7 +214,8 @@ projects:
 </div>
 
 <div class="projects-container">
-    {% for project in site.film %}
-        <img src="{{site.baseurl}}{{ project.still_thumbnail }}" class="project-img {% if project.large == true %} larger-placement {% endif %}" >
+    {% for project in page.film_projects %}
+        <img src="{{site.baseurl}}{{ project.still_thumbnail }}" class="project-img {% if project.highlight == true %} larger-placement {% endif %}" >
+        {% if project.video_thumbnail != '' %}<video class="project-img" loop="loop" autoplay="autoplay"><source src="{{ site.baseurl }}{{ project.video_thumbnail }}" type="video/webm"></video>{% endif %}
     {% endfor %}
 </div>
