@@ -18,3 +18,11 @@ layout: black
         <span>Films</span>
     </div>
 </div>
+
+<div class="projects-container">
+    {% for project in site.film %}
+        {% for still in project.stills limit: 1 %}
+        <img src="{{site.baseurl}}{{ still }}">
+        {% endfor %}
+    {% endfor %}
+</div>

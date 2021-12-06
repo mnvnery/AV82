@@ -85,6 +85,10 @@ a:hover { color: inherit; }
 
 .filters span:hover { text-decoration: underline; }
 
+.projects-container { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 0 15px; grid-gap: 5px; }
+
+.projects-container img { width: 100%; }
+
 .rental-nav { padding: 15px; }
 
 .rental-nav h1 { margin-bottom: 2vh; margin-top: 1vh; opacity: 0.3; }
