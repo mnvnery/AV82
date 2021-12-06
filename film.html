@@ -7,8 +7,8 @@ layout: black
 
 <div class="prod-navigation">
     <div class="selection-flex">
-        <h1 class="selection-title active">Film</h1>
-        <h1 class="selection-title"><a href="{{site.baseurl}}/photo">Photo</a></h1>
+        <h1 class="selection-title active">FILM</h1>
+        <h1 class="selection-title"><a href="{{site.baseurl}}/photo">PHOTO</a></h1>
     </div>
     <div class="filters">
         <span>All,</span>
@@ -21,8 +21,6 @@ layout: black
 
 <div class="projects-container">
     {% for project in site.film %}
-        {% for still in project.stills limit: 1 %}
-        <img src="{{site.baseurl}}{{ still }}">
-        {% endfor %}
+        <img src="{{site.baseurl}}{{ project.still_thumbnail }}">
     {% endfor %}
 </div>
