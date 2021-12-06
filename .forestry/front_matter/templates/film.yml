@@ -55,6 +55,10 @@ fields:
   config:
     maxSize: 64
   label: Still Thumbnail
+- name: large
+  type: boolean
+  label: large
+  description: Ligar se quiserem fazer highlight deste projeto.
 pages:
 - _film/2b.html
 - _film/alma-gemea.html
