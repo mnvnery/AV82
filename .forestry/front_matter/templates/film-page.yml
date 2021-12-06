@@ -2,15 +2,67 @@
 label: Film Page
 hide_body: true
 fields:
-- name: projects
-  type: list
+- name: film_projects
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: category
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Fashion
+      - Commercial
+      - Films
+      - Music Videos
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Category
+  - name: synopsis
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Synopsis
+  - name: stills
+    type: image_gallery
+    config: {}
+    label: Stills
+  - name: video_embed
+    type: text
+    config:
+      required: false
+    label: Video Embed
+  - name: video_thumbnail
+    type: file
+    config:
+      maxSize: 64
+    label: Video Thumbnail
+  - name: still_thumbnail
+    type: file
+    config:
+      maxSize: 64
+    label: Still Thumbnail
+  - name: highlight
+    type: boolean
+    label: Highlight
+    description: Ligar se quiserem fazer highlight deste projeto. A image vai ocupar
+      4 espaços em vez de 1.
   config:
-    use_select: true
     min: 
     max: 
-    source:
-      type: pages
-      section: film-1e8617d2-550b-4d71-a43d-c7f8c9643c05
-  label: Projects
+    labelField: 
+  label: Film Projects
 pages:
 - film.html
