@@ -45,11 +45,16 @@ fields:
     schema:
       format: markdown
   label: Video Embed
-- name: thumbnail
+- name: video_thumbnail
   type: file
   config:
     maxSize: 64
-  label: Thumbnail
+  label: Video Thumbnail
+- name: still_thumbnail
+  type: file
+  config:
+    maxSize: 64
+  label: Still Thumbnail
 pages:
 - _film/alma-gemea.html
 - _film/forum-viseu.html
