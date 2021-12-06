@@ -85,13 +85,13 @@ a:hover { color: inherit; }
 
 .filters span:hover { text-decoration: underline; }
 
-.projects-container { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 0 15px; grid-gap: 5px; }
+.projects-container { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 0 15px; grid-gap: 5px; grid-auto-flow: dense; }
 
 .projects-container img { width: 100%; }
 
 .project-img { object-fit: cover; height: 30vh; }
 
-.larger-placement { grid-column-end: span 2; grid-row-end: span 2; height: 100%; }
+.larger-placement { grid-column-end: span 2; grid-row-end: span 2; height: 61vh; }
 
 .rental-nav { padding: 15px; }
 
