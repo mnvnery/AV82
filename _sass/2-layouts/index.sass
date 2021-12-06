@@ -6,6 +6,7 @@
     height: 100vh
     position: absolute
     top: 0
+    z-index: -1
 
 .logo-square
     border: 2px solid white
@@ -22,7 +23,6 @@
 
 .index-navbar-container
     height: 100vh
-    background-color: black
     width: 100%
     color: white
     margin-top: 100vh
@@ -43,13 +43,45 @@
     opacity: 1
 
 .prod-title, .rental-title
-    z-index: 2
+    z-index: 1
+
+.img-containers
+    position: absolute
+    top: 0
+    display: flex
+
+.left-img-container
+    -webkit-backface-visibility: hidden /* the magic ingredient */
+    -webkit-transform: skew(45deg, 0)
+    overflow: hidden
+    width: 100vw
+    height: 100vh
+    position: relative
+    top: 0
+    left: -25%
+
 
 .left-img
-    clip-path: polygon(0 0, 25.5% 0, 74.5% 100%, 0% 100%)
+    -webkit-transform: skew(-45deg, 0)
+    position: relative
+    left: 50%
+
+
+.right-img-container
+    -webkit-backface-visibility: hidden /* the magic ingredient */
+    -webkit-transform: skew(45deg, 0)
+    overflow: hidden
+    width: 100vw
+    height: 100vh
+    position: relative
+    top: 0
+    right: 25%
+
 
 .right-img
-    clip-path: polygon(25.5% 0, 100% 0%, 100% 100%, 74.5% 100%)
+    -webkit-transform: skew(-45deg, 0)
+    position: relative
+    left: -25%
 
 
 .index-line-container
