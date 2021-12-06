@@ -89,6 +89,10 @@ a:hover { color: inherit; }
 
 .projects-container img { width: 100%; }
 
+.project-img { object-fit: cover; height: 30vh; }
+
+.larger-placement { grid-column-end: span 2; grid-row-end: span 2; height: 100%; }
+
 .rental-nav { padding: 15px; }
 
 .rental-nav h1 { margin-bottom: 2vh; margin-top: 1vh; opacity: 0.3; }
