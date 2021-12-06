@@ -56,6 +56,7 @@ fields:
     maxSize: 64
   label: Still Thumbnail
 pages:
+- _film/2b.html
 - _film/alma-gemea.html
 - _film/carlos-moises-dancar-ate-que-a-noite-caia.html
 - _film/ding-dong.html
