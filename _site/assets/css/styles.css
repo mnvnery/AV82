@@ -1,5 +1,7 @@
 body { font-family: sofia-pro, sans-serif; margin: 0; }
 
+body, html { overflow-x: hidden; }
+
 h1, .h1 { font-weight: 600; }
 
 .black-background { background-color: black; color: white; }
@@ -12,7 +14,7 @@ a { color: inherit; text-decoration: none; }
 
 a:hover { color: inherit; }
 
-.navbar-container { height: 100vh; background-color: black; width: 100%; color: white; display: none; }
+.navbar-container { height: 100vh; background-color: black; width: 100%; color: white; display: none; z-index: 2; position: fixed; }
 
 .navbar-open { display: block; }
 
@@ -24,7 +26,7 @@ a:hover { color: inherit; }
 
 .hamburger-inner.dark-mode:before { background-color: white !important; }
 
-.burger-container { width: 100%; float: right; display: flex; justify-content: flex-end; z-index: 2; position: fixed; top: 0; }
+.burger-container { width: 100%; float: right; display: flex; justify-content: flex-end; z-index: 3; position: fixed; top: 0; }
 
 .navbar { height: 100vh; width: 100%; display: flex; justify-content: space-around; align-items: center; }
 
@@ -35,23 +37,29 @@ a:hover { color: inherit; }
 @keyframes grow { from { height: 0; }
   to { height: 145vh; } }
 
-.line-flex, .square-flex { display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; position: absolute; top: 0; }
+.line-flex, .square-flex { display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; position: absolute; top: 0; z-index: -1; }
 
 .logo-square { border: 2px solid white; height: 200px; width: 200px; position: absolute; }
 
 .logo-line { border-left: 2px solid white; height: 350px; transform: rotate(-45deg); position: absolute; width: 0; }
 
-.index-navbar-container { height: 100vh; background-color: black; width: 100%; color: white; margin-top: 100vh; position: relative; }
+.index-navbar-container { height: 100vh; width: 100%; color: white; margin-top: 100vh; position: relative; }
 
 .navbar-img { position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; object-fit: cover; opacity: 0; z-index: 1; transition: 0.4s; }
 
 .opacity { opacity: 1; }
 
-.prod-title, .rental-title { z-index: 2; }
+.prod-title, .rental-title { z-index: 1; }
 
-.left-img { clip-path: polygon(0 0, 25.5% 0, 74.5% 100%, 0% 100%); }
+.img-containers { position: absolute; top: 0; display: flex; }
 
-.right-img { clip-path: polygon(25.5% 0, 100% 0%, 100% 100%, 74.5% 100%); }
+.left-img-container { -webkit-backface-visibility: hidden; -webkit-transform: skew(45deg, 0); overflow: hidden; width: 100vw; height: 100vh; position: relative; top: 0; left: -25%; }
+
+.left-img { -webkit-transform: skew(-45deg, 0); position: relative; left: 50%; }
+
+.right-img-container { -webkit-backface-visibility: hidden; -webkit-transform: skew(45deg, 0); overflow: hidden; width: 100vw; height: 100vh; position: relative; top: 0; right: 25%; }
+
+.right-img { -webkit-transform: skew(-45deg, 0); position: relative; left: -25%; }
 
 .index-line-container { height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; pointer-events: none; }
 
