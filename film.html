@@ -215,6 +215,6 @@ projects:
 
 <div class="projects-container">
     {% for project in site.film %}
-        <img src="{{site.baseurl}}{{ project.still_thumbnail }}" class="project-img {% if project.large = true %} larger-placement {% endif %}" >
+        <img src="{{site.baseurl}}{{ project.still_thumbnail }}" class="project-img {% if project.large == true %} larger-placement {% endif %}" >
     {% endfor %}
 </div>
