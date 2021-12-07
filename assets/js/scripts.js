@@ -11,3 +11,11 @@ $('.prod-title').hover(function() {
 $('.rental-title').hover(function() {
     $('.right-img').toggleClass("opacity");
 });
+
+
+
+
+$('.grid-item').hover(function (){
+    $(this).children(".project-vid").toggle();
+});
+

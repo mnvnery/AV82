@@ -2,6 +2,7 @@
     display: flex
     justify-content: flex-start
     padding: 15px
+    align-items: center
 
 .logo-img
     max-width: 20vw
@@ -49,9 +50,20 @@
 .projects-container img
     width: 100%
 
-.project-img
-    object-fit: cover
+.project-vid
+    display: none
+
+.grid-item
+    position: relative
     height: 30vh
+    object-fit: cover
+
+.project-img, .project-vid
+    position: absolute
+    object-fit: cover
+    width: 100%
+    height: 100%
+
 
 .larger-placement
     grid-column-end: span 2
