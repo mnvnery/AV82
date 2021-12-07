@@ -19,3 +19,9 @@ $('.grid-item').hover(function (){
     $(this).children(".project-vid").toggle();
 });
 
+$('.about-btn').click(function() {
+    $('.about-btn').toggleClass("about-btn-open");
+    $('.about-container').toggleClass("about-open");
+    $('.arrow-down').toggle();
+    $('.arrow-up').toggle();
+});
