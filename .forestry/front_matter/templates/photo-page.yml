@@ -1,7 +1,21 @@
 ---
 label: Photo Page
-hide_body: false
+hide_body: true
 fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
+- name: photo_projects
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Photo Projects
