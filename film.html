@@ -12,7 +12,7 @@ film_projects:
   - "/assets/img/2B 2.webp"
   - "/assets/img/2B 3.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/2B.webm'
+  video_thumbnail: '/assets/img/2B.mp4'
   still_thumbnail: "/assets/img/2B 2.webp"
   highlight: false
 - title: Alma Gémea
@@ -28,7 +28,7 @@ film_projects:
   - "/assets/img/alma-gemea-2.webp"
   - "/assets/img/alma-gemea.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/alma-gemea.webm'
+  video_thumbnail: '/assets/img/alma-gemea.mp4'
   still_thumbnail: "/assets/img/alma-gemea-2.webp"
   highlight: false
 - title: Boa Vista Café
@@ -40,7 +40,7 @@ film_projects:
   - "/assets/img/Boa Vista Café 2.webp"
   - "/assets/img/Boa Vista Café 3.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/boa-vista-cafe.webm'
+  video_thumbnail: '/assets/img/boa-vista-cafe.mp4'
   still_thumbnail: "/assets/img/Boa Vista Café 1.webp"
   highlight: false
 - title: Carlos Moisés – Dançar, até que a noite caia
@@ -51,10 +51,10 @@ film_projects:
     de fotografia e pós-produção. O projeto foi inteiramente realizado no nosso estúdio
     na cidade do Porto.</p>"
   stills:
-  - "/assets/img/Dançar ate que a noite caia 2.webm"
+  - "/assets/img/Dançar ate que a noite caia 2"
   - "/assets/img/Dançar, até que a noite caia.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/dancar.webm'
+  video_thumbnail: '/assets/img/dancar.mp4'
   still_thumbnail: "/assets/img/Dançar ate que a noite caia 2.webp"
   highlight: true
 - title: Ding Dong
@@ -69,7 +69,7 @@ film_projects:
   - "/assets/img/Ding Dong 4.webp"
   - "/assets/img/Ding Dong.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/ding-dong.webm'
+  video_thumbnail: '/assets/img/ding-dong.mp4'
   still_thumbnail: "/assets/img/Ding Dong 3.webp"
   highlight: false
 - title: Fórum Viseu
@@ -96,7 +96,7 @@ film_projects:
   - "/assets/img/FMS 3.webp"
   - "/assets/img/FMS.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/FMS.webm'
+  video_thumbnail: '/assets/img/FMS.mp4'
   still_thumbnail: "/assets/img/FMS.webp"
   highlight: false
 - title: Jorge Benvinda – Por Ti
@@ -107,7 +107,7 @@ film_projects:
   stills:
   - "/assets/img/Por Ti JB 2.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/por-ti-jb.webm'
+  video_thumbnail: '/assets/img/por-ti-jb.mp4'
   still_thumbnail: "/assets/img/Por Ti JB 2.webp"
   highlight: false
 - title: Miguel Araújo com António Zambujo – Dia da Procissão
@@ -122,7 +122,7 @@ film_projects:
   - "/assets/img/Dia da procissão 3.webp"
   - "/assets/img/Dia da procissão 4.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/dia-da-procissao.webm'
+  video_thumbnail: '/assets/img/dia-da-procissao.mp4'
   still_thumbnail: '/assets/img/Dia da Procissão 2.webp'
   highlight: false
 - title: Nuno Ribeiro – Por Ti
@@ -134,7 +134,7 @@ film_projects:
   stills:
   - "/assets/img/Por ti NR 1.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/por-ti-nr.webm'
+  video_thumbnail: '/assets/img/por-ti-nr.mp4'
   still_thumbnail: "/assets/img/Por ti NR 1.webp"
   highlight: false
 - title: Os Azeitonas – Traço de Mulher
@@ -145,7 +145,7 @@ film_projects:
   - "/assets/img/Traço de Mulher 2.webp"
   - "/assets/img/Traço de mulher.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/traco-de-mulher.webm'
+  video_thumbnail: '/assets/img/traco-de-mulher.mp4'
   still_thumbnail: "/assets/img/Traço de mulher.webp"
   highlight: false
 - template: film
@@ -161,7 +161,7 @@ film_projects:
   - "/assets/img/Waiting in the Dark 3.webp"
   still_thumbnail: "/assets/img/Waiting in the Dark 2.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/waiting-in-the-dark.webm'
+  video_thumbnail: '/assets/img/waiting-in-the-dark.mp4'
   large: false
   highlight: false
 - template: film
@@ -174,26 +174,10 @@ film_projects:
   stills:
   - "/assets/img/Saltpay 1.webp"
   video_embed: ''
-  video_thumbnail: "/assets/img/saltpay.webm"
+  video_thumbnail: "/assets/img/saltpay.mp4"
   still_thumbnail: "/assets/img/Saltpay 1.webp"
   large: false
   highlight: false
-projects:
-- _film/carlos-moises-dancar-ate-que-a-noite-caia.html
-- _film/ding-dong.html
-- _film/boa-vista-cafe.html
-- _film/fundacao-marques-da-silva-mais-que-arquitetura.html
-- _film/forum-viseu.html
-- _film/jorge-benvinda-por-ti.html
-- _film/miguel-araujo-com-antonio-zambujo-dia-da-procissao.html
-- _film/nuno-ribeiro-por-ti.html
-- _film/os-azeitonas-traco-de-mulher.html
-- _film/saltpay.html
-- _film/still-life.html
-- _film/waiting-in-the-dark.html
-- _film/alma-gemea.html
-- _film/2b.html
-
 ---
 <div class="nav-logo">
     <img src="{{site.baseurl}}/assets/img/logo_branco.png" alt="" class="logo-img">
@@ -217,7 +201,7 @@ projects:
     {% for project in page.film_projects %}
     <div class="grid-item {% if project.highlight == true %} larger-placement {% endif %}">
         <img src="{{site.baseurl}}{{ project.still_thumbnail }}" class="project-img" >
-        {% if project.video_thumbnail != '' %}<video class="project-img project-vid" muted autoplay loop playsinline><source src="{{ site.baseurl }}{{ project.video_thumbnail }}" type="video/webm"></video>{% endif %}
+        {% if project.video_thumbnail != '' %}<video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}{{ project.video_thumbnail }}" type="video/mp4"></video>{% endif %}
     </div>
     {% endfor %}
 </div>
