@@ -96,7 +96,7 @@ film_projects:
   - "/assets/img/FMS 3.webp"
   - "/assets/img/FMS.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/FMS.mp4'
+  video_thumbnail: '/assets/img/fms.mp4'
   still_thumbnail: "/assets/img/FMS.webp"
   highlight: false
 - title: Jorge Benvinda – Por Ti
@@ -180,8 +180,23 @@ film_projects:
   highlight: false
 ---
 <div class="nav-logo">
-    <img src="{{site.baseurl}}/assets/img/logo_branco.png" alt="" class="logo-img">
+    <a href="{{ site.baseurl }}/"><img src="{{site.baseurl}}/assets/img/logo_branco.png" alt="" class="logo-img"></a>
 </div>
+
+<div class="about-container">
+    <div class="content-flex">
+        <div class="about-intro">Porto based film and photography<br>studio offering both creative services<br>and a production space.</div>
+        <div class="about-address">
+            Avenida da Boavista, 82<br>
+            Porto, Portugal
+            <br><br>
+            geral@av82studio.com<br>
+            + 351 912558439
+        </div>
+    </div>
+</div>
+<h2 class="about-btn"><span class="arrow-up">↑</span><span class="arrow-down">↓</span> About</h2>
+
 
 <div class="prod-navigation">
     <div class="selection-flex">
@@ -205,3 +220,4 @@ film_projects:
     </div>
     {% endfor %}
 </div>
+
