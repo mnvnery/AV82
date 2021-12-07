@@ -81,7 +81,7 @@ film_projects:
   - "/assets/img/forum-viseu-2.webp"
   - "/assets/img/forum-viseu.webp"
   video_embed: ''
-  video_thumbnail: '/assets/img/forum-viseu.webm'
+  video_thumbnail: "/assets/img/forum-viseu.mp4"
   still_thumbnail: "/assets/img/forum-viseu.webp"
   highlight: false
 - title: Fundação Marques da Silva – Mais que Arquitetura
@@ -217,7 +217,7 @@ projects:
     {% for project in page.film_projects %}
     <div class="grid-item {% if project.highlight == true %} larger-placement {% endif %}">
         <img src="{{site.baseurl}}{{ project.still_thumbnail }}" class="project-img" >
-        {% if project.video_thumbnail != '' %}<video class="project-img project-vid" playsinline loop muted autoplay><source src="{{ site.baseurl }}{{ project.video_thumbnail }}" type="video/webm"></video>{% endif %}
+        {% if project.video_thumbnail != '' %}<video class="project-img project-vid" muted autoplay loop playsinline><source src="{{ site.baseurl }}{{ project.video_thumbnail }}" type="video/webm"></video>{% endif %}
     </div>
     {% endfor %}
 </div>
