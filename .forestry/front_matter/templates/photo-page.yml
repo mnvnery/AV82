@@ -55,5 +55,14 @@ fields:
     max: 
     labelField: 
   label: Photo Projects
+- name: project_order
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Project Order
+  description: Não se esqueçam de selecionar novos projectos adicionados para aparecerem
+    na página.
 pages:
 - photo.html
