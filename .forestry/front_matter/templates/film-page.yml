@@ -64,5 +64,15 @@ fields:
     max: 
     labelField: 
   label: Film Projects
+- name: project_order
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: film-1e8617d2-550b-4d71-a43d-c7f8c9643c05
+  label: Project Order
 pages:
 - film.html
