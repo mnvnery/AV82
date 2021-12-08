@@ -52,61 +52,63 @@
         </div>
         <h2 class="about-btn"><span class="arrow-up">↑</span><span class="arrow-down">↓</span> About</h2>
         <div class="nav-logo">
-    <img src="/AV82/assets/img/logo_preto.png" alt="" class="logo-img">
+  <img src="/AV82/assets/img/logo_preto.png" alt="" class="logo-img">
 </div>
 
 <div class="prod-navigation black">
-    <div class="selection-flex">
-        <h1 class="selection-title"><a href="/AV82/film">FILM</a></h1>
-        <h1 class="selection-title active">PHOTO</h1>
-    </div>
-    <div class="filters">
-        <span>All,</span>
-        <span>Commercial,</span>
-        <span>Music Videos,</span>
-        <span>Fashion,</span>
-        <span>Films</span>
-    </div>
+  <div class="selection-flex">
+      <h1 class="selection-title"><a href="/AV82/film">FILM</a></h1>
+      <h1 class="selection-title active">PHOTO</h1>
+  </div>
+  <div class="filters">
+      <span>All,</span>
+      <span>Commercial,</span>
+      <span>Music Videos,</span>
+      <span>Fashion,</span>
+      <span>Films</span>
+  </div>
 
 </div>
 <div class="photo-grid">
-      
-          <img src="/AV82/assets/img/lilas-2021-3.webp" class="photo-img" >
-      
-          <img src="/AV82/assets/img/tiago-nacarato-2020-5.webp" class="photo-img" >
-      
-          <img src="/AV82/assets/img/abraco-2021-3.webp" class="photo-img" >
-      
-          <img src="/AV82/assets/img/blasee-2021-4.jpg" class="photo-img" >
-      
-          <img src="/AV82/assets/img/frambooesas-2021-4.jpg" class="photo-img" >
-      
-          <img src="/AV82/assets/img/sonae-2020-12.jpg" class="photo-img" >
-      
-          <img src="/AV82/assets/img/berg-2018-2.webp" class="photo-img" >
-      
-          <img src="/AV82/assets/img/degrau-2019-17.webp" class="photo-img" >
-      
-          <img src="/AV82/assets/img/paw-it-up-2021-12.webp" class="photo-img" >
-      
-          <img src="/AV82/assets/img/pinta-house-2021-3.webp" class="photo-img" >
-      
-          <img src="/AV82/assets/img/b-med-2021-2.webp" class="photo-img" >
-      
-          <img src="/AV82/assets/img/alma-gemea-2021-4.webp" class="photo-img" >
-      
+    
+        <img src="/AV82/assets/img/mr-mood-2019-6.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/lilas-2021-3.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/alma-gemea-2021-4.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/abraco-2021-3.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/degrau-2019-17.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/pinta-house-2021-3.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/tiago-nacarato-2020-5.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/blasee-2021-4.jpg" class="photo-img" >
+    
+        <img src="/AV82/assets/img/frambooesas-2021-4.jpg" class="photo-img" >
+    
+        <img src="/AV82/assets/img/sonae-2020-12.jpg" class="photo-img" >
+    
+        <img src="/AV82/assets/img/berg-2018-2.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/paw-it-up-2021-12.webp" class="photo-img" >
+    
+        <img src="/AV82/assets/img/b-med-2021-2.webp" class="photo-img" >
+    
 </div>
 
 
 <script>
 window.onload = function () {
-  var images = document.getElementsByTagName('img');
+var images = document.getElementsByTagName('img');
 
-  for( var i=0; i<images.length;i++){
-    if(images[i].naturalWidth < images[i].naturalHeight) {
-        $(images[i]).addClass('portrait');  
-    }
+for( var i=0; i<images.length;i++){
+  if(images[i].naturalWidth < images[i].naturalHeight) {
+      $(images[i]).addClass('portrait');  
   }
+}
 }
 </script>
     </body>
