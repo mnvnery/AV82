@@ -41,4 +41,5 @@ fields:
     maxSize: 64
   label: Thumbnail
 pages:
+- _photo/alma-gemea.html
 - _photo/lilas.html
