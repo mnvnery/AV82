@@ -39,6 +39,8 @@ a:hover { color: inherit; }
 
 .about-container { background-color: rgba(0, 0, 0, 0.4); position: fixed; bottom: 0; z-index: 1; width: 100%; height: 0vh; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); border-top: 2px solid white; transition: 0.45s; opacity: 0; }
 
+.about-container-white { background-color: rgba(255, 255, 255, 0.8); border-top: 2px solid black; }
+
 .content-flex { display: flex; padding: 15px; height: 100%; align-items: center; }
 
 .content-flex div { font-size: 1.25em; letter-spacing: 1px; }
