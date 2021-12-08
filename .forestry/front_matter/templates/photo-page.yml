@@ -58,9 +58,12 @@ fields:
 - name: project_order
   type: list
   config:
-    use_select: false
+    use_select: true
     min: 
     max: 
+    source:
+      type: pages
+      section: photo-b4f1b9fe-6f54-4c36-8141-5532d0b48bb5
   label: Project Order
   description: Não se esqueçam de selecionar novos projectos adicionados para aparecerem
     na página.
