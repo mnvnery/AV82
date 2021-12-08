@@ -25,3 +25,14 @@ $('.about-btn').click(function() {
     $('.arrow-down').toggle();
     $('.arrow-up').toggle();
 });
+
+$(window).click(function() {
+    $('.about-btn').removeClass("about-btn-open");
+    $('.about-container').removeClass("about-open");
+    $('.arrow-down').hide();
+    $('.arrow-up').show();
+});
+
+$('.about-btn').click(function(event){
+    event.stopPropagation();
+  });
