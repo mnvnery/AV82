@@ -290,23 +290,19 @@ project_order:
   </div>
 
 </div>
-<div class="photo-grid">
-  {% comment %}
-    {% for path in page.project_order %}
-    {% assign project = site.photo | find_exp: "item", "item.path == '_photo/lilas.html'" %}
-    <p>{{ project.title | jsonify }}</p>
-    {% endfor %}
-  {% endcomment %}
 
-  {% assign order = page.project_order %}
-  <p>{{ order | jsonify }}</p>
-  {% for sortedPath in page.project_order %}
-    {% assign sortedProjects = site.photo | where: "path", sortedPath %}
-    {% for project in sortedProjects %}
-      <p>{{ project.title }}</p>
+  <div class="photo-grid">
+    
+    {% for sortedPath in page.project_order %}
+      {% assign sortedProjects = site.photo | where: "path", sortedPath %}
+      {% for project in sortedProjects %}
+      <div class="thumbnail-container">
+        <img src="{{site.baseurl}}{{ project.thumbnail }}" class="photo-img" >
+      </div>
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-</div>
+    
+  </div>
 
 
 <script>
@@ -315,7 +311,7 @@ var images = document.getElementsByTagName('img');
 
 for( var i=0; i<images.length;i++){
   if(images[i].naturalWidth < images[i].naturalHeight) {
-      $(images[i]).addClass('portrait');  
+      $(images[i]).parent().addClass('portrait');  
   }
 }
 }

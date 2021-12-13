@@ -108,7 +108,7 @@ film_projects:
   - "/assets/img/Por Ti JB 2.webp"
   video_embed: ''
   video_thumbnail: "/assets/img/por-ti-jb.mp4"
-  still_thumbnail: "/assets/img/Por Ti JB 2.webp"
+  still_thum-bnail: "/assets/img/Por Ti JB 2.webp"
   highlight: false
 - title: Miguel Araújo com António Zambujo – Dia da Procissão
   category: Music Videos
@@ -219,19 +219,28 @@ project_order:
         <h1 class="selection-title"><a href="{{site.baseurl}}/photo">PHOTO</a></h1>
     </div>
     <div class="filters">
-        <span>All,</span>
-        <span>Commercial,</span>
-        <span>Music Videos,</span>
-        <span>Fashion,</span>
-        <span>Films</span>
+        <span class="all-btn">All,</span>
+        <span class="commercial-btn">Commercial,</span>
+        <span class="music-btn">Music Videos,</span>
+        <span class="fashion-btn">Fashion,</span>
+        <span class="films-btn">Films</span>
     </div>
 </div>
 
 <div class="projects-container">
-    {% for project in page.film_projects %}
-    <div class="grid-item {% if project.highlight == true %} larger-placement {% endif %}">
+  {% for sortedPath in page.project_order %}
+  {% assign sortedProjects = site.film | where: "path", sortedPath %}
+  {% for project in sortedProjects %}
+    <div class="grid-item {% if project.large == true %} larger-placement {% endif %}  {{project.category}}">
         <img src="{{site.baseurl}}{{ project.still_thumbnail }}" class="project-img" >
         {% if project.video_thumbnail != '' %}<video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}{{ project.video_thumbnail }}" type="video/mp4"></video>{% endif %}
     </div>
     {% endfor %}
+  {% endfor %}
 </div>
+
+<script>
+$('.commercial-btn').click(function() {
+  $('.Fashion, .Commercial, .Music')
+});
+</script>
