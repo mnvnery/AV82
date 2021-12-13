@@ -14,7 +14,6 @@ $('.rental-title').hover(function() {
 
 
 
-
 $('.grid-item').hover(function (){
     $(this).children(".project-vid").toggle();
 });
