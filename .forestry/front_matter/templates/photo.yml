@@ -23,7 +23,7 @@ fields:
     required: false
     options:
     - fashion
-    - 'commercial '
+    - commercial
     - portraits
     source:
       type: simple
