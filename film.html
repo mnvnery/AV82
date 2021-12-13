@@ -232,9 +232,11 @@ project_order:
   {% assign sortedProjects = site.film | where: "path", sortedPath %}
   {% for project in sortedProjects %}
     <div class="grid-item {% if project.large == true %} larger-placement {% endif %}  {{project.category}}">
+        <div class="project-title">{{ project.title }}</div>
         <img src="{{site.baseurl}}{{ project.still_thumbnail }}" class="project-img" >
         {% if project.video_thumbnail != '' %}<video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}{{ project.video_thumbnail }}" type="video/mp4"></video>{% endif %}
-    </div>
+        <a href="{{site.baseurl}}{{project.url}}" class="project-link"></a>
+      </div>
     {% endfor %}
   {% endfor %}
 </div>
