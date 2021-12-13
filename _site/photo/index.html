@@ -69,78 +69,103 @@
   </div>
 
 </div>
-<div class="photo-grid">
-  
 
-  
-  <p>["_photo/lilas.html","_photo/alma-gemea.html","_photo/abraco.html","_photo/degrau.html","_photo/pinta-house.html","_photo/mr-mood.html","_photo/blasee.html","_photo/frambooesas.html","_photo/tiago-nacarato.html","_photo/paw-it-up.html","_photo/sonae.html","_photo/berg.html","_photo/bmed-lifestyle.html"]</p>
-  
+  <div class="photo-grid">
     
     
-      <p>Lilas</p>
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Portraits/lilas-2021-3.webp" class="photo-img" >
+      </div>
+      
     
-  
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Commercial/alma-gemea-2021-4.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Portraits/abraco-2021-3.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Commercial/degrau-2019-17.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Commercial/pinta-house-2021-14.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Fashion/mr-mood-2019-6.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Fashion/Blasée, 2021.4.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Fashion/Frambooesas, 2021.4.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Portraits/tiago-nacarato-2020-5.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Commercial/paw-it-up-2021-12.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Portraits/Sonae, 2020.12.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Commercial/berg-2018-3.webp" class="photo-img" >
+      </div>
+      
+    
+      
+      
+      <div class="thumbnail-container">
+        <img src="/AV82/assets/img/Commercial/b-med-2021-2.webp" class="photo-img" >
+      </div>
+      
     
     
-      <p>Alma Gémea</p>
-    
-  
-    
-    
-      <p>Abraço</p>
-    
-  
-    
-    
-      <p>Degrau</p>
-    
-  
-    
-    
-      <p>Pinta House</p>
-    
-  
-    
-    
-      <p>Mr Mood</p>
-    
-  
-    
-    
-      <p>Blasée</p>
-    
-  
-    
-    
-      <p>Frambooesas</p>
-    
-  
-    
-    
-      <p>Tiago Nacarato</p>
-    
-  
-    
-    
-      <p>Paw it Up</p>
-    
-  
-    
-    
-      <p>Sonae</p>
-    
-  
-    
-    
-      <p>Berg</p>
-    
-  
-    
-    
-      <p>Bmed Lifestyle</p>
-    
-  
-</div>
+  </div>
 
 
 <script>
@@ -149,7 +174,7 @@ var images = document.getElementsByTagName('img');
 
 for( var i=0; i<images.length;i++){
   if(images[i].naturalWidth < images[i].naturalHeight) {
-      $(images[i]).addClass('portrait');  
+      $(images[i]).parent().addClass('portrait');  
   }
 }
 }
