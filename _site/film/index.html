@@ -99,15 +99,15 @@
   
   
   
-    <div class="grid-item   Commercial">
-        <img src="/AV82/assets/img/Boa Vista Café 1.webp" class="project-img" >
-        <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/boa-vista-cafe.mp4" type="video/mp4"></video>
+    <div class="grid-item   Fashion">
+        <img src="/AV82/assets/img/Waiting in the Dark 2.webp" class="project-img" >
+        <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/waiting-in-the-dark.mp4" type="video/mp4"></video>
     </div>
     
   
   
   
-    <div class="grid-item  larger-placement   Music Videos">
+    <div class="grid-item  larger-placement   Music">
         <img src="/AV82/assets/img/Dançar ate que a noite caia 2.webp" class="project-img" >
         <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/dancar.mp4" type="video/mp4"></video>
     </div>
@@ -131,6 +131,22 @@
   
   
   
+    <div class="grid-item   Music">
+        <img src="/AV82/assets/img/Dia da Procissão 2.webp" class="project-img" >
+        <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/dia-da-procissao.mp4" type="video/mp4"></video>
+    </div>
+    
+  
+  
+  
+    <div class="grid-item   Music">
+        <img src="/AV82/assets/img/Por Ti JB 2.webp" class="project-img" >
+        <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/por-ti-jb.mp4" type="video/mp4"></video>
+    </div>
+    
+  
+  
+  
     <div class="grid-item   Commercial">
         <img src="/AV82/assets/img/FMS.webp" class="project-img" >
         <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/fms.mp4" type="video/mp4"></video>
@@ -139,23 +155,7 @@
   
   
   
-    <div class="grid-item   Music Videos">
-        <img src="/AV82/assets/img/Por Ti JB 2.webp" class="project-img" >
-        <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/por-ti-jb.mp4" type="video/mp4"></video>
-    </div>
-    
-  
-  
-  
-    <div class="grid-item   Music Videos">
-        <img src="/AV82/assets/img/Dia da Procissão 2.webp" class="project-img" >
-        <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/dia-da-procissao.mp4" type="video/mp4"></video>
-    </div>
-    
-  
-  
-  
-    <div class="grid-item   Music Videos">
+    <div class="grid-item   Music">
         <img src="/AV82/assets/img/Por ti NR 1.webp" class="project-img" >
         <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/por-ti-nr.mp4" type="video/mp4"></video>
     </div>
@@ -163,7 +163,7 @@
   
   
   
-    <div class="grid-item   Music Videos">
+    <div class="grid-item   Music">
         <img src="/AV82/assets/img/Traço de mulher.webp" class="project-img" >
         <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/traco-de-mulher.mp4" type="video/mp4"></video>
     </div>
@@ -171,9 +171,9 @@
   
   
   
-    <div class="grid-item   Fashion">
-        <img src="/AV82/assets/img/Waiting in the Dark 2.webp" class="project-img" >
-        <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/waiting-in-the-dark.mp4" type="video/mp4"></video>
+    <div class="grid-item   Commercial">
+        <img src="/AV82/assets/img/Boa Vista Café 1.webp" class="project-img" >
+        <video class="project-img project-vid" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="/AV82/assets/img/boa-vista-cafe.mp4" type="video/mp4"></video>
     </div>
     
   
@@ -188,8 +188,24 @@
 </div>
 
 <script>
+$('.all-btn').click(function() {
+  $('.Fashion, .Commercial, .Music, .Films').css('opacity', '1');
+});
 $('.commercial-btn').click(function() {
-  $('.Fashion, .Commercial, .Music')
+  $('.Fashion, .Films, .Music').css('opacity', '0.2');
+  $('.Commercial').css('opacity', '1');
+});
+$('.music-btn').click(function() {
+  $('.Fashion, .Commercial, .Films').css('opacity', '0.2');
+  $('.Music').css('opacity', '1');
+});
+$('.fashion-btn').click(function() {
+  $('.Commercial, .Music, .Films').css('opacity', '0.2');
+  $('.Fashion').css('opacity', '1');
+});
+$('.films-btn').click(function() {
+  $('.Commercial, .Music, .Fashion').css('opacity', '0.2');
+  $('.Films').css('opacity', '1');
 });
 </script>
     </body>

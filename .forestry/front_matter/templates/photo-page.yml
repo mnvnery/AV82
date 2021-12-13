@@ -29,9 +29,9 @@ fields:
     config:
       required: false
       options:
-      - Fashion
-      - Commercial
-      - Portraits
+      - fashion
+      - commercial
+      - portraits
       source:
         type: simple
         section: 
