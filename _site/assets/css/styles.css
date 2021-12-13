@@ -117,7 +117,7 @@ a:hover { color: inherit; }
 
 .larger-placement { grid-column-end: span 2; grid-row-end: span 2; height: 61vh; }
 
-.Fashion, .Commercial, .Films, .Music { opacity: 1; }
+.fashion, .commercial, .films, .music { opacity: 1; }
 
 .photo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 0 15px; grid-gap: 5px; grid-auto-flow: dense; }
 

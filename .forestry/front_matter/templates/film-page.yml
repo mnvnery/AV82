@@ -16,10 +16,10 @@ fields:
     config:
       required: false
       options:
-      - Fashion
-      - Commercial
-      - Films
-      - Music Videos
+      - fashion
+      - commercial
+      - films
+      - music
       source:
         type: simple
         section: 
