@@ -282,11 +282,10 @@ project_order:
       <h1 class="selection-title active">PHOTO</h1>
   </div>
   <div class="filters">
-      <span>All,</span>
-      <span>commercial,</span>
-      <span>music,</span>
-      <span>fashion,</span>
-      <span>films</span>
+      <span class="all-btn">All,</span>
+      <span class="commercial-btn">Commercial,</span>
+      <span class="fashion-btn">Fashion,</span>
+      <span class="portraits-btn">Portraits</span>
   </div>
 
 </div>
@@ -297,7 +296,7 @@ project_order:
       {% assign sortedProjects = site.photo | where: "path", sortedPath %}
       {% for project in sortedProjects %}
       <div class="thumbnail-container">
-        <img src="{{site.baseurl}}{{ project.thumbnail }}" class="photo-img" >
+        <img src="{{site.baseurl}}{{ project.thumbnail }}" class="photo-img {{project.category}}" >
       </div>
       {% endfor %}
     {% endfor %}
@@ -315,4 +314,20 @@ for( var i=0; i<images.length;i++){
   }
 }
 }
+
+$('.all-btn').click(function() {
+  $('.fashion, .commercial, .portraits').css('opacity', '1');
+});
+$('.commercial-btn').click(function() {
+  $('.fashion, .portraits').css('opacity', '0.2');
+  $('.commercial').css('opacity', '1');
+});
+$('.portraits-btn').click(function() {
+  $('.fashion, .commercial').css('opacity', '0.2');
+  $('.portraits').css('opacity', '1');
+});
+$('.fashion-btn').click(function() {
+  $('.commercial, .portraits').css('opacity', '0.2');
+  $('.fashion').css('opacity', '1');
+});
 </script>
