@@ -13,10 +13,10 @@ fields:
   config:
     required: false
     options:
-    - Films
-    - Commercial
-    - Fashion
-    - Music
+    - films
+    - commercial
+    - fashion
+    - music
     source:
       type: simple
       section: 
