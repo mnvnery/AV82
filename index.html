@@ -18,9 +18,6 @@ layout: black
             <img src="{{ site.baseurl }}/assets/img/rental.jpg" alt="" class="navbar-img right-img">
         </div>
     </div>
-    <div class="index-line-container">
-        <div class="line"></div>
-    </div>
     <nav class="index-navbar">
         <h1 class="prod-title"><a href="{{site.baseurl}}/film">PRODUCTION</a></h1>
         <h1 class="rental-title"><a href="{{site.baseurl}}/rental">RENTAL</a></h1>
@@ -30,18 +27,26 @@ layout: black
 
 <script>
 // init controller
+gsap.registerPlugin(ScrollTrigger);
 
-var controller = new ScrollMagic.Controller();
-
-
-// create a scene
-new ScrollMagic.Scene({
-    duration: 1000, // the scene should last for a scroll distance of 100px
-    offset: 0 // start this scene after scrolling for 50px
+gsap.to(".logo-line", {
+    height: '141vh',
+    scrollTrigger: {
+        end: "bottom 100%",
+        trigger: ".index-navbar-container",
+        scrub: true,
+    }
 })
 
-    .setPin('.logo-line') // pins the element for the the scene's duration
-    .addTo(controller); // assign the scene to the controller
-
+gsap.to(".logo-square", {
+    opacity: '0',
+    scrollTrigger: {
+        start: "top 50%",
+        end: "bottom 100%",
+        trigger: ".index-navbar-container",
+        scrub: true,
+        markers: true, 
+    }
+})
 
 </script>

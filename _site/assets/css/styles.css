@@ -59,9 +59,9 @@ a:hover { color: inherit; }
 
 .line-flex, .square-flex { display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; position: absolute; top: 0; z-index: -1; }
 
-.logo-square { border: 2px solid white; height: 200px; width: 200px; position: absolute; }
+.logo-square { border: 2px solid white; height: 200px; width: 200px; position: fixed; }
 
-.logo-line { border-left: 2px solid white; height: 350px; transform: rotate(-45deg); position: absolute; width: 0; }
+.logo-line { border-left: 2px solid white; height: 350px; transform: rotate(-45deg); position: fixed; width: 0; }
 
 .index-navbar-container { height: 100vh; width: 100%; color: white; margin-top: 100vh; position: relative; }
 
