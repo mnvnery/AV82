@@ -125,7 +125,7 @@ a:hover { color: inherit; }
 
 .portrait { grid-row-end: span 2; }
 
-.rental-nav { padding: 15px; }
+.rental-nav { padding: 15px; padding-top: 20px; }
 
 .rental-nav h1 { margin-bottom: 2vh; margin-top: 1vh; opacity: 0.3; }
 
