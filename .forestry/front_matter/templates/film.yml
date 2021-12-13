@@ -16,7 +16,7 @@ fields:
     - Films
     - Commercial
     - Fashion
-    - Music Videos
+    - Music
     source:
       type: simple
       section: 
