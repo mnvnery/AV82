@@ -143,7 +143,7 @@ a:hover { color: inherit; }
 
 .photo-carousel .carousel-cell { width: 100%; height: 80vh; margin-right: 10px; display: flex; justify-content: center; align-items: center; }
 
-.photo-carousel { margin-top: 5vh; }
+.photo-carousel { margin-top: 8vh; }
 
 .photo-carousel .carousel-cell img { max-height: 70vh; }
 
@@ -157,7 +157,21 @@ a:hover { color: inherit; }
 
 .photo-title { text-transform: uppercase; }
 
-.exit-btn { float: right; padding: 15px; }
+.credits p { margin: 0; font-size: 0.8em; }
+
+.project-container { margin-top: 5% !important; justify-content: space-between; }
+
+.project-description p { margin-top: 0; margin-right: 5vw; font-size: 0.9em; }
+
+.exit-btn { position: absolute; right: 0px; top: 0px; width: 32px; height: 32px; opacity: 1; padding: 3px; }
+
+.exit-btn:before, .exit-btn:after { position: absolute; left: 12px; content: ' '; height: 33px; width: 2px; background-color: black; }
+
+.exit-btn:before { transform: rotate(45deg); }
+
+.exit-btn:after { transform: rotate(-45deg); }
+
+.title-alone { position: fixed; bottom: 0; padding-left: 15px; margin-bottom: 1vh; }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }

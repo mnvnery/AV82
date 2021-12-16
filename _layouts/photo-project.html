@@ -1,30 +1,37 @@
 ---
 layout: white-clean
 ---
-<div class="exit-btn"><a href="{{ site.baseurl }}/photo">x</a></div>
-
+<a href="{{ site.baseurl }}/photo">
+    <div class="burger-container">
+        <button class="hamburger hamburger--slider is-active" type="button">
+            <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+</a>
 <div class="photo-carousel">
     {% for item in page.stills %}
         <div class="carousel-cell"><img src="{{ site.baseurl }}/{{ item }}"/></div>
     {% endfor %}
 </div>
 
-
-<div class="about-container about-container-white">
-    <div class="content-flex">
-        {% if page.description %}
-        <div class="about-intro">{{ page.description }}</div>
-        {% endif %}
-        <div class="about-address">
-            Avenida da Boavista, 82<br>
-            Porto, Portugal
-            <br><br>
-            geral@av82studio.com<br>
-            + 351 912558439
+{% if page.description != '' or page.credits != '' %}
+<div class="about-container about-container-white ">
+    <div class="content-flex project-container">
+        <div class="about-address credits">
+        {{ page.credits }}
         </div>
+        {% if page.description %}
+        <div class="about-intro project-description">{{ page.description }}</div>
+        {% endif %}
     </div>
 </div>
 <h2 class="about-btn photo-title"><span class="arrow-up">↑</span><span class="arrow-down">↓</span> {{page.title}}</h2>
+{% else %}
+<h2 class="photo-title title-alone">{{page.title}}</h2>
+{% endif %}
+
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script>
