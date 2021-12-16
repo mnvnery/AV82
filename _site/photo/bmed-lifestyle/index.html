@@ -3,6 +3,7 @@
     <head>
         <title>AV82 STUDIO</title>
 <meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" type="text/css" href="/AV82/assets/css/styles.css">
 <meta itemprop="description" name="description" content="<p>Projeto desenvolvido para a marca de vestuário Bmed onde assumimos a criação de uma campanha fotográfica composta por editorial e e-commerce. O projeto fo..." />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
@@ -21,36 +22,69 @@
 
     </head>
     <body>
-        <div class="burger-container">
-            <button class="hamburger hamburger--collapse" type="button">
-                <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>
+        <div class="exit-btn"><a href="/AV82/photo">x</a></div>
 
-        <div class="navbar-container">
-            <div class="line-container">
-                <div class="line"></div>
-            </div>
-            <nav class="navbar">
-                <h1><a href="/AV82/film">PRODUCTION</a></h1>
-                <h1><a href="/AV82/rental">RENTAL</a></h1>
-            </nav>
-        </div>
-        <div class="about-container about-container-white">
-            <div class="content-flex">
-                <div class="about-intro">Porto based film and photography<br>studio offering both creative services<br>and a production space.</div>
-                <div class="about-address">
-                    Avenida da Boavista, 82<br>
-                    Porto, Portugal
-                    <br><br>
-                    geral@av82studio.com<br>
-                    + 351 912558439
-                </div>
-            </div>
-        </div>
-        <h2 class="about-btn"><span class="arrow-up">↑</span><span class="arrow-down">↓</span> ABOUT</h2>
+<div class="photo-carousel">
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-1.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-10.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-11.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-12.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-13.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-14.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-15.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-2.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-3.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-4.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-5.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-6.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-7.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-8.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/b-med-2021-9.webp"/></div>
+    
+</div>
+
+
+<div class="about-container about-container-white">
+    <div class="content-flex">
         
+        <div class="about-intro"><p>Projeto desenvolvido para a marca de vestuário Bmed onde assumimos a criação de uma campanha fotográfica composta por editorial e e-commerce. O projeto foi desenvolvido primeiramente em estúdio, com a assistência da diretora de arte Filipa Alves, e posteriormente no exterior, onde foi realizada a campanha.</p></div>
+        
+        <div class="about-address">
+            Avenida da Boavista, 82<br>
+            Porto, Portugal
+            <br><br>
+            geral@av82studio.com<br>
+            + 351 912558439
+        </div>
+    </div>
+</div>
+<h2 class="about-btn photo-title"><span class="arrow-up">↑</span><span class="arrow-down">↓</span> Bmed Lifestyle</h2>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+$('.photo-carousel').flickity({
+    // options
+    cellAlign: 'center',
+    contain: true,
+    pageDots: false,
+    wrapAround: true,
+    prevNextButtons: true,
+});
+</script>
     </body>
 </html>
