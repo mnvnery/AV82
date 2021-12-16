@@ -1,0 +1,39 @@
+---
+layout: white-clean
+---
+<div class="exit-btn"><a href="{{ site.baseurl }}/photo">x</a></div>
+
+<div class="photo-carousel">
+    {% for item in page.stills %}
+        <div class="carousel-cell"><img src="{{ site.baseurl }}/{{ item }}"/></div>
+    {% endfor %}
+</div>
+
+
+<div class="about-container about-container-white">
+    <div class="content-flex">
+        {% if page.description %}
+        <div class="about-intro">{{ page.description }}</div>
+        {% endif %}
+        <div class="about-address">
+            Avenida da Boavista, 82<br>
+            Porto, Portugal
+            <br><br>
+            geral@av82studio.com<br>
+            + 351 912558439
+        </div>
+    </div>
+</div>
+<h2 class="about-btn photo-title"><span class="arrow-up">↑</span><span class="arrow-down">↓</span> {{page.title}}</h2>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+$('.photo-carousel').flickity({
+    // options
+    cellAlign: 'center',
+    contain: true,
+    pageDots: false,
+    wrapAround: true,
+    prevNextButtons: true,
+});
+</script>
