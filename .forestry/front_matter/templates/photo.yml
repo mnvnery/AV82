@@ -47,6 +47,24 @@ fields:
   label: Layout
   default: white
   hidden: true
+- name: credits
+  type: field_group_list
+  fields:
+  - name: description
+    type: text
+    config:
+      required: false
+    label: description
+  - name: credit
+    type: text
+    config:
+      required: false
+    label: credit
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Credits
 pages:
 - _photo/abraco.html
 - _photo/alma-gemea.html
