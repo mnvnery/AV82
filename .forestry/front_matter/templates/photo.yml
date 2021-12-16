@@ -32,22 +32,13 @@ fields:
       format: html-blocks
   label: Description
 - name: credits
-  type: field_group_list
-  fields:
-  - name: description
-    type: text
-    config:
-      required: false
-    label: description
-  - name: credit
-    type: text
-    config:
-      required: false
-    label: credit
+  type: textarea
+  default: ''
   config:
-    min: 
-    max: 
-    labelField: 
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
   label: Credits
 - name: stills
   type: image_gallery
