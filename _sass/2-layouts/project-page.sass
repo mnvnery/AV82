@@ -8,7 +8,7 @@
         align-items: center
 
 .photo-carousel
-    margin-top: 5vh
+    margin-top: 8vh
 
 .photo-carousel
     .carousel-cell img
@@ -32,6 +32,44 @@
 .photo-title
     text-transform: uppercase
 
+.credits p
+    margin: 0
+    font-size: 0.8em
+
+.project-container
+    margin-top: 5% !important
+    justify-content: space-between
+
+.project-description p
+    margin-top: 0
+    margin-right: 5vw
+    font-size: 0.9em
+
 .exit-btn 
-    float: right
-    padding: 15px
+    position: absolute
+    right: 0px
+    top: 0px
+    width: 32px
+    height: 32px
+    opacity: 1
+    padding: 3px  
+
+.exit-btn:before, .exit-btn:after 
+    position: absolute
+    left: 12px
+    content: ' '
+    height: 33px
+    width: 2px
+    background-color: black
+
+.exit-btn:before 
+    transform: rotate(45deg)
+
+.exit-btn:after 
+    transform: rotate(-45deg)
+
+.title-alone
+    position: fixed
+    bottom: 0
+    padding-left: 15px
+    margin-bottom: 1vh
