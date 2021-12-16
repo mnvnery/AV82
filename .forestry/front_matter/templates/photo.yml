@@ -7,15 +7,6 @@ fields:
   config:
     required: false
   label: Title
-- name: description
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: Description
 - name: category
   type: select
   default: []
@@ -31,22 +22,15 @@ fields:
       file: 
       path: 
   label: Category
-- name: stills
-  type: image_gallery
-  config: {}
-  label: Stills
-- name: thumbnail
-  type: file
-  config:
-    maxSize: 64
-  label: Thumbnail
-- name: layout
-  type: text
+- name: description
+  type: textarea
+  default: ''
   config:
     required: false
-  label: Layout
-  default: white
-  hidden: true
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Description
 - name: credits
   type: field_group_list
   fields:
@@ -65,6 +49,22 @@ fields:
     max: 
     labelField: 
   label: Credits
+- name: stills
+  type: image_gallery
+  config: {}
+  label: Stills
+- name: thumbnail
+  type: file
+  config:
+    maxSize: 64
+  label: Thumbnail
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  default: white
+  hidden: true
 pages:
 - _photo/abraco.html
 - _photo/alma-gemea.html
