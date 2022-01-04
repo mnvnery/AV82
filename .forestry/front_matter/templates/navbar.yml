@@ -1,4 +1,14 @@
 ---
 label: Navbar
 hide_body: true
-fields: []
+fields:
+- name: production
+  type: file
+  config:
+    maxSize: 64
+  label: Production
+- name: rental
+  type: file
+  config:
+    maxSize: 64
+  label: Rental
