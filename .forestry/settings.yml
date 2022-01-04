@@ -27,6 +27,7 @@ sections:
 - type: document
   path: _layouts/black.html
   label: Menu
+  read_only: false
 - type: document
   path: index.html
   label: Home
