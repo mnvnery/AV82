@@ -32,6 +32,9 @@
 .photo-title
     text-transform: uppercase
 
+.credits 
+    max-width: 30vw
+
 .credits p
     margin: 0
     font-size: 0.8em
@@ -73,3 +76,34 @@
     bottom: 0
     padding-left: 15px
     margin-bottom: 1vh
+
+@media screen and (max-width: 600px) 
+    .photo-carousel
+        .carousel-cell img
+            max-width: 85%
+            max-height: 90%
+
+    .photo-carousel 
+        .carousel-cell 
+            height: 50vh
+            margin-top: 10vh
+
+    .flickity-prev-next-button
+        width: 44px !important
+        
+    .carousel-img
+        max-width: 82%
+
+    .content-flex
+        flex-direction: column
+        justify-content: flex-start
+        margin-top: 16% !important
+
+    .content-flex div 
+        margin-bottom: 5vh
+        
+    .credits
+        max-width: 100%
+
+    .about-intro
+        width: 100%

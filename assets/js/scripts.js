@@ -35,4 +35,4 @@ $(window).click(function() {
 
 $('.about-btn').click(function(event){
     event.stopPropagation();
-  });
+});

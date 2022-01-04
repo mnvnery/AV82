@@ -1,3 +1,19 @@
+.showreel
+    width: 100vw
+    z-index: -2
+    position: relative
+    height: 100vh
+    object-fit: cover
+
+.index-arrow
+    position: absolute
+    bottom: 2vh
+    left: 1vw
+    font-size: 1.5em
+
+.arrow-rotate
+    transform: rotate(180deg)
+
 .line-flex, .square-flex
     display: flex
     align-items: center
@@ -25,7 +41,6 @@
     height: 100vh
     width: 100%
     color: white
-    margin-top: 100vh
     position: relative
     
 .navbar-img
@@ -100,3 +115,14 @@
     display: flex
     justify-content: space-around
     align-items: center
+
+@media screen and (max-width: 600px) 
+    .logo-square
+        height: 150px
+        width: 150px
+
+    .logo-line
+        height: 275px
+
+    .index-navbar, .navbar
+        flex-direction: column

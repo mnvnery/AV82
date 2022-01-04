@@ -39,7 +39,7 @@ a:hover { color: inherit; }
 @keyframes grow { from { height: 350px; }
   to { height: 145vh; } }
 
-.about-container { background-color: rgba(0, 0, 0, 0.4); position: fixed; bottom: 0; z-index: 1; width: 100%; height: 0vh; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); border-top: 2px solid white; transition: 0.45s; opacity: 0; }
+.about-container { background-color: rgba(0, 0, 0, 0.4); position: fixed; bottom: 0; z-index: 1; width: 100%; height: 0vh; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); border-top: 2px solid white; transition: 0.5s; opacity: 0; }
 
 .about-container-white { background-color: rgba(255, 255, 255, 0.8); border-top: 2px solid black; }
 
@@ -59,13 +59,19 @@ a:hover { color: inherit; }
 
 .arrow-down { display: none; }
 
+.showreel { width: 100vw; z-index: -2; position: relative; height: 100vh; object-fit: cover; }
+
+.index-arrow { position: absolute; bottom: 2vh; left: 1vw; font-size: 1.5em; }
+
+.arrow-rotate { transform: rotate(180deg); }
+
 .line-flex, .square-flex { display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; position: absolute; top: 0; z-index: -1; }
 
 .logo-square { border: 2px solid white; height: 200px; width: 200px; position: fixed; }
 
 .logo-line { border-left: 2px solid white; height: 350px; transform: rotate(-45deg); position: fixed; width: 0; }
 
-.index-navbar-container { height: 100vh; width: 100%; color: white; margin-top: 100vh; position: relative; }
+.index-navbar-container { height: 100vh; width: 100%; color: white; position: relative; }
 
 .navbar-img { position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; object-fit: cover; opacity: 0; z-index: 1; transition: 0.4s; }
 
@@ -86,6 +92,8 @@ a:hover { color: inherit; }
 .index-line-container { height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; pointer-events: none; }
 
 .index-navbar { height: 100vh; width: 100%; display: flex; justify-content: space-around; align-items: center; }
+
+@media screen and (max-width: 600px) { .logo-square { height: 150px; width: 150px; } .logo-line { height: 275px; } .index-navbar, .navbar { flex-direction: column; } }
 
 .nav-logo { display: flex; justify-content: flex-start; padding: 15px; align-items: center; }
 
@@ -125,6 +133,8 @@ a:hover { color: inherit; }
 
 .project-link { position: absolute; left: 0; top: 0; height: 100%; width: 100%; }
 
+@media screen and (max-width: 600px) { .logo-img { max-width: 55vw; } .prod-navigation { flex-direction: column; } .selection-flex { width: 100%; } .selection-title { margin-right: 3vw; } .projects-container { grid-template-columns: 1fr 1fr; } .grid-item { height: 15vh; } .larger-placement { height: 30vh; } }
+
 .photo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 0 15px; grid-gap: 5px; grid-auto-flow: dense; }
 
 .photo-img { width: 100%; height: 100%; object-fit: cover; }
@@ -134,6 +144,10 @@ a:hover { color: inherit; }
 .landscape { height: 50%; }
 
 .portrait { grid-row-end: span 2; }
+
+@media screen and (min-width: 600px) { .logo-mobile-img { display: none; } }
+
+@media screen and (max-width: 600px) { .photo-grid { grid-template-columns: 1fr 1fr; } .logo-img { display: none; } .logo-mobile-img { display: block; width: 15vw; } .hamburger { padding: 20px 15px; } }
 
 .rental-nav { padding: 15px; padding-top: 20px; }
 
@@ -159,6 +173,8 @@ a:hover { color: inherit; }
 
 .photo-title { text-transform: uppercase; }
 
+.credits { max-width: 30vw; }
+
 .credits p { margin: 0; font-size: 0.8em; }
 
 .project-container { margin-top: 5% !important; justify-content: space-between; }
@@ -174,6 +190,8 @@ a:hover { color: inherit; }
 .exit-btn:after { transform: rotate(-45deg); }
 
 .title-alone { position: fixed; bottom: 0; padding-left: 15px; margin-bottom: 1vh; }
+
+@media screen and (max-width: 600px) { .photo-carousel .carousel-cell img { max-width: 85%; max-height: 90%; } .photo-carousel .carousel-cell { height: 50vh; margin-top: 10vh; } .flickity-prev-next-button { width: 44px !important; } .carousel-img { max-width: 82%; } .content-flex { flex-direction: column; justify-content: flex-start; margin-top: 16% !important; } .content-flex div { margin-bottom: 5vh; } .credits { max-width: 100%; } .about-intro { width: 100%; } }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }

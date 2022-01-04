@@ -1,6 +1,8 @@
 ---
 layout: black
 ---
+<video class="showreel" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}/assets/img/showreel.mp4" type="video/mp4"></video>
+<i id="index-arrow" class="ri-arrow-down-line index-arrow"></i>
 <div class="line-flex">
     <div class="logo-line"></div>
 </div>
@@ -24,19 +26,36 @@ layout: black
     </nav>
 </div>
 
-
-<script>
+<script>    
+$('#index-arrow').click(function() {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+});
 // init controller
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".logo-line", {
-    height: '141vh',
-    scrollTrigger: {
-        end: "bottom 100%",
-        trigger: ".index-navbar-container",
-        scrub: true,
-    }
-})
+ScrollTrigger.matchMedia({
+    "(min-width: 600px)": function() {
+        gsap.to(".logo-line", {
+        height: '141vh',
+        scrollTrigger: {
+            end: "bottom 100%",
+            trigger: ".index-navbar-container",
+            scrub: true,
+        }
+        })
+    },
+    "(max-width: 600px)": function() {
+        gsap.to(".logo-line", {
+        height: '68vh',
+        scrollTrigger: {
+            end: "bottom 100%",
+            trigger: ".index-navbar-container",
+            scrub: true,
+        }
+        })
+    },
+}); 
+
 
 gsap.to(".logo-square", {
     opacity: '0',
