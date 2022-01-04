@@ -25,9 +25,8 @@ sections:
 - type: heading
   label: Pages
 - type: document
-  path: _layout/black.html
+  path: _layouts/black.html
   label: Layouts
-  match: "**/*"
 - type: document
   path: index.html
   label: Home
