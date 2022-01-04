@@ -19,4 +19,20 @@
     
 .portrait 
     grid-row-end: span 2
+@media screen and (min-width: 600px) 
+    .logo-mobile-img
+        display: none
 
+@media screen and (max-width: 600px) 
+    .photo-grid
+        grid-template-columns: 1fr 1fr
+
+    .logo-img
+        display: none
+        
+    .logo-mobile-img
+        display: block
+        width: 15vw
+
+    .hamburger 
+        padding: 20px 15px
