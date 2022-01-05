@@ -59,6 +59,8 @@ fields:
   config:
     maxSize: 64
   label: Video Thumbnail
+  description: O video que aparece quando se faz hover sobre o still. Em mp4 e o mais
+    pequeno possivel.
 - name: still_thumbnail
   type: file
   config:
