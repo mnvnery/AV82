@@ -6,55 +6,6 @@ fields:
   name: layout
   label: layout
   hidden: true
-- name: photo_projects
-  type: field_group_list
-  fields:
-  - name: title
-    type: text
-    config:
-      required: false
-    label: Title
-  - name: description
-    type: textarea
-    default: ''
-    config:
-      required: false
-      wysiwyg: true
-      schema:
-        format: html-blocks
-    label: Description
-  - name: category
-    type: select
-    default: []
-    config:
-      required: false
-      options:
-      - fashion
-      - commercial
-      - portraits
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Category
-  - name: thumbnail
-    type: file
-    config:
-      maxSize: 64
-    label: Thumbnail
-  - name: images
-    type: image_gallery
-    config: {}
-    label: Images
-  - name: highlight
-    type: boolean
-    label: Highlight
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Photo Projects
 - name: project_order
   type: list
   config:
