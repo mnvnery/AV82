@@ -151,9 +151,9 @@ a:hover { color: inherit; }
 
 .rental-nav { padding: 15px; padding-top: 20px; }
 
-.rental-nav h1 { margin-bottom: 2vh; margin-top: 1vh; opacity: 0.3; }
+.rental-nav h2 { margin-bottom: 2vh; margin-top: 1vh; opacity: 0.3; }
 
-.rental-nav h1:hover { opacity: 1; }
+.rental-nav h2:hover { opacity: 1; }
 
 .active { opacity: 1 !important; }
 
@@ -190,6 +190,8 @@ a:hover { color: inherit; }
 .exit-btn:after { transform: rotate(-45deg); }
 
 .title-alone { position: fixed; bottom: 0; padding-left: 15px; margin-bottom: 1vh; }
+
+.player .vp-controls { bottom: 20vh !important; }
 
 @media screen and (max-width: 600px) { .photo-carousel .carousel-cell img { max-width: 85%; max-height: 90%; } .photo-carousel .carousel-cell { height: 50vh; margin-top: 10vh; } .flickity-prev-next-button { width: 44px !important; } .carousel-img { max-width: 82%; } .content-flex { flex-direction: column; justify-content: flex-start; margin-top: 16% !important; } .content-flex div { margin-bottom: 5vh; } .credits { max-width: 100%; } .about-intro { width: 100%; } }
 
