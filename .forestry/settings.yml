@@ -27,7 +27,6 @@ sections:
 - type: document
   path: booking.html
   label: 'Booking '
-  match: "**/*"
 - type: document
   path: index.html
   label: Home
