@@ -23,10 +23,12 @@ sections:
   templates:
   - photo
 - type: heading
-  label: Pages
+  label: Recurring Elements
 - type: document
   path: _layouts/black.html
   label: Menu
+- type: heading
+  label: Pages
 - type: document
   path: index.html
   label: Home
