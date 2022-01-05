@@ -54,7 +54,7 @@ fields:
   config:
     required: false
   label: Layout
-  default: white
+  default: photo-project
   hidden: true
 pages:
 - _photo/abraco.html

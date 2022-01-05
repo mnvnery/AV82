@@ -76,7 +76,7 @@ fields:
     required: false
   hidden: true
   label: layout
-  default: black
+  default: film-project
 pages:
 - _film/2b.html
 - _film/alma-gemea.html
