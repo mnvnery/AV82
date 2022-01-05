@@ -7,6 +7,22 @@ fields:
   label: layout
 - name: cameras
   type: field_group_list
+  fields:
+  - name: item
+    type: text
+    config:
+      required: false
+    label: Item
+  - name: accessory
+    type: text
+    config:
+      required: false
+    label: Accessory
+  - name: price_day
+    type: text
+    config:
+      required: false
+    label: Price/Day
   config:
     min: 
     max: 
