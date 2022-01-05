@@ -5,11 +5,11 @@ $('.hamburger').click(function() {
 });
 
 $('.prod-title').hover(function() {
-    $('.left-img').toggleClass("opacity");
+    $('.right-img').toggleClass("opacity");
 });
 
 $('.rental-title').hover(function() {
-    $('.right-img').toggleClass("opacity");
+    $('.left-img').toggleClass("opacity");
 });
 
 
