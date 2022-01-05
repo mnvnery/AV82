@@ -56,3 +56,5 @@ fields:
     max: 
     labelField: 
   label: Studio
+pages:
+- booking.html
