@@ -25,6 +25,10 @@ sections:
 - type: heading
   label: Pages
 - type: document
+  path: booking.html
+  label: 'Booking '
+  match: "**/*"
+- type: document
   path: index.html
   label: Home
 - type: document
