@@ -5,29 +5,42 @@ fields:
 - type: text
   name: layout
   label: layout
-- name: cameras
+- name: gear
   type: field_group_list
   fields:
-  - name: item
-    type: text
+  - name: category
+    type: field_group_list
+    fields:
+    - name: item
+      type: text
+      config:
+        required: false
+      label: Item
+    - name: accessory
+      type: text
+      config:
+        required: false
+      label: Accessory
+    - name: price_day
+      type: number
+      label: Price/Day
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
     config:
-      required: false
-    label: Item
-  - name: accessory
-    type: text
-    config:
-      required: false
-    label: Accessory
-  - name: price_day
-    type: text
-    config:
-      required: false
-    label: Price/Day
+      min: 
+      max: 
+      labelField: 
+    label: Category
   config:
     min: 
     max: 
     labelField: 
-  label: Cameras
+  label: Gear
 - name: studio
   type: field_group_list
   fields:
