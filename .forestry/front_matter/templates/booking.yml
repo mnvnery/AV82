@@ -5,56 +5,48 @@ fields:
 - type: text
   name: layout
   label: layout
-- name: cameras
-  type: field_group_list
+  hidden: true
+- name: crew
+  type: field_group
+  config: {}
   fields:
-  - name: item
-    type: text
+  - name: role
+    type: list
     config:
-      required: false
-    label: Item
-  - name: accessory
-    type: text
-    config:
-      required: false
-    label: Accessory
-  - name: price_day
-    type: text
-    config:
-      required: false
-    label: Price/Day
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Cameras
-- name: studio
-  type: field_group_list
-  fields:
-  - name: item
-    type: text
-    config:
-      required: false
-    label: Item
-  - name: supporting_accessories
-    type: text
-    config:
-      required: false
-    label: Supporting Accessories
-  - name: price_day
-    type: number
-    label: Price/Day
-    description: ''
-    default: 0
-    required: true
-    config:
+      use_select: false
       min: 
       max: 
-      step: 
-  config:
-    min: 
-    max: 
-    labelField: 
+    label: Role
+  label: Crew
+- name: gear
+  type: field_group
+  config: {}
+  fields:
+  - name: categories
+    type: include
+    config: {}
+    template: booking-section
+    label: Categories
+  label: Gear
+- name: studio
+  type: field_group
+  config: {}
+  fields:
+  - name: categories
+    type: include
+    config: {}
+    template: booking-section
+    label: Categories
   label: Studio
+- name: mobility
+  type: field_group
+  config: {}
+  fields:
+  - name: categories
+    type: include
+    config: {}
+    template: booking-section
+    label: Categories
+  label: Mobility
 pages:
 - booking.html
