@@ -20,10 +20,20 @@ fields:
 - name: gear
   type: field_group
   config: {}
+  fields:
+  - name: category
+    type: include
+    config: {}
+    template: booking-section
+    label: Category
   label: Gear
 - name: studio
   type: field_group
   config: {}
   label: Studio
+- name: mobility
+  type: field_group
+  config: {}
+  label: Mobility
 pages:
 - booking.html
