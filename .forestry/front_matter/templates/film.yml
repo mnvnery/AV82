@@ -53,7 +53,10 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Video Embed
+  label: Vimeo Embed
+  description: 'Selecionar <strong>Tamanho: Responsive</strong>, <strong>Reproduzir
+    este vídeo automaticamente</strong> e <strong>Ativar repetição deste vídeo</strong>.
+    Tudo o resto desligado.'
 - name: video_thumbnail
   type: file
   config:
