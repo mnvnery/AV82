@@ -8,7 +8,7 @@ fields:
 - name: gear
   type: field_group_list
   fields:
-  - name: category
+  - name: camera
     type: field_group_list
     fields:
     - name: item
@@ -35,7 +35,7 @@ fields:
       min: 
       max: 
       labelField: 
-    label: Category
+    label: Camera
   config:
     min: 
     max: 
