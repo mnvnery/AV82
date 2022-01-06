@@ -21,5 +21,9 @@ fields:
   type: field_group
   config: {}
   label: Gear
+- name: studio
+  type: field_group
+  config: {}
+  label: Studio
 pages:
 - booking.html
