@@ -115,26 +115,6 @@ fields:
       labelField: 
     label: Accessories
   label: Mobility
-- name: crew
-  type: field_group_list
-  fields:
-  - name: role
-    type: text
-    config:
-      required: false
-    label: Role
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Crew
-- name: crew_t
-  type: list
-  config:
-    use_select: false
-    min: 
-    max: 
-  label: Crew test
 - name: crew_final
   type: field_group
   config: {}
