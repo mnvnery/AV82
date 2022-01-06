@@ -115,5 +115,18 @@ fields:
       labelField: 
     label: Accessories
   label: Mobility
+- name: crew
+  type: field_group_list
+  fields:
+  - name: role
+    type: text
+    config:
+      required: false
+    label: Role
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Crew
 pages:
 - booking.html
