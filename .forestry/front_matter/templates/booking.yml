@@ -128,5 +128,12 @@ fields:
     max: 
     labelField: 
   label: Crew
+- name: crew_t
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Crew test
 pages:
 - booking.html
