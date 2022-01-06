@@ -30,10 +30,22 @@ fields:
 - name: studio
   type: field_group
   config: {}
+  fields:
+  - name: categories
+    type: include
+    config: {}
+    template: booking-section
+    label: Categories
   label: Studio
 - name: mobility
   type: field_group
   config: {}
+  fields:
+  - name: categories
+    type: include
+    config: {}
+    template: booking-section
+    label: Categories
   label: Mobility
 pages:
 - booking.html
