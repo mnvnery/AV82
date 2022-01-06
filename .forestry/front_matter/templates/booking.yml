@@ -5,117 +5,7 @@ fields:
 - type: text
   name: layout
   label: layout
-- name: gear
-  type: field_group_list
-  fields:
-  - name: category
-    type: text
-    config:
-      required: false
-    label: Category
-  - name: items
-    type: field_group_list
-    fields:
-    - name: item
-      type: text
-      config:
-        required: false
-      label: Item
-    - name: accessory
-      type: text
-      config:
-        required: false
-      label: Accessory
-    - name: price_day
-      type: number
-      label: Price/Day
-      description: ''
-      default: 0
-      required: true
-      config:
-        min: 
-        max: 
-        step: 
-    config:
-      min: 
-      max: 
-      labelField: ''
-    label: Items
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Gear
-- name: studio
-  type: field_group_list
-  fields:
-  - name: category
-    type: text
-    config:
-      required: false
-    label: Category
-  - name: items
-    type: field_group_list
-    fields:
-    - name: item
-      type: text
-      config:
-        required: false
-      label: Item
-    - name: accessory
-      type: text
-      config:
-        required: false
-      label: Accessories
-    - name: price_day
-      type: number
-      label: Price/Day
-      description: ''
-      default: 0
-      required: true
-      config:
-        min: 
-        max: 
-        step: 
-    config:
-      min: 
-      max: 
-      labelField: 
-    label: Items
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Studio
-- name: mobility
-  type: field_group
-  config: {}
-  fields:
-  - name: category
-    type: text
-    config:
-      required: false
-    label: Category
-  - name: item
-    type: text
-    config:
-      required: false
-    label: Item
-  - name: accessories
-    type: field_group_list
-    fields:
-    - name: content
-      type: text
-      config:
-        required: false
-      label: Content
-    config:
-      min: 
-      max: 
-      labelField: 
-    label: Accessories
-  label: Mobility
-- name: crew_final
+- name: crew
   type: field_group
   config: {}
   fields:
@@ -126,6 +16,10 @@ fields:
       min: 
       max: 
     label: Role
-  label: Crew Final
+  label: Crew
+- name: gear
+  type: field_group
+  config: {}
+  label: Gear
 pages:
 - booking.html
