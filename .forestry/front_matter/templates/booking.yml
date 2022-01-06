@@ -66,7 +66,7 @@ fields:
       type: text
       config:
         required: false
-      label: Accessory
+      label: Accessories
     - name: price_day
       type: number
       label: Price/Day
@@ -87,5 +87,33 @@ fields:
     max: 
     labelField: 
   label: Studio
+- name: mobility
+  type: field_group
+  config: {}
+  fields:
+  - name: category
+    type: text
+    config:
+      required: false
+    label: Category
+  - name: item
+    type: text
+    config:
+      required: false
+    label: Item
+  - name: accessories
+    type: field_group_list
+    fields:
+    - name: content
+      type: text
+      config:
+        required: false
+      label: Content
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Accessories
+  label: Mobility
 pages:
 - booking.html
