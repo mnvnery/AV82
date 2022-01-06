@@ -49,26 +49,39 @@ fields:
 - name: studio
   type: field_group_list
   fields:
-  - name: item
+  - name: category
     type: text
     config:
       required: false
-    label: Item
-  - name: supporting_accessories
-    type: text
-    config:
-      required: false
-    label: Supporting Accessories
-  - name: price_day
-    type: number
-    label: Price/Day
-    description: ''
-    default: 0
-    required: true
+    label: Category
+  - name: items
+    type: field_group_list
+    fields:
+    - name: item
+      type: text
+      config:
+        required: false
+      label: Item
+    - name: accessory
+      type: text
+      config:
+        required: false
+      label: Accessory
+    - name: price_day
+      type: number
+      label: Price/Day
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
     config:
       min: 
       max: 
-      step: 
+      labelField: 
+    label: Items
   config:
     min: 
     max: 
