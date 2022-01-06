@@ -135,5 +135,17 @@ fields:
     min: 
     max: 
   label: Crew test
+- name: crew_final
+  type: field_group
+  config: {}
+  fields:
+  - name: role
+    type: list
+    config:
+      use_select: false
+      min: 
+      max: 
+    label: Role
+  label: Crew Final
 pages:
 - booking.html
