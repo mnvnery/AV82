@@ -68,5 +68,51 @@
 </div>
 
 
+<form action="https://getform.io/f/e46584e3-2177-4d02-a8ee-514e999190e2" method="POST" class="booking-form">
+  <div class="booking-content">
+    <div class="products">
+      <h3>GEAR</h3>
+      <h6 class="subtitle">CAMERAS</h6>
+      
+          <input type="checkbox" class="checkbox" id="RED KOMODO 6K KIT 1" name="cameras[]" value="RED KOMODO 6K KIT 1" data-price="250">
+          <label for="RED KOMODO 6K KIT 1">RED KOMODO 6K KIT 1</label>
+      
+          <input type="checkbox" class="checkbox" id="RED KOMODO 6K KIT 2" name="cameras[]" value="RED KOMODO 6K KIT 2" data-price="400">
+          <label for="RED KOMODO 6K KIT 2">RED KOMODO 6K KIT 2</label>
+      
+
+      <h3>STUDIO</h3>
+      
+          <input type="checkbox" class="checkbox" id="Half Day (5h)" name="studio[]" value="Half Day (5h)" data-price="200">
+          <label for="Half Day (5h)">Half Day (5h)</label>
+      
+          <input type="checkbox" class="checkbox" id="Full Day (10h)" name="studio[]" value="Full Day (10h)" data-price="300">
+          <label for="Full Day (10h)">Full Day (10h)</label>
+      
+      <h3>MOBILITY</h3>
+      <h3>CREW</h3>
+    </div>
+  
+    <div class="submission">
+      <span>Price per day:</span><span class="total-price"> 0</span><br>
+      <input type="text" name="name" placeholder="Your Name*" required="required">
+      <input type="email" name="email" placeholder="Your Email*" required="required"><br>
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+</form>
+
+<script>
+$('.checkbox').on("change", function () {
+    var totalPrice = 0;
+
+    $('.checkbox:checked').each(function () {
+        totalPrice += parseInt($(this).data('price'), 10);
+    });
+
+    $('.total-price').html(totalPrice);
+});
+
+</script>
     </body>
 </html>

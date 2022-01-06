@@ -24,10 +24,10 @@
     border-radius: 0 !important
 
 .flickity-prev-next-button.previous:hover
-    cursor: url('../img/arrow-left.svg'), auto
+    cursor: url('../img/arrow-left-line.svg'), auto
 
 .flickity-prev-next-button.next:hover
-    cursor: url('../img/arrow-right.svg'), auto	
+    cursor: url('../img/arrow-right-line.svg'), auto	
 
 .photo-title
     text-transform: uppercase
@@ -80,6 +80,41 @@
 
 .player .vp-controls
     bottom: 20vh !important
+
+.stills-container
+    display: grid
+    grid-template-columns: 1fr 1fr
+    padding: 0 10px
+    grid-gap: 10px
+    grid-auto-flow: dense
+    margin: 10px 0
+
+.three
+    grid-template-columns: 1fr 1fr 1fr
+
+.stills-container img
+    width: 100%
+
+.still-item
+    position: relative
+    object-fit: cover
+
+.project-title-flex
+    display: flex
+    justify-content: space-between
+    width: 98%
+
+.more-info
+    position: fixed
+    bottom: 0
+    right: 15px
+    margin-bottom: 1vh
+    opacity: 0
+    transition: 0.5s
+
+.opacity
+    opacity: 1
+
 
 @media screen and (max-width: 600px) 
     .photo-carousel

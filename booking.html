@@ -4,6 +4,9 @@ cameras:
 - item: RED KOMODO 6K KIT 1
   accessory: RED + Monitor + 1 vlock + 1 CFAST
   price_day: "250"
+- item: RED KOMODO 6K KIT 2
+  accessory: KIT 1 + DZO VESPID or XEEN Prime Lens Kit + Mattebox
+  price_day: "400"
 studio:
 - item: Half Day (5h)
   supporting_accessories: 'Access to Infinity wall, Black box, makeup and dressing
@@ -21,3 +24,45 @@ studio:
         <img src="{{site.baseurl}}/assets/img/logo_mobile_preto.png" alt="" class="logo-mobile-img">
     </a>
 </div>
+
+
+<form action="https://getform.io/f/e46584e3-2177-4d02-a8ee-514e999190e2" method="POST" class="booking-form">
+  <div class="booking-content">
+    <div class="products">
+      <h3>GEAR</h3>
+      <h6 class="subtitle">CAMERAS</h6>
+      {% for i in page.cameras %}
+          <input type="checkbox" class="checkbox" id="{{ i.item }}" name="cameras[]" value="{{i.item}}" data-price="{{i.price_day}}">
+          <label for="{{ i.item }}">{{ i.item }}</label>
+      {% endfor %}
+
+      <h3>STUDIO</h3>
+      {% for i in page.studio %}
+          <input type="checkbox" class="checkbox" id="{{ i.item }}" name="studio[]" value="{{i.item}}" data-price="{{i.price_day}}">
+          <label for="{{ i.item }}">{{ i.item }}</label>
+      {% endfor %}
+      <h3>MOBILITY</h3>
+      <h3>CREW</h3>
+    </div>
+  
+    <div class="submission">
+      <span>Price per day:</span><span class="total-price"> 0</span><br>
+      <input type="text" name="name" placeholder="Your Name*" required="required">
+      <input type="email" name="email" placeholder="Your Email*" required="required"><br>
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+</form>
+
+<script>
+$('.checkbox').on("change", function () {
+    var totalPrice = 0;
+
+    $('.checkbox:checked').each(function () {
+        totalPrice += parseInt($(this).data('price'), 10);
+    });
+
+    $('.total-price').html(totalPrice);
+});
+
+</script>

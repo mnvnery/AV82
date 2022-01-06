@@ -49,7 +49,7 @@ a:hover { color: inherit; }
 
 .about-intro { width: 50%; }
 
-.about-btn { position: fixed; bottom: 0; z-index: 1; padding-left: 15px; transition: 0.5s; margin-bottom: 1vh; }
+.about-btn { position: fixed; bottom: 0; z-index: 1; padding-left: 15px; transition: 0.5s; margin-bottom: 1vh; cursor: pointer; }
 
 .arrow-white { color: white; }
 
@@ -167,9 +167,9 @@ a:hover { color: inherit; }
 
 .flickity-prev-next-button { height: 100% !important; width: 40vw !important; background: transparent !important; border-radius: 0 !important; }
 
-.flickity-prev-next-button.previous:hover { cursor: url("../img/arrow-left.svg"), auto; }
+.flickity-prev-next-button.previous:hover { cursor: url("../img/arrow-left-line.svg"), auto; }
 
-.flickity-prev-next-button.next:hover { cursor: url("../img/arrow-right.svg"), auto; }
+.flickity-prev-next-button.next:hover { cursor: url("../img/arrow-right-line.svg"), auto; }
 
 .photo-title { text-transform: uppercase; }
 
@@ -193,7 +193,27 @@ a:hover { color: inherit; }
 
 .player .vp-controls { bottom: 20vh !important; }
 
+.stills-container { display: grid; grid-template-columns: 1fr 1fr; padding: 0 10px; grid-gap: 10px; grid-auto-flow: dense; margin: 10px 0; }
+
+.three { grid-template-columns: 1fr 1fr 1fr; }
+
+.stills-container img { width: 100%; }
+
+.still-item { position: relative; object-fit: cover; }
+
+.project-title-flex { display: flex; justify-content: space-between; width: 98%; }
+
+.more-info { position: fixed; bottom: 0; right: 15px; margin-bottom: 1vh; opacity: 0; transition: 0.5s; }
+
+.opacity { opacity: 1; }
+
 @media screen and (max-width: 600px) { .photo-carousel .carousel-cell img { max-width: 85%; max-height: 90%; } .photo-carousel .carousel-cell { height: 50vh; margin-top: 10vh; } .flickity-prev-next-button { width: 44px !important; } .carousel-img { max-width: 82%; } .content-flex { flex-direction: column; justify-content: flex-start; margin-top: 16% !important; } .content-flex div { margin-bottom: 5vh; } .credits { max-width: 100%; } .about-intro { width: 100%; } }
+
+.booking-content { margin: 15px; }
+
+.booking-content { display: flex; justify-content: space-between; }
+
+.subtitle { margin-left: 1vw; }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
