@@ -1,15 +1,5 @@
 ---
 layout: white
-cameras:
-- item: RED KOMODO 6K KIT 2
-  accessory: KIT 1 + DZO VESPID or XEEN Prime Lens Kit + Mattebox
-  price_day: '400'
-- item: RED KOMODO 6K KIT 1
-  accessory: RED + Monitor + 1 vlock + 1 CFAST
-  price_day: '250'
-- item: RED KOMODO 6K KIT 2
-  accessory: KIT 1 + DZO VESPID or XEEN Prime Lens Kit + Mattebox
-  price_day: '400'
 studio:
   category:
   - title: Coffee&Water Pack
@@ -52,18 +42,6 @@ crew:
   role:
   - Gaffer / Chefe Eletricista
   - Production Assitant / Assistente de Produção
-crew_t:
-- Makeup Artist / Maquilhagem
-- 'Data Wrangler '
-- Assistant Director / Assistente de Realização
-- Producer / Produtor(a)
-- Camera Assistant / Assistente de Câmara
-- Camera Operator / Operador(a) de Câmara
-- Director of Photography / Diretor(a) de Fotografia
-- Gaffer
-- Production Assistant
-crew_final:
-  role: []
 
 ---
 <div class="nav-logo">
@@ -79,11 +57,41 @@ crew_final:
   <div class="booking-content">
     <div class="products">
       <h3>GEAR</h3>
-      <h6 class="subtitle">CAMERAS</h6>
-      {% for i in page.cameras %}
+      <div class="products-row">
+        <h6>CATEGORY</h6>
+        <h6>ITEM</h6>
+        <h6>ACCESSORY</h6>
+        <h6>€/DAY</h6>
+      </div>
+      {% for category in page.gear.category %}
+      <div class="products-row">
+        <h6 class="category">{{category.title}}</h6>
+        {% for items in category.items limit:1 %}
+        <h6 class="item">{{items.item}}</h6>
+        <h6 class="accessory">{{items.accessory}}</h6>
+        <h6 class="price">{{items.price/day}}</h6>
+        {% endfor %}
+      </div>
+      <div class="products-row">
+        <h6 class="category"></h6>
+        {% for items in category.items offset:1 %}
+        <h6 class="item">{{items.item}}</h6>
+        <h6 class="accessory">{{items.accessory}}</h6>
+        <h6 class="price">{{items.price/day}}</h6>
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+
+
           <input type="checkbox" class="checkbox" id="{{ i.item }}" name="cameras[]" value="{{i.item}}" data-price="{{i.price_day}}">
           <label for="{{ i.item }}">{{ i.item }}</label>
+      {% for i in page.cameras offset:1 %}
+      <input type="checkbox" class="checkbox" id="{{ i.item }}" name="cameras[]" value="{{i.item}}" data-price="{{i.price_day}}">
       {% endfor %}
+
+    
+
 
       <h3>STUDIO</h3>
       {% for i in page.studio %}
