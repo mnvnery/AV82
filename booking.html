@@ -30,12 +30,75 @@ gear:
       price_day: 250
   - title: OPTICS / OBJETIVAS
     items:
-    - item: LEICA Summicron-C (PL) Kit 1
-      accessory: 3 Lens Set
-      price_day: 250
     - item: LEICA Summicron-C Full Set (PL)
       accessory: 18, 25, 35, 50, 75, 100
       price_day: 400
+    - item: LEICA Summicron-C (PL) Kit 1
+      accessory: 3 Lens Set
+      price_day: 250
+    - item: LEICA Summicron-C (PL) Kit 2
+      accessory: Kit 1 + 1 additional lens
+      price_day: 320
+    - item: LEICA MacroLux 95 Plus +2 Diopter
+      accessory: ''
+      price_day: 45
+    - item: Samyang Xeen Full Set (PL)
+      accessory: 14, 24, 35, 50, 85, 135
+      price_day: 150
+    - item: Samyang Xeen (PL) Kit 1
+      accessory: 3 Lens Set
+      price_day: 85
+    - item: Samyang Xeen (PL) Kit 2
+      accessory: Kit 1 + 1 additional lens
+      price_day: 110
+    - item: DZOFilm Vespid Full Set (EF)
+      accessory: 25, 35, 50, 75, 100, 125
+      price_day: 150
+    - item: DZOFilm Vespid (EF) Kit 1
+      accessory: 3 Lens Set
+      price_day: 85
+    - item: DZOFilm Vespid (EF) Kit 2
+      accessory: Kit 1 + 1 additional lens
+      price_day: 110
+    - item: DZOFilm Vespid (EF) 1 Lens
+      accessory: 25, 35, 50, 75, 100, 125
+      price_day: 30
+    - item: Samyang Cine Full Set (EF)
+      accessory: 16, 24, 35, 50, 85
+      price_day: 100
+    - item: Samyang Cine (EF) Kit 1
+      accessory: 3 Lens Set
+      price_day: 50
+    - item: Samyang Cine (EF) Kit 2
+      accessory: Kit 1 + 1 additional lens
+      price_day: 65
+    - item: Samyang Cine (EF) 1 Lens
+      accessory: 25, 35, 50, 75, 100, 125
+      price_day: 20
+    - item: Kinemount Enhancer (EF)
+      accessory: ''
+      price_day: 35
+    - item: 95mm Rotating Circular Polariser
+      accessory: ''
+      price_day: 10
+    - item: Formatt Firecrest Super-Slim IRND (5 Set)
+      accessory: 0.6, 0.9, 1.2, 1.8, 2.1
+      price_day: 45
+    - item: Tiffen – Black Pro Mist 1⁄4 (77mm)
+      accessory: ''
+      price_day: 6
+    - item: Tiffen – Black Pro Mist 1⁄2 (77mm)
+      accessory: ''
+      price_day: 6
+    - item: Prism Lens FX – Dream FX (4x5.65)
+      accessory: ''
+      price_day: 5
+    - item: Tiffen – Variable ND (77mm)
+      accessory: ''
+      price_day: 8
+    - item: Tiffen – Variable Polariser (77mm)
+      accessory: ''
+      price_day: 5
 mobility:
   category:
   - title: VAN / CARRINHA
@@ -68,9 +131,9 @@ crew:
       <h3>GEAR</h3>
       <div class="products-row">
         <h6 class="category">CATEGORY</h6>
-        <h6 class="item">ITEM</h6>
-        <h6 class="accessory">ACCESSORY</h6>
-        <h6 class="price">€/DAY</h6>
+        <h6 class="item bold">ITEM</h6>
+        <h6 class="accessory bold">ACCESSORY</h6>
+        <h6 class="price bold">€/DAY</h6>
         <i class="ri-checkbox-fill"></i>
       </div>
       <div class="underline"></div>
@@ -84,15 +147,17 @@ crew:
         <input type="checkbox" class="checkbox" id="{{ items.item }}" name="gear[]" value="{{items.item}}" data-price="{{items.price_day}}">
         {% endfor %}
       </div>
-      <div class="products-row">
-        <h6 class="category"></h6>
+
         {% for items in category.items offset:1 %}
-        <h6 class="item">{{items.item}}</h6>
-        <h6 class="accessory">{{items.accessory}}</h6>
-        <h6 class="price">{{items.price_day}}</h6>
-        <input type="checkbox" class="checkbox" id="{{ items.item }}" name="gear[]" value="{{items.item}}" data-price="{{items.price_day}}">
+        <div class="products-row">
+          <h6 class="category"></h6>
+          <h6 class="item">{{items.item}}</h6>
+          <h6 class="accessory">{{items.accessory}}</h6>
+          <h6 class="price">{{items.price_day}}</h6>
+          <input type="checkbox" class="checkbox" id="{{ items.item }}" name="gear[]" value="{{items.item}}" data-price="{{items.price_day}}">
+        </div>
         {% endfor %}
-      </div>
+
       {% endfor %}
 
 
@@ -123,9 +188,13 @@ crew:
     </div>
   
     <div class="submission">
-      <span>Price per day:</span><span class="total-price"> 0</span><br>
+      <span>Price per day:</span><span class="day-price"> 0</span><br>
+      <span>Total Price:</span><span class="total-price"> 0</span><br>
       <input type="text" name="name" placeholder="Your Name*" required="required">
       <input type="email" name="email" placeholder="Your Email*" required="required"><br>
+      <input type="date" name="start date" placeholder="Start Date" required="required">
+      <input type="date" name="end date" placeholder="End Date" required="required"><br>
+      <input type="text_area" name="order notes" placeholder="Notes"><br>
       <button type="submit">Submit</button>
     </div>
   </div>
@@ -139,7 +208,7 @@ $('.checkbox').on("change", function () {
         totalPrice += parseInt($(this).data('price'), 10);
     });
 
-    $('.total-price').html(totalPrice);
+    $('.day-price').html(totalPrice);
 });
 
 $(document).ready 
