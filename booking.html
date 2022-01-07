@@ -6,44 +6,36 @@ studio:
     items:
     - item: Half Day
       accessory: Water, Coffee, Tea
-      price/day: 10
-      price_day: 
+      price_day: 10
     - item: Full Day
       accessory: Water, Coffee, Tea
-      price/day: 15
-      price_day: 
+      price_day: 15
   - title: Space / Espaço
     items:
     - item: Half Day (5h)
       accessory: 'Access to Infinity wall, Black box, makeup and dressing rooms '
-      price/day: 200
-      price_day: 
+      price_day: 200
     - item: Full Day (10h)
       accessory: 'Access to Infinity wall, Black box, makeup and dressing rooms '
-      price/day: 300
-      price_day: 
+      price_day: 300
 gear:
   category:
   - title: OPTICS / OBJETIVAS
     items:
     - item: LEICA Summicron-C (PL) Kit 1
       accessory: 3 Lens Set
-      price/day: 250
-      price_day: 
+      price_day: 250
     - item: LEICA Summicron-C Full Set (PL)
       accessory: 18, 25, 35, 50, 75, 100
-      price/day: 400
-      price_day: 
+      price_day: 400
   - title: CAMERAS / CÂMARAS
     items:
     - item: RED KOMODO 6K KIT 2
       accessory: KIT 1 + DZO VESPID or XEEN Prime Lens Kit + Mattebox
-      price/day: 400
-      price_day: 
+      price_day: 400
     - item: RED KOMODO 6K KIT 1
       accessory: RED + Monitor + 1 vlock + 1 CFAST
-      price/day: 250
-      price_day: 
+      price_day: 250
 mobility:
   category: []
 crew:
@@ -77,7 +69,7 @@ crew:
         {% for items in category.items limit:1 %}
         <h6 class="item">{{items.item}}</h6>
         <h6 class="accessory">{{items.accessory}}</h6>
-        <h6 class="price">{{items.price/day}}</h6>
+        <h6 class="price">{{items.price_day}}</h6>
         {% endfor %}
       </div>
       <div class="products-row">
@@ -85,7 +77,7 @@ crew:
         {% for items in category.items offset:1 %}
         <h6 class="item">{{items.item}}</h6>
         <h6 class="accessory">{{items.accessory}}</h6>
-        <h6 class="price">{{items.price/day}}</h6>
+        <h6 class="price">{{items.price_day}}</h6>
         {% endfor %}
       </div>
       {% endfor %}
