@@ -229,6 +229,10 @@ a:hover { color: inherit; }
 
 .checkbox > input:checked { border: 1px solid #41B883; background-color: #34495E; }
 
+.item, .accessory, .price { font-weight: normal; }
+
+.bold { font-weight: bold; }
+
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
 
