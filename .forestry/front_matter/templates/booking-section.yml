@@ -23,7 +23,7 @@ fields:
       config:
         required: false
       label: Accessory
-    - name: price/day
+    - name: price_day
       type: number
       description: ''
       default: 0
