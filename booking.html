@@ -58,11 +58,13 @@ crew:
     <div class="products">
       <h3>GEAR</h3>
       <div class="products-row">
-        <h6>CATEGORY</h6>
-        <h6>ITEM</h6>
-        <h6>ACCESSORY</h6>
-        <h6>€/DAY</h6>
+        <h6 class="category">CATEGORY</h6>
+        <h6 class="item">ITEM</h6>
+        <h6 class="accessory">ACCESSORY</h6>
+        <h6 class="price">€/DAY</h6>
+        <i class="ri-checkbox-fill"></i>
       </div>
+      <div class="underline"></div>
       {% for category in page.gear.category %}
       <div class="products-row">
         <h6 class="category">{{category.title}}</h6>
@@ -70,6 +72,7 @@ crew:
         <h6 class="item">{{items.item}}</h6>
         <h6 class="accessory">{{items.accessory}}</h6>
         <h6 class="price">{{items.price_day}}</h6>
+        <input type="checkbox" class="checkbox" id="{{ items.item }}" name="gear[]" value="{{items.item}}" data-price="{{items.price_day}}">
         {% endfor %}
       </div>
       <div class="products-row">
@@ -78,26 +81,34 @@ crew:
         <h6 class="item">{{items.item}}</h6>
         <h6 class="accessory">{{items.accessory}}</h6>
         <h6 class="price">{{items.price_day}}</h6>
+        <input type="checkbox" class="checkbox" id="{{ items.item }}" name="gear[]" value="{{items.item}}" data-price="{{items.price_day}}">
         {% endfor %}
       </div>
       {% endfor %}
 
 
-
-          <input type="checkbox" class="checkbox" id="{{ i.item }}" name="cameras[]" value="{{i.item}}" data-price="{{i.price_day}}">
-          <label for="{{ i.item }}">{{ i.item }}</label>
-      {% for i in page.cameras offset:1 %}
-      <input type="checkbox" class="checkbox" id="{{ i.item }}" name="cameras[]" value="{{i.item}}" data-price="{{i.price_day}}">
-      {% endfor %}
-
-    
-
-
       <h3>STUDIO</h3>
-      {% for i in page.studio %}
-          <input type="checkbox" class="checkbox" id="{{ i.item }}" name="studio[]" value="{{i.item}}" data-price="{{i.price_day}}">
-          <label for="{{ i.item }}">{{ i.item }}</label>
+      {% for category in page.studio.category %}
+      <div class="products-row">
+        <h6 class="category">{{category.title}}</h6>
+        {% for items in category.items limit:1 %}
+        <h6 class="item">{{items.item}}</h6>
+        <h6 class="accessory">{{items.accessory}}</h6>
+        <h6 class="price">{{items.price_day}}</h6>
+        <input type="checkbox" class="checkbox" id="{{ items.item }}" name="gear[]" value="{{items.item}}" data-price="{{items.price_day}}">
+        {% endfor %}
+      </div>
+      <div class="products-row">
+        <h6 class="category"></h6>
+        {% for items in category.items offset:1 %}
+        <h6 class="item">{{items.item}}</h6>
+        <h6 class="accessory">{{items.accessory}}</h6>
+        <h6 class="price">{{items.price_day}}</h6>
+        <input type="checkbox" class="checkbox" id="{{ items.item }}" name="gear[]" value="{{items.item}}" data-price="{{items.price_day}}">
+        {% endfor %}
+      </div>
       {% endfor %}
+
       <h3>MOBILITY</h3>
       <h3>CREW</h3>
     </div>
