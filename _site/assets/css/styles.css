@@ -171,6 +171,8 @@ a:hover { color: inherit; }
 
 .photo-carousel .flickity-prev-next-button { height: 100% !important; width: 40vw; background: transparent !important; border-radius: 0 !important; }
 
+.carousel-nav .flickity-prev-next-button { background: transparent !important; }
+
 .photo-carousel .flickity-prev-next-button.previous:hover { cursor: url("../img/arrow-left-line.svg"), auto; }
 
 .photo-carousel .flickity-prev-next-button.next:hover { cursor: url("../img/arrow-right-line.svg"), auto; }
@@ -213,7 +215,7 @@ a:hover { color: inherit; }
 
 .video-embed { width: 75%; align-items: center; margin: 5vh auto 9vh auto; }
 
-@media screen and (max-width: 600px) { .photo-carousel .carousel-cell img { max-width: 85%; max-height: 90%; } .photo-carousel .carousel-cell { height: 50vh; margin-top: 10vh; } .flickity-prev-next-button { width: 20vw !important; } .carousel-img { max-width: 82%; } .content-flex { flex-direction: column; justify-content: flex-start; margin-top: 16% !important; } .content-flex div { margin-bottom: 5vh; } .credits { max-width: 100%; } .about-intro { width: 100%; } .video-embed, .stills-container { width: 85%; } .mobile-container { display: flex; flex-direction: column; justify-content: center; height: 80vh; } .video-embed { margin: 5vh auto 0 auto; } html, body { overflow-x: hidden; } body { position: relative; } .carousel-nav .flickity-viewport { left: 10px; } }
+@media screen and (max-width: 600px) { .photo-carousel .carousel-cell img { max-width: 85%; max-height: 90%; } .photo-carousel .carousel-cell { height: 50vh; margin-top: 10vh; } .flickity-prev-next-button { width: 20vw !important; } .carousel-img { max-width: 82%; } .content-flex { flex-direction: column; justify-content: flex-start; margin-top: 16% !important; } .content-flex div { margin-bottom: 5vh; } .credits { max-width: 100%; } .about-intro { width: 100%; } .video-embed, .stills-container { width: 85%; } .mobile-container { display: flex; flex-direction: column; justify-content: center; height: 80vh; } .video-embed { margin: 5vh auto 0 auto; } html, body { overflow-x: hidden; overflow-y: scroll; } body { position: relative; } .carousel-nav .flickity-viewport { left: 10px; } }
 
 .booking-content { margin: 15px; }
 
