@@ -16,6 +16,12 @@ layout: white-clean
     {% endfor %}
 </div>
 
+<div class="carousel-nav" data-flickity='{ "asNavFor": ".photo-carousel", "contain": true, "pageDots": false }'>
+    {% for item in page.stills %}
+        <div class="carousel-cell"><img src="{{ site.baseurl }}/{{ item }}"/></div>
+    {% endfor %}
+</div>
+
 {% if page.description != '' or page.credits != '' %}
 <div class="about-container about-container-white ">
     <div class="content-flex project-container">
@@ -42,5 +48,12 @@ $('.photo-carousel').flickity({
     pageDots: false,
     wrapAround: true,
     prevNextButtons: true,
+});
+
+$('.carousel-nav').flickity({
+  asNavFor: '.photo-carousel',
+  contain: true,
+  pageDots: false,
+  draggable: false
 });
 </script>

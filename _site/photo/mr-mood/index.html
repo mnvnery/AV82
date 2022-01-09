@@ -56,6 +56,30 @@
     
 </div>
 
+<div class="carousel-nav" data-flickity='{ "asNavFor": ".photo-carousel", "contain": true, "pageDots": false }'>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-1.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-10.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-2.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-3.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-4.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-5.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-6.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-7.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-8.webp"/></div>
+    
+        <div class="carousel-cell"><img src="/AV82//assets/img/fashion/mr-mood-2019-9.webp"/></div>
+    
+</div>
+
 
 <h2 class="photo-title title-alone">Mr Mood</h2>
 
@@ -70,6 +94,13 @@ $('.photo-carousel').flickity({
     pageDots: false,
     wrapAround: true,
     prevNextButtons: true,
+});
+
+$('.carousel-nav').flickity({
+  asNavFor: '.photo-carousel',
+  contain: true,
+  pageDots: false,
+  draggable: false
 });
 </script>
     </body>
