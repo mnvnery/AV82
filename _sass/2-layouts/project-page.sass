@@ -36,17 +36,13 @@
         height: 100%
         object-fit: cover
 
-.carousel-nav
-    .flickity-viewport
-        left: 20px
-
 .flickity-button-icon
     display: none
 
 .photo-carousel 
     .flickity-prev-next-button
         height: 100% !important
-        width: 40vw !important
+        width: 40vw 
         background: transparent !important
         border-radius: 0 !important
 
@@ -162,7 +158,7 @@
             margin-top: 10vh
 
     .flickity-prev-next-button
-        width: 44px !important
+        width: 20vw !important
         
     .carousel-img
         max-width: 82%
@@ -192,5 +188,15 @@
 
     .video-embed
         margin: 5vh auto 0 auto
+
+    html, body 
+        overflow-x: hidden
+
+    body 
+        position: relative
+
+    .carousel-nav
+        .flickity-viewport
+            left: 10px
 
 
