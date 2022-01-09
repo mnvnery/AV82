@@ -11,28 +11,29 @@ layout: black-clean
     </div>
 </a>
 
-<div class="video-embed">{{ page.video_embed }}</div>
-{% assign stills = page.stills %}
-<div class="stills-container {% if stills.size == 3 %}three{% endif %}">
-    {% for image in page.stills %}
-    <div class="still-item">
-        <img src="{{ site.baseurl }}/{{ image }}" alt="project-still">
-    </div>
-    {% endfor %}
-</div>
-
-{% if page.synopsis != '' or page.credits != '' %}
-<div class="about-container">
-    <div class="content-flex project-container">
-        <div class="about-address credits">
-        {{ page.credits }}
+<div class="mobile-container">
+    <div class="video-embed">{{ page.video_embed }}</div>
+    {% assign stills = page.stills %}
+    <div class="stills-container {% if stills.size == 3 %}three{% endif %}">
+        {% for image in page.stills %}
+        <div class="still-item">
+            <img src="{{ site.baseurl }}/{{ image }}" alt="project-still">
         </div>
-        {% if page.synopsis %}
-        <div class="about-intro project-description">{{ page.synopsis }}</div>
-        {% endif %}
+        {% endfor %}
+    </div>
+
+    {% if page.synopsis != '' or page.credits != '' %}
+    <div class="about-container">
+        <div class="content-flex project-container">
+            <div class="about-address credits">
+            {{ page.credits }}
+            </div>
+            {% if page.synopsis %}
+            <div class="about-intro project-description">{{ page.synopsis }}</div>
+            {% endif %}
+        </div>
     </div>
 </div>
-
 
 <h2 class="about-btn photo-title"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span> {{page.title}}</h2>
 <h2 class="more-info">MORE INFO</h2>
