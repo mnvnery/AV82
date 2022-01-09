@@ -199,7 +199,7 @@ a:hover { color: inherit; }
 
 .player .vp-controls { bottom: 20vh !important; }
 
-.stills-container { display: grid; grid-template-columns: 1fr 1fr; padding: 0 10px; grid-gap: 10px; grid-auto-flow: dense; margin: 10px 0; }
+.stills-container { display: grid; grid-template-columns: 1fr 1fr; padding: 0 10px; grid-gap: 10px; grid-auto-flow: dense; margin: 10px auto; width: 75%; }
 
 .three { grid-template-columns: 1fr 1fr 1fr; }
 
@@ -215,7 +215,7 @@ a:hover { color: inherit; }
 
 .video-embed { width: 75%; align-items: center; margin: 5vh auto 9vh auto; }
 
-@media screen and (max-width: 600px) { .photo-carousel .carousel-cell img { max-width: 85%; max-height: 90%; } .photo-carousel .carousel-cell { height: 50vh; margin-top: 10vh; } .flickity-prev-next-button { width: 44px !important; } .carousel-img { max-width: 82%; } .content-flex { flex-direction: column; justify-content: flex-start; margin-top: 16% !important; } .content-flex div { margin-bottom: 5vh; } .credits { max-width: 100%; } .about-intro { width: 100%; } }
+@media screen and (max-width: 600px) { .photo-carousel .carousel-cell img { max-width: 85%; max-height: 90%; } .photo-carousel .carousel-cell { height: 50vh; margin-top: 10vh; } .flickity-prev-next-button { width: 44px !important; } .carousel-img { max-width: 82%; } .content-flex { flex-direction: column; justify-content: flex-start; margin-top: 16% !important; } .content-flex div { margin-bottom: 5vh; } .credits { max-width: 100%; } .about-intro { width: 100%; } .video-embed, .stills-container { width: 85%; } .mobile-container { display: flex; flex-direction: column; justify-content: center; height: 80vh; } .video-embed { margin: 5vh auto 0 auto; } }
 
 .booking-content { margin: 15px; }
 
