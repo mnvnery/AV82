@@ -12,6 +12,8 @@ a { color: inherit; text-decoration: none; }
 
 a:hover { color: inherit; }
 
+.mailto:hover { text-decoration: underline; }
+
 .navbar-container { height: 100vh; background-color: black; width: 100%; color: white; display: none; z-index: 2; position: fixed; }
 
 .navbar-open { display: block; }
@@ -45,7 +47,7 @@ a:hover { color: inherit; }
 
 .content-flex div { font-size: 1.25em; letter-spacing: 1px; }
 
-.about-intro { width: 50%; }
+.about-intro { width: 46vw; padding-right: 3vw; }
 
 .about-btn { position: fixed; bottom: 0; z-index: 1; padding-left: 15px; transition: 0.5s; margin-bottom: 1vh; cursor: pointer; }
 

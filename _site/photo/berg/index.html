@@ -44,18 +44,6 @@
     
 </div>
 
-<div class="carousel-nav" data-flickity='{ "asNavFor": ".photo-carousel", "contain": true, "pageDots": false }'>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/berg-2018-1.webp"/></div>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/berg-2018-2.webp"/></div>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/berg-2018-3.webp"/></div>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/commercial/berg-2018-4.webp"/></div>
-    
-</div>
-
 
 <h2 class="photo-title title-alone">Berg</h2>
 
@@ -67,17 +55,11 @@ $('.photo-carousel').flickity({
     // options
     cellAlign: 'center',
     contain: true,
-    pageDots: false,
+    pageDots: true,
     wrapAround: true,
     prevNextButtons: true,
 });
 
-$('.carousel-nav').flickity({
-  asNavFor: '.photo-carousel',
-  contain: true,
-  pageDots: false,
-  draggable: false
-});
 </script>
     </body>
 </html>
