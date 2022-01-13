@@ -46,20 +46,6 @@
     
 </div>
 
-<div class="carousel-nav" data-flickity='{ "asNavFor": ".photo-carousel", "contain": true, "pageDots": false }'>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/Portraits/tiago-nacarato-2020-1.webp"/></div>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/Portraits/tiago-nacarato-2020-2.webp"/></div>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/Portraits/tiago-nacarato-2020-3.webp"/></div>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/Portraits/tiago-nacarato-2020-4.webp"/></div>
-    
-        <div class="carousel-cell"><img src="/AV82//assets/img/Portraits/tiago-nacarato-2020-5.webp"/></div>
-    
-</div>
-
 
 <div class="about-container about-container-white ">
     <div class="content-flex project-container">
@@ -81,17 +67,11 @@ $('.photo-carousel').flickity({
     // options
     cellAlign: 'center',
     contain: true,
-    pageDots: false,
+    pageDots: true,
     wrapAround: true,
     prevNextButtons: true,
 });
 
-$('.carousel-nav').flickity({
-  asNavFor: '.photo-carousel',
-  contain: true,
-  pageDots: false,
-  draggable: false
-});
 </script>
     </body>
 </html>
