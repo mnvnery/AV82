@@ -33,6 +33,17 @@ fields:
         max: 
         step: 
       label: Price/Day
+    - name: product_suggestions
+      type: list
+      config:
+        use_select: true
+        min: 
+        max: 
+        source:
+          type: pages
+          section: booking-b2e06a71-2272-43c8-a76b-bac5a1fc0f8b
+          file: booking.html
+      label: Product Suggestions
     config:
       min: 
       max: 
