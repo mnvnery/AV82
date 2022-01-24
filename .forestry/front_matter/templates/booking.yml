@@ -18,7 +18,7 @@ fields:
       max: 
     label: Role
   label: Crew
-- name: gear
+- name: video
   type: field_group
   config: {}
   fields:
@@ -27,7 +27,7 @@ fields:
     config: {}
     template: booking-section
     label: Categories
-  label: Gear
+  label: Video
 - name: studio
   type: field_group
   config: {}
