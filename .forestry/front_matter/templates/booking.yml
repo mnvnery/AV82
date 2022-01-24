@@ -18,19 +18,6 @@ fields:
       max: 
     label: Role
   label: Crew
-- name: photography
-  type: field_group_list
-  fields:
-  - name: categories
-    type: include
-    config: {}
-    template: booking-section
-    label: Categories
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Photography
 - name: video
   type: field_group
   config: {}
