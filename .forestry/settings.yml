@@ -9,7 +9,7 @@ sections:
   label: Products
   create: all
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
 - type: heading
   label: Projects
 - type: directory
