@@ -56,3 +56,13 @@ fields:
   type: tag_list
   default: []
   label: Category
+- name: recommended
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: products
+  label: Recommended
