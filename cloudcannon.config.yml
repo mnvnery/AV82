@@ -1,0 +1,5 @@
+collections_config:
+  products:
+    add_options:
+      - name: Add New Product
+        href: "cloudcannon:explore/_products/.html🆕"
