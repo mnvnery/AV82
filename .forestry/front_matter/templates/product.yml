@@ -8,6 +8,7 @@ fields:
     required: false
   label: layout
   default: project
+  hidden: true
 - name: name
   type: text
   config:
