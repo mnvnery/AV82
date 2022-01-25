@@ -149,13 +149,31 @@ a:hover { color: inherit; }
 
 @media screen and (max-width: 600px) { .photo-grid { grid-template-columns: 1fr 1fr; } .logo-img { display: none; } .logo-mobile-img { display: block; width: 15vw; } .hamburger { padding: 20px 15px; } }
 
-.rental-nav { padding: 15px; padding-top: 20px; }
+.rental-nav { padding: 15px; padding-top: 20px; position: fixed; }
 
 .rental-nav h2 { margin-bottom: 2vh; margin-top: 1vh; opacity: 0.3; }
 
 .rental-nav h2:hover { opacity: 1; }
 
 .active { opacity: 1 !important; }
+
+.text-left { float: right; padding-top: 20px; margin-top: 1vh; margin-right: 20px; }
+
+.layout { width: 20vw; margin-top: 20px; }
+
+.images-right { float: right; max-width: 60%; padding-top: 20px; margin-top: 1vh; display: flex; overflow: hidden; position: -webkit-sticky; position: sticky; top: 40px; }
+
+.images-right img { width: 100%; height: 83vh; object-fit: cover; }
+
+.layout-flex { display: flex; justify-content: space-between; border-top: solid 1px black; }
+
+.layout-flex p { margin: 0.5em 0; }
+
+ul { padding: 0; }
+
+li { list-style-type: none; }
+
+.category { min-height: 83vh; }
 
 .photo-carousel .carousel-cell { width: 100%; height: 80vh; margin-right: 10px; display: flex; justify-content: center; align-items: center; }
 
