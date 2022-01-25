@@ -52,3 +52,7 @@ fields:
     min: 
     max: 
     step: 
+- name: category
+  type: tag_list
+  default: []
+  label: Category
