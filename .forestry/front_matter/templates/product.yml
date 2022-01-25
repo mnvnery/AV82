@@ -53,14 +53,15 @@ fields:
     max: 
     step: 
 - name: category
-  type: select
-  default: ''
+  type: list
   config:
-    required: false
-    options: []
+    use_select: true
+    min: 
+    max: 
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+    options:
+    - 'Cameras '
+    - Lenses
+    - Extras
   label: Category
