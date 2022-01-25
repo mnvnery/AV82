@@ -19,6 +19,8 @@ collections:
     output: true
   film:
     output: true
+  products:
+    output: true
 
 # exclude:
 #   - .sass-cache/
