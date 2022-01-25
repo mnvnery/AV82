@@ -22,11 +22,6 @@ collections:
   products:
     output: true
     
-collections_config:
-  products:
-    add_options:
-      - name: Add Product
-        href: "cloudcannon:explore/_products/.html🆕"
 
 collections_config:
   products:
