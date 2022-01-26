@@ -53,10 +53,6 @@ fields:
     min: 
     max: 
     step: 
-- name: category
-  type: tag_list
-  default: []
-  label: Category
 - name: recommended
   type: list
   config:
@@ -67,15 +63,3 @@ fields:
       type: pages
       section: products
   label: Recommended
-- name: subcategories
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: documents
-      section: booking-b2e06a71-2272-43c8-a76b-bac5a1fc0f8b
-      file: booking.html
-      path: subcategories
-  label: subcategories
