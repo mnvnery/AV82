@@ -5,3 +5,12 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
+- name: film_categories
+  type: tag_list
+  default: []
+  label: Film Dropdown Categories
+- name: photo_categories
+  type: tag_list
+  default: []
+  label: Photo Dropdown Categories
