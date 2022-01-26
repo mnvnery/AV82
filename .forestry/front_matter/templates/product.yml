@@ -33,6 +33,7 @@ fields:
     - Film
     - Studio
     - Crew
+    - Mobility
     source:
       type: simple
       section: 
