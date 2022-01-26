@@ -19,7 +19,7 @@ layout: rental
     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">CREW</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">FILM</button>
+    <button class="nav-link" id="pills-film-tab" data-bs-toggle="pill" data-bs-target="#pills-film" type="button" role="tab" aria-controls="pills-film" aria-selected="false">FILM</button>
   </li>
   <li class="nav-item dropdown" role="presentation">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">PHOTOGRAPHY</a>
@@ -34,20 +34,32 @@ layout: rental
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">    </div>
 
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">  </div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">3</div>
+  <div class="tab-pane fade" id="pills-film" role="tabpanel" aria-labelledby="pills-film-tab">
+    <div class="products">
+      {% for product in filmProducts %}
+        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+        <div class="product-title small-label">{{ product.title }}</div>
+        <div class="d-flex justify-content-between mt-2">
+          <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+          <div class="addToCart small-label me-2" data-item="{{ product.title }}">ADD TO CART</div>
+        </div>  
+      {% endfor %}
+    </div>
+  </div>
 
   <div class="tab-pane fade" id="pills-cameras" role="tabpanel" aria-labelledby="pills-cameras-tab">
-      <div class="film-products-container products">
-        {% for product in filmProducts %}
-          <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img"></div>
-          <div class="product-title small-label">{{ product.title }}</div>
-          <div class="d-flex justify-content-between mt-2">
-            <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-            <div class="addToCart small-label me-2" data-item="{{ product.title }}">ADD TO CART</div>
-          </div>  
-        {% endfor %}
-      </div>
+    <div class="products">
+      {% for product in photoProducts %}
+        <div><img src="{{site.baseurl}}{{ product.images[0]}}" alt="{{ product.title }}" class="product-img"></div>
+        <div class="product-title small-label">{{ product.title }}</div>
+        <div class="d-flex justify-content-between mt-2">
+          <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+          <div class="addToCart small-label me-2" data-item="{{ product.title }}">ADD TO CART</div>
+        </div>  
+      {% endfor %}
+    </div>
   </div>
+
   <div class="tab-pane fade" id="pills-lenses" role="tabpanel" aria-labelledby="pills-lenses-tab">5</div>
   <div class="tab-pane fade" id="pills-lighting" role="tabpanel" aria-labelledby="pills-lighting-tab">6</div>
 </div> 
@@ -66,6 +78,22 @@ data-netlify="true" class="booking-form">
     <button type="submit">Submit</button>
   </div>
 </form>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div>Hello</div>
+    </div>
+  </div>
+</div>
+
+
 
 </main>
 

@@ -257,7 +257,7 @@ li { list-style-type: none; }
 
 .dropdown-item.nav-link.active { opacity: 1; }
 
-.product-img { width: 17em; height: 12em; object-fit: cover; }
+.product-img { width: 17em; height: 12em; object-fit: cover; background-color: black; }
 
 .products { width: 17em; }
 
