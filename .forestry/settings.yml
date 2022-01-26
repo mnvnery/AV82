@@ -33,12 +33,6 @@ sections:
 - type: heading
   label: Pages
 - type: document
-  path: booking.html
-  label: 'Booking '
-- type: document
-  path: index.html
-  label: Home
-- type: document
   path: film.html
   label: Film Page
 - type: document

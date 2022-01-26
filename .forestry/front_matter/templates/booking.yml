@@ -52,5 +52,3 @@ fields:
   type: tag_list
   default: []
   label: Subcategories
-pages:
-- booking.html
