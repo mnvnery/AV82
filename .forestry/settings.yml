@@ -56,7 +56,6 @@ sections:
 - type: document
   path: _data/about.yml
   label: About
-  match: "**/*"
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
