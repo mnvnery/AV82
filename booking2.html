@@ -50,10 +50,11 @@ layout: rental
   </div>
   <div class="tab-pane fade" id="pills-lenses" role="tabpanel" aria-labelledby="pills-lenses-tab">5</div>
   <div class="tab-pane fade" id="pills-lighting" role="tabpanel" aria-labelledby="pills-lighting-tab">6</div>
-</div>
+</div> 
 
 
-<form action="https://getform.io/f/e46584e3-2177-4d02-a8ee-514e999190e2" method="POST" class="booking-form">
+<form name="orders" method="POST" netlify-honeypot="bot-field"
+data-netlify="true" class="booking-form">
   <div class="submission">
     <span>Price per day:</span><span class="day-price"> 0</span><br>
     <span>Total Price:</span><span class="total-price"> 0</span><br>
