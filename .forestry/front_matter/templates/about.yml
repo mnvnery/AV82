@@ -25,3 +25,5 @@ fields:
   config:
     required: false
   label: Email
+pages:
+- _data/about.yml
