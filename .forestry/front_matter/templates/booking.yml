@@ -48,5 +48,9 @@ fields:
     template: booking-section
     label: Categories
   label: Mobility
+- name: subcategories
+  type: tag_list
+  default: []
+  label: Subcategories
 pages:
 - booking.html
