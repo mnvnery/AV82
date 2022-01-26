@@ -1,0 +1,29 @@
+---
+label: About
+hide_body: true
+fields:
+- name: about
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: About
+- name: address
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Address
+- name: email
+  type: text
+  config:
+    required: false
+  label: Email
+pages:
+- _data/about.yml
