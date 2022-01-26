@@ -7,7 +7,7 @@ fields:
   config:
     required: false
   label: layout
-  default: project
+  default: white
   hidden: true
 - name: title
   type: text
@@ -23,7 +23,7 @@ fields:
     schema:
       format: html-blocks
   label: Description
-- name: type
+- name: category
   type: select
   default: []
   config:
@@ -38,7 +38,7 @@ fields:
       section: 
       file: 
       path: 
-  label: Type
+  label: Category
 - name: images
   type: image_gallery
   config: {}
