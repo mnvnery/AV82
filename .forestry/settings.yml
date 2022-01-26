@@ -15,7 +15,6 @@ sections:
 - type: document
   path: booking2.html
   label: Product Categories
-  match: "**/*"
 - type: heading
   label: Projects
 - type: directory
