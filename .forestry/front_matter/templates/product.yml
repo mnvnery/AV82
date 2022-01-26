@@ -77,7 +77,7 @@ fields:
       type: documents
       section: booking-b2e06a71-2272-43c8-a76b-bac5a1fc0f8b
       file: booking.html
-      path: studio
+      path: subcategories
   label: subcategories
 pages:
 - _products/black-magic-pocket-cinema-camera-6k-pro.html
