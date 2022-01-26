@@ -1,0 +1,83 @@
+---
+label: Product Photography
+hide_body: true
+fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: project
+  hidden: true
+- name: title
+  type: text
+  config:
+    required: false
+  label: Name
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Description
+- name: type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Photography
+    - Film
+    - Studio
+    - Crew
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Type
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+- name: price_day
+  type: number
+  label: Price/day
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: category
+  type: tag_list
+  default: []
+  label: Category
+- name: recommended
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: products
+  label: Recommended
+- name: subcategories
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: booking-b2e06a71-2272-43c8-a76b-bac5a1fc0f8b
+      file: booking.html
+      path: subcategories
+  label: subcategories
+pages:
+- _products/Photography/canon-17-40mm-l-usm-f-4.html
