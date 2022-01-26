@@ -25,7 +25,7 @@ fields:
   label: Description
 - name: type
   type: select
-  default: []
+  default: Photography
   config:
     required: false
     options:
@@ -39,6 +39,18 @@ fields:
       file: 
       path: 
   label: Type
+- name: category
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: booking-b2e06a71-2272-43c8-a76b-bac5a1fc0f8b
+      file: booking.html
+      path: subcategories
+  label: Category
 - name: images
   type: image_gallery
   config: {}
@@ -53,10 +65,6 @@ fields:
     min: 
     max: 
     step: 
-- name: category
-  type: tag_list
-  default: []
-  label: Category
 - name: recommended
   type: list
   config:
@@ -67,17 +75,5 @@ fields:
       type: pages
       section: products
   label: Recommended
-- name: subcategories
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: documents
-      section: booking-b2e06a71-2272-43c8-a76b-bac5a1fc0f8b
-      file: booking.html
-      path: subcategories
-  label: subcategories
 pages:
 - _products/Photography/canon-17-40mm-l-usm-f-4.html
