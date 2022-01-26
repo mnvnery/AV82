@@ -23,7 +23,7 @@ fields:
     schema:
       format: html-blocks
   label: Description
-- name: type
+- name: category
   type: select
   default: []
   config:
@@ -38,8 +38,8 @@ fields:
       section: 
       file: 
       path: 
-  label: Type
-- name: category
+  label: Category
+- name: subcategory
   type: select
   default: []
   config:
@@ -50,7 +50,7 @@ fields:
       section: product-categories
       file: booking2.html
       path: film_categories
-  label: Category
+  label: Sub-Category
 - name: images
   type: image_gallery
   config: {}
