@@ -63,3 +63,5 @@ fields:
       type: pages
       section: products
   label: Recommended
+pages:
+- _products/Crew/gaffer-chefe-eletricista.html
