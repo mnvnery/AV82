@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
+- type: heading
+  label: Rental Products
 - type: directory
   path: _products
   label: Products
@@ -27,6 +29,9 @@ sections:
   new_doc_ext: html
   templates:
   - film
+- type: document
+  path: film.html
+  label: Film Project Order
 - type: directory
   path: _photo
   label: Photo
@@ -35,14 +40,11 @@ sections:
   new_doc_ext: html
   templates:
   - photo
-- type: heading
-  label: Pages
-- type: document
-  path: film.html
-  label: Film Page
 - type: document
   path: photo.html
-  label: Photo Page
+  label: Photo Project Order
+- type: heading
+  label: Pages
 - type: document
   path: rental.html
   label: Rental
@@ -51,6 +53,10 @@ sections:
 - type: document
   path: _layouts/black.html
   label: Menu
+- type: document
+  path: _data/about.yml
+  label: About
+  match: "**/*"
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
