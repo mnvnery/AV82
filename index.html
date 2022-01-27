@@ -1,0 +1,70 @@
+---
+layout: black
+---
+<video class="showreel" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}/assets/img/showreel.mp4" type="video/mp4"></video>
+<i id="index-arrow" class="ri-arrow-down-line index-arrow"></i>
+<div class="line-flex">
+    <div class="logo-line"></div>
+</div>
+
+<div class="square-flex">
+    <div class="logo-square"></div>
+</div>
+
+<div class="index-navbar-container">
+    <div class="img-containers">
+        <div class="left-img-container">
+            <img src="{{ site.baseurl }}/assets/img/rental.webp" alt="" class="navbar-img left-img">
+        </div>
+        <div class="right-img-container">
+            <img src="{{ site.baseurl }}/assets/img/production.webp" alt="" class="navbar-img right-img">
+        </div>
+    </div>
+    <nav class="index-navbar">
+        <h1 class="rental-title"><a href="#">RENTAL</a></h1>
+        <h1 class="prod-title"><a href="{{site.baseurl}}/film">PRODUCTION</a></h1>
+    </nav>
+</div>
+
+<script>    
+$('#index-arrow').click(function() {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+});
+// init controller
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.matchMedia({
+    "(min-width: 600px)": function() {
+        gsap.to(".logo-line", {
+        height: '141vh',
+        scrollTrigger: {
+            end: "bottom 100%",
+            trigger: ".index-navbar-container",
+            scrub: true,
+        }
+        })
+    },
+    "(max-width: 600px)": function() {
+        gsap.to(".logo-line", {
+        height: '70vh',
+        scrollTrigger: {
+            end: "bottom 100%",
+            trigger: ".index-navbar-container",
+            scrub: true,
+        }
+        })
+    },
+}); 
+
+
+gsap.to(".logo-square", {
+    opacity: '0',
+    scrollTrigger: {
+        start: "top 50%",
+        end: "bottom 100%",
+        trigger: ".index-navbar-container",
+        scrub: true,
+    }
+})
+
+</script>
