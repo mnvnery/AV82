@@ -25,13 +25,10 @@ fields:
   label: Description
 - name: type
   type: select
-  default: Photography
+  default: Gear
   config:
     required: false
     options:
-    - Film
-    - Studio
-    - Mobility
     - Gear
     source:
       type: simple

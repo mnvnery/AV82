@@ -29,8 +29,6 @@ fields:
   config:
     required: false
     options:
-    - Photography
-    - Film
     - Studio
     - Crew
     - Mobility
