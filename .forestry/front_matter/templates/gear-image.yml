@@ -97,7 +97,7 @@ fields:
   type: tag_list
   default: []
   label: Selection
-  description: Se o produto tem várias opções, adicionar aqui
+  description: Se o produto tem várias opções, adicionar aqui.
 pages:
 - _products/Gear/2-5-stop-nd-filter.html
 - _products/Gear/4x5.65-filter-tray-holder.html

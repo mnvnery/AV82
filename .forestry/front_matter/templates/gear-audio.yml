@@ -95,4 +95,4 @@ fields:
   type: tag_list
   default: []
   label: Selection
-  description: Se o produto tem várias opções, adicionar aqui
+  description: Se o produto tem várias opções, adicionar aqui.
