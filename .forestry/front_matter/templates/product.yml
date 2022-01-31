@@ -23,7 +23,7 @@ fields:
     schema:
       format: html-blocks
   label: Description
-- name: category
+- name: Type
   type: select
   default: []
   config:
@@ -37,7 +37,7 @@ fields:
       section: 
       file: 
       path: 
-  label: Category
+  label: Type
 - name: images
   type: image_gallery
   config: {}

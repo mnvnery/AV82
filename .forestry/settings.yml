@@ -13,7 +13,6 @@ sections:
   match: "**/*"
   new_doc_ext: html
   templates:
-  - product-film
   - product-photography
   - product
 - type: document
