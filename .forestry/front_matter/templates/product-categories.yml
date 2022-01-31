@@ -15,16 +15,8 @@ fields:
       required: false
     label: Category
   - name: subcategories
-    type: select
+    type: tag_list
     default: []
-    config:
-      required: false
-      options: []
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
     label: Subcategories
   config:
     min: 

@@ -18,7 +18,7 @@ sections:
   - product
 - type: document
   path: booking2.html
-  label: Product Subcategories
+  label: Gear Categories
 - type: heading
   label: Projects
 - type: directory
