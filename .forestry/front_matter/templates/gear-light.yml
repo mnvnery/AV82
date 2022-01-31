@@ -23,11 +23,11 @@ fields:
   label: Name
 - name: category
   type: select
-  default: Audio
+  default: Light
   config:
     required: false
     options:
-    - Audio
+    - Light
     source:
       type: simple
       section: 
@@ -44,7 +44,7 @@ fields:
       type: documents
       section: product-categories
       file: booking2.html
-      path: audio_eng
+      path: light_eng
   label: Sub-Category
 - name: subcategoria
   type: select
@@ -56,7 +56,7 @@ fields:
       type: documents
       section: product-categories
       file: booking2.html
-      path: audio_pt
+      path: luz_pt
   label: Subcategoria
 - name: description
   type: textarea
