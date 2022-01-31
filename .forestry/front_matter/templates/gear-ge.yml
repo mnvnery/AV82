@@ -91,7 +91,13 @@ fields:
       type: pages
       section: products
   label: Recommended
+- name: selection
+  type: tag_list
+  default: []
+  label: Selection
+  description: Se o produto tem várias opções, adicionar aqui
 pages:
+- _products/Gear/baby-receiver-elbow.html
 - _products/Gear/baby-stand.html
 - _products/Gear/c-stand.html
 - _products/Gear/condor-baby-stand.html
