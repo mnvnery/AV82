@@ -23,6 +23,16 @@ fields:
     schema:
       format: html-blocks
   label: Description
+- name: descricao
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Descrição
+  description: Em PT
 - name: Type
   type: select
   default: []
