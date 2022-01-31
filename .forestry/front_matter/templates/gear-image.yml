@@ -45,7 +45,8 @@ fields:
       section: product-categories
       file: booking2.html
       path: imagem_eng
-  label: Sub-Category
+  label: Subcategory
+  description: Versão ENG
 - name: subcategoria
   type: select
   default: []
@@ -58,6 +59,7 @@ fields:
       file: booking2.html
       path: imagem_pt
   label: Subcategoria
+  description: Versão PT
 - name: description
   type: textarea
   default: ''
