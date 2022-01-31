@@ -97,6 +97,7 @@ fields:
   label: Selection
   description: Se o produto tem várias opções, adicionar aqui.
 pages:
+- _products/Gear/folding-recording-booth.html
 - _products/Gear/rode-link.html
 - _products/Gear/rode-ntg-4.html
 - _products/Gear/roland-r26-recorder.html
