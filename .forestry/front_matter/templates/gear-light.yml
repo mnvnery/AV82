@@ -91,3 +91,5 @@ fields:
       type: pages
       section: products
   label: Recommended
+pages:
+- _products/Gear/aputure-600d-pro.html
