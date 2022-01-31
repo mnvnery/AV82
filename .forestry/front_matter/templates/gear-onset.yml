@@ -1,0 +1,135 @@
+---
+label: Gear (On Set)
+hide_body: true
+fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: white
+  hidden: true
+- name: type
+  type: text
+  config:
+    required: false
+  default: Gear
+  label: Type
+  hidden: true
+- name: title
+  type: text
+  config:
+    required: false
+  label: Name
+- name: category
+  type: select
+  default: On Set
+  config:
+    required: false
+    options:
+    - On Set
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
+- name: subcategory
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: product-categories
+      file: booking2.html
+      path: on_set_eng
+  label: Sub-Category
+- name: subcategoria
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: product-categories
+      file: booking2.html
+      path: on_set_pt
+  label: Subcategoria
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Description
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+- name: price_day
+  type: number
+  label: Price/day
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: recommended
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: products
+  label: Recommended
+- name: selection
+  type: tag_list
+  default: []
+  label: Selection
+  description: Se o produto tem várias opções, adicionar aqui.
+pages:
+- _products/Gear/5in1-reflector-0.5x1m.html
+- _products/Gear/5in1-reflector-1x1.5m.html
+- _products/Gear/6-x6-frame.html
+- _products/Gear/Cineroid Flex800 RGBW (3 light set).html
+- _products/Gear/ambitful-al-16-projection-lens-bowens.html
+- _products/Gear/aputure-120d.html
+- _products/Gear/aputure-300d-300x.html
+- _products/Gear/aputure-300x.html
+- _products/Gear/aputure-600d-pro.html
+- _products/Gear/aputure-accent-b7c-8-lights-kit-led-rgb.html
+- _products/Gear/aputure-accent-b7c-bulb-led-rgb.html
+- _products/Gear/aputure-lantern.html
+- _products/Gear/aputure-light-dome-mk2.html
+- _products/Gear/aputure-ls-60d-eu.html
+- _products/Gear/aputure-ls-60x-eu.html
+- _products/Gear/aputure-mc-12-set.html
+- _products/Gear/aputure-nova-p300c-kit-eu.html
+- _products/Gear/aputure-nova-p300c-softbox.html
+- _products/Gear/aputure-space-light.html
+- _products/Gear/avenger-12-x12-modular-overhead-frame.html
+- _products/Gear/avenger-8-x8-modular-overhead-frame-1.html
+- _products/Gear/barn-doors-1.html
+- _products/Gear/barn-doors.html
+- _products/Gear/cineroid-flex400-3-light-set.html
+- _products/Gear/f10-lens.html
+- _products/Gear/falcon-eyes-flex-light-24tdx-ii.html
+- _products/Gear/falcon-eyes-flex-light-rx-18t.html
+- _products/Gear/falcon-eyes-flex-light-rx-24tdx.html
+- _products/Gear/fresnel-lens.html
+- _products/Gear/rosco-12-x12-black.html
+- _products/Gear/rosco-12-x12-cinebounce.html
+- _products/Gear/rosco-12-x12-silent-grid-cloth-3060.html
+- _products/Gear/rosco-8-x8-black.html
+- _products/Gear/rosco-8-x8-cinebounce.html
+- _products/Gear/rosco-8-x8-silent-grid-cloth-3060.html
+- _products/Gear/smallrig-pix-m160.html
