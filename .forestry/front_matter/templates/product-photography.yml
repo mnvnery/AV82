@@ -1,5 +1,5 @@
 ---
-label: Product (Photography)
+label: Product (Gear)
 hide_body: true
 fields:
 - name: layout
@@ -29,11 +29,22 @@ fields:
   config:
     required: false
     options:
-    - Photography
     - Film
     - Studio
-    - Crew
     - Mobility
+    - Gear
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Type
+- name: category
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
     source:
       type: simple
       section: 
