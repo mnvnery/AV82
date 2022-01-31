@@ -21,7 +21,6 @@ collections:
     output: true
   products:
     output: true
-    
 
 
 # exclude:
