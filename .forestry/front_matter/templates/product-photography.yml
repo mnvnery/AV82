@@ -23,25 +23,16 @@ fields:
     schema:
       format: html-blocks
   label: Description
-- name: type
+- name: category
   type: select
-  default: Gear
+  default: Audio
   config:
     required: false
     options:
-    - Gear
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Type
-- name: category
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
+    - Audio
+    - Image
+    - Light
+    - G&E
     source:
       type: simple
       section: 
@@ -58,8 +49,20 @@ fields:
       type: documents
       section: product-categories
       file: booking2.html
-      path: photo_categories
+      path: audio_eng
   label: Sub-Category
+- name: subcategoria
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: product-categories
+      file: booking2.html
+      path: audio_pt
+  label: Subcategoria
 - name: images
   type: image_gallery
   config: {}
