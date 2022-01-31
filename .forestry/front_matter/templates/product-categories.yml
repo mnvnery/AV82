@@ -6,33 +6,15 @@ fields:
   name: layout
   label: layout
   hidden: true
-- name: gear_categories
-  type: field_group_list
-  fields:
-  - name: category
-    type: text
-    config:
-      required: false
-    label: Category
-    description: Versão EN
-  - name: subcategories
-    type: tag_list
-    default: []
-    label: Subcategories
-  - name: categoria
-    type: text
-    config:
-      required: false
-    label: Categoria
-    description: Versão PT
-  - name: subcategorias
-    type: tag_list
-    default: []
-    label: Subcategorias
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Gear Categories
+- name: ge_pt
+  type: tag_list
+  default: []
+  label: G&E PT
+  description: Versao PT
+- name: ge_eng
+  type: tag_list
+  default: []
+  label: G&E ENG
+  description: Versão ENG
 pages:
 - booking2.html
