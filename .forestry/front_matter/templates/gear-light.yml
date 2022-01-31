@@ -97,6 +97,7 @@ fields:
   label: Selection
   description: Se o produto tem várias opções, adicionar aqui.
 pages:
+- _products/Gear/5in1-reflector-0.5x1m.html
 - _products/Gear/5in1-reflector-1x1.5m.html
 - _products/Gear/6-x6-frame.html
 - _products/Gear/Cineroid Flex800 RGBW (3 light set).html
