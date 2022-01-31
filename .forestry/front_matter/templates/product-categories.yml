@@ -46,5 +46,15 @@ fields:
   default: []
   label: G&E ENG
   description: Versão ENG
+- name: on_set
+  type: tag_list
+  default: []
+  label: ON SET PT
+  description: Versao PT
+- name: on_set_eng
+  type: tag_list
+  default: []
+  label: ON SET ENG
+  description: Versao ENG
 pages:
 - booking2.html
