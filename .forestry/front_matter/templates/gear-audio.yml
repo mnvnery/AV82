@@ -96,3 +96,5 @@ fields:
   default: []
   label: Selection
   description: Se o produto tem várias opções, adicionar aqui.
+pages:
+- _products/Gear/roland-r26-recorder.html
