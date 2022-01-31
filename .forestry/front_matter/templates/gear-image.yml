@@ -44,7 +44,7 @@ fields:
       type: documents
       section: product-categories
       file: booking2.html
-      path: image_eng
+      path: imagem_eng
   label: Sub-Category
 - name: subcategoria
   type: select

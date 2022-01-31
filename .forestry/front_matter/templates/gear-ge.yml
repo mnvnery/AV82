@@ -44,7 +44,7 @@ fields:
       type: documents
       section: product-categories
       file: booking2.html
-      path: audio_eng
+      path: ge_eng
   label: Sub-Category
 - name: subcategoria
   type: select
@@ -56,7 +56,7 @@ fields:
       type: documents
       section: product-categories
       file: booking2.html
-      path: audio_pt
+      path: ge_pt
   label: Subcategoria
 - name: description
   type: textarea
