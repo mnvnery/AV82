@@ -92,6 +92,7 @@ fields:
       section: products
   label: Recommended
 pages:
+- _products/Gear/aputure-300d-300x.html
 - _products/Gear/aputure-600d-pro.html
 - _products/Gear/aputure-nova-p300c-kit-eu.html
 - _products/Gear/aputure-nova-p300c-softbox.html
