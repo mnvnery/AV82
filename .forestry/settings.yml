@@ -13,6 +13,7 @@ sections:
   match: "**/*"
   new_doc_ext: html
   templates:
+  - gear-onset
   - gear-ge
   - gear-image
   - gear-light
