@@ -16,5 +16,15 @@ fields:
   default: []
   label: G&E ENG
   description: Versão ENG
+- name: imagem_pt
+  type: tag_list
+  default: []
+  label: IMAGEM
+  description: Versão PT
+- name: imagem_eng
+  type: tag_list
+  default: []
+  label: IMAGE
+  description: Versão ENG
 pages:
 - booking2.html
