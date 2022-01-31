@@ -6,16 +6,6 @@ fields:
   name: layout
   label: layout
   hidden: true
-- name: ge_pt
-  type: tag_list
-  default: []
-  label: G&E PT
-  description: Versao PT
-- name: ge_eng
-  type: tag_list
-  default: []
-  label: G&E ENG
-  description: Versão ENG
 - name: imagem_pt
   type: tag_list
   default: []
@@ -35,6 +25,26 @@ fields:
   type: tag_list
   default: []
   label: AUDIO
+  description: Versão ENG
+- name: luz_pt
+  type: tag_list
+  default: []
+  label: LUZ
+  description: Versão PT
+- name: light_eng
+  type: tag_list
+  default: []
+  label: LIGHT
+  description: Versão ENG
+- name: ge_pt
+  type: tag_list
+  default: []
+  label: G&E PT
+  description: Versao PT
+- name: ge_eng
+  type: tag_list
+  default: []
+  label: G&E ENG
   description: Versão ENG
 pages:
 - booking2.html
