@@ -26,5 +26,15 @@ fields:
   default: []
   label: IMAGE
   description: Versão ENG
+- name: audio_pt
+  type: tag_list
+  default: []
+  label: ÁUDIO
+  description: Versão PT
+- name: audio_eng
+  type: tag_list
+  default: []
+  label: AUDIO
+  description: Versão ENG
 pages:
 - booking2.html
