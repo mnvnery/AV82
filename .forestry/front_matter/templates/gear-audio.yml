@@ -91,3 +91,8 @@ fields:
       type: pages
       section: products
   label: Recommended
+- name: selection
+  type: tag_list
+  default: []
+  label: Selection
+  description: Se o produto tem várias opções, adicionar aqui
