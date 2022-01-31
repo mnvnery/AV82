@@ -72,11 +72,6 @@ fields:
       type: pages
       section: products
   label: Recommended
-- name: selection
-  type: tag_list
-  default: []
-  label: Selection
-  description: Se o produto tem várias opções, adicionar aqui.
 pages:
 - _products/Crew/gaffer-chefe-eletricista.html
 - _products/Mobility/renault-trafic-2018-h1l2-white.html
