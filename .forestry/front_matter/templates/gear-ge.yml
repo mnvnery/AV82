@@ -92,6 +92,7 @@ fields:
       section: products
   label: Recommended
 pages:
+- _products/Gear/baby-stand.html
 - _products/Gear/c-stand.html
 - _products/Gear/condor-baby-stand.html
 - _products/Gear/condor-photo-baby-stand.html
