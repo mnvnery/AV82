@@ -13,7 +13,10 @@ sections:
   match: "**/*"
   new_doc_ext: html
   templates:
-  - product-photography
+  - gear-ge
+  - gear-image
+  - gear-light
+  - gear-audio
   - product
 - type: document
   path: booking2.html
