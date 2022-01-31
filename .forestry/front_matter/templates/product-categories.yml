@@ -6,5 +6,30 @@ fields:
   name: layout
   label: layout
   hidden: true
+- name: gear_categories
+  type: field_group_list
+  fields:
+  - name: category
+    type: text
+    config:
+      required: false
+    label: Category
+  - name: subcategories
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Subcategories
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Gear Categories
 pages:
 - booking2.html
