@@ -32,6 +32,15 @@ fields:
     schema:
       format: html-blocks
   label: Synopsis
+- name: sinopse
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Sinopse
 - name: credits
   type: textarea
   default: ''
@@ -41,6 +50,15 @@ fields:
     schema:
       format: html-blocks
   label: Credits
+- name: creditos
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Créditos
 - name: video_embed
   type: textarea
   default: ''
@@ -80,15 +98,6 @@ fields:
   hidden: true
   label: layout
   default: film-project
-- name: creditos
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Créditos
 pages:
 - _film/2b.html
 - _film/agender-perks-fw17.html
