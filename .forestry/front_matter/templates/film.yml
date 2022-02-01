@@ -80,6 +80,15 @@ fields:
   hidden: true
   label: layout
   default: film-project
+- name: creditos
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Créditos
 pages:
 - _film/2b.html
 - _film/agender-perks-fw17.html
