@@ -20,7 +20,7 @@ sections:
   - gear-audio
   - product
 - type: document
-  path: booking2.html
+  path: booking.html
   label: Gear Categories
 - type: heading
   label: Projects
