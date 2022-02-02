@@ -49,8 +49,9 @@ sections:
 - type: heading
   label: Pages
 - type: document
-  path: rental.html
-  label: Rental
+  path: index.html
+  label: 'Home '
+  match: "**/*"
 - type: heading
   label: Recurring Elements
 - type: document
