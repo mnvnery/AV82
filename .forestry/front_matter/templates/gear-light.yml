@@ -2,20 +2,6 @@
 label: Gear (Light)
 hide_body: true
 fields:
-- name: layout
-  type: text
-  config:
-    required: false
-  label: layout
-  default: white
-  hidden: true
-- name: type
-  type: text
-  config:
-    required: false
-  default: Gear
-  label: Type
-  hidden: true
 - name: title
   type: text
   config:
@@ -106,6 +92,20 @@ fields:
   default: []
   label: Selection
   description: Se o produto tem várias opções, adicionar aqui.
+- name: type
+  type: text
+  config:
+    required: false
+  default: Gear
+  label: Type
+  hidden: true
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: white
+  hidden: true
 pages:
 - _products/Gear/aputure-accent-b7c-8-lights-kit-led-rgb-1.html
 - _products/Gear/aputure-accent-b7c-bulb-led-rgb-1.html

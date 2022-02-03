@@ -2,20 +2,6 @@
 label: Gear (Audio)
 hide_body: true
 fields:
-- name: layout
-  type: text
-  config:
-    required: false
-  label: layout
-  default: white
-  hidden: true
-- name: type
-  type: text
-  config:
-    required: false
-  default: Gear
-  label: Type
-  hidden: true
 - name: title
   type: text
   config:
@@ -106,6 +92,20 @@ fields:
   default: []
   label: Selection
   description: Se o produto tem várias opções, adicionar aqui.
+- name: type
+  type: text
+  config:
+    required: false
+  default: Gear
+  label: Type
+  hidden: true
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: white
+  hidden: true
 pages:
 - _products/Gear/folding-recording-booth.html
 - _products/Gear/rode-link.html

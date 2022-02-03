@@ -2,13 +2,6 @@
 label: Product (Studio/Mobility/Crew)
 hide_body: true
 fields:
-- name: layout
-  type: text
-  config:
-    required: false
-  label: layout
-  default: white
-  hidden: true
 - name: title
   type: text
   config:
@@ -77,6 +70,13 @@ fields:
   default: []
   label: Selection
   description: Se o produto tem várias opções, adicionar aqui.
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: white
+  hidden: true
 pages:
 - _products/Crew/gaffer-chefe-eletricista.html
 - _products/Mobility/renault-trafic-2018-h1l2-white.html
