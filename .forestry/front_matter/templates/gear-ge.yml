@@ -84,13 +84,13 @@ fields:
 - name: available_quantity
   type: number
   label: Available Quantity
-  default: 0
+  default: 1
   required: true
   config:
     min: 
     max: 
     step: 
-  description: 'Limite de items para adicionar ao carrinho '
+  description: 'Limite de items para adicionar ao carrinho'
 - name: recommended
   type: list
   config:
