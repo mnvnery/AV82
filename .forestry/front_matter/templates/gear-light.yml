@@ -107,6 +107,8 @@ fields:
   label: Selection
   description: Se o produto tem várias opções, adicionar aqui.
 pages:
+- _products/Gear/aputure-accent-b7c-8-lights-kit-led-rgb-1.html
+- _products/Gear/aputure-accent-b7c-bulb-led-rgb-1.html
 - _products/Gear/beauty-dish-50cm-bowens-mount.html
 - _products/Gear/diffusion-umbrella-2m.html
 - _products/Gear/godox-ad600bm.html
@@ -116,6 +118,7 @@ pages:
 - _products/Gear/octabox-150cm-bowens-mount.html
 - _products/Gear/rectangle-softbox-60x90cm-bowens-mount.html
 - _products/Gear/reflective-umbrella-2m.html
+- _products/Gear/smallrig-pix-m160.html
 - _products/Gear/square-softbox-120x90cm-bowens-mount.html
 - _products/Gear/strobe-rgb.html
 - _products/Gear/yn-e3-rt-strobe-trigger.html
