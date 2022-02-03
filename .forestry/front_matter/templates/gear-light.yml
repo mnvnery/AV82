@@ -107,6 +107,7 @@ fields:
   default: white
   hidden: true
 pages:
+- _products/Gear/5in1-reflector-0.5x1m.html
 - _products/Gear/aputure-accent-b7c-8-lights-kit-led-rgb-1.html
 - _products/Gear/aputure-accent-b7c-bulb-led-rgb-1.html
 - _products/Gear/beauty-dish-50cm-bowens-mount.html
