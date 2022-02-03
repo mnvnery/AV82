@@ -90,7 +90,7 @@ fields:
     min: 
     max: 
     step: 
-  description: 'Limite de items para adicionar ao carrinho'
+  description: Limite de items para adicionar ao carrinho
 - name: recommended
   type: list
   config:

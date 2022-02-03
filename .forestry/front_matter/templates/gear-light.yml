@@ -80,7 +80,7 @@ fields:
   config:
     min: 
     max: 
-    step:
+    step: 
 - name: available_quantity
   type: number
   label: Available Quantity
@@ -90,7 +90,7 @@ fields:
     min: 
     max: 
     step: 
-  description: 'Limite de items para adicionar ao carrinho' 
+  description: Limite de items para adicionar ao carrinho
 - name: recommended
   type: list
   config:
