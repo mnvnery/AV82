@@ -50,7 +50,7 @@ sections:
   label: Pages
 - type: document
   path: index.html
-  label: 'Home '
+  label: Home (Showreel)
 - type: heading
   label: Recurring Elements
 - type: document
