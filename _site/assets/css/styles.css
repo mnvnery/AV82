@@ -63,6 +63,12 @@ a:hover { color: inherit; }
 
 .qty-input { max-width: 2em; border: none; outline: none; border-bottom: 1px solid black; }
 
+.modal-img { width: 20em; height: 100%; object-fit: contain; }
+
+li p { margin-bottom: 0.5rem; }
+
+@media (min-width: 992px) { .modal-lg { max-width: 900px; } }
+
 .showreel { width: 100vw; z-index: -2; position: relative; height: 100vh; object-fit: cover; }
 
 .index-arrow { position: absolute; bottom: 2vh; left: 1vw; font-size: 1.5em; }
@@ -279,9 +285,13 @@ li { list-style-type: none; }
 
 .small-label { font-size: 0.7em; text-transform: uppercase; }
 
+.small-text { font-size: 0.75em; }
+
 .addToCart { border-bottom: 1px solid black; }
 
-.addToCart:hover { font-weight: bold; cursor: pointer; }
+.addToCart:hover { font-weight: bold; cursor: pointer; border-bottom: 1px solid black; }
+
+.inner-cart-btn { border: none; font-weight: bold; }
 
 .dropdown-toggle:focus { outline: none; }
 
