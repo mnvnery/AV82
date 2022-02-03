@@ -57,12 +57,13 @@
     font-weight: bold
 
 .dropdown-menu
-    background-color: rgba(255,255,255,0.5)
+    background-color: rgba(255,255,255,0.8)
     border-radius: 0
     border: none
     border-top: 1px solid black
-    -webkit-backdrop-filter: blur(5px)
-    backdrop-filter: blur(5px)
+    border-bottom: 1px solid black
+    -webkit-backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px)
 
 .dropdown-item.nav-link.active
     opacity: 1
@@ -71,6 +72,8 @@
     width: 17em
     height: 12em
     object-fit: contain
+
+
 
 .product-container
     max-width: 17em
@@ -112,6 +115,17 @@
 .full-width.dropdown > .dropdown-menu > li > a 
     white-space: normal
 
-.dropdown-item.active, .dropdown-item:active
-    background-color: #e9ecef
+.dropdown-item
+    margin: 2px 2px
+
+.dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover
+    background-color: transparent
     color: black
+    border-top: 1px solid black
+    border-bottom: 1px solid black
+
+.dropdown-item:hover
+    font-style: italic
+
+.modal-content
+    border-radius: 0

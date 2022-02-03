@@ -64,7 +64,6 @@ on_set:
 on_set_eng:
 - Magliner
 - COM
-
 ---
 <div class="nav-logo">
     <a href="{{ site.baseurl }}/">
@@ -78,10 +77,10 @@ on_set_eng:
 <main class="page-container">
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#pills-studio" type="button" role="tab" aria-controls="pills-studio" aria-selected="true">STUDIO</button>
+    <button class="nav-link active h5" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#pills-studio" type="button" role="tab" aria-controls="pills-studio" aria-selected="true">STUDIO</button>
   </li>
   <li class="nav-item dropdown full-width" role="presentation">
-    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
+    <a class="nav-link dropdown-toggle h5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
     <ul class="dropdown-menu">
       <li>
         <div class="subnav">IMAGE</div>
@@ -117,10 +116,10 @@ on_set_eng:
     </ul>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#pills-crew" type="button" role="tab" aria-controls="pills-crew" aria-selected="false">CREW</button>
+    <button class="nav-link h5" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#pills-crew" type="button" role="tab" aria-controls="pills-crew" aria-selected="false">CREW</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#pills-mobility" type="button" role="tab" aria-controls="pills-mobility" aria-selected="false">MOBILITY</button>
+    <button class="nav-link h5" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#pills-mobility" type="button" role="tab" aria-controls="pills-mobility" aria-selected="false">MOBILITY</button>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
@@ -133,11 +132,11 @@ on_set_eng:
       <div class="row gx-4 gy-4 mt-4">
           {% for product in products %}
           <div class="col m-3">
-            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
-            <div class="product-title small-label">{{ product.title }}</div>
+            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -150,11 +149,11 @@ on_set_eng:
       <div class="row gx-4 gy-4 mt-4">
           {% for product in products %}
           <div class="col m-3">
-            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
-            <div class="product-title small-label">{{ product.title }}</div>
+            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -167,11 +166,11 @@ on_set_eng:
       <div class="row gx-4 gy-4 mt-4">
           {% for product in products %}
           <div class="col m-3">
-            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
-            <div class="product-title small-label">{{ product.title }}</div>
+            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -184,11 +183,11 @@ on_set_eng:
       <div class="row gx-4 gy-4 mt-4">
           {% for product in products %}
           <div class="col m-3">
-            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
-            <div class="product-title small-label">{{ product.title }}</div>
+            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -201,11 +200,11 @@ on_set_eng:
     <div class="row gx-4 gy-4 mt-4">
         {% for product in products %}
         <div class="col m-3">
-          <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
-          <div class="product-title small-label">{{ product.title }}</div>
+          <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+          <div class="product-title mt-2 small-label">{{ product.title }}</div>
           <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-            <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+            <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD</div>
           </div> 
         </div>
         {% endfor %}
@@ -215,8 +214,7 @@ on_set_eng:
 </div> 
 
 
-<form name="test-form" method="POST" netlify-honeypot="bot-field"
-data-netlify="true" class="booking-form">
+<form action="https://getform.io/f/e46584e3-2177-4d02-a8ee-514e999190e2" method="POST" class="booking-form">
   <div class="submission p-5">
     <a href="#" class="close-cart">Close Cart</a>
     <div class="allcontent mb-5"></div>
@@ -233,17 +231,37 @@ data-netlify="true" class="booking-form">
 
 <!-- Button trigger modal -->
 
-
+{% for product in site.products %}
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-
+<div class="modal fade bd-example-modal-lg" id="{{product.title | slugify }}Modal" tabindex="-1" aria-labelledby="{{product.title | slugify }}ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-3">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div>Hello</div>
+        <div class="d-flex">
+          <div class="d-flex">
+            {% for img in product.images %}
+            <img src="{{site.baseurl}}{{ img }}" alt="{{ product.title }}" class="product-img">
+            {% endfor %}
+          </div>
+          <div class="modal-info-side">
+            <div>{{ product.category }} / {{ product.subcategory }}</div>
+            <div class="border-bottom border-dark my-2"></div>
+            <h4 class="text-uppercase"><b>{{product.title}}</b></h4>
+            <div class="border-bottom border-dark my-2"></div>
+            <div class="d-flex justify-content-between bold">
+              <div>{{ product.price_day }} EUR/DAY</div>
+              <div>QTY: <input type="number" class="qty-input" step="1" min="1" name="qty" value="1" title="QTY" inputmode="numeric" autocomplete="off"></div>
+            </div>
+            <div class="border-bottom border-dark my-2"></div>
+            <div>{{ product.description }}</div>
+            <div class="border-bottom border-dark my-2"></div>
+          </div>
+        </div>
     </div>
   </div>
 </div>
+
+{% endfor %}
 
 
 
