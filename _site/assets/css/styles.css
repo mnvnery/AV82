@@ -14,6 +14,8 @@ a:hover { color: inherit; }
 
 .mailto:hover { text-decoration: underline; }
 
+.bold { font-weight: bold; }
+
 .navmenu-container { height: 100vh; background-color: black; width: 100%; color: white; display: none; z-index: 2; position: fixed; }
 
 .navmenu-open { display: block; }
@@ -58,6 +60,8 @@ a:hover { color: inherit; }
 .about-btn-open { bottom: 58vh; }
 
 .arrow-down { display: none; }
+
+.qty-input { max-width: 2em; border: none; outline: none; border-bottom: 1px solid black; }
 
 .showreel { width: 100vw; z-index: -2; position: relative; height: 100vh; object-fit: cover; }
 
@@ -261,7 +265,7 @@ li { list-style-type: none; }
 
 .subnav { padding: 0.5rem 1rem; font-weight: bold; }
 
-.dropdown-menu { background-color: rgba(255, 255, 255, 0.5); border-radius: 0; border: none; border-top: 1px solid black; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
+.dropdown-menu { background-color: rgba(255, 255, 255, 0.8); border-radius: 0; border: none; border-top: 1px solid black; border-bottom: 1px solid black; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 
 .dropdown-item.nav-link.active { opacity: 1; }
 
@@ -289,7 +293,13 @@ li { list-style-type: none; }
 
 .full-width.dropdown > .dropdown-menu > li > a { white-space: normal; }
 
-.dropdown-item.active, .dropdown-item:active { background-color: #e9ecef; color: black; }
+.dropdown-item { margin: 2px 2px; }
+
+.dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover { background-color: transparent; color: black; border-top: 1px solid black; border-bottom: 1px solid black; }
+
+.dropdown-item:hover { font-style: italic; }
+
+.modal-content { border-radius: 0; }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
