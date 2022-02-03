@@ -81,6 +81,16 @@ fields:
     min: 
     max: 
     step: 
+- name: available_quantity
+  type: number
+  label: Available Quantity
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  description: 'Limite de items para adicionar ao carrinho '
 - name: recommended
   type: list
   config:
