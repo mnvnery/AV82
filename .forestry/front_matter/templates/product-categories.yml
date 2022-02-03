@@ -56,3 +56,5 @@ fields:
   default: []
   label: ON SET ENG
   description: Versao ENG
+pages:
+- booking2.html
