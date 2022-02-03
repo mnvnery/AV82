@@ -256,20 +256,24 @@ data-netlify="true" class="booking-form">
   let totalPrice = 0;
   $(".addToCart").click(function() {
     let elem = $(this).data("item");
-    $('.submission').toggle();
-    $('.allcontent').prepend('<div><input class="w-100 border-top cart-item" type="text" name="products[]" disabled value="' + elem + '"/></div><div class="remove">Remove</div>');
+    $('.submission').show();
+    $('.allcontent').prepend('<div class="cart-item"><input class="w-100 border-top" type="text" name="products[]" disabled value="' + elem + '"/><div class="remove-btn"><i class="ri-delete-bin-2-fill"></i></div></div>');
     dayPrice += parseInt($(this).data('price'), 10);
     $('.day-price').html(dayPrice);
     console.log(totalPrice);
+
   });
 
-  $(".remove").click(function() {
-      $(".cart-item").remove();
-  });
+    $(document).on( "click", '.remove-btn', function() {
+        $(this).parent().remove();
+        console.log("clicked!");
+        return false;
+    });
 
-  $(".close-cart").click(function() {
-    $('.submission').toggle();
-  });
+    $(".close-cart").click(function() {
+      $('.submission').toggle();
+    });
+
 
   $('.end-date, .start-date').on("change", function () {
     let start = new Date($('.start-date').val());
