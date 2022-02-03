@@ -1,5 +1,5 @@
 ---
-label: Navbar
+label: navmenu
 hide_body: true
 fields:
 - name: title
@@ -8,7 +8,7 @@ fields:
     required: false
   label: Title
   hidden: true
-  default: navbar
+  default: navmenu
 - name: production
   type: file
   config:

@@ -1,0 +1,57 @@
+---
+layout: rental
+---
+<div class="black-background">
+<form name="checkout" method="POST" netlify-honeypot="bot-field"
+data-netlify="true" class="booking-form">
+  <div class="p-5">
+    <a href="#" class="close-cart">Close Cart</a>
+    <div class="allcontent mb-5"></div>
+    <span>Price per day:</span><span class="day-price"> 0</span><br>
+    <span>Total Price:</span><span class="total-price"> 0</span><br>
+    <input type="text" name="name" placeholder="Your Name*" required="required" class="w-100"><br>
+    <input type="email" name="email" placeholder="Your Email*" required="required" class="w-100"><br>
+    <input type="date" name="start date" placeholder="Start Date" required="required" class="start-date">
+    <input type="date" name="end date" placeholder="End Date" required="required" class="end-date"><br>
+    <textarea name="order notes" placeholder="Notes" class="w-100"></textarea><br>
+    <button type="submit" class="request mt-2">Submit Request</button>
+  </div>
+</form>
+</div>
+
+<script>
+
+let shoppingCart = (function() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+    console.log(cart)
+
+    var obj = {};
+    obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+        item = cart[i];
+        itemCopy = {};
+        for(p in item) {
+            itemCopy[p] = item[p];
+
+        }
+        itemCopy.total = Number(item.price * item.count).toFixed(2);
+        cartCopy.push(itemCopy)
+        }
+        return cartCopy;
+    }
+    return obj;
+})();
+
+function displayCart() {
+    let cartArray = shoppingCart.listCart();
+    let output = "";
+    for(let i in cartArray) {
+        output += '<div class="cart-item"><input class="w-100 border-top" type="text" name="products[]" disabled value="' + cartArray[i].name + '"/><input class="w-100 border-top" type="hidden" name="products[]" value="' + cartArray[i].name + '"/><div class="remove-btn"><i class="ri-delete-bin-2-fill"></i></div></div>'
+    }
+
+    $('.allcontent').prepend(output);
+}
+
+displayCart();
+</script>

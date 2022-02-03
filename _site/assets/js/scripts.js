@@ -1,7 +1,7 @@
 $('.hamburger').click(function() {
     $('.hamburger').toggleClass("is-active");
     $('.hamburger-inner').toggleClass("dark-mode");
-    $('.navbar-container').toggleClass('navbar-open');
+    $('.navmenu-container').toggleClass('navmenu-open');
 });
 
 $('.prod-title').hover(function() {
