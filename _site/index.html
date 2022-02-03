@@ -31,19 +31,19 @@
             </button>
         </div>
 
-        <div class="navbar-container">
+        <div class="navmenu-container">
             <div class="img-containers">
                 <div class="left-img-container">
-                    <img src="/assets/img/rental.webp" alt="" class="navbar-img left-img">
+                    <img src="/assets/img/rental.webp" alt="" class="navmenu-img left-img">
                 </div>
                 <div class="right-img-container">
-                    <img src="/assets/img/production.webp" alt="" class="navbar-img right-img">
+                    <img src="/assets/img/production.webp" alt="" class="navmenu-img right-img">
                 </div>
             </div>
             <div class="line-container">
                 <div class="line border-white"></div>
             </div>
-            <nav class="navbar">
+            <nav class="navmenu">
                 <h1 class="rental-title"><a href="#">RENTAL</a></h1>
                 <h1 class="prod-title"><a href="/film">PRODUCTION</a></h1>
             </nav>
@@ -58,16 +58,16 @@
     <div class="logo-square"></div>
 </div>
 
-<div class="index-navbar-container">
+<div class="index-navmenu-container">
     <div class="img-containers">
         <div class="left-img-container">
-            <img src="/assets/img/rental.webp" alt="" class="navbar-img left-img">
+            <img src="/assets/img/rental.webp" alt="" class="navmenu-img left-img">
         </div>
         <div class="right-img-container">
-            <img src="/assets/img/production.webp" alt="" class="navbar-img right-img">
+            <img src="/assets/img/production.webp" alt="" class="navmenu-img right-img">
         </div>
     </div>
-    <nav class="index-navbar">
+    <nav class="index-navmenu">
         <h1 class="rental-title"><a href="#">RENTAL</a></h1>
         <h1 class="prod-title"><a href="/film">PRODUCTION</a></h1>
     </nav>
@@ -86,7 +86,7 @@ ScrollTrigger.matchMedia({
         height: '141vh',
         scrollTrigger: {
             end: "bottom 100%",
-            trigger: ".index-navbar-container",
+            trigger: ".index-navmenu-container",
             scrub: true,
         }
         })
@@ -96,7 +96,7 @@ ScrollTrigger.matchMedia({
         height: '70vh',
         scrollTrigger: {
             end: "bottom 100%",
-            trigger: ".index-navbar-container",
+            trigger: ".index-navmenu-container",
             scrub: true,
         }
         })
@@ -109,7 +109,7 @@ gsap.to(".logo-square", {
     scrollTrigger: {
         start: "top 50%",
         end: "bottom 100%",
-        trigger: ".index-navbar-container",
+        trigger: ".index-navmenu-container",
         scrub: true,
     }
 })

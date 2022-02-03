@@ -14,9 +14,9 @@ a:hover { color: inherit; }
 
 .mailto:hover { text-decoration: underline; }
 
-.navbar-container { height: 100vh; background-color: black; width: 100%; color: white; display: none; z-index: 2; position: fixed; }
+.navmenu-container { height: 100vh; background-color: black; width: 100%; color: white; display: none; z-index: 2; position: fixed; }
 
-.navbar-open { display: block; }
+.navmenu-open { display: block; }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { height: 2px !important; }
 
@@ -28,7 +28,7 @@ a:hover { color: inherit; }
 
 .burger-container { float: right; z-index: 3; position: fixed; top: 0; right: 0; }
 
-.navbar { height: 100vh; width: 100%; display: flex; justify-content: space-around; align-items: center; }
+.navmenu { height: 100vh; width: 100%; display: flex; justify-content: space-around; align-items: center; }
 
 .prod-title:hover, .rental-title:hover { text-decoration: underline; }
 
@@ -71,9 +71,9 @@ a:hover { color: inherit; }
 
 .logo-line { border-left: 2px solid white; height: 350px; transform: rotate(-45deg); position: fixed; width: 0; }
 
-.index-navbar-container { height: 100vh; width: 100%; color: white; position: relative; }
+.index-navmenu-container { height: 100vh; width: 100%; color: white; position: relative; }
 
-.navbar-img { position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; object-fit: cover; opacity: 0; z-index: 1; transition: 0.4s; }
+.navmenu-img { position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; object-fit: cover; opacity: 0; z-index: 1; transition: 0.4s; }
 
 .opacity { opacity: 1; }
 
@@ -91,9 +91,9 @@ a:hover { color: inherit; }
 
 .index-line-container { height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; pointer-events: none; }
 
-.index-navbar { height: 100vh; width: 100%; display: flex; justify-content: space-around; align-items: center; }
+.index-navmenu { height: 100vh; width: 100%; display: flex; justify-content: space-around; align-items: center; }
 
-@media screen and (max-width: 600px) { .logo-square { height: 150px; width: 150px; } .logo-line { height: 275px; } .index-navbar, .navbar { flex-direction: column; } .index-arrow { display: none; } }
+@media screen and (max-width: 600px) { .logo-square { height: 150px; width: 150px; } .logo-line { height: 275px; } .index-navmenu, .navmenu { flex-direction: column; } .index-arrow { display: none; } }
 
 .nav-logo { display: flex; justify-content: flex-start; padding: 15px; align-items: center; }
 

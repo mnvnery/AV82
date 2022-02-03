@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AV82 STUDIO</title>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+<meta itemprop="description" name="description" content="AV82 é um estúdio de fotografia e vídeo localizado no centro do Porto. Este é um espaço que não só permite a realização de trabalhos fotográficos como também..." />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/assets/js/scripts.js" defer></script>
+<link rel="stylesheet" href="https://use.typekit.net/mke7hkk.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<meta property="og:title" content="AV82 STUDIO">
+<meta property="og:description" content="AV82 é um estúdio de fotografia e vídeo localizado no centro do Porto. Este é um espaço que não só permite a realização de trabalhos fotográficos como também o aluguer de material, seja ele de fotografia ou video."> 
+
+    </head>
+    <body>
+        <div class="burger-container">
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+        <div class="navmenu-container">
+            <div class="img-containers">
+                <div class="left-img-container">
+                    <img src="/assets/img/rental.webp" alt="" class="navmenu-img left-img">
+                </div>
+                <div class="right-img-container">
+                    <img src="/assets/img/production.webp" alt="" class="navmenu-img right-img">
+                </div>
+            </div>
+            <div class="line-container">
+                <div class="line border-white"></div>
+            </div>
+            <nav class="navmenu">
+                <h1 class="rental-title"><a href="#">RENTAL</a></h1>
+                <h1 class="prod-title"><a href="/film">PRODUCTION</a></h1>
+            </nav>
+        </div>
+        <div class="black-background">
+<form name="checkout" method="POST" netlify-honeypot="bot-field"
+data-netlify="true" class="booking-form">
+  <div class="p-5">
+    <a href="#" class="close-cart">Close Cart</a>
+    <div class="allcontent mb-5"></div>
+    <span>Price per day:</span><span class="day-price"> 0</span><br>
+    <span>Total Price:</span><span class="total-price"> 0</span><br>
+    <input type="text" name="name" placeholder="Your Name*" required="required" class="w-100"><br>
+    <input type="email" name="email" placeholder="Your Email*" required="required" class="w-100"><br>
+    <input type="date" name="start date" placeholder="Start Date" required="required" class="start-date">
+    <input type="date" name="end date" placeholder="End Date" required="required" class="end-date"><br>
+    <textarea name="order notes" placeholder="Notes" class="w-100"></textarea><br>
+    <button type="submit" class="request mt-2">Submit Request</button>
+  </div>
+</form>
+</div>
+
+<script>
+
+let shoppingCart = (function() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+    console.log(cart)
+
+    var obj = {};
+    obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+        item = cart[i];
+        itemCopy = {};
+        for(p in item) {
+            itemCopy[p] = item[p];
+
+        }
+        itemCopy.total = Number(item.price * item.count).toFixed(2);
+        cartCopy.push(itemCopy)
+        }
+        return cartCopy;
+    }
+    return obj;
+})();
+
+function displayCart() {
+    let cartArray = shoppingCart.listCart();
+    let output = "";
+    for(let i in cartArray) {
+        output += '<div class="cart-item"><input class="w-100 border-top" type="text" name="products[]" disabled value="' + cartArray[i].name + '"/><input class="w-100 border-top" type="hidden" name="products[]" value="' + cartArray[i].name + '"/><div class="remove-btn"><i class="ri-delete-bin-2-fill"></i></div></div>'
+    }
+
+    $('.allcontent').prepend(output);
+}
+
+displayCart();
+</script>
+    </body>
+</html>
