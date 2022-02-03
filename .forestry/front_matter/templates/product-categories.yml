@@ -56,5 +56,23 @@ fields:
   default: []
   label: ON SET ENG
   description: Versao ENG
+- name: carrinho
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Carrinho Explicacao
+- name: cart
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: About Add To Cart
 pages:
 - booking2.html
