@@ -78,83 +78,158 @@ on_set_eng:
 <main class="page-container">
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">STUDIO</button>
+    <button class="nav-link active" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#pills-studio" type="button" role="tab" aria-controls="pills-studio" aria-selected="true">STUDIO</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">CREW</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-film-tab" data-bs-toggle="pill" data-bs-target="#pills-film" type="button" role="tab" aria-controls="pills-film" aria-selected="false">MOBILITY</button>
-  </li>
-  <li class="nav-item dropdown" role="presentation">
+  <li class="nav-item dropdown full-width" role="presentation">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
     <ul class="dropdown-menu">
       <li>
-        <div class="nav-link">IMAGE</div>
+        <div class="subnav">IMAGE</div>
         {% for subcat in page.imagem_eng %}
           <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
-      <li><button class="dropdown-item nav-link" data-bs-toggle="pill" data-bs-target="#pills-cameras" type="button" role="tab" aria-controls="pills-cameras" aria-selected="false">CAMERAS</button></li>
-      <li><button class="dropdown-item nav-link" data-bs-toggle="pill" data-bs-target="#pills-lenses" type="button" role="tab" aria-controls="pills-lenses" aria-selected="false">LENSES</button></li>
-      <li><button class="dropdown-item nav-link" data-bs-toggle="pill" data-bs-target="#pills-lighting" type="button" role="tab" aria-controls="pills-lighting" aria-selected="false">LIGTHING</button></li>
+      <li>
+        <div class="subnav">AUDIO</div>
+        {% for subcat in page.audio_eng %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      <li>
+        <div class="subnav">LUZ</div>
+        {% for subcat in page.light_eng %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      <li>
+        <div class="subnav">G&E</div>
+        {% for subcat in page.ge_eng %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      <li>
+        <div class="subnav">ON SET</div>
+        {% for subcat in page.on_set_eng %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      
     </ul>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#pills-crew" type="button" role="tab" aria-controls="pills-crew" aria-selected="false">CREW</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#pills-mobility" type="button" role="tab" aria-controls="pills-mobility" aria-selected="false">MOBILITY</button>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">    </div>
-
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">  </div>
-  <div class="tab-pane fade" id="pills-film" role="tabpanel" aria-labelledby="pills-film-tab">
-    <div class="products">
-      {% for product in filmProducts %}
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
-        <div class="product-title small-label">{{ product.title }}</div>
-        <div class="d-flex justify-content-between mt-2">
-          <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-          <div class="addToCart small-label me-2" data-item="{{ product.title }}">ADD TO CART</div>
-        </div>  
-      {% endfor %}
-    </div>
-  </div>
-
+  <div class="tab-pane fade show active" id="pills-studio" role="tabpanel" aria-labelledby="pills-studio-tab">STUDIO</div>
+  <div class="tab-pane fade" id="pills-crew" role="tabpanel" aria-labelledby="pills-crew-tab">CREW</div>
+  <div class="tab-pane fade" id="pills-mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">MOBILITY</div>
   {% for subcat in page.imagem_eng %}
     <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
       {% assign products = site.products | where: "subcategory", subcat %}
-      <div class="row gx-5">
+      <div class="row gx-4 gy-4 mt-4">
           {% for product in products %}
-          <div class="col">
+          <div class="col m-3">
             <div><img src="{{site.baseurl}}/{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
             <div class="product-title small-label">{{ product.title }}</div>
-            <div class="d-flex justify-content-between mt-2">
+            <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-              <div class="addToCart small-label me-2" data-item="{{ product.title }}">ADD TO CART</div>
+              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
             </div> 
           </div>
           {% endfor %}
         </div>
-      </div>
     </div>
   {% endfor %}
-  <div class="tab-pane fade" id="pills-lenses" role="tabpanel" aria-labelledby="pills-lenses-tab">5</div>
-  <div class="tab-pane fade" id="pills-lighting" role="tabpanel" aria-labelledby="pills-lighting-tab">6</div>
+  {% for subcat in page.audio_eng %}
+    <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
+      {% assign products = site.products | where: "subcategory", subcat %}
+      <div class="row gx-4 gy-4 mt-4">
+          {% for product in products %}
+          <div class="col m-3">
+            <div><img src="{{site.baseurl}}/{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+            <div class="product-title small-label">{{ product.title }}</div>
+            <div class="d-flex justify-content-between mt-2 product-container">
+              <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+            </div> 
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  {% endfor %}
+  {% for subcat in page.light_eng %}
+    <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
+      {% assign products = site.products | where: "subcategory", subcat %}
+      <div class="row gx-4 gy-4 mt-4">
+          {% for product in products %}
+          <div class="col m-3">
+            <div><img src="{{site.baseurl}}/{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+            <div class="product-title small-label">{{ product.title }}</div>
+            <div class="d-flex justify-content-between mt-2 product-container">
+              <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+            </div> 
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  {% endfor %}
+  {% for subcat in page.ge_eng %}
+    <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
+      {% assign products = site.products | where: "subcategory", subcat %}
+      <div class="row gx-4 gy-4 mt-4">
+          {% for product in products %}
+          <div class="col m-3">
+            <div><img src="{{site.baseurl}}/{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+            <div class="product-title small-label">{{ product.title }}</div>
+            <div class="d-flex justify-content-between mt-2 product-container">
+              <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+            </div> 
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  {% endfor %}
+  {% for subcat in page.on_set_eng %}
+  <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
+    {% assign products = site.products | where: "subcategory", subcat %}
+    <div class="row gx-4 gy-4 mt-4">
+        {% for product in products %}
+        <div class="col m-3">
+          <div><img src="{{site.baseurl}}/{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#exampleModal"></div>
+          <div class="product-title small-label">{{ product.title }}</div>
+          <div class="d-flex justify-content-between mt-2 product-container">
+            <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+            <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{ product.price_day }}">ADD TO CART</div>
+          </div> 
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+{% endfor %}
 </div> 
 
-<!--
+
 <form name="orders" method="POST" netlify-honeypot="bot-field"
 data-netlify="true" class="booking-form">
-  <div class="submission">
+  <div class="submission p-5">
+    <a href="#" class="close-cart">Close Cart</a>
+    <div class="allcontent mb-5"></div>
     <span>Price per day:</span><span class="day-price"> 0</span><br>
     <span>Total Price:</span><span class="total-price"> 0</span><br>
-    <input type="text" name="name" placeholder="Your Name*" required="required"><br>
-    <input type="email" name="email" placeholder="Your Email*" required="required"><br>
-    <input type="date" name="start date" placeholder="Start Date" required="required">
-    <input type="date" name="end date" placeholder="End Date" required="required"><br>
-    <input type="text_area" name="order notes" placeholder="Notes"><br>
-    <button type="submit">Submit</button>
+    <input type="text" name="name" placeholder="Your Name*" required="required" class="w-100"><br>
+    <input type="email" name="email" placeholder="Your Email*" required="required" class="w-100"><br>
+    <input type="date" name="start date" placeholder="Start Date" required="required" class="start-date">
+    <input type="date" name="end date" placeholder="End Date" required="required" class="end-date"><br>
+    <textarea name="order notes" placeholder="Notes" class="w-100"></textarea><br>
+    <button type="submit" class="request mt-2">Submit Request</button>
   </div>
 </form>
--->
 
 <!-- Button trigger modal -->
 
@@ -176,24 +251,57 @@ data-netlify="true" class="booking-form">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
-  $('.checkbox').on("change", function () {
-      var totalPrice = 0;
   
-      $('.checkbox:checked').each(function () {
-          totalPrice += parseInt($(this).data('price'), 10);
-      });
-  
-      $('.day-price').html(totalPrice);
+  let dayPrice = 0;
+  let totalPrice = 0;
+  $(".addToCart").click(function() {
+    let elem = $(this).data("item");
+    $('.submission').toggle();
+    $('.allcontent').prepend('<div><input class="w-100 border-top cart-item" type="text" name="products[]" disabled value="' + elem + '"/></div><div class="remove">Remove</div>');
+    dayPrice += parseInt($(this).data('price'), 10);
+    $('.day-price').html(dayPrice);
+    console.log(totalPrice);
   });
 
-  $('.film-cameras').click(function() {
-      $('.film-products-container').addClass("show");
+  $(".remove").click(function() {
+      $(".cart-item").remove();
+  });
+
+  $(".close-cart").click(function() {
+    $('.submission').toggle();
+  });
+
+  $('.end-date, .start-date').on("change", function () {
+    let start = new Date($('.start-date').val());
+    let end = new Date($('.end-date').val());
+    let diff = 1000 * 60 * 60 * 24;
+    let start_date = $('.start-date').val();
+    $(".end-date").attr("min", start_date );
+
+    let date_diff = end - start;
+    let days_diff = date_diff / (1000 * 3600 * 24);
+    let totalPrice = dayPrice * days_diff
+
+    if (days_diff < 3) {      
+        $('.total-price').html(totalPrice);
+    }           
+    else if (days_diff >= 3 || days_diff < 7) {
+        discountPrice = .25;
+        totalPrice = totalPrice - (totalPrice * discountPrice);
+        $('.total-price').html(totalPrice);
+    }
+    else if (days_diff >= 7 || days_diff < 30) {
+        discountPrice = .40;
+        totalPrice = totalPrice - (totalPrice * discountPrice); 
+        $('.total-price').html(totalPrice);   
+    }
+    else if (days_diff >= 30) {
+        discountPrice = .55;
+        totalPrice = totalPrice - (totalPrice * discountPrice);  
+        $('.total-price').html(totalPrice);  
+    }
   });
   
-  $(".addToCart").click(function() {
-    const elem = $(this).data("item");
-    $('.submission').prepend('<div><input type="text" name="products[]" value="' + elem + '"/></div>');
-  });
 
   function handleFirstTab(e) {
     if (e.keyCode === 9) { // the "I am a keyboard user" key
