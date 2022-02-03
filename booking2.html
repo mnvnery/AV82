@@ -257,7 +257,7 @@ data-netlify="true" class="booking-form">
   $(".addToCart").click(function() {
     let elem = $(this).data("item");
     $('.submission').show();
-    $('.allcontent').prepend('<div class="cart-item"><input class="w-100 border-top" type="text" name="products[]" disabled value="' + elem + '"/><div class="remove-btn"><i class="ri-delete-bin-2-fill"></i></div></div>');
+    $('.allcontent').prepend('<div class="cart-item"><input class="w-100 border-top" type="text" name="products[]" readonly value="' + elem + '"/><div class="remove-btn"><i class="ri-delete-bin-2-fill"></i></div></div>');
     dayPrice += parseInt($(this).data('price'), 10);
     $('.day-price').html(dayPrice);
     console.log(totalPrice);
