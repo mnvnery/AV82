@@ -12,9 +12,31 @@
     display: block
 
 .submission
-    position: absolute
+    position: fixed
+    background-color: black
+    color: white
+    height: 100vh
     top: 0
-    right: 15px
+    right: 0
+    display: none
+
+.request
+    background-color: transparent
+    color: white
+    border: none
+    font-weight: bold
+    padding: 0
+    margin: 0
+
+.booking-form input, textarea
+    background-color: transparent
+    border: none
+    border-bottom: white solid 1px
+    margin-top: 10px
+    color: white
+
+::-webkit-calendar-picker-indicator 
+    filter: invert(1)
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link
     color: black
@@ -30,6 +52,10 @@
 .nav-pills .nav-link:hover
     opacity: 1
 
+.subnav
+    padding: 0.5rem 1rem
+    font-weight: bold
+
 .dropdown-menu
     background-color: rgba(255,255,255,0.5)
     border-radius: 0
@@ -44,11 +70,18 @@
 .product-img
     width: 17em
     height: 12em
-    object-fit: cover
-    background-color: black
+    object-fit: contain
 
 .product-container
     max-width: 17em
+
+.product-grid::after 
+    content: ""
+    flex: auto
+
+.col 
+    flex: 0 0 0%
+
 
 .small-label
     font-size: 0.7em
@@ -67,3 +100,18 @@
 .dropdown-menu.show
     display: grid
     grid-template-columns: auto auto auto auto auto
+
+.full-width.dropdown
+    position: static
+
+.full-width.dropdown > .dropdown-menu 
+    left: 0
+    right: 0
+    position: absolute
+
+.full-width.dropdown > .dropdown-menu > li > a 
+    white-space: normal
+
+.dropdown-item.active, .dropdown-item:active
+    background-color: #e9ecef
+    color: black
