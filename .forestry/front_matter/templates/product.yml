@@ -78,5 +78,8 @@ fields:
   default: white
   hidden: true
 pages:
+- _products/Crew/director.html
 - _products/Crew/gaffer-chefe-eletricista.html
+- _products/Crew/photographer.html
+- _products/Crew/photography-digital-assistant.html
 - _products/Mobility/renault-trafic-2018-h1l2-white.html
