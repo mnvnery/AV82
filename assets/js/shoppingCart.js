@@ -5,10 +5,11 @@ var shoppingCart = (function() {
   cart = [];
   
   // Constructor
-  function Item(name, price, count) {
+  function Item(name, price, count, image) {
     this.name = name;
     this.price = price;
     this.count = count;
+    this.image = image;
   }
   
   // Save cart
@@ -31,7 +32,7 @@ var shoppingCart = (function() {
   var obj = {};
   
   // Add to cart
-  obj.addItemToCart = function(name, price, count) {
+  obj.addItemToCart = function(name, price, image, count) {
     for(var item in cart) {
       if(cart[item].name === name) {
         cart[item].count ++;
@@ -39,7 +40,7 @@ var shoppingCart = (function() {
         return;
       }
     }
-    var item = new Item(name, price, count);
+    var item = new Item(name, price, count, image);
     cart.push(item);
     saveCart();
   }
@@ -140,7 +141,8 @@ $('.add-to-cart').click(function(event) {
   event.preventDefault();
   var name = $(this).data('name');
   var price = Number($(this).data('price'));
-  shoppingCart.addItemToCart(name, price, 1);
+  var image = $(this).data('image');
+  shoppingCart.addItemToCart(name, price, image, 1);
   displayCart();
 });
 
@@ -151,24 +153,27 @@ $('.clear-cart').click(function() {
 });
 
 
+
 function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
-    output += "<tr>"
-      + "<td>" + cartArray[i].name + "</td>" 
-      + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name='" + cartArray[i].name + "'>-</button>"
-      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "<button class='plus-item btn btn-primary input-group-addon' data-name='" + cartArray[i].name + "''>+</button></div></td>"
-      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-      + " = " 
-      + "<td>" + cartArray[i].total + "</td>" 
-      +  "</tr>";
+    output += "<div class='d-flex py-3 border-bottom border-dark'>"
+      + "<img class='cart-img pe-3' src='" + cartArray[i].image + "'>"
+      + "<div class='w-100'>"
+      + "<div class='mb-2'>" + cartArray[i].name + "</div>" 
+      + "<div class='d-flex justify-content-between'>"
+      + "<div>" + cartArray[i].price + " EUR/DAY</div>"
+      + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'></div>"
+      + "<div><button class='delete-item' data-name='" + cartArray[i].name + "'>Remove</button></div>"
+//      + "<div>" + cartArray[i].total + "</div>" 
+      + "</div>"
+      + "</div>"
+      + "</div>";
       console.log(cartArray[i].name)
   }
   $('.show-cart').html(output);
-  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-cart').html(shoppingCart.totalCart() + "  EUR");
   $('.total-count').html(shoppingCart.totalCount());
 }
 
