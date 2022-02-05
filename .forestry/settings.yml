@@ -54,7 +54,6 @@ sections:
 - type: document
   path: rental.html
   label: Rental
-  match: "**/*"
 - type: heading
   label: Recurring Elements
 - type: document
