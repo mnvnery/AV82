@@ -1,19 +1,11 @@
 ---
 label: Rental
-hide_body: false
+hide_body: true
 fields:
 - type: text
   name: layout
   label: layout
-- name: intro_eng
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: Intro ENG
+  hidden: true
 - name: intro_pt
   type: textarea
   default: ''
@@ -23,6 +15,15 @@ fields:
     schema:
       format: html-blocks
   label: Intro PT
+- name: intro_eng
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Intro ENG
 - name: studio_pt
   type: textarea
   default: ''
@@ -68,3 +69,32 @@ fields:
     schema:
       format: html-blocks
   label: Equipa PT
+- name: crew_eng
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Crew ENG
+- name: transport_pt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Transporte PT
+- name: transport_eng
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Mobility ENG
+pages:
+- rental.html
