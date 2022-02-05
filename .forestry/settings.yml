@@ -51,6 +51,10 @@ sections:
 - type: document
   path: index.html
   label: Home (Showreel)
+- type: document
+  path: rental.html
+  label: Rental
+  match: "**/*"
 - type: heading
   label: Recurring Elements
 - type: document
