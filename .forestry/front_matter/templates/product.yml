@@ -7,6 +7,12 @@ fields:
   config:
     required: false
   label: Name
+- name: name_pt
+  type: text
+  config:
+    required: false
+  label: Nome
+  description: em pt. se for igual à versão inglesa, deixar vazio.
 - name: description
   type: textarea
   default: ''
@@ -25,7 +31,7 @@ fields:
     schema:
       format: markdown
   label: Descrição
-  description: Em PT
+  description: em pt. se for igual à versão inglesa, deixar vazio.
 - name: Type
   type: select
   default: []
@@ -77,6 +83,16 @@ fields:
   label: layout
   default: white
   hidden: true
+- name: description_pt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Descrição
+  description: em pt
 pages:
 - _products/Crew/1st-ac.html
 - _products/Crew/art-director.html
