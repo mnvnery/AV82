@@ -7,7 +7,7 @@ fields:
   config:
     required: false
   label: Name
-- name: name_pt
+- name: title_pt
   type: text
   config:
     required: false
@@ -22,7 +22,7 @@ fields:
     schema:
       format: html-blocks
   label: Description
-- name: descricao
+- name: description_pt
   type: textarea
   default: ''
   config:
