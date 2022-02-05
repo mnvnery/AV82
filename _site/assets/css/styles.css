@@ -69,6 +69,18 @@ li p { margin-bottom: 0.5rem; }
 
 @media (min-width: 992px) { .modal-lg { max-width: 900px; } }
 
+.modal.right .modal-dialog { position: fixed; margin: auto; width: 35vw; height: 100%; -webkit-transform: translate3d(0%, 0, 0); -ms-transform: translate3d(0%, 0, 0); -o-transform: translate3d(0%, 0, 0); transform: translate3d(0%, 0, 0); }
+
+.modal.right .modal-content { height: 100%; overflow-y: auto; }
+
+.modal.right .modal-body { padding: 15px 15px 80px; }
+
+.modal.right.fade .modal-dialog { right: -35vw; -webkit-transition: opacity 0.3s linear, right 0.3s ease-out; -moz-transition: opacity 0.3s linear, right 0.3s ease-out; -o-transition: opacity 0.3s linear, right 0.3s ease-out; transition: opacity 0.3s linear, right 0.3s ease-out; }
+
+.modal.right.fade.show .modal-dialog { right: 0; }
+
+.cart-img { max-width: 5em; height: 100%; }
+
 .showreel { width: 100vw; z-index: -2; position: relative; height: 100vh; object-fit: cover; }
 
 .index-arrow { position: absolute; bottom: 2vh; left: 1vw; font-size: 1.5em; }
@@ -303,13 +315,27 @@ li { list-style-type: none; }
 
 .full-width.dropdown > .dropdown-menu > li > a { white-space: normal; }
 
-.dropdown-item { margin: 2px 2px; }
+.dropdown-item { margin: 2px 2px; position: relative; }
 
-.dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover { background-color: transparent; color: black; border-top: 1px solid black; border-bottom: 1px solid black; }
+.dropdown-item.active, .dropdown-item:active { font-weight: bold; }
 
-.dropdown-item:hover { font-style: italic; }
+.dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover { background-color: transparent; color: black; }
+
+.dropdown-item:after { content: ""; position: absolute; left: 0; top: 100%; width: 0; height: 1px; background-color: black; transition: width .3s ease-in-out; }
+
+.dropdown-item:hover:after { width: 100%; }
+
+.dropdown-item.active:after { width: 100%; }
 
 .modal-content { border-radius: 0; }
+
+.cart-btn { float: right; background-color: transparent; outline: none; border: none; font-weight: bold; padding: .5rem 1rem; position: relative; }
+
+.cart-btn:hover { text-decoration: underline; }
+
+.delete-item { text-decoration: underline; }
+
+button { background-color: transparent; outline: none; border: none; }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }

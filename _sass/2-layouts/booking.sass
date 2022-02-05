@@ -125,15 +125,50 @@
 
 .dropdown-item
     margin: 2px 2px
+    position: relative
+
+.dropdown-item.active, .dropdown-item:active
+    font-weight: bold
 
 .dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover
     background-color: transparent
     color: black
-    border-top: 1px solid black
-    border-bottom: 1px solid black
 
-.dropdown-item:hover
-    font-style: italic
+.dropdown-item:after 
+    content: ""
+    position: absolute
+    left: 0
+    top: 100%
+    width: 0
+    height: 1px
+    background-color: black
+    transition: width .3s ease-in-out
+
+.dropdown-item:hover:after 
+    width: 100%
+
+.dropdown-item.active:after 
+    width: 100%
 
 .modal-content
     border-radius: 0
+
+.cart-btn 
+    float: right
+    background-color: transparent
+    outline: none
+    border: none
+    font-weight: bold
+    padding: .5rem 1rem
+    position: relative
+
+.cart-btn:hover
+    text-decoration: underline
+
+.delete-item 
+    text-decoration: underline
+
+button
+    background-color: transparent
+    outline: none
+    border: none
