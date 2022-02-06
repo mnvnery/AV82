@@ -77,49 +77,99 @@
 </div>
 -->
 
-<div class="images-right">
-    <img class="studio-img" src="/assets/img/studio.webp" alt="studio">
-    <img class="gear-img" src="/assets/img/red-lens-kit.webp" alt="gear">
-    <img class="crew-img" src="/assets/img/crew-1.jpg" alt="crew">
-    <img class="mobility-img" src="/assets/img/van.jpg" alt="mobility">
+<div class="sticky-container">
+  <div class="grid-img-wrap images-right">
+      <img class="grid-img-item studio-img" src="/assets/img/studio.webp" alt="studio">
+      <img class="grid-img-item gear-img" src="/assets/img/red-lens-kit.webp" alt="gear">
+      <img class="grid-img-item crew-img" src="/assets/img/crew-1.jpg" alt="crew">
+      <img class="grid-img-item mobility-img" src="/assets/img/van.jpg" alt="mobility">
+  </div>
+
+  <div class="text-wrapper-container">
+      <div class="text-wrapper category-studio">
+          <h2>STUDIO</h2>
+          <p>AV82 is a film production studio based in Porto, Portugal.</p><p>As part of a growing community of artists and creators, we present tailored solutions for each project and client.</p><p>We offer a full range of film, TV and photography production services and also support for filming locations.</p><p>We can supply cameras, lenses, lighting, grip and crew in our studio rental service.</p>
+          <h4>LAYOUT</h4> 
+          <div class="container-flex">
+            <div class="flex-item-50">
+              <div class="layout-flex"><p>Internal Height</p><p>3,05m</p></div>
+              <div class="layout-flex"><p>1. White Cyclorama</p><p>6m x 7m</p></div>
+              <div class="layout-flex"><p>2. Blackout</p><p>7m x 12m</p></div>
+              <div class="layout-flex"><p>3. Make-up</p><p>3m x 5m</p></div>
+              <div class="layout-flex"><p>4. Dressing Rooms</p><p></p></div>
+              <div class="layout-flex"><p></p><p></p></div>
+            </div>
+            <img class="layout" src="/assets/img/layout.png" alt="layout">
+          </div>
+          <h4>DETAILS</h4>
+          <ul class="details-ul">
+              <li>Lighting grid</li>
+              <li>Restrooms with Showers</li>
+              <li>Heating</li>
+              <li>Fan</li>
+              <li>Wi-fi Access</li>
+              <li>Central Location</li>
+              <br>
+              <li>Coffee, Tea and Water (15€/day)</li>
+          </ul>
+      </div>
+
+      <div class="text-wrapper category-gear">
+          <h2>GEAR</h2>
+          <p>We have a wide range of gear adapted to small and large productions.</p><p>Our personalised service combines each customer's needs with a simple rental solution. We have daily, weekly and monthly rentals available.</p><p>From photography to video, we work with brands such as RED, Leica, Aputure, Blackmagic, Godox, among others.</p>
+      </div>
+
+      <div class="text-wrapper category-crew">
+          <h2>CREW</h2>
+          <p>Meet the right professionals for your production.</p><p>We are part of a broader network of skilled technicians and we can provide you with the best fit for your needs.</p>
+      </div>
+
+      <div class="text-wrapper category-mobility extra-margin">
+          <h2>MOBILITY</h2>
+          <p>Lighting and grip van, suitable for your productions. Runner included.</p><p></p><p>Renault trafic h1l2 2018</p><p>White / Two lateral doors / With shelves / Includes Generator </p><p>Van available only with AV82 drivers.</p>
+      </div>
+  </div>
+</div>
+<div class="book-now">
+  <h4>MAIS IMAGENS</h4>
 </div>
 
-<div class="text-left">
-
-    <div class="category studio">
-        <h4>LAYOUT</h4>
-        <div class="layout-flex"><p>1. White Cyclorama</p><p>6m x 7m</p></div>
-        <div class="layout-flex"><p>2. Blackout</p><p>7m x 12m</p></div>
-        <div class="layout-flex"><p>3. Make-up</p><p>3m x 5m</p></div>
-        <div class="layout-flex"><p>4. Dressing Rooms</p><p></p></div>
-        <img class="layout" src="/assets/img/layout.png" alt="layout">
-        <h4>DETAILS</h4>
-        <ul class="details-ul">
-            <li>Internal Height - 3,05m</li>
-            <li>Lighting grid</li>
-            <li>Restrooms with Showers</li>
-            <li>Heating</li>
-            <li>Fan</li>
-            <li>Wi-fi Access</li>
-            <li>Central Location</li>
-            <li>Coffee, Tea and Water (15€/day)</li>
-        </ul>
-    </div>
-
-    <div class="category mobility">
-        <h4>DETAILS</h4>
-        <ul class="details-ul">
-            <li>White Renault Trafic 2018 H1L2</li> 
-            <li>Two lateral doors</li>
-            <li>Option for Runner Rental</li>
-            <li>Kit Options</li>
-        </ul>
-    </div>
-
-</div>
 
 <script>
+gsap.registerPlugin(ScrollTrigger);
 
+ScrollTrigger.defaults({
+markers: false
+});
+
+$('.grid-img-item').eq(0).addClass('is--active');
+$('.text-wrapper').eq(0).addClass('is--active');
+// Run a function
+$(".text-wrapper").each(function (index) {
+  let triggerElement = $(this);
+  let myIndex = $(this).index();
+  let targetElement = $(".grid-img-item").eq(myIndex);
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => {
+        $(".grid-img-item").removeClass("is--active");
+        targetElement.addClass("is--active");
+        $(".text-wrapper").removeClass("is--active");
+        triggerElement.addClass("is--active");
+      },
+      onEnterBack: () => {
+        $(".grid-img-item").removeClass("is--active");
+        targetElement.addClass("is--active");
+        $(".text-wrapper").removeClass("is--active");
+        triggerElement.addClass("is--active");
+      }
+    }
+  });
+});
 </script>
     </body>
 </html>
