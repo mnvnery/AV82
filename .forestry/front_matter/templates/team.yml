@@ -1,0 +1,38 @@
+---
+label: Team
+hide_body: true
+fields:
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+- name: team_members
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: roles_eng
+    type: tag_list
+    default: []
+    label: Roles
+    description: ENG
+  - name: roles_pt
+    type: tag_list
+    default: []
+    label: Funções
+    description: PT
+  - name: retrato
+    type: file
+    config:
+      maxSize: 64
+    label: Retrato
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Team Members
+pages:
+- team.html
