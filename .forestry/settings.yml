@@ -57,7 +57,6 @@ sections:
 - type: document
   path: team.html
   label: Team
-  match: "**/*"
 - type: heading
   label: Recurring Elements
 - type: document
