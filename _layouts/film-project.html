@@ -17,7 +17,7 @@ layout: black-clean
     <div class="stills-container {% if stills.size == 3 %}three{% endif %}">
         {% for image in page.stills %}
         <div class="still-item">
-            <img src="{{ site.baseurl }}/{{ image }}" alt="project-still">
+            <img src="{{ site.baseurl }}{{ image }}" alt="project-still">
         </div>
         {% endfor %}
     </div>
