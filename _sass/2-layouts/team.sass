@@ -1,0 +1,38 @@
+.team-flex
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 0 15px
+    margin-bottom: 20vh
+
+.member-div
+    width: 32%
+
+.portrait
+    width: 100%
+
+.member-titles
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    margin-bottom: 1em
+    margin-top: 1em
+    border-top: 1px solid white
+
+.member-titles h4
+    margin-top: 10px
+
+.team-link
+    text-transform: uppercase
+    font-weight: bold
+
+@media screen and (max-width: 600px) 
+    .member-titles
+        flex-direction: column
+
+    .member-div
+        width: 48%
+
+    .member-titles h4
+        margin-bottom: 2px
+

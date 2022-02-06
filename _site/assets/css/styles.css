@@ -1,4 +1,4 @@
-body { font-family: sofia-pro, sans-serif; margin: 0; }
+body { font-family: sofia-pro, sans-serif; margin: 0; letter-spacing: 1px; }
 
 h1, .h1, h2, .h2 { font-weight: 600; letter-spacing: 1px; }
 
@@ -41,15 +41,13 @@ a:hover { color: inherit; }
 @keyframes grow { from { height: 350px; }
   to { height: 145vh; } }
 
-.about-container { background-color: rgba(0, 0, 0, 0.4); position: fixed; bottom: 0; z-index: 1; width: 100%; height: 0vh; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); border-top: 2px solid white; transition: 0.5s; opacity: 0; }
+.about-container { background-color: rgba(0, 0, 0, 0.4); position: fixed; bottom: 0; z-index: 1; width: 100%; height: 0vh; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-top: 2px solid white; transition: 0.5s; opacity: 0; }
 
 .about-container-white { background-color: rgba(255, 255, 255, 0.8); border-top: 2px solid black; }
 
-.content-flex { display: flex; padding: 15px; height: 100%; align-items: flex-start; margin-top: 7%; }
+.content-flex { display: flex; padding: 15px; height: 100%; align-items: flex-start; margin-top: 7%; justify-content: space-between; width: 90%; }
 
-.content-flex div { font-size: 1.25em; letter-spacing: 1px; }
-
-.about-intro { width: 46vw; padding-right: 3vw; }
+.about-intro { width: 35vw; }
 
 .about-btn { position: fixed; bottom: 0; z-index: 1; padding-left: 15px; transition: 0.5s; margin-bottom: 1vh; cursor: pointer; }
 
@@ -60,6 +58,22 @@ a:hover { color: inherit; }
 .about-btn-open { bottom: 58vh; }
 
 .arrow-down { display: none; }
+
+.team-link:hover { text-underline-offset: 2px; }
+
+.contact-form input, .contact-form textarea { background-color: transparent; border: none; border-bottom: white solid 1px !important; outline: none; margin-top: 2px; color: white; font-family: inherit; padding-bottom: 10px; }
+
+.form-white input, .form-white textarea { border-bottom: black solid 1px !important; color: black !important; }
+
+#name, #email { width: 48%; }
+
+.submit-btn { width: 100%; padding-bottom: 10px; }
+
+.contact-form { width: 30%; }
+
+.social-icons i { font-size: 1.5em; margin-right: 0.2em; }
+
+@media screen and (max-width: 600px) { .about-container { overflow-y: scroll; } .about-open { height: 89%; } .about-btn-open { bottom: 82%; } .contact-form { width: 100%; padding-bottom: 10vh; } .desktop { display: none; } .about-intro { margin-bottom: 2vh !important; } }
 
 .qty-input { max-width: 2em; border: none; outline: none; border-bottom: 1px solid black; }
 
@@ -342,6 +356,20 @@ li { list-style-type: none; }
 .delete-item { text-decoration: underline; }
 
 button { background-color: transparent; outline: none; border: none; }
+
+.team-flex { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 15px; margin-bottom: 20vh; }
+
+.member-div { width: 32%; }
+
+.portrait { width: 100%; }
+
+.member-titles { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1em; margin-top: 1em; border-top: 1px solid white; }
+
+.member-titles h4 { margin-top: 10px; }
+
+.team-link { text-transform: uppercase; font-weight: bold; }
+
+@media screen and (max-width: 600px) { .member-titles { flex-direction: column; } .member-div { width: 48%; } .member-titles h4 { margin-bottom: 2px; } }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }

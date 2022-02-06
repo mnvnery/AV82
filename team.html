@@ -45,3 +45,33 @@ team_members:
   retrato: "/assets/img/retratos_bw_website_6.jpg"
 
 ---
+<div class="nav-logo">
+    <a href="{{ site.baseurl }}/">
+        <img src="{{site.baseurl}}/assets/img/logo_branco.png" alt="" class="logo-img">
+        <img src="{{site.baseurl}}/assets/img/logo_mobile_branco.png" alt="" class="logo-mobile-img">
+    </a>
+</div>
+{% include about-container.html %}
+<div class="prod-navigation">
+    <div class="selection-flex">
+        <h1 class="selection-title active">MEET THE TEAM</h1>
+    </div>
+    <div class="filters">
+    </div>
+</div>
+
+<div class="team-flex">
+    {% for member in page.team_members %}
+        <div class="member-div">
+            <img src="{{ site.baseurl }}{{ member.retrato }}" alt="{{member.name | slugify}}-photo" class="portrait">
+            <div class="member-titles">
+                <h4 class="member-name">{{ member.name }}</h4>
+                <div>
+                    {% for role in member.roles_eng %}
+                    <div>{{ role }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

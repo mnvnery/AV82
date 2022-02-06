@@ -30,14 +30,24 @@
         </div>
         <div class="about-container about-container-white">
             <div class="content-flex">
-                <div class="about-intro">{{ site.data.about.about }}</div>
+                <div class="about-intro">
+                    {{ site.data.about.about }}
+                    <br class="desktop"><br>
+                    <a href="{{site.baseurl}}/team" class="team-link"><u>Meet the Team</u></a>
+                </div>
                 <div class="about-address">
                     {{ site.data.about.address }}
-                    <br><br>
-                    geral@av82studio.com<br>
-                    + 351 912558439
+                    <br class="desktop"><br>
                     <a href="mailto:geral@av82studio.com" class="mailto">geral@av82studio.com</a><br>
                     + 351 912558439
+                </div>
+                <div class="contact-form form-white">
+                    <form action="" method="POST">
+                        <input type="text" id="name" name="name" placeholder="Name">
+                        <input type="email" id="email" name="email" placeholder="Email"><br>
+                        <textarea id="subject" name="subject" placeholder="Message" style="height:150px; width: 100%;"></textarea>
+                        <input class="submit-btn" type="submit" value="SUBMIT">
+                    </form>
                 </div>
             </div>
         </div>
