@@ -74,8 +74,8 @@
     z-index: 1
     width: 100%
     height: 0vh
-    -webkit-backdrop-filter: blur(5px)
-    backdrop-filter: blur(5px)
+    -webkit-backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px)
     border-top: 2px solid white
     transition: 0.5s
     opacity: 0
@@ -90,14 +90,11 @@
     height: 100%
     align-items: flex-start
     margin-top: 7%
-
-.content-flex div
-    font-size: 1.25em
-    letter-spacing: 1px
+    justify-content: space-between
+    width: 90%
 
 .about-intro
-    width: 46vw
-    padding-right: 3vw
+    width: 35vw
 
 .about-btn
     position: fixed
@@ -120,3 +117,55 @@
 
 .arrow-down
     display: none
+
+.team-link:hover
+    text-underline-offset: 2px
+
+
+.contact-form input, .contact-form textarea
+    background-color: transparent
+    border: none
+    border-bottom: white solid 1px !important
+    outline: none
+    margin-top: 2px
+    color: white
+    font-family: inherit
+    padding-bottom: 10px
+
+.form-white input, .form-white textarea
+    border-bottom: black solid 1px !important
+    color: black !important
+
+#name, #email
+    width: 48%
+
+.submit-btn
+    width: 100%
+    padding-bottom: 10px
+
+.contact-form
+    width: 30%
+
+.social-icons i
+    font-size: 1.5em
+    margin-right: 0.2em
+
+@media screen and (max-width: 600px) 
+    .about-container
+        overflow-y: scroll
+
+    .about-open
+        height: 89%
+
+    .about-btn-open
+        bottom: 82%
+
+    .contact-form 
+        width: 100%
+        padding-bottom: 10vh
+
+    .desktop
+        display: none
+
+    .about-intro
+        margin-bottom: 2vh !important

@@ -26,13 +26,12 @@ $('.about-btn').click(function() {
     $('.arrow-up').toggle();
 });
 
-$(window).click(function() {
-    $('.about-btn').removeClass("about-btn-open");
-    $('.about-container').removeClass("about-open");
-    $('.arrow-down').hide();
-    $('.arrow-up').show();
-});
 
-$('.about-btn').click(function(event){
-    event.stopPropagation();
+$(document).on('click',function(e){
+    if(!(($(e.target).closest(".about-container").length > 0 ) || ($(e.target).closest(".about-btn").length > 0))){
+        $('.about-btn').removeClass("about-btn-open");
+        $('.about-container').removeClass("about-open");
+        $('.arrow-down').hide();
+        $('.arrow-up').show();
+}
 });
