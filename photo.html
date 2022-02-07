@@ -36,14 +36,14 @@ project_order:
 
 <div class="prod-navigation black">
   <div class="selection-flex">
-      <h1 class="selection-title"><a href="{{site.baseurl}}/film">FILM</a></h1>
-      <h1 class="selection-title active">PHOTO</h1>
+      <h1 class="selection-title"><a href="{{site.baseurl}}/film"><span class="eng">FILM</span><span class="pt">VÍDEO</span></a></h1>
+      <h1 class="selection-title active"><span class="eng">PHOTO</span><span class="pt">FOTOGRAFIA</span></h1>
   </div>
   <div class="filters">
-      <span class="all-btn">All,</span>
-      <span class="commercial-btn">Commercial,</span>
-      <span class="fashion-btn">Fashion,</span>
-      <span class="portraits-btn">Portraits</span>
+      <span class="all-btn underline"><span class="eng">All</span><span class="pt">Todos</span>,</span>
+      <span class="commercial-btn"><span class="eng">Commercial</span><span class="pt">Comercial</span>,</span>
+      <span class="fashion-btn"><span class="eng">Fashion</span><span class="pt">Moda</span>,</span>
+      <span class="portraits-btn"><span class="eng">Portraits</span><span class="pt">Retratos</span></span>
   </div>
 
 </div>
@@ -75,17 +75,21 @@ for( var i=0; i<images.length;i++){
 
 $('.all-btn').click(function() {
   $('.fashion, .commercial, .portraits').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 $('.commercial-btn').click(function() {
   $('.fashion, .portraits').css('opacity', '0.2');
   $('.commercial').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 $('.portraits-btn').click(function() {
   $('.fashion, .commercial').css('opacity', '0.2');
   $('.portraits').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 $('.fashion-btn').click(function() {
   $('.commercial, .portraits').css('opacity', '0.2');
   $('.fashion').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 </script>
