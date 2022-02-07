@@ -11,6 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/assets/js/scripts.js" defer></script>
+<script src="/assets/js/language.js" defer></script>
 <link rel="stylesheet" href="https://use.typekit.net/mke7hkk.css">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
@@ -43,22 +44,32 @@
                 <div class="line border-white"></div>
             </div>
             <nav class="navmenu">
-                <h1 class="rental-title"><a href="#">RENTAL</a></h1>
-                <h1 class="prod-title"><a href="/film">PRODUCTION</a></h1>
+                <h2 class="rental-title"><a href="/rental"><span class="eng">RENTAL</span><span class="pt">ALUGUER</span></a></h2>
+                <h2 class="prod-title"><a href="/film"><span class="eng">PRODUCTION</span><span class="pt">PRODUÇÃO</span></a></h2>
             </nav>
         </div>
         <div class="about-container about-container-white">
             <div class="content-flex">
-                <div class="about-intro">
+                <div class="about-intro eng">
                     <p>We are a film production studio based in Porto, Portugal.</p><p>We are part of a growing community of artists and creators, which offers tailored solutions for each project and client.</p><p>We offer a full range of film, TV and photography production services, and support for filming locations.</p>
                     <br class="desktop"><br>
                     <a href="/team" class="team-link"><u>Meet the Team</u></a>
                 </div>
+                <div class="about-intro pt">
+                    <p>Somos um estúdio de produção audiovisual, com sede na cidade do Porto, em Portugal Estamos inseridos numa comunidade crescente de artistas e criadores, que oferece soluções à medida para cada projeto e cliente.</p> <p>Oferecemos uma gama completa de serviços de produção de cinema, TV e fotografia e suporte para locais de filmagem.</p>
+                    <br class="desktop"><br>
+                    <a href="/team" class="team-link"><u>Conheça a Equipa</u></a>
+                </div>
                 <div class="about-address">
                     <p>Avenida da Boavista, 82<br>Porto, Portugal</p>
                     <br class="desktop"><br>
-                    <a href="mailto:geral@av82studio.com" class="mailto">geral@av82studio.com</a><br>
-                    + 351 912558439
+                    <div>
+                        <a href="mailto:geral@av82studio.com" class="mailto">geral@av82studio.com</a><br>
+                        + 351 912558439
+                        
+                    </div>
+                    <br class="desktop"><br>
+                    <div class="social-icons"><a href="https://www.instagram.com/av82studio/" target="_blank"><i class="ri-instagram-fill"></i></a><a href="https://www.facebook.com/av82studio" target="_blank"><i class="ri-facebook-box-fill"></i></a></div>
                 </div>
                 <div class="contact-form form-white">
                     <form action="" method="POST">
@@ -70,7 +81,10 @@
                 </div>
             </div>
         </div>
-        <h2 class="about-btn"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span> ABOUT</h2>
+        <h2 class="about-btn"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span> <span class="eng">ABOUT</span><span class="pt">SOBRE</span></h2>
+        <div class="language-switcher">
+            <span id="#pt" class="lang-selector pt-selector active">PT</span> / <span id="#eng" class="lang-selector eng-selector"> ENG</span>
+        </div>
         <div class="nav-logo">
     <a href="/">
         <img src="/assets/img/logo_preto.png" alt="" class="logo-img">
@@ -97,11 +111,11 @@
 
   <div class="text-wrapper-container">
       <div class="text-wrapper category-studio">
-          <h2>STUDIO</h2>
-          <p>AV82 is a film production studio based in Porto, Portugal.</p><p>As part of a growing community of artists and creators, we present tailored solutions for each project and client.</p><p>We offer a full range of film, TV and photography production services and also support for filming locations.</p><p>We can supply cameras, lenses, lighting, grip and crew in our studio rental service.</p>
+          <h2 class="category-title"><span class="eng">STUDIO</span><span class="pt">ESTÚDIO</span></h2>
+          <span class="eng"><p>AV82 is a film production studio based in Porto, Portugal.</p><p>As part of a growing community of artists and creators, we present tailored solutions for each project and client.</p><p>We offer a full range of film, TV and photography production services and also support for filming locations.</p><p>We can supply cameras, lenses, lighting, grip and crew in our studio rental service.</p></span><span class="pt"><p>Somos um estúdio de produção audiovisual, com sede na cidade do Porto, em Portugal</p><p>Estamos inseridos numa comunidade crescente de artistas e criadores, que apresenta soluções à medida para cada projeto e cliente.</p><p>Oferecemos uma gama completa de serviços de produção de cinema, TV e fotografia e, também, suporte para locais de filmagem.</p><p>Fornecemos câmaras, objetivas, luz, grip e equipa no nosso serviço de aluguer de estúdio.</p></span>
           <h4>LAYOUT</h4> 
           <div class="container-flex">
-            <div class="flex-item-50">
+            <div class="flex-item-50 eng">
               <div class="layout-flex"><p>Internal Height</p><p>3,05m</p></div>
               <div class="layout-flex"><p>1. White Cyclorama</p><p>6m x 7m</p></div>
               <div class="layout-flex"><p>2. Blackout</p><p>7m x 12m</p></div>
@@ -109,41 +123,46 @@
               <div class="layout-flex"><p>4. Dressing Rooms</p><p></p></div>
               <div class="layout-flex"><p></p><p></p></div>
             </div>
+            <div class="flex-item-50 pt">
+              <div class="layout-flex"><p>Pé Direito</p><p>3,05m</p></div>
+              <div class="layout-flex"><p>1. Ciclorama Branco</p><p>6m x 7m</p></div>
+              <div class="layout-flex"><p>2. Blackout</p><p>7m x 12m</p></div>
+              <div class="layout-flex"><p>3. Maquilhagem</p><p>3m x 5m</p></div>
+              <div class="layout-flex"><p>4. Vestiários</p><p></p></div>
+              <div class="layout-flex"><p></p><p></p></div>
+            </div>
             <img class="layout" src="/assets/img/layout.png" alt="layout">
           </div>
-          <h4>DETAILS</h4>
+          <h4><span class="eng">AMENITIES</span><span class="pt">AMENIDADES</span></h4>
           <ul class="details-ul">
-              <li>Lighting grid</li>
-              <li>Restrooms with Showers</li>
-              <li>Heating</li>
-              <li>Fan</li>
-              <li>Wi-fi Access</li>
-              <li>Central Location</li>
-              <br>
-              <li>Coffee, Tea and Water (15€/day)</li>
+              <span class="eng">Lighting grid / Restrooms with Showers / Heating / Fan / Wi-fi Access / Central Location</span>
+              <span class="pt">Teia de Luz / WC com Chuveiro / Aquecimento / Ventoinha / Acesso Internet Wi-fi / Localização Central</span>
+              <br><br>
+              <span class="eng">Coffee, Tea and Water (15€/day)</span><span class="pt"> Café, Chá e Água (15€/dia)</span>
           </ul>
+          <a href="/booking2/#studio" class="booking-link"><span class="eng">BOOK NOW</span><span class="pt">RESERVA JÁ</span></a>
       </div>
+      
 
       <div class="text-wrapper category-gear">
-          <h2>GEAR</h2>
-          <p>We have a wide range of gear adapted to small and large productions.</p><p>Our personalised service combines each customer's needs with a simple rental solution. We have daily, weekly and monthly rentals available.</p><p>From photography to video, we work with brands such as RED, Leica, Aputure, Blackmagic, Godox, among others.</p>
+          <h2 class="category-title"><span class="eng">GEAR</span><span class="pt">MATERIAL</span></h2>
+          <span class="eng"><p>We have a wide range of gear adapted to small and large productions.</p><p>Our personalised service combines each customer's needs with a simple rental solution. We have daily, weekly and monthly rentals available.</p><p>From photography to video, we work with brands such as RED, Leica, Aputure, Blackmagic, Godox, among others.</p></span><span class="pt"><p>Dispomos de uma vasta gama de material adaptada a pequenas e grandes produções.</p><p>O nosso serviço personalizado alia a facilidade de aluguer às necessidades do cliente. Temos disponibilidade para alugueres diários, semanais e mensais.</p><p>Desde fotografia a vídeo, trabalhamos com marcas como RED, Leica, Aputure, Blackmagic, Godox, entre outras.</p></span>
+          <a href="/booking2" class="booking-link"><span class="eng">SEE FULL LIST</span><span class="pt">VER LISTA COMPLETA</span></a>
       </div>
 
       <div class="text-wrapper category-crew">
-          <h2>CREW</h2>
-          <p>Meet the right professionals for your production.</p><p>We are part of a broader network of skilled technicians and we can provide you with the best fit for your needs.</p>
+          <h2 class="category-title"><span class="eng">CREW</span><span class="pt">EQUIPA</span></h2>
+          <div class="eng"><p>Meet the right professionals for your production.</p><p>We are part of a broader network of skilled technicians and we can provide you with the best fit for your needs.</p></div><div class="pt"><p>Conhece os profissionais certos para a tua produção.</p><p>Fazemos parte de uma ampla rede de contactos com técnicos criativos e especializados para que possamos obter o melhor resultado às tuas necessidades.</p></div>
+          <a href="/booking2/#crew" class="booking-link"><span class="eng">HIRE NOW</span><span class="pt">CONTRATA JÁ</span></a>
       </div>
 
       <div class="text-wrapper category-mobility extra-margin">
-          <h2>MOBILITY</h2>
-          <p>Lighting and grip van, suitable for your productions. Runner included.</p><p></p><p>Renault trafic h1l2 2018</p><p>White / Two lateral doors / With shelves / Includes Generator </p><p>Van available only with AV82 drivers.</p>
+          <h2 class="category-title"><span class="eng">MOBILITY</span><span class="pt">TRANSPORTE</span></h2>
+          <div class="eng"><p>Lighting and grip van, suitable for your productions. Runner included.</p><p></p><p>Renault trafic h1l2 2018</p><p>White / Two lateral doors / With shelves / Includes Generator </p><p>Van available only with AV82 drivers.</p></div><div class="pt"><p>Carrinha de iluminação e grip preparada para produções.</p><p>Com prateleiras e portas laterais dos dois lados, para acesso facilitado a todo o interior da carrinha.</p><p>Inclui runner.</p><p></p><p>Renault trafic h1l2 2018</p><p>Branca / Duas portas laterais / Com prateleiras / Inclui Gerador</p><p>Carrinha disponível apenas com condutores AV82.</p></div>
+          <a href="/booking2/#mobility" class="booking-link"><span class="eng">BOOK NOW</span><span class="pt">RESERVA JÁ</span></a>
       </div>
   </div>
 </div>
-<div class="book-now">
-  <h4>MAIS IMAGENS</h4>
-</div>
-
 
 <script>
 gsap.registerPlugin(ScrollTrigger);

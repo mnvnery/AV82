@@ -24,9 +24,12 @@
                     <div class="line border-white"></div>
                 </div>
                 <nav class="navmenu">
-                    <h1 class="rental-title"><a href="#">RENTAL</a></h1>
-                    <h1 class="prod-title"><a href="{{ site.baseurl }}/film">PRODUCTION</a></h1>
+                    <h2 class="rental-title"><a href="{{site.baseurl}}/rental">RENTAL</a></h2>
+                    <h2 class="prod-title"><a href="{{ site.baseurl }}/film">PRODUCTION</a></h2>
                 </nav>
+            </div>
+            <div class="language-switcher">
+                <span id="#pt" class="lang-selector pt-selector active">PT</span> / <span id="#eng" class="lang-selector eng-selector"> ENG</span>
             </div>
             {{ content }}
     </body>

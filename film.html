@@ -41,15 +41,15 @@ project_order:
 
 <div class="prod-navigation">
     <div class="selection-flex">
-        <h1 class="selection-title active">FILM</h1>
-        <h1 class="selection-title"><a href="{{site.baseurl}}/photo">PHOTO</a></h1>
+        <h1 class="selection-title active"><span class="eng">FILM</span><span class="pt">VÍDEO</span></h1>
+        <h1 class="selection-title"><a href="{{site.baseurl}}/photo"><span class="eng">PHOTO</span><span class="pt">FOTOGRAFIA</span></a></h1>
     </div>
     <div class="filters">
-        <span class="all-btn">All,</span>
-        <span class="commercial-btn">Commercial,</span>
-        <span class="music-btn">Music,</span>
-        <span class="fashion-btn">Fashion,</span>
-        <span class="films-btn">Films</span>
+        <span class="all-btn filter-btn underline"><span class="eng">All</span><span class="pt">Todos</span>,</span>
+        <span class="commercial-btn filter-btn"><span class="eng">Commercial</span><span class="pt">Comercial</span>,</span>
+        <span class="music-btn filter-btn"><span class="eng">Music</span><span class="pt">Música</span>,</span>
+        <span class="fashion-btn filter-btn"><span class="eng">Fashion</span><span class="pt">Moda</span>,</span>
+        <span class="films-btn filter-btn"><span class="eng">Films</span><span class="pt">Filmes</span></span>
     </div>
 </div>
 
@@ -70,21 +70,26 @@ project_order:
 <script>
 $('.all-btn').click(function() {
   $('.fashion, .commercial, .music, .films').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 $('.commercial-btn').click(function() {
   $('.fashion, .films, .music').css('opacity', '0.2');
   $('.commercial').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 $('.music-btn').click(function() {
   $('.fashion, .commercial, .films').css('opacity', '0.2');
   $('.music').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 $('.fashion-btn').click(function() {
   $('.commercial, .music, .films').css('opacity', '0.2');
   $('.fashion').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 $('.films-btn').click(function() {
   $('.commercial, .music, .fashion').css('opacity', '0.2');
   $('.films').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
 });
 </script>

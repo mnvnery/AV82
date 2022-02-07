@@ -66,11 +66,11 @@ transport_eng: "<p>Lighting and grip van, suitable for your productions. Runner 
 
   <div class="text-wrapper-container">
       <div class="text-wrapper category-studio">
-          <h2>STUDIO</h2>
-          {{ page.studio_eng }}
+          <h2 class="category-title"><span class="eng">STUDIO</span><span class="pt">ESTÚDIO</span></h2>
+          <span class="eng">{{ page.studio_eng }}</span><span class="pt">{{ page.studio_pt }}</span>
           <h4>LAYOUT</h4> 
           <div class="container-flex">
-            <div class="flex-item-50">
+            <div class="flex-item-50 eng">
               <div class="layout-flex"><p>Internal Height</p><p>3,05m</p></div>
               <div class="layout-flex"><p>1. White Cyclorama</p><p>6m x 7m</p></div>
               <div class="layout-flex"><p>2. Blackout</p><p>7m x 12m</p></div>
@@ -78,41 +78,46 @@ transport_eng: "<p>Lighting and grip van, suitable for your productions. Runner 
               <div class="layout-flex"><p>4. Dressing Rooms</p><p></p></div>
               <div class="layout-flex"><p></p><p></p></div>
             </div>
+            <div class="flex-item-50 pt">
+              <div class="layout-flex"><p>Pé Direito</p><p>3,05m</p></div>
+              <div class="layout-flex"><p>1. Ciclorama Branco</p><p>6m x 7m</p></div>
+              <div class="layout-flex"><p>2. Blackout</p><p>7m x 12m</p></div>
+              <div class="layout-flex"><p>3. Maquilhagem</p><p>3m x 5m</p></div>
+              <div class="layout-flex"><p>4. Vestiários</p><p></p></div>
+              <div class="layout-flex"><p></p><p></p></div>
+            </div>
             <img class="layout" src="{{ site.baseurl }}/assets/img/layout.png" alt="layout">
           </div>
-          <h4>DETAILS</h4>
+          <h4><span class="eng">AMENITIES</span><span class="pt">AMENIDADES</span></h4>
           <ul class="details-ul">
-              <li>Lighting grid</li>
-              <li>Restrooms with Showers</li>
-              <li>Heating</li>
-              <li>Fan</li>
-              <li>Wi-fi Access</li>
-              <li>Central Location</li>
-              <br>
-              <li>Coffee, Tea and Water (15€/day)</li>
+              <span class="eng">Lighting grid / Restrooms with Showers / Heating / Fan / Wi-fi Access / Central Location</span>
+              <span class="pt">Teia de Luz / WC com Chuveiro / Aquecimento / Ventoinha / Acesso Internet Wi-fi / Localização Central</span>
+              <br><br>
+              <span class="eng">Coffee, Tea and Water (15€/day)</span><span class="pt"> Café, Chá e Água (15€/dia)</span>
           </ul>
+          <a href="{{ site.baseurl }}/booking2/#studio" class="booking-link"><span class="eng">BOOK NOW</span><span class="pt">RESERVA JÁ</span></a>
       </div>
+      
 
       <div class="text-wrapper category-gear">
-          <h2>GEAR</h2>
-          {{ page.material_eng }}
+          <h2 class="category-title"><span class="eng">GEAR</span><span class="pt">MATERIAL</span></h2>
+          <span class="eng">{{ page.material_eng }}</span><span class="pt">{{ page.material_pt }}</span>
+          <a href="{{ site.baseurl }}/booking2" class="booking-link"><span class="eng">SEE FULL LIST</span><span class="pt">VER LISTA COMPLETA</span></a>
       </div>
 
       <div class="text-wrapper category-crew">
-          <h2>CREW</h2>
-          {{ page.crew_eng }}
+          <h2 class="category-title"><span class="eng">CREW</span><span class="pt">EQUIPA</span></h2>
+          <div class="eng">{{ page.crew_eng }}</div><div class="pt">{{ page.crew_pt }}</div>
+          <a href="{{ site.baseurl }}/booking2/#crew" class="booking-link"><span class="eng">HIRE NOW</span><span class="pt">CONTRATA JÁ</span></a>
       </div>
 
       <div class="text-wrapper category-mobility extra-margin">
-          <h2>MOBILITY</h2>
-          {{ page.transport_eng }}
+          <h2 class="category-title"><span class="eng">MOBILITY</span><span class="pt">TRANSPORTE</span></h2>
+          <div class="eng">{{ page.transport_eng }}</div><div class="pt">{{ page.transport_pt }}</div>
+          <a href="{{ site.baseurl }}/booking2/#mobility" class="booking-link"><span class="eng">BOOK NOW</span><span class="pt">RESERVA JÁ</span></a>
       </div>
   </div>
 </div>
-<div class="book-now">
-  <h4>MAIS IMAGENS</h4>
-</div>
-
 
 <script>
 gsap.registerPlugin(ScrollTrigger);

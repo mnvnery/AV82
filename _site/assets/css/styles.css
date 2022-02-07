@@ -2,6 +2,10 @@ body { font-family: sofia-pro, sans-serif; margin: 0; letter-spacing: 1px; }
 
 h1, .h1, h2, .h2 { font-weight: 600; letter-spacing: 1px; }
 
+h1, .h1 { font-size: 2em; }
+
+h2, .h2 { font-size: 1.5em; }
+
 .black-background { background-color: black; color: white; }
 
 .white-background, .white-background:after, .white-background:before { background-color: white !important; color: black; }
@@ -15,6 +19,16 @@ a:hover { color: inherit; }
 .mailto:hover { text-decoration: underline; }
 
 .bold { font-weight: bold; }
+
+.language-switcher { font-weight: bold; position: fixed; bottom: 15px; right: 15px; z-index: 4; }
+
+.lang-selector { opacity: 0.3; }
+
+.lang-selector:hover { opacity: 1; }
+
+.eng { display: none; }
+
+.underline { text-decoration: underline; }
 
 .navmenu-container { height: 100vh; background-color: black; width: 100%; color: white; display: none; z-index: 2; position: fixed; }
 
@@ -41,15 +55,15 @@ a:hover { color: inherit; }
 @keyframes grow { from { height: 350px; }
   to { height: 145vh; } }
 
-.about-container { background-color: rgba(0, 0, 0, 0.4); position: fixed; bottom: 0; z-index: 1; width: 100%; height: 0vh; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-top: 2px solid white; transition: 0.5s; opacity: 0; }
+.about-container { background-color: rgba(0, 0, 0, 0.4); position: fixed; bottom: 0; z-index: 5; width: 100%; height: 0vh; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-top: 2px solid white; transition: 0.5s; opacity: 0; }
 
-.about-container-white { background-color: rgba(255, 255, 255, 0.8); border-top: 2px solid black; }
+.about-container-white { background-color: rgba(255, 255, 255, 0.6); border-top: 2px solid black; }
 
 .content-flex { display: flex; padding: 15px; height: 100%; align-items: flex-start; margin-top: 7%; justify-content: space-between; width: 90%; }
 
 .about-intro { width: 35vw; }
 
-.about-btn { position: fixed; bottom: 0; z-index: 1; padding-left: 15px; transition: 0.5s; margin-bottom: 1vh; cursor: pointer; }
+.about-btn { position: fixed; bottom: 0; z-index: 6; padding-left: 15px; transition: 0.5s; margin-bottom: 1vh; cursor: pointer; }
 
 .arrow-white { color: white; }
 
@@ -80,6 +94,18 @@ a:hover { color: inherit; }
 .modal-img { width: 20em; height: 100%; object-fit: contain; }
 
 li p { margin-bottom: 0.5rem; }
+
+.booking-form input, .booking-form textarea { background-color: transparent; outline: none; border: black solid 1px; margin-top: 10px; color: black; padding: 0.5em 0.5em; }
+
+.request { background-color: transparent; color: black; border: none; font-weight: bold; padding: 0; margin: 0; }
+
+.order-notes { height: 20vh; }
+
+.cart-item, .cart-item input { width: 25vw; }
+
+.cart-item input { border: none; }
+
+.order-left-side { width: 25vw; }
 
 @media (min-width: 992px) { .modal-lg { max-width: 900px; } }
 
@@ -147,7 +173,7 @@ li p { margin-bottom: 0.5rem; }
 
 .black-background .selection-title.active { opacity: 1; }
 
-.active { opacity: 1; }
+.active { opacity: 1 !important; }
 
 .filters span:hover { text-decoration: underline; }
 
@@ -189,7 +215,7 @@ li p { margin-bottom: 0.5rem; }
 
 .images-right { position: sticky; top: 50px; }
 
-.grid-img-item { width: 55%; height: 83vh; object-fit: cover; position: absolute; right: 15px; top: 20px; }
+.grid-img-item { width: 55%; height: 83vh; object-fit: cover; position: absolute; right: 15px; top: 5px; }
 
 .flex-item-50 { width: 50%; margin-right: 1.5em; }
 
@@ -216,6 +242,14 @@ li { list-style-type: none; }
 .test-box { height: 100vh; width: 100vw; }
 
 .book-now { border-top: 1px solid black; border-bottom: 1px solid black; height: 400px; width: 100vw; }
+
+.object-fit-cover { object-fit: cover !important; }
+
+.booking-link { text-decoration: underline; text-underline-offset: 2px; }
+
+.booking-link:hover { opacity: 0.5; }
+
+.category-title { border-bottom: 2px solid black; padding-bottom: 7px; }
 
 .photo-carousel .carousel-cell { width: 100%; height: 80vh; margin-right: 10px; display: flex; justify-content: center; align-items: center; }
 
@@ -288,12 +322,6 @@ li { list-style-type: none; }
 .show { display: block; }
 
 .submission { position: fixed; background-color: black; color: white; height: 100vh; top: 0; right: 0; display: none; }
-
-.request { background-color: transparent; color: white; border: none; font-weight: bold; padding: 0; margin: 0; }
-
-.booking-form input, textarea { background-color: transparent; border: none; border-bottom: white solid 1px; margin-top: 10px; color: white; }
-
-::-webkit-calendar-picker-indicator { filter: invert(1); }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link { color: black; background-color: transparent; opacity: 1; }
 

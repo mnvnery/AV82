@@ -54,23 +54,28 @@ team_members:
 {% include about-container.html %}
 <div class="prod-navigation">
     <div class="selection-flex">
-        <h1 class="selection-title active">MEET THE TEAM</h1>
+        <h1 class="selection-title active"><span class="eng">MEET THE TEAM</span><span class="pt">QUEM SOMOS</span></h1>
     </div>
     <div class="filters">
     </div>
 </div>
 
 <div class="team-flex">
-    {% for member in page.team_members %}
+    {% for member in page.team_members reversed %}
         <div class="member-div">
             <img src="{{ site.baseurl }}{{ member.retrato }}" alt="{{member.name | slugify}}-photo" class="portrait">
             <div class="member-titles">
                 <h4 class="member-name">{{ member.name }}</h4>
-                <div>
+                <div class="eng">
                     {% for role in member.roles_eng %}
                     <div>{{ role }}</div>
                     {% endfor %}
                 </div>
+                <div class="pt">
+                  {% for role in member.roles_pt %}
+                  <div>{{ role }}</div>
+                  {% endfor %}
+              </div>
             </div>
         </div>
     {% endfor %}

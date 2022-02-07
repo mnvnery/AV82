@@ -11,6 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/assets/js/scripts.js" defer></script>
+<script src="/assets/js/language.js" defer></script>
 <link rel="stylesheet" href="https://use.typekit.net/mke7hkk.css">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
@@ -43,22 +44,32 @@
                 <div class="line border-white"></div>
             </div>
             <nav class="navmenu">
-                <h1 class="rental-title"><a href="#">RENTAL</a></h1>
-                <h1 class="prod-title"><a href="/film">PRODUCTION</a></h1>
+                <h2 class="rental-title"><a href="/rental"><span class="eng">RENTAL</span><span class="pt">ALUGUER</span></a></h2>
+                <h2 class="prod-title"><a href="/film"><span class="eng">PRODUCTION</span><span class="pt">PRODUÇÃO</span></a></h2>
             </nav>
         </div>
         <div class="about-container about-container-white">
             <div class="content-flex">
-                <div class="about-intro">
+                <div class="about-intro eng">
                     <p>We are a film production studio based in Porto, Portugal.</p><p>We are part of a growing community of artists and creators, which offers tailored solutions for each project and client.</p><p>We offer a full range of film, TV and photography production services, and support for filming locations.</p>
                     <br class="desktop"><br>
                     <a href="/team" class="team-link"><u>Meet the Team</u></a>
                 </div>
+                <div class="about-intro pt">
+                    <p>Somos um estúdio de produção audiovisual, com sede na cidade do Porto, em Portugal Estamos inseridos numa comunidade crescente de artistas e criadores, que oferece soluções à medida para cada projeto e cliente.</p> <p>Oferecemos uma gama completa de serviços de produção de cinema, TV e fotografia e suporte para locais de filmagem.</p>
+                    <br class="desktop"><br>
+                    <a href="/team" class="team-link"><u>Conheça a Equipa</u></a>
+                </div>
                 <div class="about-address">
                     <p>Avenida da Boavista, 82<br>Porto, Portugal</p>
                     <br class="desktop"><br>
-                    <a href="mailto:geral@av82studio.com" class="mailto">geral@av82studio.com</a><br>
-                    + 351 912558439
+                    <div>
+                        <a href="mailto:geral@av82studio.com" class="mailto">geral@av82studio.com</a><br>
+                        + 351 912558439
+                        
+                    </div>
+                    <br class="desktop"><br>
+                    <div class="social-icons"><a href="https://www.instagram.com/av82studio/" target="_blank"><i class="ri-instagram-fill"></i></a><a href="https://www.facebook.com/av82studio" target="_blank"><i class="ri-facebook-box-fill"></i></a></div>
                 </div>
                 <div class="contact-form form-white">
                     <form action="" method="POST">
@@ -70,7 +81,10 @@
                 </div>
             </div>
         </div>
-        <h2 class="about-btn"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span> ABOUT</h2>
+        <h2 class="about-btn"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span> <span class="eng">ABOUT</span><span class="pt">SOBRE</span></h2>
+        <div class="language-switcher">
+            <span id="#pt" class="lang-selector pt-selector active">PT</span> / <span id="#eng" class="lang-selector eng-selector"> ENG</span>
+        </div>
         <div class="nav-logo">
     <a href="/">
         <img src="/assets/img/logo_preto.png" alt="" class="logo-img">

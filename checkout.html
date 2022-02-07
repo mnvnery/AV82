@@ -1,23 +1,48 @@
 ---
 layout: rental
+cart: "<p>Use this form to select your desired dates and receive
+    a price estimate. This is only a contact form and not a payment gateway. We can't guarantee these products to be available for your required
+    dates. Our team will get in touch to confirm your booking and provide any further
+    details necessary. Payment is taken on site upon collection.</p>"
+carrinho: "<p>Neste formulário poderá seleccionar as datas desejadas e calcular
+uma estimativa do preço total da reserva. Não podemos garantir que este produto terá disponibilidade
+para as datas desejadas, mas a nossa equipa entrará em contacto para confirmar o
+seu pedido e fornecer qualquer informação em falta. O pagamento será efectuado presencialmente.
+</p>"
 ---
-<div class="black-background">
+<div class="nav-logo">
+    <a href="{{ site.baseurl }}/">
+        <img src="{{site.baseurl}}/assets/img/logo_preto.png" alt="" class="logo-img">
+        <img src="{{site.baseurl}}/assets/img/logo_mobile_preto.png" alt="" class="logo-mobile-img">
+    </a>
+</div>
+<h2 class="px-3 pt-5 pb-2">CHECKOUT</h2>
 <form name="checkout" method="POST" netlify-honeypot="bot-field"
 data-netlify="true" class="booking-form">
-  <div class="p-5">
-    <a href="#" class="close-cart">Close Cart</a>
-    <div class="allcontent mb-5"></div>
-    <span>Price per day:</span><span class="day-price"> 0</span><br>
-    <span>Total Price:</span><span class="total-price"> 0</span><br>
-    <input type="text" name="name" placeholder="Your Name*" required="required" class="w-100"><br>
-    <input type="email" name="email" placeholder="Your Email*" required="required" class="w-100"><br>
-    <input type="date" name="start date" placeholder="Start Date" required="required" class="start-date">
-    <input type="date" name="end date" placeholder="End Date" required="required" class="end-date"><br>
-    <textarea name="order notes" placeholder="Notes" class="w-100"></textarea><br>
-    <button type="submit" class="request mt-2">Submit Request</button>
-  </div>
+    <div class="p-3">
+        <div class="d-flex">
+            <div class="me-5 order-left-side">
+                <div class="allcontent">
+
+                </div>
+                <div class="d-flex w-100 justify-content-between my-3"><span class="eng">TOTAL PER DAY</span><span class="pt">TOTAL POR DIA</span> <span class="total-cart"> / EUR</span></div>
+                <div class="border-bottom border-dark my-2 w-100"></div>
+                <div class="small-text mt-5"><span class="eng">{{ page.cart }}</span><span class="pt">{{ page.carrinho }}</span></div>
+            </div>
+            <div class='ms-5'>
+                <input type="text" name="name" placeholder="Name*" required="required" class="w-100">
+                <input type="email" name="email" placeholder="Email*" required="required" class="w-100"><br>
+                <input type="date" name="start date" placeholder="Start Date" required="required" class="start-date">
+                <input type="date" name="end date" placeholder="End Date" required="required" class="end-date"><br>
+                <textarea name="order notes" placeholder="Notes" class="w-100 order-notes"></textarea><br>
+                <div class="d-flex w-100 justify-content-between my-3"><div>GRAND TOTAL</div> <span class="grand-total-cart"> / EUR</span></div>
+                <div class="border-bottom border-dark my-2 w-100"></div>
+                <button type="submit" class="request mt-2 w-100 pb-3 border-bottom border-dark"><span class="eng">SUBMIT REQUEST</span><span class="pt">PEDIDO DE RESERVA</span></button>
+            </div>
+        </div>
+    </div>
 </form>
-</div>
+
 
 <script>
 
@@ -40,6 +65,13 @@ let shoppingCart = (function() {
         }
         return cartCopy;
     }
+    obj.totalCart = function() {
+        var totalCart = 0;
+        for(var item in cart) {
+        totalCart += cart[item].price * cart[item].count;
+        }
+        return Number(totalCart.toFixed(2));
+    }
     return obj;
 })();
 
@@ -47,11 +79,47 @@ function displayCart() {
     let cartArray = shoppingCart.listCart();
     let output = "";
     for(let i in cartArray) {
-        output += '<div class="cart-item"><input class="w-100 border-top" type="text" name="products[]" disabled value="' + cartArray[i].name + '"/><input class="w-100 border-top" type="hidden" name="products[]" value="' + cartArray[i].name + '"/><div class="remove-btn"><i class="ri-delete-bin-2-fill"></i></div></div>'
+        output += '<div class="cart-item d-flex align-items-baseline border-bottom border-dark "><input class="w-100 p-0" type="text" name="products[]" disabled value="' + cartArray[i].name + '"/><span>x' + cartArray[i].count + '</span><input class="w-100 border-top" type="hidden" name="products[]" value="' + cartArray[i].name + '"/></div>'
     }
 
     $('.allcontent').prepend(output);
+    $('.total-cart').html(shoppingCart.totalCart() + "  EUR");
 }
 
 displayCart();
+
+let dayPrice = shoppingCart.totalCart();
+let totalPrice = 0;
+
+$('.end-date, .start-date').on("change", function () {
+    let start = new Date($('.start-date').val());
+    let end = new Date($('.end-date').val());
+    let diff = 1000 * 60 * 60 * 24;
+    let start_date = $('.start-date').val();
+    $(".end-date").attr("min", start_date );
+
+    let date_diff = end - start;
+    let days_diff = date_diff / (1000 * 3600 * 24);
+    let totalPrice = dayPrice * days_diff
+
+    if (days_diff < 3) {      
+        $('.grand-total-cart').html(totalPrice);
+    }           
+    else if (days_diff >= 3 || days_diff < 7) {
+        discountPrice = .25;
+        totalPrice = totalPrice - (totalPrice * discountPrice);
+        $('.grand-total-cart').html(totalPrice);
+    }
+    else if (days_diff >= 7 || days_diff < 30) {
+        discountPrice = .40;
+        totalPrice = totalPrice - (totalPrice * discountPrice); 
+        $('.grand-total-cart').html(totalPrice);   
+    }
+    else if (days_diff >= 30) {
+        discountPrice = .55;
+        totalPrice = totalPrice - (totalPrice * discountPrice);  
+        $('.grand-total-cart').html(totalPrice);  
+    }
+  });
+
 </script>

@@ -24,22 +24,32 @@
                 <div class="line border-white"></div>
             </div>
             <nav class="navmenu">
-                <h1 class="rental-title"><a href="#">RENTAL</a></h1>
-                <h1 class="prod-title"><a href="{{ site.baseurl }}/film">PRODUCTION</a></h1>
+                <h2 class="rental-title"><a href="{{site.baseurl}}/rental"><span class="eng">RENTAL</span><span class="pt">ALUGUER</span></a></h2>
+                <h2 class="prod-title"><a href="{{site.baseurl}}/film"><span class="eng">PRODUCTION</span><span class="pt">PRODUÇÃO</span></a></h2>
             </nav>
         </div>
         <div class="about-container about-container-white">
             <div class="content-flex">
-                <div class="about-intro">
+                <div class="about-intro eng">
                     {{ site.data.about.about }}
                     <br class="desktop"><br>
                     <a href="{{site.baseurl}}/team" class="team-link"><u>Meet the Team</u></a>
                 </div>
+                <div class="about-intro pt">
+                    {{ site.data.about.about_pt }}
+                    <br class="desktop"><br>
+                    <a href="{{site.baseurl}}/team" class="team-link"><u>Conheça a Equipa</u></a>
+                </div>
                 <div class="about-address">
                     {{ site.data.about.address }}
                     <br class="desktop"><br>
-                    <a href="mailto:geral@av82studio.com" class="mailto">geral@av82studio.com</a><br>
-                    + 351 912558439
+                    <div>
+                        <a href="mailto:geral@av82studio.com" class="mailto">geral@av82studio.com</a><br>
+                        + 351 912558439
+                        
+                    </div>
+                    <br class="desktop"><br>
+                    <div class="social-icons"><a href="https://www.instagram.com/av82studio/" target="_blank"><i class="ri-instagram-fill"></i></a><a href="https://www.facebook.com/av82studio" target="_blank"><i class="ri-facebook-box-fill"></i></a></div>
                 </div>
                 <div class="contact-form form-white">
                     <form action="" method="POST">
@@ -51,7 +61,10 @@
                 </div>
             </div>
         </div>
-        <h2 class="about-btn"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span> ABOUT</h2>
+        <h2 class="about-btn"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span> <span class="eng">ABOUT</span><span class="pt">SOBRE</span></h2>
+        <div class="language-switcher">
+            <span id="#pt" class="lang-selector pt-selector active">PT</span> / <span id="#eng" class="lang-selector eng-selector"> ENG</span>
+        </div>
         {{ content }}
     </body>
 </html>

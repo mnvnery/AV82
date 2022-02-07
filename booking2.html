@@ -87,21 +87,24 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
 {% assign gearProducts = site.products | where: "type", "Gear" %}
 {% assign studioProducts = site.products | where: "type", "Studio" %}
 {% assign mobilityProducts = site.products | where: "type", "Mobility" %}
-{% assign crewProducts = site.products | where: "Type", "Crew" %}
+{% assign crewProducts = site.products | where: "type", "Crew" %}
 
 <main class="page-container">
-  <button type="button" class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart">Cart (<span class="total-count"></span>)</button></div>
+  <button type="button" class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart"><span class="eng">CART</span><span class="pt">CESTO</span> (<span class="total-count"></span>)</button></div>
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active h5" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#pills-studio" type="button" role="tab" aria-controls="pills-studio" aria-selected="true">STUDIO</button>
+    <a class="nav-link h5" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" type="button" role="tab" aria-controls="pills-studio" aria-selected="true"><span class="eng">STUDIO</span><span class="pt">ESTÚDIO</span></a>
   </li>
   <li class="nav-item dropdown full-width" role="presentation">
-    <a class="nav-link dropdown-toggle h5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
+    <a class="nav-link dropdown-toggle h5 active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="eng">GEAR</span><span class="pt">MATERIAL</span></a>
     <ul class="dropdown-menu">
       <li>
-        <div class="subnav">IMAGE</div>
-        {% for subcat in page.imagem_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        <div class="subnav"><span class="eng">IMAGE</span><span class="pt">IMAGEM</span></div>
+        {% for subcat in page.imagem_eng  limit: 1 %}
+          <a class="dropdown-item active" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
+        {% endfor %}
+        {% for subcat in page.imagem_eng offset: 1 %}
+          <a class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
         {% endfor %}
       </li>
       <li>
@@ -111,7 +114,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
         {% endfor %}
       </li>
       <li>
-        <div class="subnav">LUZ</div>
+        <div class="subnav"><span class="eng">LIGHT</span><span class="pt">LUZ</span></div>
         {% for subcat in page.light_eng %}
           <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
@@ -132,22 +135,22 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
     </ul>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link h5" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#pills-crew" type="button" role="tab" aria-controls="pills-crew" aria-selected="false">CREW</button>
+    <a class="nav-link h5" href="#crew" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#crew" type="button" role="tab" aria-controls="pills-crew" aria-selected="false"><span class="eng">CREW</span><span class="pt">EQUIPA</span></a>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link h5" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#pills-mobility" type="button" role="tab" aria-controls="pills-mobility" aria-selected="false">MOBILITY</button>
+    <a class="nav-link h5" href="#mobility" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#mobility" type="button" role="tab" aria-controls="pills-mobility" aria-selected="false"><span class="eng">MOBILITY</span><span class="pt">TRANSPORTE</span></a>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
   <!--STUDIO TAB-->
-  <div class="tab-pane fade show active" id="pills-studio" role="tabpanel" aria-labelledby="pills-studio-tab">
+  <div class="tab-pane fade" id="studio" role="tabpanel" aria-labelledby="pills-studio-tab">
     <div class="row gx-4 gy-4 mt-4">
       {% for product in studioProducts %}
       <div class="col m-3">
         <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+          <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
           <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
         </div> 
       </div>
@@ -155,14 +158,14 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
     </div>
   </div>
   <!--CREW TAB-->
-  <div class="tab-pane fade" id="pills-crew" role="tabpanel" aria-labelledby="pills-crew-tab">
+  <div class="tab-pane fade" id="crew" role="tabpanel" aria-labelledby="pills-crew-tab">
     <div class="row gx-4 gy-4 mt-4">
       {% for product in crewProducts %}
       <div class="col m-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+          <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
           <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
         </div> 
       </div>
@@ -170,14 +173,14 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
     </div>
   </div>
   <!--MOBILITY TAB-->
-  <div class="tab-pane fade" id="pills-mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">
+  <div class="tab-pane fade" id="mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">
     <div class="row gx-4 gy-4 mt-4">
       {% for product in mobilityProducts %}
       <div class="col m-3">
         <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+          <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
           <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
         </div> 
       </div>
@@ -185,8 +188,8 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
     </div>
   </div>
   <!--GEAR TABS-->
-  {% for subcat in page.imagem_eng %}
-    <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
+  {% for subcat in page.imagem_eng limit: 1 %}
+    <div class="tab-pane fade show active" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
       {% assign products = site.products | where: "subcategory", subcat %}
       <div class="row gx-4 gy-4 mt-4">
           {% for product in products %}
@@ -194,7 +197,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
-              <div class="small-label">{{ product.price_day }} EUR/DAY</div>
+              <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
               <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
             </div> 
           </div>
@@ -202,6 +205,23 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
         </div>
     </div>
   {% endfor %}
+  {% for subcat in page.imagem_eng offset: 1 %}
+  <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
+    {% assign products = site.products | where: "subcategory", subcat %}
+    <div class="row gx-4 gy-4 mt-4">
+        {% for product in products %}
+        <div class="col m-3">
+          <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+          <div class="product-title mt-2 small-label">{{ product.title }}</div>
+          <div class="d-flex justify-content-between mt-2 product-container">
+            <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+          </div> 
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+{% endfor %}
   {% for subcat in page.audio_eng %}
     <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
       {% assign products = site.products | where: "subcategory", subcat %}
@@ -211,8 +231,8 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
-              <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+              <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -228,8 +248,8 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
-              <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+              <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -245,8 +265,8 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
-              <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-              <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+              <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -262,8 +282,8 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
           <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
           <div class="product-title mt-2 small-label">{{ product.title }}</div>
           <div class="d-flex justify-content-between mt-2 product-container">
-            <div class="small-label">{{ product.price_day }} EUR/DAY</div>
-            <div class="addToCart small-label me-2" data-item="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+            <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
           </div> 
         </div>
         {% endfor %}
@@ -272,24 +292,6 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
 {% endfor %}
 </div> 
 
-<!--
-
-<form action="https://getform.io/f/e46584e3-2177-4d02-a8ee-514e999190e2" method="POST" class="booking-form">
-  <div class="submission p-5">
-    <a href="#" class="close-cart">Close Cart</a>
-    <div class="allcontent mb-5"></div>
-    <span>Price per day:</span><span class="day-price"> 0</span><br>
-    <span>Total Price:</span><span class="total-price"> 0</span><br>
-    <input type="text" name="name" placeholder="Your Name*" required="required" class="w-100"><br>
-    <input type="email" name="email" placeholder="Your Email*" required="required" class="w-100"><br>
-    <input type="date" name="start date" placeholder="Start Date" required="required" class="start-date">
-    <input type="date" name="end date" placeholder="End Date" required="required" class="end-date"><br>
-    <textarea name="order notes" placeholder="Notes" class="w-100"></textarea><br>
-    <button type="submit" class="request mt-2">Submit Request</button>
-  </div>
-</form>
-
--->
 
 <!-- Button trigger modal -->
 
@@ -311,16 +313,16 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <h4 class="text-uppercase"><b>{{product.title}}</b></h4>
             <div class="border-bottom border-dark my-2"></div>
             <div class="d-flex justify-content-between bold">
-              <div>{{ product.price_day }} EUR/DAY</div>
+              <div>{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
               <div>QTY: <input type="number" class="qty-input" step="1" min="1" name="qty" value="1" title="QTY" inputmode="numeric" autocomplete="off"></div>
             </div>
             <div class="border-bottom border-dark my-2"></div>
             <div>{{ product.description }}</div>
             <div class="border-bottom border-dark my-2"></div>
-            <div class="small-text mt-2">{{ page.cart }}</div>
+            <div class="small-text mt-2"><span class="eng">{{ page.cart }}</span><span class="pt">{{ page.carrinho }}</span></div>
             <div class="border-bottom border-dark my-2"></div>
             <div class="d-flex justify-content-center">
-              <div class="add-to-cart inner-cart-btn me-2" data-name="{{product.title}}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD TO CART</div>
+              <div class="add-to-cart inner-cart-btn me-2" data-name="{{product.title}}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}"><span class="eng">ADD TO CART</span><span class="pt">ADICIONAR AO CESTO</span></div>
             </div>
             <div class="border-bottom border-dark my-2"></div>
           </div>
@@ -338,8 +340,8 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
       <div class="modal-body">
         
         <div class="pb-2 d-flex justify-content-between">
-          <div>Cart (<span class="total-count"></span>)</div>
-          <button class="clear-cart">Clear All</button>
+          <div><span class="eng">Cart</span><span class="pt">Cesto</span> (<span class="total-count"></span>)</div>
+          <button class="clear-cart"><span class="eng">Clear All</span><span class="pt">Limpar Cesto</span></button>
         </div>
         <div class="border-bottom border-dark w-100"></div>
         <div class="show-cart">
@@ -348,7 +350,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
       </div>
       <div class="modal-footer border-0 flex-column">
         <div class="border-bottom border-dark my-2 w-100"></div>
-        <div class="d-flex w-100 justify-content-between"><div>TOTAL PER DAY</div> <span class="total-cart"> / EUR</span></div>
+        <div class="d-flex w-100 justify-content-between"><div><span class="eng">TOTAL PER DAY</span><span class="pt">TOTAL POR DIA</span></div> <span class="total-cart"> / EUR</span></div>
         <div class="border-bottom border-dark my-2 w-100"></div>
         <a href="{{site.baseurl}}/checkout"><button type="button" class="checkout-btn bold">CHECKOUT</button></a>
         <div class="border-bottom border-dark my-2 w-100"></div>
@@ -362,56 +364,18 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
 <script src="{{site.baseurl}}/assets/js/shoppingCart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
-  
-  let dayPrice = 0;
-  let totalPrice = 0;
-  $(".addToCart").click(function() {
-    let elem = $(this).data("item");
-    $('.submission').show();
-    $('.allcontent').prepend('<div class="cart-item"><input class="w-100 border-top" type="text" name="products[]" disabled value="' + elem + '"/><input class="w-100 border-top" type="hidden" name="products[]" value="' + elem + '"/><div class="remove-btn"><i class="ri-delete-bin-2-fill"></i></div></div>');
-    dayPrice += parseInt($(this).data('price'), 10);
-    $('.day-price').html(dayPrice);
-    console.log(totalPrice);
 
-  });
+var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
+if (hash) {
+    $('.nav-pills .nav-item a[href="#' + hash + '"]').tab('show');
+    $(document).scrollTop(0);
+} 
 
-    $(document).on( "click", '.remove-btn', function() {
-        $(this).parent().remove();
-        console.log("clicked!");
-        return false;
-    });
-
-  $('.end-date, .start-date').on("change", function () {
-    let start = new Date($('.start-date').val());
-    let end = new Date($('.end-date').val());
-    let diff = 1000 * 60 * 60 * 24;
-    let start_date = $('.start-date').val();
-    $(".end-date").attr("min", start_date );
-
-    let date_diff = end - start;
-    let days_diff = date_diff / (1000 * 3600 * 24);
-    let totalPrice = dayPrice * days_diff
-
-    if (days_diff < 3) {      
-        $('.total-price').html(totalPrice);
-    }           
-    else if (days_diff >= 3 || days_diff < 7) {
-        discountPrice = .25;
-        totalPrice = totalPrice - (totalPrice * discountPrice);
-        $('.total-price').html(totalPrice);
-    }
-    else if (days_diff >= 7 || days_diff < 30) {
-        discountPrice = .40;
-        totalPrice = totalPrice - (totalPrice * discountPrice); 
-        $('.total-price').html(totalPrice);   
-    }
-    else if (days_diff >= 30) {
-        discountPrice = .55;
-        totalPrice = totalPrice - (totalPrice * discountPrice);  
-        $('.total-price').html(totalPrice);  
-    }
-  });
-  
+// Change hash for page-reload
+$('.nav-pills a').on('shown.bs.tab', function (e) {
+    window.location.hash = e.target.hash;
+    $(document).scrollTop(0);
+})
 
   function handleFirstTab(e) {
     if (e.keyCode === 9) { // the "I am a keyboard user" key
