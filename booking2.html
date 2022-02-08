@@ -88,9 +88,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
 {% assign studioProducts = site.products | where: "type", "Studio" %}
 {% assign mobilityProducts = site.products | where: "type", "Mobility" %}
 {% assign crewProducts = site.products | where: "type", "Crew" %}
-
+<button class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart"><span class="eng">CART</span><span class="pt">CESTO</span> (<span class="total-count"></span>)</button></div>
 <main class="page-container">
-  <button class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart"><span class="eng">CART</span><span class="pt">CESTO</span> (<span class="total-count"></span>)</button></div>
+  
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
     <a class="nav-link h5" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" role="tab" aria-controls="pills-studio" aria-selected="true"><span class="eng">STUDIO</span><span class="pt">ESTÚDIO</span></a>
@@ -98,7 +98,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   <li class="nav-item dropdown full-width" role="presentation">
     <a class="nav-link dropdown-toggle h5 active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="eng">GEAR</span><span class="pt">MATERIAL</span></a>
     <ul class="dropdown-menu">
-      <li>
+      <li class="span-mobile">
         <div class="subnav"><span class="eng">IMAGE</span><span class="pt">IMAGEM</span></div>
         {% for subcat in page.imagem_eng  limit: 1 %}
           <a class="dropdown-item active" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
@@ -108,14 +108,14 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
         {% endfor %}
       </li>
       <li>
-        <div class="subnav">AUDIO</div>
-        {% for subcat in page.audio_eng %}
+        <div class="subnav"><span class="eng">LIGHT</span><span class="pt">LUZ</span></div>
+        {% for subcat in page.light_eng %}
           <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
-        <div class="subnav"><span class="eng">LIGHT</span><span class="pt">LUZ</span></div>
-        {% for subcat in page.light_eng %}
+        <div class="subnav">AUDIO</div>
+        {% for subcat in page.audio_eng %}
           <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
@@ -144,9 +144,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
 <div class="tab-content" id="pills-tabContent">
   <!--STUDIO TAB-->
   <div class="tab-pane fade" id="studio" role="tabpanel" aria-labelledby="pills-studio-tab">
-    <div class="row gx-4 gy-4 mt-4">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5">
       {% for product in studioProducts %}
-      <div class="col m-3">
+      <div class="col m-lg-3">
         <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
@@ -159,9 +159,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   </div>
   <!--CREW TAB-->
   <div class="tab-pane fade" id="crew" role="tabpanel" aria-labelledby="pills-crew-tab">
-    <div class="row gx-4 gy-4 mt-4">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5">
       {% for product in crewProducts %}
-      <div class="col m-3">
+      <div class="col m-lg-3">
         <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
@@ -174,9 +174,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   </div>
   <!--MOBILITY TAB-->
   <div class="tab-pane fade" id="mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">
-    <div class="row gx-4 gy-4 mt-4">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5">
       {% for product in mobilityProducts %}
-      <div class="col m-3">
+      <div class="col m-lg-3">
         <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
@@ -191,9 +191,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   {% for subcat in page.imagem_eng limit: 1 %}
     <div class="tab-pane fade show active" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
       {% assign products = site.products | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-4">
+      <div class="row gx-4 gy-4 mt-md-4 pb-5">
           {% for product in products %}
-          <div class="col m-3">
+          <div class="col m-lg-3">
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
@@ -208,9 +208,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   {% for subcat in page.imagem_eng offset: 1 %}
   <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
     {% assign products = site.products | where: "subcategory", subcat %}
-    <div class="row gx-4 gy-4 mt-4">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5">
         {% for product in products %}
-        <div class="col m-3">
+        <div class="col m-lg-3">
           <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
           <div class="product-title mt-2 small-label">{{ product.title }}</div>
           <div class="d-flex justify-content-between mt-2 product-container">
@@ -225,9 +225,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   {% for subcat in page.audio_eng %}
     <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
       {% assign products = site.products | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-4">
+      <div class="row gx-4 gy-4 mt-md-4 pb-5">
           {% for product in products %}
-          <div class="col m-3">
+          <div class="col m-lg-3">
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
@@ -242,9 +242,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   {% for subcat in page.light_eng %}
     <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
       {% assign products = site.products | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-4">
+      <div class="row gx-4 gy-4 mt-md-4 pb-5">
           {% for product in products %}
-          <div class="col m-3">
+          <div class="col m-lg-3">
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
@@ -259,9 +259,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   {% for subcat in page.ge_eng %}
     <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
       {% assign products = site.products | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-4">
+      <div class="row gx-4 gy-4 mt-md-4 pb-5">
           {% for product in products %}
-          <div class="col m-3">
+          <div class="col m-lg-3">
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
@@ -276,9 +276,9 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   {% for subcat in page.on_set_eng %}
   <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
     {% assign products = site.products | where: "subcategory", subcat %}
-    <div class="row gx-4 gy-4 mt-4">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5">
         {% for product in products %}
-        <div class="col m-3">
+        <div class="col m-lg-3">
           <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
           <div class="product-title mt-2 small-label">{{ product.title }}</div>
           <div class="d-flex justify-content-between mt-2 product-container">
@@ -299,10 +299,10 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="{{product.title | slugify }}Modal" tabindex="-1" aria-labelledby="{{product.title | slugify }}ModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content p-3 pe-5">
+    <div class="modal-content p-3 pe-md-5">
         <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="d-flex">
-          <div class="d-flex ps-3 pe-5">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="d-flex ps-md-3 pe-md-5">
             {% for img in product.images %}
             <img src="{{site.baseurl}}{{ img }}" alt="{{ product.title }}" class="modal-img">
             {% endfor %}
@@ -379,7 +379,33 @@ $('.nav-pills a').on('shown.bs.tab', function (e) {
     $(document).scrollTop(0);
 })
 
-  function handleFirstTab(e) {
+const $dropdown = $(".dropdown");
+const $dropdownToggle = $(".dropdown-toggle");
+const $dropdownMenu = $(".dropdown-menu");
+const showClass = "show";
+
+$(window).on("load resize", function() {
+  if (this.matchMedia("(min-width: 768px)").matches) {
+    $dropdown.hover(
+      function() {
+        const $this = $(this);
+        $this.addClass(showClass);
+        $this.find($dropdownToggle).attr("aria-expanded", "true");
+        $this.find($dropdownMenu).addClass(showClass);
+      },
+      function() {
+        const $this = $(this);
+        $this.removeClass(showClass);
+        $this.find($dropdownToggle).attr("aria-expanded", "false");
+        $this.find($dropdownMenu).removeClass(showClass);
+      }
+    );
+  } else {
+    $dropdown.off("mouseenter mouseleave");
+  }
+});
+
+function handleFirstTab(e) {
     if (e.keyCode === 9) { // the "I am a keyboard user" key
         document.body.classList.add('user-is-tabbing');
         window.removeEventListener('keydown', handleFirstTab);
