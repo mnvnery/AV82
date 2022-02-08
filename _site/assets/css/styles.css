@@ -253,6 +253,8 @@ li { list-style-type: none; }
 
 .category-title { border-bottom: 1px solid grey; padding-bottom: 7px; }
 
+.sticky-container { margin-top: 10vh; }
+
 @media screen and (max-width: 768px) { .images-right { display: none; } .text-wrapper { max-width: 100%; } .container-flex { flex-direction: column-reverse; } .flex-item-50 { width: 100%; } .layout { width: 100%; padding-bottom: 2em; } }
 
 .photo-carousel .carousel-cell { width: 100%; height: 80vh; margin-right: 10px; display: flex; justify-content: center; align-items: center; }
@@ -317,7 +319,7 @@ li { list-style-type: none; }
 
 @media screen and (max-width: 600px) { .photo-carousel .carousel-cell img { max-width: 85%; max-height: 90%; } .photo-carousel .carousel-cell { height: 50vh; margin-top: 10vh; } .flickity-prev-next-button { width: 20vw !important; } .carousel-img { max-width: 82%; } .content-flex { flex-direction: column; justify-content: flex-start; margin-top: 16% !important; } .content-flex div { margin-bottom: 5vh; } .credits { max-width: 100%; } .about-intro { width: 100%; } .video-embed, .stills-container { width: 85%; } .mobile-container { display: flex; flex-direction: column; justify-content: center; height: 80vh; } .video-embed { margin: 5vh auto 0 auto; } html, body { overflow-x: hidden; overflow-y: scroll; } body { position: relative; } .carousel-nav .flickity-viewport { left: 10px; } }
 
-.page-container { margin: 15px; position: relative; }
+.page-container { position: relative; }
 
 .bold { font-weight: bold; }
 
@@ -395,7 +397,7 @@ button { background-color: transparent; outline: none; border: none; }
 
 .show.dropdown .dropdown-toggle::after { transform: translateY(3px); }
 
-@media screen and (min-width: 768px) { .full-width.dropdown > .dropdown-menu { transform: translate3d(15px, 42px, 0px); } }
+@media screen and (min-width: 768px) { .full-width.dropdown > .dropdown-menu { transform: translate3d(15px, 42px, 0px); } .page-container { margin-top: 10vh; } }
 
 @media screen and (max-width: 768px) { .dropdown-menu.show { display: flex; flex-direction: column; flex-wrap: wrap; max-height: 750px; width: 95%; } .dropdown-menu li { margin-bottom: 2vh; } .full-width.dropdown > .dropdown-menu { transform: translate3d(0px, 75px, 0px) !important; } .product-img { width: 10em; height: 8em; object-fit: contain; } .nav { width: 100%; justify-content: space-between; } .nav-link { padding: 0.5rem 0; } .page-container { height: 100vh; } .modal-img { width: 12em; margin: 0 auto; } }
 
