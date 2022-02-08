@@ -1,11 +1,11 @@
 ---
-layout: white
+layout: black
 intro_eng: "<p>Portuguese production company that offers Gear Rental, Studio, Servicing
   and Mobility.</p>"
 intro_pt: "<p>Produtora portuguesa que disponibiliza aluguer de material, estúdio,
   equipa e transporte.</p>"
 studio_pt: "<p>Somos um estúdio de produção audiovisual, com sede na cidade do Porto,
-  em Portugal</p><p>Estamos inseridos numa comunidade crescente de artistas e criadores,
+  em Portugal.</p><p>Estamos inseridos numa comunidade crescente de artistas e criadores,
   que apresenta soluções à medida para cada projeto e cliente.</p><p>Oferecemos uma
   gama completa de serviços de produção de cinema, TV e fotografia e, também, suporte
   para locais de filmagem.</p><p>Fornecemos câmaras, objetivas, luz, grip e equipa
@@ -41,12 +41,13 @@ transport_eng: "<p>Lighting and grip van, suitable for your productions. Runner 
 
 ---
 <div class="nav-logo">
-    <a href="{{ site.baseurl }}/">
-        <img src="{{site.baseurl}}/assets/img/logo_preto.png" alt="" class="logo-img">
-        <img src="{{site.baseurl}}/assets/img/logo_mobile_preto.png" alt="" class="logo-mobile-img">
-    </a>
+  <a href="{{ site.baseurl }}/">
+    <img src="{{site.baseurl}}/assets/img/logo_branco.png" alt="" class="logo-img">
+    <img src="{{site.baseurl}}/assets/img/logo_mobile_branco.png" alt="" class="logo-mobile-img">
+  </a>
 </div>
 
+{% include about-container.html %}
 <!--
 <div class="rental-nav">
     <h2 class="active">STUDIO</h2>
@@ -59,15 +60,19 @@ transport_eng: "<p>Lighting and grip van, suitable for your productions. Runner 
 <div class="sticky-container">
   <div class="grid-img-wrap images-right">
       <img class="grid-img-item studio-img" src="{{ site.baseurl }}/assets/img/studio.webp" alt="studio">
+      <img class="grid-img-item studio-img" src="{{ site.baseurl }}/assets/img/studio_4.jpg" alt="studio">
       <img class="grid-img-item gear-img" src="{{ site.baseurl }}/assets/img/red-lens-kit.webp" alt="gear">
       <img class="grid-img-item crew-img" src="{{ site.baseurl }}/assets/img/crew-1.jpg" alt="crew">
       <img class="grid-img-item mobility-img" src="{{ site.baseurl }}/assets/img/van.jpg" alt="mobility">
   </div>
 
   <div class="text-wrapper-container">
+      <div class="text-wrapper category-gear">
+          <h2 class="category-title"><span class="eng">RENTAL</span><span class="pt">ALUGUER</span></h2>
+          <span class="eng">{{ page.studio_eng }}</span><span class="pt">{{ page.studio_pt }}</span>
+      </div>
       <div class="text-wrapper category-studio">
           <h2 class="category-title"><span class="eng">STUDIO</span><span class="pt">ESTÚDIO</span></h2>
-          <span class="eng">{{ page.studio_eng }}</span><span class="pt">{{ page.studio_pt }}</span>
           <h4>LAYOUT</h4> 
           <div class="container-flex">
             <div class="flex-item-50 eng">
@@ -76,6 +81,7 @@ transport_eng: "<p>Lighting and grip van, suitable for your productions. Runner 
               <div class="layout-flex"><p>2. Blackout</p><p>7m x 12m</p></div>
               <div class="layout-flex"><p>3. Make-up</p><p>3m x 5m</p></div>
               <div class="layout-flex"><p>4. Dressing Rooms</p><p></p></div>
+              <div class="layout-flex"><p>5. Coffee & Water Station</p><p></p></div>
               <div class="layout-flex"><p></p><p></p></div>
             </div>
             <div class="flex-item-50 pt">
@@ -84,9 +90,10 @@ transport_eng: "<p>Lighting and grip van, suitable for your productions. Runner 
               <div class="layout-flex"><p>2. Blackout</p><p>7m x 12m</p></div>
               <div class="layout-flex"><p>3. Maquilhagem</p><p>3m x 5m</p></div>
               <div class="layout-flex"><p>4. Vestiários</p><p></p></div>
+              <div class="layout-flex"><p>5. Zona Café e Água</p><p></p></div>
               <div class="layout-flex"><p></p><p></p></div>
             </div>
-            <img class="layout" src="{{ site.baseurl }}/assets/img/layout.png" alt="layout">
+            <img class="layout" src="{{ site.baseurl }}/assets/img/layout_white.png" alt="layout">
           </div>
           <h4><span class="eng">AMENITIES</span><span class="pt">AMENIDADES</span></h4>
           <ul class="details-ul">
