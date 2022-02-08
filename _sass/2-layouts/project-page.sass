@@ -61,11 +61,17 @@
     text-transform: uppercase
 
 .credits 
-    max-width: 30vw
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    max-height: 36vh
+    justify-content: space-between
 
 .credits p
     margin: 0
     font-size: 0.8em
+    margin-bottom: 15px
+    margin-right: 30px
 
 .project-container
     margin-top: 5% !important
@@ -191,10 +197,6 @@
 
     .video-embed
         margin: 5vh auto 0 auto
-
-    html, body 
-        overflow-x: hidden
-        overflow-y: scroll
 
     body 
         position: relative
