@@ -90,10 +90,10 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
 {% assign crewProducts = site.products | where: "type", "Crew" %}
 
 <main class="page-container">
-  <button type="button" class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart"><span class="eng">CART</span><span class="pt">CESTO</span> (<span class="total-count"></span>)</button></div>
+  <button class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart"><span class="eng">CART</span><span class="pt">CESTO</span> (<span class="total-count"></span>)</button></div>
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" type="button" role="tab" aria-controls="pills-studio" aria-selected="true"><span class="eng">STUDIO</span><span class="pt">ESTÚDIO</span></a>
+    <a class="nav-link h5" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" role="tab" aria-controls="pills-studio" aria-selected="true"><span class="eng">STUDIO</span><span class="pt">ESTÚDIO</span></a>
   </li>
   <li class="nav-item dropdown full-width" role="presentation">
     <a class="nav-link dropdown-toggle h5 active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="eng">GEAR</span><span class="pt">MATERIAL</span></a>
@@ -101,44 +101,44 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
       <li>
         <div class="subnav"><span class="eng">IMAGE</span><span class="pt">IMAGEM</span></div>
         {% for subcat in page.imagem_eng  limit: 1 %}
-          <a class="dropdown-item active" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
+          <a class="dropdown-item active" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
         {% endfor %}
         {% for subcat in page.imagem_eng offset: 1 %}
-          <a class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
+          <a class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
         {% endfor %}
       </li>
       <li>
         <div class="subnav">AUDIO</div>
         {% for subcat in page.audio_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
         <div class="subnav"><span class="eng">LIGHT</span><span class="pt">LUZ</span></div>
         {% for subcat in page.light_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
         <div class="subnav">G&E</div>
         {% for subcat in page.ge_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
         <div class="subnav">ON SET</div>
         {% for subcat in page.on_set_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" type="button" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       
     </ul>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#crew" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#crew" type="button" role="tab" aria-controls="pills-crew" aria-selected="false"><span class="eng">CREW</span><span class="pt">EQUIPA</span></a>
+    <a class="nav-link h5" href="#crew" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#crew" role="tab" aria-controls="pills-crew" aria-selected="false"><span class="eng">CREW</span><span class="pt">EQUIPA</span></a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#mobility" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#mobility" type="button" role="tab" aria-controls="pills-mobility" aria-selected="false"><span class="eng">MOBILITY</span><span class="pt">TRANSPORTE</span></a>
+    <a class="nav-link h5" href="#mobility" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#mobility" role="tab" aria-controls="pills-mobility" aria-selected="false"><span class="eng">MOBILITY</span><span class="pt">TRANSPORTE</span></a>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
@@ -165,7 +165,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
         <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
+          <div class="small-label"><span class='eng'>REQUEST BUDGET</span><span class='pt'>PEDIR ORÇAMENTO</span></div>
           <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
         </div> 
       </div>
@@ -300,7 +300,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
 <div class="modal fade bd-example-modal-lg" id="{{product.title | slugify }}Modal" tabindex="-1" aria-labelledby="{{product.title | slugify }}ModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content p-3 pe-5">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="d-flex">
           <div class="d-flex ps-3 pe-5">
             {% for img in product.images %}
@@ -308,17 +308,19 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             {% endfor %}
           </div>
           <div class="modal-info-side">
-            <div>{{ product.category }} / {{ product.subcategory }}</div>
+            <div>{% if product.type == "Gear" %}{{ product.category }} / {{ product.subcategory }}{% endif %}</div>
             <div class="border-bottom border-dark my-2"></div>
             <h4 class="text-uppercase"><b>{{product.title}}</b></h4>
             <div class="border-bottom border-dark my-2"></div>
             <div class="d-flex justify-content-between bold">
-              <div>{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
+              <div>{% if product.type == "Crew" %}<span class='eng'>REQUEST BUDGET</span><span class='pt'>PEDIR ORÇAMENTO</span>{% else %}{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span>{% endif %}</div>
               <div>QTY: <input type="number" class="qty-input" step="1" min="1" name="qty" value="1" title="QTY" inputmode="numeric" autocomplete="off"></div>
             </div>
             <div class="border-bottom border-dark my-2"></div>
+            {% if product.description != '' %}
             <div>{{ product.description }}</div>
             <div class="border-bottom border-dark my-2"></div>
+            {% endif %}
             <div class="small-text mt-2"><span class="eng">{{ page.cart }}</span><span class="pt">{{ page.carrinho }}</span></div>
             <div class="border-bottom border-dark my-2"></div>
             <div class="d-flex justify-content-center">

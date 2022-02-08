@@ -363,7 +363,7 @@ li { list-style-type: none; }
 
 .full-width.dropdown > .dropdown-menu > li > a { white-space: normal; }
 
-.dropdown-item { margin: 2px 2px; position: relative; }
+.dropdown-item { margin: 2px 2px; position: relative; cursor: pointer; }
 
 .dropdown-item.active, .dropdown-item:active { font-weight: bold; }
 
@@ -384,6 +384,8 @@ li { list-style-type: none; }
 .delete-item { text-decoration: underline; }
 
 button { background-color: transparent; outline: none; border: none; }
+
+.product-img, .inner-cart-btn { cursor: pointer; }
 
 .team-flex { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 15px; margin-bottom: 20vh; }
 
