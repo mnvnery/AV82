@@ -32,7 +32,7 @@ fields:
       format: html-blocks
   label: Descrição
   description: em pt. se for igual à versão inglesa, deixar vazio.
-- name: Type
+- name: type
   type: select
   default: []
   config:
@@ -83,16 +83,6 @@ fields:
   label: layout
   default: white
   hidden: true
-- name: description_pt
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Descrição
-  description: em pt
 pages:
 - _products/Crew/1st-ac.html
 - _products/Crew/art-director.html
