@@ -175,7 +175,9 @@ li p { margin-bottom: 0.5rem; }
 
 .black-background .selection-title.active { opacity: 1; }
 
-.active { opacity: 1 !important; }
+.selection-title.active { opacity: 1 !important; }
+
+.lang-selector.active { opacity: 1 !important; }
 
 .filters span:hover { text-decoration: underline; }
 
@@ -400,6 +402,12 @@ button { background-color: transparent; outline: none; border: none; }
 .dropdown-toggle::after { transition: transform 0.15s linear; }
 
 .show.dropdown .dropdown-toggle::after { transform: translateY(3px); }
+
+.img-size { height: 450px; width: 700px; background-size: cover; overflow: hidden; }
+
+#studioCarousel { width: 40vw; }
+
+.studio-info-side { width: 48%; }
 
 @media screen and (min-width: 768px) { .full-width.dropdown > .dropdown-menu { transform: translate3d(15px, 42px, 0px); } .page-container { margin-top: 10vh; } }
 
