@@ -1,15 +1,16 @@
-var shoppingCart = (function() {
+let shoppingCart = (function() {
   // =============================
   // Private methods and propeties
   // =============================
   cart = [];
   
   // Constructor
-  function Item(name, price, count, image) {
+  function Item(name, price, count, image, days) {
     this.name = name;
     this.price = price;
     this.count = count;
     this.image = image;
+    this.days = days;
   }
   
   // Save cart
@@ -29,33 +30,42 @@ var shoppingCart = (function() {
   // =============================
   // Public methods and propeties
   // =============================
-  var obj = {};
+  let obj = {};
   
   // Add to cart
-  obj.addItemToCart = function(name, price, image, count) {
-    for(var item in cart) {
+  obj.addItemToCart = function(name, price, image, count, days) {
+    for(let item in cart) {
       if(cart[item].name === name) {
         cart[item].count ++;
         saveCart();
         return;
       }
     }
-    var item = new Item(name, price, count, image);
+    let item = new Item(name, price, count, image, days);
     cart.push(item);
     saveCart();
   }
   // Set count from item
   obj.setCountForItem = function(name, count) {
-    for(var i in cart) {
+    for(let i in cart) {
       if (cart[i].name === name) {
         cart[i].count = count;
         break;
       }
     }
   };
+  // Set days from item
+  obj.setDaysForItem = function(name, days) {
+    for(let i in cart) {
+      if (cart[i].name === name) {
+        cart[i].days = days;
+        break;
+      }
+    }
+  };
   // Remove item from cart
   obj.removeItemFromCart = function(name) {
-      for(var item in cart) {
+      for(let item in cart) {
         if(cart[item].name === name) {
           cart[item].count --;
           if(cart[item].count === 0) {
@@ -69,7 +79,7 @@ var shoppingCart = (function() {
 
   // Remove all items from cart
   obj.removeItemFromCartAll = function(name) {
-    for(var item in cart) {
+    for(let item in cart) {
       if(cart[item].name === name) {
         cart.splice(item, 1);
         break;
@@ -86,8 +96,8 @@ var shoppingCart = (function() {
 
   // Count cart 
   obj.totalCount = function() {
-    var totalCount = 0;
-    for(var item in cart) {
+    let totalCount = 0;
+    for(let item in cart) {
       totalCount += cart[item].count;
     }
     return totalCount;
@@ -95,16 +105,25 @@ var shoppingCart = (function() {
 
   // Total cart
   obj.totalCart = function() {
-    var totalCart = 0;
-    for(var item in cart) {
+    let totalCart = 0;
+    for(let item in cart) {
       totalCart += cart[item].price * cart[item].count;
     }
     return Number(totalCart.toFixed(2));
   }
 
+  obj.totalCartDays = function() {
+    let totalCartDays = 0;
+    for(let item in cart) {
+      totalCartDays += cart[item].price * cart[item].count * cart[item].days;
+    }
+    return Number(totalCartDays.toFixed(2));
+  }
+
+
   // List cart
   obj.listCart = function() {
-    var cartCopy = [];
+    let cartCopy = [];
     for(i in cart) {
       item = cart[i];
       itemCopy = {};
@@ -113,6 +132,7 @@ var shoppingCart = (function() {
 
       }
       itemCopy.total = Number(item.price * item.count).toFixed(2);
+      itemCopy.totalDays = Number(item.price * item.count * item.days).toFixed(2);
       cartCopy.push(itemCopy)
     }
     return cartCopy;
@@ -139,10 +159,11 @@ var shoppingCart = (function() {
 // Add item
 $('.add-to-cart').click(function(event) {
   event.preventDefault();
-  var name = $(this).data('name');
-  var price = Number($(this).data('price'));
-  var image = $(this).data('image');
-  shoppingCart.addItemToCart(name, price, image, 1);
+  let name = $(this).data('name');
+  let price = Number($(this).data('price'));
+  let image = $(this).data('image');
+  let count = Number($(this).data('count'));
+  shoppingCart.addItemToCart(name, price, image, count, 1);
   displayCart();
 });
 
@@ -155,9 +176,9 @@ $('.clear-cart').click(function() {
 
 
 function displayCart() {
-  var cartArray = shoppingCart.listCart();
-  var output = "";
-  for(var i in cartArray) {
+  let cartArray = shoppingCart.listCart();
+  let output = "";
+  for(let i in cartArray) {
     output += "<div class='d-flex py-3 border-bottom border-dark'>"
       + "<img class='cart-img pe-3' src='" + cartArray[i].image + "'>"
       + "<div class='w-100'>"
@@ -165,12 +186,12 @@ function displayCart() {
       + "<div class='d-flex justify-content-between align-items-end'>"
       + "<div>" + cartArray[i].price + " EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>"
       + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'></div>"
+      + "<div><span class='eng'>DAYS:</span><span class='pt'>DIAS: </span><input type='number' class='days-count' data-name='" + cartArray[i].name + "' value='" + cartArray[i].days + "'></div>"
       + "<div><button class='delete-item' data-name='" + cartArray[i].name + "'><span class='eng'>Remove</span><span class='pt'>Eliminar</span></button></div>"
-//      + "<div>" + cartArray[i].total + "</div>" 
+      + "<div>" + cartArray[i].total + "<span class='small-label days-total-price'>"+ cartArray[i].totalDays +"</span></div>" 
       + "</div>"
       + "</div>"
       + "</div>";
-      console.log(cartArray[i].name)
   }
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCart() + "  EUR");
@@ -180,31 +201,38 @@ function displayCart() {
 // Delete item button
 
 $('.show-cart').on("click", ".delete-item", function(event) {
-  var name = $(this).data('name')
+  let name = $(this).data('name')
   shoppingCart.removeItemFromCartAll(name);
   displayCart();
 })
 
-
 // -1
 $('.show-cart').on("click", ".minus-item", function(event) {
-  var name = $(this).data('name')
+  let name = $(this).data('name')
   shoppingCart.removeItemFromCart(name);
   displayCart();
 })
 // +1
 $('.show-cart').on("click", ".plus-item", function(event) {
-  var name = $(this).data('name')
+  let name = $(this).data('name')
   shoppingCart.addItemToCart(name);
   displayCart();
 })
 
 // Item count input
 $('.show-cart').on("change", ".item-count", function(event) {
-   var name = $(this).data('name');
-   var count = Number($(this).val());
+  let name = $(this).data('name');
+  let count = Number($(this).val());
   shoppingCart.setCountForItem(name, count);
   displayCart();
 });
+
+$('.show-cart').on("change", ".days-count", function(event) {
+  let name = $(this).data('name');
+  let days = Number($(this).val());
+  shoppingCart.setDaysForItem(name, days);
+  displayCart();
+});
+
 
 displayCart();

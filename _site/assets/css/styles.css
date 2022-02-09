@@ -20,7 +20,7 @@ a:hover { color: inherit; }
 
 .bold { font-weight: bold; }
 
-.language-switcher { font-weight: bold; position: fixed; bottom: 0; right: 15px; z-index: 4; font-size: 1.5em; margin-bottom: 1vh; }
+.language-switcher { font-weight: bold; position: fixed; bottom: 0; right: 15px; z-index: 4; font-size: 1.3em; margin-bottom: 1vh; }
 
 .lang-selector { opacity: 0.3; }
 
@@ -61,7 +61,7 @@ a:hover { color: inherit; }
 
 .content-flex { display: flex; padding: 15px; height: 100%; align-items: flex-start; margin-top: 7%; justify-content: space-between; width: 90%; }
 
-.about-intro { width: 35vw; }
+.about-intro { width: 35vw; margin-bottom: 5vh; }
 
 .about-btn { position: fixed; bottom: 0; z-index: 6; padding-left: 15px; transition: 0.5s; margin-bottom: 1vh; cursor: pointer; }
 
@@ -287,7 +287,9 @@ li { list-style-type: none; }
 
 .credits p { margin: 0; font-size: 0.8em; margin-bottom: 15px; margin-right: 30px; }
 
-.project-container { margin-top: 5% !important; justify-content: space-between; }
+.project-container { margin: 20px; margin-top: 5% !important; justify-content: space-between; }
+
+.project-description { width: 50vw !important; }
 
 .project-description p { margin-top: 0; margin-right: 5vw; font-size: 0.9em; }
 
@@ -343,9 +345,9 @@ li { list-style-type: none; }
 
 .dropdown-item.nav-link.active { opacity: 1; }
 
-.product-img { width: 17em; height: 12em; object-fit: contain; }
+.product-img { width: 19em; height: 12em; object-fit: contain; }
 
-.product-container { max-width: 17em; }
+.product-container { max-width: 19em; }
 
 .product-grid::after { content: ""; flex: auto; }
 
