@@ -1,5 +1,5 @@
 ---
-production: "/assets/img/production.webp"
+production: "/assets/img/production.jpg"
 rental: "/assets/img/rental.webp"
 ---
 <!DOCTYPE html>
@@ -19,10 +19,10 @@ rental: "/assets/img/rental.webp"
         <div class="navmenu-container">
             <div class="img-containers">
                 <div class="left-img-container">
-                    <img src="{{ site.baseurl }}/assets/img/rental.webp" alt="" class="navmenu-img left-img">
+                    <img src="{{ site.baseurl }}{{site.data.menu-images.rental}}" alt="" class="navmenu-img left-img">
                 </div>
                 <div class="right-img-container">
-                    <img src="{{ site.baseurl }}/assets/img/production.webp" alt="" class="navmenu-img right-img">
+                    <img src="{{ site.baseurl }}{{site.data.menu-images.production}}" alt="" class="navmenu-img right-img">
                 </div>
             </div>
             <div class="line-container">

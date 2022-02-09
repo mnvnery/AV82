@@ -419,6 +419,8 @@ button { background-color: transparent; outline: none; border: none; }
 
 @media screen and (max-width: 600px) { .member-titles { flex-direction: column; } .member-div { width: 48%; } .member-titles h4 { margin-bottom: 2px; } }
 
+@media screen and (min-width: 768px) { .credits { max-width: 65vw; } .credits p { margin-bottom: 5vh; } .logo-img { max-width: 16vw; } .extra-margin { margin-bottom: 50vh; } .about-intro { width: 25vw; } .content-flex { width: 61%; } .about-btn-open { bottom: 50vh; } .about-open { height: 55vh; } }
+
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
 
