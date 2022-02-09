@@ -75,6 +75,11 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   para as datas desejadas, mas a nossa equipa entrará em contacto para confirmar o
   seu pedido e fornecer qualquer informação em falta. O pagamento será efectuado presencialmente.
   </p>"
+discounts_eng: "<span>Discounts applied based on selected nº of days.<br>
+3+ days - <b>25% discount</b> / Week - <b>40% discount</b></span>"
+discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<br>
+3+ dias - <b>25% desconto</b> / Semana - <b>40% desconto</b></span>"
+
 
 ---
 <div class="nav-logo">
@@ -151,7 +156,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
           <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
         </div> 
       </div>
       {% endfor %}
@@ -166,7 +171,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
           <div class="small-label"><span class='eng'>REQUEST BUDGET</span><span class='pt'>PEDIR ORÇAMENTO</span></div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
         </div> 
       </div>
       {% endfor %}
@@ -181,7 +186,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
           <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
         </div> 
       </div>
       {% endfor %}
@@ -198,7 +203,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -215,7 +220,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
           <div class="product-title mt-2 small-label">{{ product.title }}</div>
           <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
           </div> 
         </div>
         {% endfor %}
@@ -232,7 +237,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -249,7 +254,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -266,7 +271,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div class="product-title mt-2 small-label">{{ product.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
             </div> 
           </div>
           {% endfor %}
@@ -283,7 +288,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
           <div class="product-title mt-2 small-label">{{ product.title }}</div>
           <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}">ADD</div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
           </div> 
         </div>
         {% endfor %}
@@ -324,7 +329,7 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
             <div class="small-text mt-2"><span class="eng">{{ page.cart }}</span><span class="pt">{{ page.carrinho }}</span></div>
             <div class="border-bottom border-dark my-2"></div>
             <div class="d-flex justify-content-center">
-              <div class="add-to-cart inner-cart-btn me-2" data-name="{{product.title}}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}"><span class="eng">ADD TO CART</span><span class="pt">ADICIONAR AO CESTO</span></div>
+              <div class="add-to-cart inner-cart-btn me-2" data-name="{{product.title}}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1"><span class="eng">ADD TO CART</span><span class="pt">ADICIONAR AO CESTO</span></div>
             </div>
             <div class="border-bottom border-dark my-2"></div>
           </div>
@@ -351,11 +356,13 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
         </div>
       </div>
       <div class="modal-footer border-0 flex-column">
+
         <div class="border-bottom border-dark my-2 w-100"></div>
         <div class="d-flex w-100 justify-content-between"><div><span class="eng">TOTAL PER DAY</span><span class="pt">TOTAL POR DIA</span></div> <span class="total-cart"> / EUR</span></div>
         <div class="border-bottom border-dark my-2 w-100"></div>
-        <a href="{{site.baseurl}}/checkout"><button type="button" class="checkout-btn bold">CHECKOUT</button></a>
+        <a href="{{site.baseurl}}/checkout"><button type="button" class="checkout-btn bold"><span class="eng">CHECK AVAILABILITY</span><span class="pt">VER DISPONIBILIDADE</span></button></a>
         <div class="border-bottom border-dark my-2 w-100"></div>
+        <div class="text-center small-text mb-0">{{ page.discounts_eng}}</div>
       </div>
     </div>
   </div>
@@ -378,6 +385,10 @@ $('.nav-pills a').on('shown.bs.tab', function (e) {
     window.location.hash = e.target.hash;
     $(document).scrollTop(0);
 })
+
+$('.qty-input').on("change", function () {
+  $(this).closest('.modal-dialog').find('.inner-cart-btn').attr('data-count', $(this).val() );
+});
 
 const $dropdown = $(".dropdown");
 const $dropdownToggle = $(".dropdown-toggle");
