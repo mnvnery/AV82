@@ -24,6 +24,11 @@ fields:
     schema:
       format: html-blocks
   label: Intro ENG
+- name: studio_img
+  type: file
+  config:
+    maxSize: 64
+  label: Studio Img
 - name: studio_pt
   type: textarea
   default: ''
@@ -33,6 +38,7 @@ fields:
     schema:
       format: html-blocks
   label: Estúdio PT
+  hidden: true
 - name: studio_eng
   type: textarea
   default: ''
@@ -42,6 +48,7 @@ fields:
     schema:
       format: html-blocks
   label: Studio ENG
+  hidden: true
 - name: material_pt
   type: textarea
   default: ''
@@ -60,6 +67,11 @@ fields:
     schema:
       format: html-blocks
   label: Material ENG
+- name: material_img
+  type: file
+  config:
+    maxSize: 64
+  label: Material Img
 - name: crew_pt
   type: textarea
   default: ''
@@ -78,6 +90,11 @@ fields:
     schema:
       format: html-blocks
   label: Crew ENG
+- name: crew_img
+  type: file
+  config:
+    maxSize: 64
+  label: Crew Img
 - name: transport_pt
   type: textarea
   default: ''
@@ -96,5 +113,10 @@ fields:
     schema:
       format: html-blocks
   label: Mobility ENG
+- name: mobility_img
+  type: file
+  config:
+    maxSize: 64
+  label: Mobility Img
 pages:
 - rental.html
