@@ -133,7 +133,7 @@ li p { margin-bottom: 0.5rem; }
 
 .showreel { width: 100vw; z-index: -2; position: relative; height: 100vh; object-fit: cover; }
 
-.index-arrow { position: absolute; bottom: 2vh; left: 1vw; font-size: 1.5em; }
+.index-arrow { position: absolute; bottom: 2vh; left: 1vw; font-size: 1.5em; cursor: pointer; }
 
 .arrow-rotate { transform: rotate(180deg); }
 
@@ -227,7 +227,7 @@ li p { margin-bottom: 0.5rem; }
 
 .layout { width: 50%; height: 100%; }
 
-.images-right { position: sticky; top: 50px; }
+.images-right { position: -webkit-sticky; position: sticky; top: 50px; }
 
 .grid-img-item { width: 55%; height: 83vh; object-fit: cover; position: absolute; right: 15px; top: 5px; }
 
