@@ -132,7 +132,7 @@ let shoppingCart = (function() {
 
       }
       itemCopy.total = Number(item.price * item.count).toFixed(2);
-      itemCopy.totalDays = Number(item.price * item.count * item.days).toFixed(2);
+      itemCopy.totalDays = Number(item.price * item.count * item.days);
       cartCopy.push(itemCopy)
     }
     return cartCopy;
@@ -179,22 +179,24 @@ function displayCart() {
   let cartArray = shoppingCart.listCart();
   let output = "";
   for(let i in cartArray) {
-    output += "<div class='d-flex py-3 border-bottom border-dark'>"
+    output += "<div class='d-flex align-items-center py-3 border-bottom border-dark'>"
       + "<img class='cart-img pe-3' src='" + cartArray[i].image + "'>"
       + "<div class='w-100'>"
+      + "<div class='d-flex justify-content-between align-items-start'>"
       + "<div class='mb-2'>" + cartArray[i].name + "</div>" 
-      + "<div class='d-flex justify-content-between align-items-end'>"
-      + "<div>" + cartArray[i].price + " EUR/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>"
-      + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'></div>"
-      + "<div><span class='eng'>DAYS:</span><span class='pt'>DIAS: </span><input type='number' class='days-count' data-name='" + cartArray[i].name + "' value='" + cartArray[i].days + "'></div>"
-      + "<div><button class='delete-item' data-name='" + cartArray[i].name + "'><span class='eng'>Remove</span><span class='pt'>Eliminar</span></button></div>"
-      + "<div>" + cartArray[i].total + "<span class='small-label days-total-price'>"+ cartArray[i].totalDays +"</span></div>" 
+      + "<div><button class='delete-item' data-name='" + cartArray[i].name + "'><i class='ri-delete-bin-2-fill'></i></button></div>"
+      + "</div>"
+      + "<div class='d-flex justify-content-between align-items-baseline'>"
+      + "<div>" + cartArray[i].price + " €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>"
+      + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' min='1' value='" + cartArray[i].count + "'></div>"
+      + "<div><span class='eng'>DAYS:</span><span class='pt'>DIAS: </span><input type='number' class='days-count qty-input' min='1' data-name='" + cartArray[i].name + "' value='" + cartArray[i].days + "'></div>"
+      + "<div class='days-total-price'>"+ cartArray[i].totalDays +" €</span></div>" 
       + "</div>"
       + "</div>"
       + "</div>";
   }
   $('.show-cart').html(output);
-  $('.total-cart').html(shoppingCart.totalCart() + "  EUR");
+  $('.total-cart').html(shoppingCart.totalCartDays() + "  €");
   $('.total-count').html(shoppingCart.totalCount());
 }
 
@@ -224,6 +226,9 @@ $('.show-cart').on("change", ".item-count", function(event) {
   let name = $(this).data('name');
   let count = Number($(this).val());
   shoppingCart.setCountForItem(name, count);
+  if ($(this).val() < 1) {
+    shoppingCart.removeItemFromCart(name);
+  }
   displayCart();
 });
 

@@ -4,15 +4,15 @@ intro_eng: "<p>Portuguese production company that offers Gear Rental, Studio, Se
   and Mobility.</p>"
 intro_pt: "<p>Produtora portuguesa que disponibiliza aluguer de material, estúdio,
   equipa e transporte.</p>"
-studio_pt: "<p>Somos um estúdio de produção audiovisual, com sede na cidade do Porto,
-  em Portugal.</p><p>Estamos inseridos numa comunidade crescente de artistas e criadores,
+studio_pt: "<h4 class='intro-rental'>Somos um estúdio de produção audiovisual, com sede na cidade do Porto,
+  em Portugal.</h4><p>Estamos inseridos numa comunidade crescente de artistas e criadores,
   que apresenta soluções à medida para cada projeto e cliente.</p><p>Oferecemos uma
   gama completa de serviços de produção de cinema, TV e fotografia e, também, suporte
   para locais de filmagem.</p><p>Fornecemos câmaras, objetivas, luz, grip e equipa
   no nosso serviço de aluguer de estúdio.</p>"
-studio_eng: "<p>AV82 is a film production studio based in Porto, Portugal.</p><p>As
+studio_eng: "<h4 class='intro-rental'>AV82 is a film production studio based in Porto, Portugal.</p><p>As
   part of a growing community of artists and creators, we present tailored solutions
-  for each project and client.</p><p>We offer a full range of film, TV and photography
+  for each project and client.</h4><p>We offer a full range of film, TV and photography
   production services and also support for filming locations.</p><p>We can supply
   cameras, lenses, lighting, grip and crew in our studio rental service.</p>"
 material_pt: "<p>Dispomos de uma vasta gama de material adaptada a pequenas e grandes
@@ -60,16 +60,15 @@ transport_eng: "<p>Lighting and grip van, suitable for your productions. Runner 
 -->
 <div class="sticky-container">
   <div class="grid-img-wrap images-right">
-      <img class="grid-img-item studio-img" src="{{ site.baseurl }}/assets/img/studio.webp" alt="studio">
-      <video class="grid-img-item studio-img" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}/assets/img/studio.mp4" type="video/mp4"></video>
+      <img class="grid-img-item category-intro" src="{{ site.baseurl }}/assets/img/10.jpg" alt="studio">
+      <img class="grid-img-item studio-img" src="{{ site.baseurl }}/assets/img/10.jpg" alt="studio">
       <video class="grid-img-item gear-img" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}/assets/img/gear.mp4" type="video/mp4"></video>
-      <video class="grid-img-item crew-img" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}/assets/img/crew.mp4" type="video/mp4"></video>
+      <img class="grid-img-item crew-img" src="{{ site.baseurl }}/assets/img/rental_crew.webp" alt="crew">
       <img class="grid-img-item mobility-img" src="{{ site.baseurl }}/assets/img/van.jpg" alt="mobility">
   </div>
 
   <div class="text-wrapper-container">
-      <div class="text-wrapper category-gear">
-          <h2 class="category-title"><span class="eng">RENTAL</span><span class="pt">ALUGUER</span></h2>
+      <div class="text-wrapper category-intro">
           <span class="eng">{{ page.studio_eng }}</span><span class="pt">{{ page.studio_pt }}</span>
       </div>
       <div class="text-wrapper category-studio">
@@ -146,7 +145,7 @@ $(".text-wrapper").each(function (index) {
       trigger: triggerElement,
       // trigger element - viewport
       start: "top center",
-      end: "bottom center",
+      end: "bottom 40%",
       onEnter: () => {
         $(".grid-img-item").removeClass("is--active");
         targetElement.addClass("is--active");
