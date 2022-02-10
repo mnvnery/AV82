@@ -37,9 +37,9 @@ transport_eng: "<p>Lighting and grip van, suitable for your productions. Runner 
   trafic h1l2 2018</p><p>White / Two lateral doors / With shelves / Includes Generator
   </p><p>Van available only with AV82 drivers.</p>"
 studio_img: "/assets/img/10.jpg"
-crew_img: "/assets/img/production.jpg"
+crew_img: "/assets/img/rental_crew.webp"
 mobility_img: "/assets/img/Carrinha_01.webp"
-material_img: ''
+material_img: "/assets/img/gear.mp4"
 
 ---
 <style>
@@ -55,32 +55,23 @@ material_img: ''
 </div>
 
 {% include about-container.html %}
-<!--
-<div class="prod-navigation">
-  <div class="selection-flex">
-      <h1 class="selection-title"><span class="eng">RENTAL</span><span class="pt">ALUGUER</span></h1>
-  </div>
-  <div class="filters">
-    <span class="eng">{{ page.studio_eng }}</span><span class="pt">{{ page.studio_pt }}</span>
-  </div>
-</div>
--->
+
 <div class="sticky-container">
   <div class="grid-img-wrap images-right">
-      <img class="grid-img-item category-intro" src="{{ site.baseurl }}/assets/img/10.jpg" alt="studio">
-      <img class="grid-img-item studio-img" src="{{ site.baseurl }}/assets/img/10.jpg" alt="studio">
-      <video class="grid-img-item gear-img" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}/assets/img/gear.mp4" type="video/mp4"></video>
-      <img class="grid-img-item crew-img" src="{{ site.baseurl }}/assets/img/rental_crew.webp" alt="crew">
-      <img class="grid-img-item mobility-img" src="{{ site.baseurl }}/assets/img/carrinha_01.webp" alt="mobility">
+      <img class="grid-img-item category-intro" src="{{ site.baseurl }}{{page.studio_img}}" alt="studio">
+      <img class="grid-img-item studio-img" src="{{ site.baseurl }}{{page.studio_img}}" alt="studio">
+      <video class="grid-img-item gear-img" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}{{page.material_img}}" type="video/mp4"></video>
+      <img class="grid-img-item crew-img" src="{{ site.baseurl }}{{page.crew_img}}" alt="crew">
+      <img class="grid-img-item mobility-img" src="{{ site.baseurl }}{{page.mobility_img}}" alt="mobility">
   </div>
 
   <div class="text-wrapper-container">
       <div class="text-wrapper category-intro">
-          <span class="eng">{{ page.studio_eng }}</span><span class="pt">{{ page.studio_pt }}</span>
+          <span class="eng">{{ page.intro_eng }}</span><span class="pt">{{ page.intro_pt }}</span>
       </div>
       <div class="text-wrapper category-studio">
           <h3 class="category-title"><span class="eng">STUDIO</span><span class="pt">ESTÚDIO</span></h3>
-          <img class="rental-mobile-img" src="{{ site.baseurl }}/assets/img/10.jpg" alt="studio">
+          <img class="rental-mobile-img" src="{{ site.baseurl }}{{page.studio_img}}" alt="studio">
           <div class="bold subtitle">LAYOUT</div> 
           <div class="container-flex">
             <div class="flex-item-50 eng">
@@ -125,7 +116,7 @@ material_img: ''
 
       <div class="text-wrapper category-crew">
           <h3 class="category-title"><span class="eng">CREW</span><span class="pt">EQUIPA</span></h3>
-          <img class="rental-mobile-img" src="{{ site.baseurl }}/assets/img/rental_crew.webp" alt="crew">
+          <img class="rental-mobile-img" src="{{ site.baseurl }}{{page.crew_img}}" alt="crew">
           <div class="eng">{{ page.crew_eng }}</div><div class="pt">{{ page.crew_pt }}</div>
           <div class="space-bottom"></div>
           <a href="{{ site.baseurl }}/booking2/#crew" class="booking-link"><span class="eng">HIRE NOW</span><span class="pt">CONTRATA JÁ</span></a>
@@ -133,7 +124,7 @@ material_img: ''
 
       <div class="text-wrapper category-mobility extra-margin">
           <h3 class="category-title"><span class="eng">MOBILITY</span><span class="pt">TRANSPORTE</span></h3>
-          <img class="rental-mobile-img" src="{{ site.baseurl }}/assets/img/van.jpg" alt="mobility">
+          <img class="rental-mobile-img" src="{{ site.baseurl }}{{page.mobility_img}}" alt="mobility">
           <div class="eng">{{ page.transport_eng }}</div><div class="pt">{{ page.transport_pt }}</div>
           <div class="space-bottom"></div>
           <a href="{{ site.baseurl }}/booking2/#mobility" class="booking-link"><span class="eng">BOOK NOW</span><span class="pt">RESERVA JÁ</span></a>
