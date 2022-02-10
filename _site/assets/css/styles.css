@@ -113,6 +113,8 @@ li p { margin-bottom: 0.5rem; }
 
 @media (min-width: 992px) { .modal-lg { max-width: 900px; } }
 
+@media (max-width: 600px) { .checkout-grid, .order-left-side, .cart-item { width: 100%; } .request { margin-bottom: 10vh; } .start-date, .end-date { width: 100%; } .checkout-grid { font-size: 0.85em; } .checkout-grid .small-label { font-size: 0.85em; } }
+
 .modal.right .modal-dialog { position: fixed; margin: auto; width: 35vw; height: 100%; -webkit-transform: translate3d(0%, 0, 0); -ms-transform: translate3d(0%, 0, 0); -o-transform: translate3d(0%, 0, 0); transform: translate3d(0%, 0, 0); }
 
 .modal.right .modal-content { height: 100%; overflow-y: auto; }
@@ -409,7 +411,7 @@ li { list-style-type: none; }
 
 .delete-item:hover { color: red; }
 
-button { background-color: transparent; outline: none; border: none; }
+button { background-color: transparent; outline: none; border: none; color: inherit; }
 
 .product-img, .inner-cart-btn { cursor: pointer; }
 
@@ -435,7 +437,7 @@ button { background-color: transparent; outline: none; border: none; }
 
 @media screen and (min-width: 768px) { .full-width.dropdown > .dropdown-menu { transform: translate3d(15px, 42px, 0px); } .page-container { margin-top: 10vh; } }
 
-@media screen and (max-width: 768px) { .dropdown-menu.show { display: flex; flex-direction: column; flex-wrap: wrap; max-height: 750px; width: 95%; } .dropdown-menu li { margin-bottom: 2vh; } .full-width.dropdown > .dropdown-menu { transform: translate3d(0px, 75px, 0px) !important; } .product-img { width: 10em; height: 8em; object-fit: contain; } .nav { width: 100%; justify-content: space-between; } .nav-link { padding: 0.5rem 0; } .page-container { height: 100vh; padding: 0 15px; } .modal-img { width: 12em; margin: 0 auto; } .studio-info-side { width: 100%; } #studioCarousel { width: 100%; margin-bottom: 1em; } }
+@media screen and (max-width: 768px) { .dropdown-menu.show { display: flex; flex-direction: column; flex-wrap: wrap; max-height: 750px; width: 95%; } .dropdown-menu li { margin-bottom: 2vh; } .full-width.dropdown > .dropdown-menu { transform: translate3d(15px, 88px, 0px) !important; } .product-img { width: 10em; height: 8em; object-fit: contain; } .nav { width: 100%; justify-content: space-between; } .nav-link { padding: 0.5rem 0; } .page-container { height: 100vh; padding: 0 15px; } .modal-img { width: 12em; margin: 0 auto; } .studio-info-side { width: 100%; } #studioCarousel { width: 100%; margin-bottom: 1em; } }
 
 .team-flex { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 15px; margin-bottom: 20vh; }
 
