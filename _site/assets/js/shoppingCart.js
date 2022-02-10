@@ -115,7 +115,19 @@ let shoppingCart = (function() {
   obj.totalCartDays = function() {
     let totalCartDays = 0;
     for(let item in cart) {
-      totalCartDays += cart[item].price * cart[item].count * cart[item].days;
+      let totalDaysCalc = Number(cart[item].price * cart[item].count * cart[item].days);
+      if (cart[item].days < 3) {      
+        totalDaysCalc = totalDaysCalc
+      }           
+      else if (cart[item].days >= 3 && cart[item].days < 7) {
+          discountPrice = .25;
+          totalDaysCalc = totalDaysCalc - (totalDaysCalc * discountPrice);
+      }
+      else if (cart[item].days >= 7) {
+          discountPrice = .40;
+          totalDaysCalc = totalDaysCalc - (totalDaysCalc * discountPrice); 
+      }
+      totalCartDays += totalDaysCalc
     }
     return Number(totalCartDays.toFixed(2));
   }
@@ -131,8 +143,21 @@ let shoppingCart = (function() {
         itemCopy[p] = item[p];
 
       }
+      let totalDaysCalc = Number(item.price * item.count * item.days);
+      if (item.days < 3) {      
+        itemCopy.totalDays = Number(totalDaysCalc.toFixed(2));
+      }           
+      else if (item.days >= 3 && item.days < 7) {
+          discountPrice = .25;
+          totalDaysCalc = totalDaysCalc - (totalDaysCalc * discountPrice);
+          itemCopy.totalDays = Number(totalDaysCalc.toFixed(2));
+      }
+      else if (item.days >= 7) {
+          discountPrice = .40;
+          totalDaysCalc = totalDaysCalc - (totalDaysCalc * discountPrice); 
+          itemCopy.totalDays = Number(totalDaysCalc.toFixed(2)); 
+      }
       itemCopy.total = Number(item.price * item.count).toFixed(2);
-      itemCopy.totalDays = Number(item.price * item.count * item.days);
       cartCopy.push(itemCopy)
     }
     return cartCopy;

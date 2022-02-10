@@ -419,6 +419,10 @@ button { background-color: transparent; outline: none; border: none; }
 
 .recommended-img { width: 15em; height: 10em; }
 
+.pre-click { transition: 0.2s; }
+
+.post-click { display: none; transition: 0.2s; }
+
 @media screen and (min-width: 768px) { .full-width.dropdown > .dropdown-menu { transform: translate3d(15px, 42px, 0px); } .page-container { margin-top: 10vh; } }
 
 @media screen and (max-width: 768px) { .dropdown-menu.show { display: flex; flex-direction: column; flex-wrap: wrap; max-height: 750px; width: 95%; } .dropdown-menu li { margin-bottom: 2vh; } .full-width.dropdown > .dropdown-menu { transform: translate3d(0px, 75px, 0px) !important; } .product-img { width: 10em; height: 8em; object-fit: contain; } .nav { width: 100%; justify-content: space-between; } .nav-link { padding: 0.5rem 0; } .page-container { height: 100vh; } .modal-img { width: 12em; margin: 0 auto; } }
