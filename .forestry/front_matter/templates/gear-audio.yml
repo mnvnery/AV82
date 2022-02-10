@@ -13,6 +13,7 @@ fields:
     required: false
   label: Nome
   description: em pt. se for igual à versão inglesa, deixar vazio.
+  default: "''"
 - name: description
   type: textarea
   default: ''
@@ -24,7 +25,7 @@ fields:
   label: Description
 - name: description_pt
   type: textarea
-  default: ''
+  default: "<p>''</p>"
   config:
     required: false
     wysiwyg: true
