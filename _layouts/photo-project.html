@@ -18,13 +18,13 @@ layout: white-clean
 
 {% if page.description != '' or page.credits != '' %}
 <div class="about-container about-container-white ">
-    <div class="content-flex project-container">
-        <div class="about-address credits">
-        {{ page.credits }}
-        </div>
+    <div class="project-container">
         {% if page.description %}
         <div class="about-intro project-description">{{ page.description }}</div>
         {% endif %}
+        <div class="about-address credits">
+        {{ page.credits }}
+        </div>
     </div>
 </div>
 <h2 class="about-btn photo-title"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span> {{page.title}}</h2>
