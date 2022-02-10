@@ -55,6 +55,7 @@ project_order:
       {% for project in sortedProjects %}
       <div class="thumbnail-container">
         <img src="{{site.baseurl}}{{ project.thumbnail }}" class="photo-img {{project.category}}" ><a href="{{site.baseurl}}{{project.url}}" class="project-link"></a>
+        <span class="project-title-hover small-text">{{ project.title }}</span>
       </div>
       {% endfor %}
     {% endfor %}
@@ -63,6 +64,9 @@ project_order:
 
 
 <script>
+$('.thumbnail-container').hover(function() {
+  $(this).children('.project-title-hover').toggle();
+});
 window.onload = function () {
 var images = document.getElementsByTagName('img');
 
