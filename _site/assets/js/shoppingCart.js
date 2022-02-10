@@ -53,6 +53,7 @@ let shoppingCart = (function() {
         break;
       }
     }
+    saveCart();
   };
   // Set days from item
   obj.setDaysForItem = function(name, days) {
@@ -62,6 +63,7 @@ let shoppingCart = (function() {
         break;
       }
     }
+    saveCart();
   };
   // Remove item from cart
   obj.removeItemFromCart = function(name) {
