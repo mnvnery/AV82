@@ -365,7 +365,7 @@ li { list-style-type: none; }
 
 .dropdown-item.nav-link.active { opacity: 1; }
 
-.product-img { width: 19em; height: 12em; object-fit: contain; }
+.product-img { width: 18em; height: 12em; object-fit: contain; }
 
 .product-container { max-width: 19em; }
 
