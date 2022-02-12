@@ -5,12 +5,13 @@ let shoppingCart = (function() {
   cart = [];
   
   // Constructor
-  function Item(name, price, count, image, days) {
+  function Item(name, price, count, image, days, max) {
     this.name = name;
     this.price = price;
     this.count = count;
     this.image = image;
     this.days = days;
+    this.max = max;
   }
   
   // Save cart
@@ -33,7 +34,7 @@ let shoppingCart = (function() {
   let obj = {};
   
   // Add to cart
-  obj.addItemToCart = function(name, price, image, count, days) {
+  obj.addItemToCart = function(name, price, image, count, days, max) {
     for(let item in cart) {
       if(cart[item].name === name) {
         cart[item].count ++;
@@ -41,7 +42,7 @@ let shoppingCart = (function() {
         return;
       }
     }
-    let item = new Item(name, price, count, image, days);
+    let item = new Item(name, price, count, image, days, max);
     cart.push(item);
     saveCart();
   }
@@ -190,7 +191,8 @@ $('.add-to-cart').click(function(event) {
   let price = Number($(this).data('price'));
   let image = $(this).data('image');
   let count = Number($(this).data('count'));
-  shoppingCart.addItemToCart(name, price, image, count, 1);
+  let max = Number($(this).data('max')); 
+  shoppingCart.addItemToCart(name, price, image, count, 1, max);
   displayCart();
 });
 
@@ -215,7 +217,7 @@ function displayCart() {
       + "</div>"
       + "<div class='d-flex justify-content-between align-items-baseline'>"
       + "<div>" + cartArray[i].price + " €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>"
-      + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' min='1' value='" + cartArray[i].count + "'></div>"
+      + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' min='1' max='" + cartArray[i].max + "' value='" + cartArray[i].count + "'></div>"
       + "<div><span class='eng'>DAYS:</span><span class='pt'>DIAS: </span><input type='number' class='days-count qty-input' min='1' data-name='" + cartArray[i].name + "' value='" + cartArray[i].days + "'></div>"
       + "<div class='days-total-price'>"+ cartArray[i].totalDays +" €</span></div>" 
       + "</div>"
