@@ -127,7 +127,7 @@ let shoppingCart = (function() {
           totalDaysCalc = totalDaysCalc - (totalDaysCalc * discountPrice);
       }
       else if (cart[item].days >= 7) {
-          discountPrice = .40;
+          discountPrice = .35;
           totalDaysCalc = totalDaysCalc - (totalDaysCalc * discountPrice); 
       }
       totalCartDays += totalDaysCalc
@@ -215,8 +215,8 @@ function displayCart() {
       + "<div class='mb-2'>" + cartArray[i].name + "</div>" 
       + "<div><button class='delete-item' data-name='" + cartArray[i].name + "'><i class='ri-delete-bin-2-fill'></i></button></div>"
       + "</div>"
-      + "<div class='d-flex justify-content-between align-items-baseline'>"
-      + "<div>" + cartArray[i].price + " €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>"
+      + "<div class='cart-grid justify-content-between align-items-baseline'>"
+      + "<div>" + cartArray[i].price + "€/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>"
       + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' min='1' max='" + cartArray[i].max + "' value='" + cartArray[i].count + "'></div>"
       + "<div><span class='eng'>DAYS:</span><span class='pt'>DIAS: </span><input type='number' class='days-count qty-input' min='1' data-name='" + cartArray[i].name + "' value='" + cartArray[i].days + "'></div>"
       + "<div class='days-total-price'>"+ cartArray[i].totalDays +" €</span></div>" 
