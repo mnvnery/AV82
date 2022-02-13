@@ -72,8 +72,8 @@
         </div>
     </div>
     <nav class="index-navmenu">
-        <h2 class="rental-title"><a href="/rental"><span class="eng">RENTAL</span><span class="pt">ALUGUER</span></a></h2>
-        <h2 class="prod-title"><a href="/film"><span class="eng">PRODUCTION</span><span class="pt">PRODUÇÃO</span></a></h2>
+        <h2 class="rental-title gsap-title"><a href="/rental"><span class="eng">RENTAL</span><span class="pt">ALUGUER</span></a></h2>
+        <h2 class="prod-title gsap-title"><a href="/film"><span class="eng">PRODUCTION</span><span class="pt">PRODUÇÃO</span></a></h2>
     </nav>
 </div>
 <script>    
@@ -114,6 +114,26 @@ gsap.to(".logo-square", {
         end: "bottom 100%",
         trigger: ".index-navmenu-container",
         scrub: true,
+    }
+})
+
+gsap.to(".index-navmenu-container", {
+    opacity: '1',
+    scrollTrigger: {
+        start: "top bottom",
+        end: "top 90%",
+        trigger: ".index-navmenu-container",
+        scrub: true
+    }
+})
+
+gsap.to(".gsap-title", {
+    opacity: '1',
+    scrollTrigger: {
+        start: "top 35%",
+        end: "bottom 100%",
+        trigger: ".index-navmenu-container",
+        scrub: true
     }
 })
 
