@@ -131,25 +131,29 @@ li p { margin-bottom: 0.5rem; }
 
 @media screen and (max-width: 768px) { .modal.right.fade .modal-dialog { right: -100vw; } .modal.right .modal-dialog { width: 100vw; } .row { margin-left: 0; } }
 
-.showreel { width: 100vw; z-index: -2; position: relative; height: 100vh; object-fit: cover; }
+.showreel { width: 100vw; z-index: -2; position: relative; object-fit: cover; height: 100vh; }
 
-.index-arrow { position: absolute; bottom: 2vh; left: 1vw; font-size: 1.5em; cursor: pointer; }
+.index-navmenu-container::before { width: 100%; height: 100px; position: absolute; top: -100px; left: 0; background: linear-gradient(to bottom, rgba(28, 29, 30, 0) 0%, #010101 100%); content: ''; }
+
+.index-arrow { position: absolute; bottom: 2vh; left: 1vw; font-size: 1.5em; cursor: pointer; z-index: 2; }
 
 .arrow-rotate { transform: rotate(180deg); }
 
-.line-flex, .square-flex { display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; position: absolute; top: 0; z-index: -1; }
+.line-flex, .square-flex { display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; position: absolute; top: 0; z-index: 2; }
 
 .logo-square { border: 2px solid white; height: 200px; width: 200px; position: fixed; }
 
 .logo-line { border-left: 2px solid white; height: 350px; transform: rotate(-45deg); position: fixed; width: 0; }
 
-.index-navmenu-container { height: 100vh; width: 100%; color: white; position: relative; }
+.index-navmenu-container { height: 100vh; width: 100%; color: white; position: relative; z-index: 1; opacity: 0; }
 
 .navmenu-img { position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; object-fit: cover; opacity: 0; z-index: 1; transition: 0.4s; }
 
 .opacity { opacity: 1; }
 
 .prod-title, .rental-title { z-index: 1; }
+
+.gsap-title { opacity: 0; }
 
 .img-containers { position: absolute; top: 0; display: flex; }
 
