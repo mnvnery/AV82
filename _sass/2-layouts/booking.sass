@@ -193,6 +193,9 @@ button
     display: none
     transition: 0.2s
 
+.cart-grid
+    display: grid
+    grid-template-columns: 20% 20% 20% auto
 
 @media screen and (min-width: 768px) 
     .full-width.dropdown > .dropdown-menu 
@@ -202,6 +205,8 @@ button
         margin-top: 10vh
 
 @media screen and (max-width: 768px) 
+    .cart-grid
+        grid-template-columns: 27% 20% 25% auto
     .dropdown-menu.show 
         display: flex
         flex-direction: column
