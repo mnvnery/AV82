@@ -195,7 +195,13 @@ button
 
 .cart-grid
     display: grid
-    grid-template-columns: 20% 20% 22% auto
+    grid-template-columns: 25% 20% 22% 14%
+
+.back-to:hover
+    text-decoration: underline
+
+.days-total-price
+    justify-self: end
 
 @media screen and (min-width: 768px) 
     .full-width.dropdown > .dropdown-menu 
@@ -206,7 +212,7 @@ button
 
 @media screen and (max-width: 768px) 
     .cart-grid
-        grid-template-columns: 27% 20% 25% auto
+        grid-template-columns: 27% 20% 25% 14%
     .dropdown-menu.show 
         display: flex
         flex-direction: column
