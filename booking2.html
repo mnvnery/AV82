@@ -498,11 +498,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
 <script src="{{site.baseurl}}/assets/js/shoppingCart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
-var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
-if (hash) {
-    $('.nav-pills .nav-item a[href="#' + hash + '"]').tab('show');
-    $(document).scrollTop(0);
-} 
+$(document).ready(function() {
+  var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
+  if (hash) {
+      $('.nav-pills .nav-item a[href="#' + hash + '"]').tab('show');
+      $(document).scrollTop(0);
+  } 
+});
+
 
 // Change hash for page-reload
 $('.nav-pills a').on('shown.bs.tab', function (e) {

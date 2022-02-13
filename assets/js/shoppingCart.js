@@ -225,6 +225,7 @@ function displayCart() {
   let cartArray = shoppingCart.listCart();
   let output = "";
   for(let i in cartArray) {
+    if (cartArray[i].price > 0) {
     output += "<div class='d-flex align-items-center py-3 border-bottom border-dark'>"
       + "<img class='cart-img pe-3' src='" + cartArray[i].image + "'>"
       + "<div class='w-100'>"
@@ -233,17 +234,30 @@ function displayCart() {
       + "<div><button class='delete-item' data-name='" + cartArray[i].name + "'><i class='ri-delete-bin-2-fill'></i></button></div>"
       + "</div>"
       + "<div class='cart-grid justify-content-between align-items-baseline'>"
-      if (cartArray[i].price > 0) {
       + "<div>" + cartArray[i].price + "€/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>"
-      } else {
-      + "<div><span class='eng'>TBD</span><span class='pt'>TBD</span></div>"
-      }
       + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' min='1' max='" + cartArray[i].max + "' value='" + cartArray[i].count + "'></div>"
       + "<div><span class='eng'>DAYS:</span><span class='pt'>DIAS: </span><input type='number' class='days-count qty-input' min='1' data-name='" + cartArray[i].name + "' value='" + cartArray[i].days + "'></div>"
       + "<div class='days-total-price'>"+ cartArray[i].totalDays +" €</span></div>" 
       + "</div>"
       + "</div>"
       + "</div>";
+    } else {
+      output += "<div class='d-flex align-items-center py-3 border-bottom border-dark'>"
+      + "<img class='cart-img pe-3' src='" + cartArray[i].image + "'>"
+      + "<div class='w-100'>"
+      + "<div class='d-flex justify-content-between align-items-start'>"
+      + "<div class='mb-2'>" + cartArray[i].name + "</div>" 
+      + "<div><button class='delete-item' data-name='" + cartArray[i].name + "'><i class='ri-delete-bin-2-fill'></i></button></div>"
+      + "</div>"
+      + "<div class='cart-grid justify-content-between align-items-baseline'>"
+      + "<div><span class='eng'>TBD</span><span class='pt'>TBD</span></div>" 
+      + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' min='1' max='" + cartArray[i].max + "' value='" + cartArray[i].count + "'></div>"
+      + "<div><span class='eng'>DAYS:</span><span class='pt'>DIAS: </span><input type='number' class='days-count qty-input' min='1' data-name='" + cartArray[i].name + "' value='" + cartArray[i].days + "'></div>"
+      + "<div class='days-total-price'>TBD</span></div>" 
+      + "</div>"
+      + "</div>"
+      + "</div>";
+    }
   }
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCartDays() + "  €");
