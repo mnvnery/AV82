@@ -119,10 +119,10 @@ let shoppingCart = (function() {
     let totalCartDays = 0;
     for(let item in cart) {
       let totalDaysCalc = Number(cart[item].price * cart[item].count * cart[item].days);
-      if (cart[item].days < 3 || item.name != "Coffee and Water Pack (Full Day)") {      
+      if (cart[item].days < 3) {      
         totalDaysCalc = totalDaysCalc
       }           
-      else if (cart[item].days >= 3 && cart[item].days < 7 && item.name != "Coffee and Water Pack (Full Day)") {
+      else if (cart[item].days >= 3 && cart[item].days < 7) {
           if (item.name == "Coffee and Water Pack (Full Day)" || item.name == "Coffee and Water Pack (Half Day)") {
             discountPrice = 0;
           } else {
@@ -130,7 +130,7 @@ let shoppingCart = (function() {
           }
           totalDaysCalc = totalDaysCalc - (totalDaysCalc * discountPrice);
       }
-      else if (cart[item].days >= 7 && item.name != "Coffee and Water Pack (Full Day)") {
+      else if (cart[item].days >= 7) {
         if (item.name == "Coffee and Water Pack (Full Day)" || item.name == "Coffee and Water Pack (Half Day)") {
           discountPrice = 0;
         } else {

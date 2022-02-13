@@ -18,7 +18,7 @@ seu pedido e fornecer qualquer informação em falta. O pagamento será efectuad
 </div>
 <h2 class="px-3 pt-5 pb-2">CHECKOUT</h2>
 <a href="{{ site.baseurl }}/booking2" class="ps-3 back-to"><span class="eng"> < Back to Products</span><span class="pt"> < Voltar a Produtos</span></a>
-<form name="checkout-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="booking-form">
+<form name="checkout-form" action="https://getform.io/f/e46584e3-2177-4d02-a8ee-514e999190e2" method="POST" netlify-honeypot="bot-field" class="booking-form">
     <div class="p-3">
         <div class="d-md-flex">
             <div class="me-5 order-left-side">
@@ -113,7 +113,7 @@ function displayCart() {
     let cartArray = shoppingCart.listCart();
     let output = "";
     for(let i in cartArray) {
-        output += '<div class="cart-item checkout-grid align-items-baseline border-bottom border-dark pb-2"><div><input class="w-100 p-0" type="text" name="products[]" disabled value="' + cartArray[i].name + '"/></div><div>' + cartArray[i].count + '</div><div>' + cartArray[i].days + '</div><input class="w-100 border-top" type="hidden" name="products[]" value="' + cartArray[i].count + 'x ' + cartArray[i].name + '/ duração: ' + cartArray[i].days + ' dias"/></div>'
+        output += '<div class="cart-item checkout-grid align-items-baseline border-bottom border-dark pb-2"><div><input class="w-100 p-0" type="text" name="products[]" disabled value="' + cartArray[i].name + '"/></div><div>' + cartArray[i].count + '</div><div>' + cartArray[i].days + '</div><input class="w-100 border-top" type="hidden" name="products[]" value="' + cartArray[i].count + 'x ' + cartArray[i].name + ' / duração: ' + cartArray[i].days + ' dias"/></div>'
     }
 
     $('.allcontent').html(output);
