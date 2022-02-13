@@ -2,7 +2,7 @@ title: AV82 STUDIO
 email: geral@av82studio.com
 description: >- # this means to ignore newlines until "baseurl:"
   AV82 é um estúdio de fotografia e vídeo localizado no centro do Porto. Este é um espaço que não só permite a realização de trabalhos fotográficos como também o aluguer de material, seja ele de fotografia ou video.
-url: "av82.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
+url: "av82studio.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings

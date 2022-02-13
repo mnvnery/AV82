@@ -435,7 +435,7 @@ button { background-color: transparent; outline: none; border: none; color: inhe
 
 .post-click { display: none; transition: 0.2s; }
 
-.cart-grid { display: grid; grid-template-columns: 20% 20% 20% auto; }
+.cart-grid { display: grid; grid-template-columns: 20% 20% 22% auto; }
 
 @media screen and (min-width: 768px) { .full-width.dropdown > .dropdown-menu { transform: translate3d(15px, 42px, 0px); } .page-container { margin-top: 10vh; } }
 
