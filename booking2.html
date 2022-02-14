@@ -91,6 +91,11 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
 {% assign studioMain = site.products | where: "title", "Studio Full Day (10h)" %}
 {% assign mobilityProducts = site.products | where: "type", "Mobility" %}
 {% assign crewProducts = site.products | where: "type", "Crew" %}
+{% assign geproducts = site.products | where: "category", "G&E" %}
+{% assign imgproducts = site.products | where: "category", "Image" %}
+{% assign audioproducts = site.products | where: "category", "Audio" %}
+{% assign lightproducts = site.products | where: "category", "Light" %}
+{% assign onsetproducts = site.products | where: "category", "On Set" %}
 
 <main class="page-container">
 <button class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart"><span class="eng">CART</span><span class="pt">CESTO</span> (<span class="total-count"></span>)</button></div>
@@ -104,34 +109,34 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
       <li class="span-mobile">
         <div class="subnav"><span class="eng">IMAGE</span><span class="pt">IMAGEM</span></div>
         {% for subcat in page.imagem_eng  limit: 1 %}
-          <a class="dropdown-item active" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
+          <a class="dropdown-item active" data-bs-toggle="pill" data-bs-target="#pills-img-{{ subcat | slugify }}" role="tab" aria-controls="pills-img-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
         {% endfor %}
         {% for subcat in page.imagem_eng offset: 1 %}
-          <a class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
+          <a class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-img-{{ subcat | slugify }}" role="tab" aria-controls="pills-img-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
         {% endfor %}
       </li>
       <li>
         <div class="subnav"><span class="eng">LIGHT</span><span class="pt">LUZ</span></div>
         {% for subcat in page.light_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-light-{{ subcat | slugify }}" role="tab" aria-controls="pills-light-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
         <div class="subnav">AUDIO</div>
         {% for subcat in page.audio_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-audio-{{ subcat | slugify }}" role="tab" aria-controls="pills-audio-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
         <div class="subnav">G&E</div>
         {% for subcat in page.ge_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-ge-{{ subcat | slugify }}" role="tab" aria-controls="pills-ge-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
         <div class="subnav">ON SET</div>
         {% for subcat in page.on_set_eng %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-{{ subcat | slugify }}" role="tab" aria-controls="pills-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-onset-{{ subcat | slugify }}" role="tab" aria-controls="pills-onset-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       
@@ -259,8 +264,8 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   </div>
   <!--GEAR TABS-->
   {% for subcat in page.imagem_eng limit: 1 %}
-    <div class="tab-pane fade show active" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
-      {% assign products = site.products | where: "subcategory", subcat %}
+    <div class="tab-pane fade show active" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
+      {% assign products = imgproducts | where: "subcategory", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5">
           {% for product in products %}
           <div class="col m-lg-3">
@@ -276,8 +281,8 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
     </div>
   {% endfor %}
   {% for subcat in page.imagem_eng offset: 1 %}
-  <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
-    {% assign products = site.products | where: "subcategory", subcat %}
+  <div class="tab-pane fade" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
+    {% assign products = imgproducts | where: "subcategory", subcat %}
     <div class="row gx-4 gy-4 mt-md-4 pb-5">
         {% for product in products %}
         <div class="col m-lg-3">
@@ -293,8 +298,8 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   </div>
 {% endfor %}
   {% for subcat in page.audio_eng %}
-    <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
-      {% assign products = site.products | where: "subcategory", subcat %}
+    <div class="tab-pane fade" id="pills-audio-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-audio-{{subcat | slugify }}-tab">
+      {% assign products = audioproducts | where: "subcategory", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5">
           {% for product in products %}
           <div class="col m-lg-3">
@@ -310,8 +315,8 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
     </div>
   {% endfor %}
   {% for subcat in page.light_eng %}
-    <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
-      {% assign products = site.products | where: "subcategory", subcat %}
+    <div class="tab-pane fade" id="pills-light-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-light-{{subcat | slugify }}-tab">
+      {% assign products = lightproducts | where: "subcategory", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5">
           {% for product in products %}
           <div class="col m-lg-3">
@@ -327,8 +332,8 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
     </div>
   {% endfor %}
   {% for subcat in page.ge_eng %}
-    <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
-      {% assign products = site.products | where: "subcategory", subcat %}
+    <div class="tab-pane fade" id="pills-ge-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-ge-{{subcat | slugify }}-tab">
+      {% assign products = geproducts | where: "subcategory", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5">
           {% for product in products %}
           <div class="col m-lg-3">
@@ -344,8 +349,8 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
     </div>
   {% endfor %}
   {% for subcat in page.on_set_eng %}
-  <div class="tab-pane fade" id="pills-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-{{subcat | slugify }}-tab">
-    {% assign products = site.products | where: "subcategory", subcat %}
+  <div class="tab-pane fade" id="pills-onset-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-onset-{{subcat | slugify }}-tab">
+    {% assign products = onsetproducts | where: "subcategory", subcat %}
     <div class="row gx-4 gy-4 mt-md-4 pb-5">
         {% for product in products %}
         <div class="col m-lg-3">
