@@ -1,0 +1,562 @@
+---
+layout: rental_pt
+imagem_pt:
+- Câmaras
+- Objetivas
+- Monitores
+- Wireless
+- Outros
+- Live Streaming
+- Outros
+- Media
+- Power
+imagem_eng:
+- Cameras
+- Lenses
+- Monitors
+- Wireless
+- Live Streaming
+- Drone
+- Others
+- Media
+- Power
+audio_pt:
+- Microfones
+- Gravadores de Som
+- Outros
+audio_eng:
+- Microphones
+- Sound Recorders
+- Others
+luz_pt:
+- Luz Contínua
+- Flash
+- Modificadores de Luz
+- Panos
+- Frames
+- Refletores
+light_eng:
+- Continuous Light
+- Flash
+- Light Modifiers
+- Cloths
+- Frames
+- Reflectors
+ge_pt:
+- Rigs
+- Stabilizers/Gimbals
+- Tripés/Cabeças Fluídas
+- Dollies/Sliders
+- Grip
+- Power
+- Outros
+ge_eng:
+- Rigs
+- Stabilizers/Gimbals
+- Tripods/Fluid Heads
+- Dollies/Sliders
+- Grip
+- Power
+- Others
+on_set:
+- Magliner
+- COM
+on_set_eng:
+- Magliner
+- COM
+cart: "<p>When adding to cart, you'll be able to select your desired dates and receive
+  a price estimate for that time and full list of products. Here you can submit a
+  request for rental. We can't guarantee this product to be available for your required
+  dates. Our team will get in touch to confirm your booking and provide any further
+  details necessary. Payment is taken on site upon collection.</p>"
+carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e calcular
+  uma estimativa do preço total  da reserva. Poderá submeter o seu pedido através
+  de um formulário de reserva. Não podemos garantir que este produto terá disponibilidade
+  para as datas desejadas, mas a nossa equipa entrará em contacto para confirmar o
+  seu pedido e fornecer qualquer informação em falta. O pagamento será efectuado presencialmente.
+  </p>"
+discounts_eng: "<span>Discounts applied based on selected nº of days.<br>
+3+ days - <b>25% discount</b> / Week - <b>35% discount</b></span>"
+discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<br>
+3+ dias - <b>25% desconto</b> / Semana - <b>35% desconto</b></span>"
+
+
+---
+<div class="nav-logo">
+    <a href="{{ site.baseurl }}/">
+        <img src="{{site.baseurl}}/assets/img/logo_preto.png" alt="" class="logo-img">
+        <img src="{{site.baseurl}}/assets/img/logo_mobile_preto.png" alt="" class="logo-mobile-img">
+    </a>
+</div>
+<div class="language-switcher">
+  <span class="lang-selector active">PT</span> / <a href="{{ site.baseurl }}/booking-eng"><span class="lang-selector"> ENG</span></a>
+</div>
+{% assign gearProducts = site.products | where: "type", "Gear" %}
+{% assign studioProducts = site.products | where: "type", "Studio" %}
+{% assign studioMain = site.products | where: "title", "Studio Full Day (10h)" %}
+{% assign mobilityProducts = site.products | where: "type", "Mobility" %}
+{% assign crewProducts = site.products | where: "type", "Crew" %}
+{% assign geproducts = site.products | where: "category", "G&E" %}
+{% assign imgproducts = site.products | where: "category", "Image" %}
+{% assign audioproducts = site.products | where: "category", "Audio" %}
+{% assign lightproducts = site.products | where: "category", "Light" %}
+{% assign onsetproducts = site.products | where: "category", "On Set" %}
+
+<main class="page-container">
+<button class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart">CESTO (<span class="total-count"></span>)</button></div>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link h5" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" role="tab" aria-controls="pills-studio" aria-selected="true">ESTÚDIO</a>
+  </li>
+  <li class="nav-item dropdown full-width" role="presentation">
+    <a class="nav-link dropdown-toggle h5 active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">MATERIAL</a>
+    <ul class="dropdown-menu">
+      <li class="span-mobile">
+        <div class="subnav">IMAGEM</div>
+        {% for subcat in page.imagem_pt  limit: 1 %}
+          <a class="dropdown-item active" data-bs-toggle="pill" data-bs-target="#pills-img-{{ subcat | slugify }}" role="tab" aria-controls="pills-img-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
+        {% endfor %}
+        {% for subcat in page.imagem_pt offset: 1 %}
+          <a class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-img-{{ subcat | slugify }}" role="tab" aria-controls="pills-img-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
+        {% endfor %}
+      </li>
+      <li>
+        <div class="subnav">LUZ</div>
+        {% for subcat in page.luz_pt %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-light-{{ subcat | slugify }}" role="tab" aria-controls="pills-light-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      <li>
+        <div class="subnav">AUDIO</div>
+        {% for subcat in page.audio_pt %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-audio-{{ subcat | slugify }}" role="tab" aria-controls="pills-audio-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      <li>
+        <div class="subnav">G&E</div>
+        {% for subcat in page.ge_pt %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-ge-{{ subcat | slugify }}" role="tab" aria-controls="pills-ge-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      <li>
+        <div class="subnav">ON SET</div>
+        {% for subcat in page.on_set %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-onset-{{ subcat | slugify }}" role="tab" aria-controls="pills-onset-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      
+    </ul>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link h5" href="#crew" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#crew" role="tab" aria-controls="pills-crew" aria-selected="false">CREW</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link h5" href="#mobility" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#mobility" role="tab" aria-controls="pills-mobility" aria-selected="false">MOBILITY</a>
+  </li>
+</ul>
+
+<div class="tab-content" id="pills-tabContent">
+  <!--STUDIO TAB-->
+  <div class="tab-pane fade" id="studio" role="tabpanel" aria-labelledby="pills-studio-tab">
+      {% for product in studioMain %}
+      <div class="d-flex flex-column flex-md-row">
+        <div class="ps-md-3 pe-md-5 studio-carousel">
+            <!-- Carousel -->
+            <div id="studioCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                {% for img in product.images limit: 1 %}
+                <div class="carousel-item active">
+                  <img src="{{site.baseurl}}{{ img }}" class="d-block w-100" alt="...">
+                </div>
+                {% endfor %}
+                {% for img in product.images offset: 1 %}
+                <div class="carousel-item">
+                  <img src="{{site.baseurl}}{{ img }}" class="d-block w-100" alt="...">
+                </div>
+                {% endfor %}
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#studioCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#studioCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!-- Carousel End -->
+        </div>
+        <div class="studio-info-side">
+          <div class="border-bottom border-dark mb-2"></div>
+          <h5 class="text-uppercase"><b>{{ product.title_pt }}</b></h5>
+          <div class="border-bottom border-dark my-2"></div>
+          <div class="d-flex justify-content-between bold">
+            <div>{{ product.price_day }} €/DIA</div>
+            <div>QTY: <input type="number" class="qty-input" step="1" min="1" name="qty" value="1" max='1' title="QTY" inputmode="numeric" autocomplete="off"></div>
+          </div>
+          <div class="border-bottom border-dark my-2"></div>
+          {% if product.description_pt != '' %}
+          <div>{{ product.description_pt }}</div>
+          <div class="border-bottom border-dark my-2"></div>
+          {% endif %}
+          <div class="small-text mt-2">{{ page.carrinho }}</div>
+          <div class="border-bottom border-dark my-2"></div>
+          <div class="d-flex justify-content-center">
+            <div class="add-to-cart inner-cart-btn me-2" data-name="{{product.title}}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="1">
+            <span class="post-click">
+              <span>ADICIONADO AO CESTO <i class='ri-check-line'></i></span>
+            </span>
+            <span class="pre-click">
+              <span>ADICIONAR AO CESTO</span>
+            </span>
+          </div>
+          </div>
+          <div class="border-bottom border-dark my-2"></div>
+        </div>
+      </div>
+      <div class="mx-lg-3">
+        <h6 class="bold mt-4">EXTRAS</h6>
+        <div class="border-bottom border-dark my-2"></div>
+      </div>
+      <div class="row gx-4 gy-4 mt-md-2 pb-5 ms-md-2 mb-4">
+        {% for productPath in product.recommended reversed %}
+        {% assign recommendedProducts = site.products | where: "path", productPath %}
+        {% for rec in recommendedProducts %}
+        <div class="col">
+          <div><img src="{{site.baseurl}}{{ rec.images[0] }}" alt="{{ rec.title }}" class="product-img recommended-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#{{rec.title | slugify }}Modal"></div>
+          <div class="rec-title mt-2 small-label">{{ rec.title_pt }}</div>
+          <div class="d-flex justify-content-between mt-2 product-container">
+            <div class="small-label">{{ rec.price_day }} €/DIA</div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ rec.title }}" data-price="{{rec.price_day}}" data-image="{{rec.images[0]}}" data-count="1" data-max="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+          </div> 
+        </div>
+      {% endfor %}
+      {% endfor %}
+      </div>
+      {% endfor %}
+  </div>
+  <!--CREW TAB-->
+  <div class="tab-pane fade" id="crew" role="tabpanel" aria-labelledby="pills-crew-tab">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+      {% for product in crewProducts %}
+      <div class="col m-lg-3">
+        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        <div class="product-title mt-2 small-label">{{product.title}}</div>
+        <div class="d-flex justify-content-between mt-2 product-container">
+          <div class="small-label">PEDIR ORÇAMENTO</div>
+          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+        </div> 
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!--MOBILITY TAB-->
+  <div class="tab-pane fade" id="mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+      {% for product in mobilityProducts %}
+      <div class="col m-lg-3">
+        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        <div class="product-title mt-2 small-label">{{product.title}}</div>
+        <div class="d-flex justify-content-between mt-2 product-container">
+          <div class="small-label">{{ product.price_day }} €/DIA</div>
+          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+        </div> 
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!--GEAR TABS-->
+  {% for subcat in page.imagem_pt limit: 1 %}
+    <div class="tab-pane fade show active" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
+      {% assign products = imgproducts | where: "subcategoria", subcat %}
+      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+          {% for product in products %}
+          <div class="col m-lg-3">
+            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            <div class="product-title mt-2 small-label">{{ product.title }}</div>
+            <div class="d-flex justify-content-between mt-2 product-container">
+              <div class="small-label">{{ product.price_day }} €/DIA</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+            </div> 
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  {% endfor %}
+  {% for subcat in page.imagem_pt offset: 1 %}
+  <div class="tab-pane fade" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
+    {% assign products = imgproducts | where: "subcategoria", subcat %}
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+        {% for product in products %}
+        <div class="col m-lg-3">
+          <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+          <div class="product-title mt-2 small-label">{{ product.title }}</div>
+          <div class="d-flex justify-content-between mt-2 product-container">
+            <div class="small-label">{{ product.price_day }} €/DIA</div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+          </div> 
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+{% endfor %}
+  {% for subcat in page.audio_pt %}
+    <div class="tab-pane fade" id="pills-audio-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-audio-{{subcat | slugify }}-tab">
+      {% assign products = audioproducts | where: "subcategoria", subcat %}
+      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+          {% for product in products %}
+          <div class="col m-lg-3">
+            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            <div class="product-title mt-2 small-label">{{ product.title }}</div>
+            <div class="d-flex justify-content-between mt-2 product-container">
+              <div class="small-label">{{ product.price_day }} €/DIA</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+            </div> 
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  {% endfor %}
+  {% for subcat in page.luz_pt %}
+    <div class="tab-pane fade" id="pills-light-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-light-{{subcat | slugify }}-tab">
+      {% assign products = lightproducts | where: "subcategoria", subcat %}
+      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+          {% for product in products %}
+          <div class="col m-lg-3">
+            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            <div class="product-title mt-2 small-label">{{ product.title }}</div>
+            <div class="d-flex justify-content-between mt-2 product-container">
+              <div class="small-label">{{ product.price_day }} €/DIA</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+            </div> 
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  {% endfor %}
+  {% for subcat in page.ge_pt %}
+    <div class="tab-pane fade" id="pills-ge-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-ge-{{subcat | slugify }}-tab">
+      {% assign products = geproducts | where: "subcategoria", subcat %}
+      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+          {% for product in products %}
+          <div class="col m-lg-3">
+            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            <div class="product-title mt-2 small-label">{{ product.title }}</div>
+            <div class="d-flex justify-content-between mt-2 product-container">
+              <div class="small-label">{{ product.price_day }} €/DIA</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+            </div> 
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  {% endfor %}
+  {% for subcat in page.on_set %}
+  <div class="tab-pane fade" id="pills-onset-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-onset-{{subcat | slugify }}-tab">
+    {% assign products = onsetproducts | where: "subcategoria", subcat %}
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+        {% for product in products %}
+        <div class="col m-lg-3">
+          <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+          <div class="product-title mt-2 small-label">{{ product.title }}</div>
+          <div class="d-flex justify-content-between mt-2 product-container">
+            <div class="small-label">{{ product.price_day }} €/DIA</div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+          </div> 
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+{% endfor %}
+</div> 
+
+
+<!-- Button trigger modal -->
+
+{% for product in site.products %}
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="{{product.title | slugify }}Modal" tabindex="-1" aria-labelledby="{{product.title | slugify }}ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-3 pe-md-5">
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="d-flex flex-column flex-md-row">
+          <div class="d-flex align-items-center ps-md-3 pe-md-5">
+            {% if product.images.size > 1 %}
+              <!-- Carousel -->
+              <div id="{{product.title | slugify }}Carousel" class="modalCarousel carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  {% for img in product.images limit: 1 %}
+                  <div class="carousel-item active">
+                    <img src="{{site.baseurl}}{{ img }}" class="d-block w-100" alt="...">
+                  </div>
+                  {% endfor %}
+                  {% for img in product.images offset: 1 %}
+                  <div class="carousel-item">
+                    <img src="{{site.baseurl}}{{ img }}" class="d-block w-100" alt="...">
+                  </div>
+                  {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#{{product.title | slugify }}Carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#{{product.title | slugify }}Carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- Carousel End -->
+              {% else %}
+                {% for img in product.images %}
+                <img src="{{site.baseurl}}{{ img }}" alt="{{ product.title }}" class="modal-img">
+                {% endfor %}
+            {% endif %}
+            
+          </div>
+          <div class="modal-info-side">
+            <div>{% if product.type == "Gear" %}{{ product.category }} / {{ product.subcategoria }}{% endif %}</div>
+            <div class="border-bottom border-dark my-2"></div>
+            <h5 class="text-uppercase"><b>{{product.title}}</b></h5>
+            <div class="border-bottom border-dark my-2"></div>
+            <div class="d-flex justify-content-between bold">
+              <div>{% if product.type == "Crew" %}<span>PEDIR ORÇAMENTO</span>{% else %}{{ product.price_day }} €/DIA{% endif %}</div>
+              <div>QTY: <input type="number" class="qty-input" step="1" min="1" max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}" name="qty" value="1" title="QTY" inputmode="numeric" autocomplete="off"></div>
+            </div>
+            <div class="border-bottom border-dark my-2"></div>
+            {% if product.description != '' %}
+            <div>{{ product.description }}</div>
+            <div class="border-bottom border-dark my-2"></div>
+            {% endif %}
+            <div class="small-text mt-2">{{ page.carrinho }}</div>
+            <div class="border-bottom border-dark my-2"></div>
+            <div class="d-flex justify-content-center"> 
+              <div class="add-to-cart inner-cart-btn me-2" data-name="{{product.title}}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}">
+                <span class="post-click">
+                  <span>ADICIONADO AO CESTO <i class='ri-check-line'></i></span>
+                </span>
+                <span class="pre-click">
+                  <span>ADICIONAR AO CESTO</span>
+                </span>  
+              </div>
+            </div>
+            <div class="border-bottom border-dark my-2"></div>
+          </div>
+        </div>
+        {% if product.recommended.size > 0 %}
+        <div class="mx-lg-3">
+          <h6 class="bold mt-md-4">RECOMENDADOS</h6>
+          <div class="border-bottom border-dark my-2"></div>
+        </div>
+        <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+          {% for productPath in product.recommended %}
+          {% assign recommendedProducts = site.products | where: "path", productPath %}
+          {% for rec in recommendedProducts %}
+          <div class="col">
+            <div><img src="{{site.baseurl}}{{ rec.images[0] }}" alt="{{ rec.title }}" class="product-img recommended-img" data-bs-toggle="modal" data-bs-target="#{{rec.title | slugify }}Modal"></div>
+            <div class="rec-title mt-2 small-label">{{ rec.title }}</div>
+            <div class="d-flex justify-content-between mt-2 product-container">
+              <div class="small-label">{{ rec.price_day }} €/DIA</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ rec.title }}" data-price="{{rec.price_day}}" data-image="{{rec.images[0]}}" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+            </div> 
+          </div>
+        {% endfor %}
+        {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+
+<div class="modal right fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <button type="button" class="btn-close cart-close-btn p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body">
+        
+        <div class="pb-2 d-flex justify-content-between">
+          <div><span class="eng">Cart</span><span class="pt">Cesto</span> (<span class="total-count"></span>)</div>
+          <button class="clear-cart"><span class="eng">Clear All</span><span class="pt">Limpar Cesto</span></button>
+        </div>
+        <div class="border-bottom border-dark w-100"></div>
+        <div class="show-cart">
+
+        </div>
+      </div>
+      <div class="modal-footer border-0 flex-column">
+
+        <div class="border-bottom border-dark my-2 w-100"></div>
+        <div class="d-flex w-100 justify-content-between"><div><span>TOTAL (+IVA)</span></div> <span class="total-cart"> / €</span></div>
+        <div class="border-bottom border-dark my-2 w-100"></div>
+        <a href="{{site.baseurl}}/checkout"><button class="checkout-btn bold"><span>VER DISPONIBILIDADE</span></button></a>
+        <div class="border-bottom border-dark my-2 w-100"></div>
+        <div class="text-center small-text mb-0"><span>{{ page.discounts_pt}}</span></div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+</main>
+{% include bootstrap-scripts.html %}
+<script src="{{site.baseurl}}/assets/js/shoppingCart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+  var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
+  if (hash) {
+      $('.nav-pills .nav-item a[href="#' + hash + '"]').tab('show');
+      $(document).scrollTop(0);
+  } 
+});
+
+
+// Change hash for page-reload
+$('.nav-pills a').on('shown.bs.tab', function (e) {
+    window.location.hash = e.target.hash;
+    $(document).scrollTop(0);
+})
+
+$('.qty-input').on("change", function () {
+  $(this).closest('.modal-dialog').find('.inner-cart-btn').attr('data-count', $(this).val() );
+});
+$('.add-to-cart').on("click", function () {
+  $(this).children('.pre-click').hide();
+  $(this).children('.post-click').show();
+});
+
+const $dropdown = $(".dropdown");
+const $dropdownToggle = $(".dropdown-toggle");
+const $dropdownMenu = $(".dropdown-menu");
+const showClass = "show";
+
+$(window).on("load resize", function() {
+  if (this.matchMedia("(min-width: 768px)").matches) {
+    $dropdown.hover(
+      function() {
+        const $this = $(this);
+        $this.addClass(showClass);
+        $this.find($dropdownToggle).attr("aria-expanded", "true");
+        $this.find($dropdownMenu).addClass(showClass);
+      },
+      function() {
+        const $this = $(this);
+        $this.removeClass(showClass);
+        $this.find($dropdownToggle).attr("aria-expanded", "false");
+        $this.find($dropdownMenu).removeClass(showClass);
+      }
+    );
+  } else {
+    $dropdown.off("mouseenter mouseleave");
+  }
+});
+
+function handleFirstTab(e) {
+    if (e.keyCode === 9) { // the "I am a keyboard user" key
+        document.body.classList.add('user-is-tabbing');
+        window.removeEventListener('keydown', handleFirstTab);
+    }
+}
+
+window.addEventListener('keydown', handleFirstTab);
+</script>
