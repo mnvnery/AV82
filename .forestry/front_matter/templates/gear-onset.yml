@@ -124,5 +124,6 @@ fields:
   hidden: true
 pages:
 - _products/Gear/fresnel-lens.html
+- _products/Gear/megaphone.html
 - _products/Gear/retevis-radio-1-unit.html
 - _products/Gear/retevis-radio-kit-10-units.html
