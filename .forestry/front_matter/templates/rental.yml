@@ -38,7 +38,7 @@ fields:
     schema:
       format: html-blocks
   label: Estúdio PT
-  hidden: true
+  hidden: false
 - name: studio_eng
   type: textarea
   default: ''
@@ -48,7 +48,7 @@ fields:
     schema:
       format: html-blocks
   label: Studio ENG
-  hidden: true
+  hidden: false
 - name: material_pt
   type: textarea
   default: ''
