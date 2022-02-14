@@ -31,6 +31,15 @@ fields:
     schema:
       format: html-blocks
   label: Description
+- name: description_pt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Descrição
 - name: credits
   type: textarea
   default: ''
@@ -40,6 +49,15 @@ fields:
     schema:
       format: html-blocks
   label: Credits
+- name: credits_pt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Créditos
 - name: stills
   type: image_gallery
   config: {}
