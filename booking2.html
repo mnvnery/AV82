@@ -10,8 +10,6 @@ imagem_pt:
 - Outros
 - Media
 - Power
-- Drone
-- Filtros
 imagem_eng:
 - Cameras
 - Lenses
@@ -22,47 +20,50 @@ imagem_eng:
 - Others
 - Media
 - Power
-- Filters
 audio_pt:
-- Áudio
+- Microfones
+- Gravadores de Som
+- Outros
 audio_eng:
-- Audio
+- Microphones
+- Sound Recorders
+- Others
 luz_pt:
 - Luz Contínua
 - Flash
 - Modificadores de Luz
+- Panos
 - Frames
 - Refletores
 light_eng:
 - Continuous Light
 - Flash
 - Light Modifiers
+- Cloths
 - Frames
 - Reflectors
 ge_pt:
+- Rigs
 - Stabilizers/Gimbals
 - Tripés/Cabeças Fluídas
 - Dollies/Sliders
 - Grip
 - Power
 - Outros
-- Efeitos Especiais
 ge_eng:
+- Rigs
 - Stabilizers/Gimbals
 - Tripods/Fluid Heads
 - Dollies/Sliders
 - Grip
 - Power
 - Others
-- FX
 on_set:
 - Magliner
 - COM
-- Acessórios
 on_set_eng:
 - Magliner
 - COM
-- Accessories
 cart: "<p>When adding to cart, you'll be able to select your desired dates and receive
   a price estimate for that time and full list of products. Here you can submit a
   request for rental. We can't guarantee this product to be available for your required
@@ -74,10 +75,11 @@ carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e
   para as datas desejadas, mas a nossa equipa entrará em contacto para confirmar o
   seu pedido e fornecer qualquer informação em falta. O pagamento será efectuado presencialmente.
   </p>"
-discounts_eng: "<span>Discounts applied based on selected nº of days.<br> 3+ days
-  - <b>25% discount</b> / Week - <b>35% discount</b></span>"
+discounts_eng: "<span>Discounts applied based on selected nº of days.<br>
+3+ days - <b>25% discount</b> / Week - <b>35% discount</b></span>"
 discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<br>
-  3+ dias - <b>25% desconto</b> / Semana - <b>35% desconto</b></span>"
+3+ dias - <b>25% desconto</b> / Semana - <b>35% desconto</b></span>"
+
 
 ---
 <div class="nav-logo">
@@ -212,7 +214,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
         </div>
       </div>
       <div class="mx-lg-3">
-        <h6 class="bold mt-md-4">EXTRAS</h6>
+        <h6 class="bold mt-4">EXTRAS</h6>
         <div class="border-bottom border-dark my-2"></div>
       </div>
       <div class="row gx-4 gy-4 mt-md-2 pb-5 ms-md-2 mb-4">
@@ -224,7 +226,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
           <div class="rec-title mt-2 small-label"><span class="eng">{{rec.title}}</span><span class="pt">{{rec.title_pt}}</span></div>
           <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ rec.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-            <div class="addToCart add-to-cart small-label me-2" data-name="{{ rec.title }}" data-price="{{rec.price_day}}" data-image="{{rec.images[0]}}" data-count="1" data-max="1">ADD</div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ rec.title }}" data-price="{{rec.price_day}}" data-image="{{rec.images[0]}}" data-count="1" data-max="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
           </div> 
         </div>
       {% endfor %}
@@ -234,14 +236,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   </div>
   <!--CREW TAB-->
   <div class="tab-pane fade" id="crew" role="tabpanel" aria-labelledby="pills-crew-tab">
-    <div class="row gx-4 gy-4 mt-md-4 pb-5">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
       {% for product in crewProducts %}
       <div class="col m-lg-3">
         <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{% if product.title_pt == blank %}<span class="eng">{{product.title}}</span><span class="pt">{{product.title_pt}}</span>{% else %}{{ product.title }}{% endif %}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
           <div class="small-label"><span class='eng'>REQUEST BUDGET</span><span class='pt'>PEDIR ORÇAMENTO</span></div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1">ADD</div>
+          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
         </div> 
       </div>
       {% endfor %}
@@ -249,14 +251,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   </div>
   <!--MOBILITY TAB-->
   <div class="tab-pane fade" id="mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">
-    <div class="row gx-4 gy-4 mt-md-4 pb-5">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
       {% for product in mobilityProducts %}
       <div class="col m-lg-3">
         <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
         <div class="product-title mt-2 small-label">{% if product.title_pt == blank %}<span class="eng">{{product.title}}</span><span class="pt">{{product.title_pt}}</span>{% else %}{{ product.title }}{% endif %}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
           <div class="small-label">{{ product.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="1">ADD</div>
+          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
         </div> 
       </div>
       {% endfor %}
@@ -266,14 +268,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   {% for subcat in page.imagem_eng limit: 1 %}
     <div class="tab-pane fade show active" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
       {% assign products = imgproducts | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-md-4 pb-5">
+      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
           {% for product in products %}
           <div class="col m-lg-3">
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{% if product.title_pt == blank %}<span class="eng">{{product.title}}</span><span class="pt">{{product.title_pt}}</span>{% else %}{{ product.title }}{% endif %}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
             </div> 
           </div>
           {% endfor %}
@@ -283,14 +285,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   {% for subcat in page.imagem_eng offset: 1 %}
   <div class="tab-pane fade" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
     {% assign products = imgproducts | where: "subcategory", subcat %}
-    <div class="row gx-4 gy-4 mt-md-4 pb-5">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
         {% for product in products %}
         <div class="col m-lg-3">
           <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
           <div class="product-title mt-2 small-label">{% if product.title_pt == blank %}<span class="eng">{{product.title}}</span><span class="pt">{{product.title_pt}}</span>{% else %}{{ product.title }}{% endif %}</div>
           <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}">ADD</div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
           </div> 
         </div>
         {% endfor %}
@@ -300,14 +302,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   {% for subcat in page.audio_eng %}
     <div class="tab-pane fade" id="pills-audio-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-audio-{{subcat | slugify }}-tab">
       {% assign products = audioproducts | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-md-4 pb-5">
+      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
           {% for product in products %}
           <div class="col m-lg-3">
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{% if product.title_pt == blank %}<span class="eng">{{product.title}}</span><span class="pt">{{product.title_pt}}</span>{% else %}{{ product.title }}{% endif %}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
             </div> 
           </div>
           {% endfor %}
@@ -317,14 +319,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   {% for subcat in page.light_eng %}
     <div class="tab-pane fade" id="pills-light-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-light-{{subcat | slugify }}-tab">
       {% assign products = lightproducts | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-md-4 pb-5">
+      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
           {% for product in products %}
           <div class="col m-lg-3">
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{% if product.title_pt == blank %}<span class="eng">{{product.title}}</span><span class="pt">{{product.title_pt}}</span>{% else %}{{ product.title }}{% endif %}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
             </div> 
           </div>
           {% endfor %}
@@ -334,14 +336,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   {% for subcat in page.ge_eng %}
     <div class="tab-pane fade" id="pills-ge-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-ge-{{subcat | slugify }}-tab">
       {% assign products = geproducts | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-md-4 pb-5">
+      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
           {% for product in products %}
           <div class="col m-lg-3">
             <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
             <div class="product-title mt-2 small-label">{% if product.title_pt == blank %}<span class="eng">{{product.title}}</span><span class="pt">{{product.title_pt}}</span>{% else %}{{ product.title }}{% endif %}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ product.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
             </div> 
           </div>
           {% endfor %}
@@ -351,14 +353,14 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
   {% for subcat in page.on_set_eng %}
   <div class="tab-pane fade" id="pills-onset-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-onset-{{subcat | slugify }}-tab">
     {% assign products = onsetproducts | where: "subcategory", subcat %}
-    <div class="row gx-4 gy-4 mt-md-4 pb-5">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
         {% for product in products %}
         <div class="col m-lg-3">
           <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
           <div class="product-title mt-2 small-label">{% if product.title_pt %}<span class="eng">{{product.title}}</span><span class="pt">{{product.title_pt}}</span>{% else %} {{product.title}} {% endif %}</div>
           <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}">ADD</div>
+            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
           </div> 
         </div>
         {% endfor %}
@@ -446,7 +448,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
           <h6 class="bold mt-md-4">RECOMMENDED</h6>
           <div class="border-bottom border-dark my-2"></div>
         </div>
-        <div class="row gx-4 gy-4 mt-md-4 pb-5">
+        <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
           {% for productPath in product.recommended %}
           {% assign recommendedProducts = site.products | where: "path", productPath %}
           {% for rec in recommendedProducts %}
@@ -455,7 +457,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
             <div class="rec-title mt-2 small-label">{{ rec.title }}</div>
             <div class="d-flex justify-content-between mt-2 product-container">
               <div class="small-label">{{ rec.price_day }} €/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ rec.title }}" data-price="{{rec.price_day}}" data-image="{{rec.images[0]}}" data-count="1">ADD</div>
+              <div class="addToCart add-to-cart small-label me-2" data-name="{{ rec.title }}" data-price="{{rec.price_day}}" data-image="{{rec.images[0]}}" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
             </div> 
           </div>
         {% endfor %}

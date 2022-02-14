@@ -51,6 +51,8 @@ seu pedido e fornecer qualquer informação em falta. O pagamento será efectuad
 
 
 <script>
+document.querySelector('.start-date').valueAsDate = new Date();
+document.querySelector('.end-date').valueAsDate = new Date();
 
 let shoppingCart = (function() {
     cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
