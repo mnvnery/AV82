@@ -27,6 +27,11 @@ project_order:
 - _photo/berg.html
 
 ---
+<style>
+  body, html {
+      overflow-x: visible;
+  }
+</style>
 <div class="nav-logo">
   <a href="{{ site.baseurl }}/">
     <img src="{{site.baseurl}}/assets/img/logo_preto.png" alt="" class="logo-img">
@@ -48,8 +53,7 @@ project_order:
 
 </div>
 
-  <div class="photo-grid">
-    
+  <div class="photo-grid">    
     {% for sortedPath in page.project_order %}
       {% assign sortedProjects = site.photo | where: "path", sortedPath %}
       {% for project in sortedProjects %}
