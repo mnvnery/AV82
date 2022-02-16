@@ -111,6 +111,12 @@ li p { margin-bottom: 0.5rem; }
 
 .checkout-grid { display: grid; grid-template-columns: 1fr 0.1fr 0.1fr; border-bottom: 1px solid black; width: 35vw; text-align: center; }
 
+.nice-number { display: inline-flex; justify-content: stretch; }
+
+.nice-number input { vertical-align: middle; -moz-appearance: textfield; box-sizing: content-box; margin: 0; text-align: center; }
+
+.nice-number input::-webkit-inner-spin-button, .nice-number input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
 @media (min-width: 992px) { .modal-lg { max-width: 900px; } }
 
 @media (max-width: 600px) { .checkout-grid, .order-left-side, .cart-item { width: 100%; } .request { margin-bottom: 10vh; } .start-date, .end-date { width: 100%; } .checkout-grid { font-size: 0.85em; } .checkout-grid .small-label { font-size: 0.85em; } }
@@ -443,7 +449,7 @@ button { background-color: transparent; outline: none; border: none; color: inhe
 
 .post-click { display: none; transition: 0.2s; }
 
-.cart-grid { display: grid; grid-template-columns: 25% 20% 22% 16%; }
+.cart-grid { display: grid; grid-template-columns: 25% 20% 22% 18%; }
 
 .back-to:hover { text-decoration: underline; }
 
