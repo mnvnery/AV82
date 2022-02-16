@@ -113,34 +113,34 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
     <ul class="dropdown-menu">
       <li class="span-mobile">
         <div class="subnav">IMAGEM</div>
-        {% for subcat in page.imagem_pt  limit: 1 %}
+        {% for subcat in site.data.booking.imagem_pt  limit: 1 %}
           <a class="dropdown-item active" data-bs-toggle="pill" data-bs-target="#pills-img-{{ subcat | slugify }}" role="tab" aria-controls="pills-img-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
         {% endfor %}
-        {% for subcat in page.imagem_pt offset: 1 %}
+        {% for subcat in site.data.booking.imagem_pt offset: 1 %}
           <a class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-img-{{ subcat | slugify }}" role="tab" aria-controls="pills-img-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
         {% endfor %}
       </li>
       <li>
         <div class="subnav">LUZ</div>
-        {% for subcat in page.luz_pt %}
+        {% for subcat in site.data.booking.luz_pt %}
           <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-light-{{ subcat | slugify }}" role="tab" aria-controls="pills-light-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
-        <div class="subnav">AUDIO</div>
-        {% for subcat in page.audio_pt %}
-          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-audio-{{ subcat | slugify }}" role="tab" aria-controls="pills-audio-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
-        {% endfor %}
-      </li>
-      <li>
         <div class="subnav">G&E</div>
-        {% for subcat in page.ge_pt %}
+        {% for subcat in site.data.booking.ge_pt %}
           <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-ge-{{ subcat | slugify }}" role="tab" aria-controls="pills-ge-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
       <li>
+        <div class="subnav">AUDIO</div>
+        {% for subcat in site.data.booking.audio_pt %}
+          <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-audio-{{ subcat | slugify }}" role="tab" aria-controls="pills-audio-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
+        {% endfor %}
+      </li>
+      <li>
         <div class="subnav">ON SET</div>
-        {% for subcat in page.on_set %}
+        {% for subcat in site.data.booking.on_set %}
           <button class="dropdown-item" data-bs-toggle="pill" data-bs-target="#pills-onset-{{ subcat | slugify }}" role="tab" aria-controls="pills-onset-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
         {% endfor %}
       </li>
@@ -199,7 +199,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
           <div>{{ product.description_pt }}</div>
           <div class="border-bottom border-dark my-2"></div>
           {% endif %}
-          <div class="small-text mt-2">{{ page.carrinho }}</div>
+          <div class="small-text mt-2">{{ site.data.booking.carrinho }}</div>
           <div class="border-bottom border-dark my-2"></div>
           <div class="d-flex justify-content-center">
             <div class="add-to-cart inner-cart-btn me-2" data-name="{{product.title}}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="1">
@@ -266,7 +266,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
     </div>
   </div>
   <!--GEAR TABS-->
-  {% for subcat in page.imagem_pt limit: 1 %}
+  {% for subcat in site.data.booking.imagem_pt limit: 1 %}
     <div class="tab-pane fade show active" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
       {% assign products = imgproducts | where: "subcategoria", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
@@ -283,7 +283,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
         </div>
     </div>
   {% endfor %}
-  {% for subcat in page.imagem_pt offset: 1 %}
+  {% for subcat in site.data.booking.imagem_pt offset: 1 %}
   <div class="tab-pane fade" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
     {% assign products = imgproducts | where: "subcategoria", subcat %}
     <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
@@ -300,7 +300,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
       </div>
   </div>
 {% endfor %}
-  {% for subcat in page.audio_pt %}
+  {% for subcat in site.data.booking.audio_pt %}
     <div class="tab-pane fade" id="pills-audio-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-audio-{{subcat | slugify }}-tab">
       {% assign products = audioproducts | where: "subcategoria", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
@@ -317,7 +317,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
         </div>
     </div>
   {% endfor %}
-  {% for subcat in page.luz_pt %}
+  {% for subcat in site.data.booking.luz_pt %}
     <div class="tab-pane fade" id="pills-light-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-light-{{subcat | slugify }}-tab">
       {% assign products = lightproducts | where: "subcategoria", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
@@ -334,7 +334,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
         </div>
     </div>
   {% endfor %}
-  {% for subcat in page.ge_pt %}
+  {% for subcat in site.data.booking.ge_pt %}
     <div class="tab-pane fade" id="pills-ge-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-ge-{{subcat | slugify }}-tab">
       {% assign products = geproducts | where: "subcategoria", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
@@ -351,7 +351,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
         </div>
     </div>
   {% endfor %}
-  {% for subcat in page.on_set %}
+  {% for subcat in site.data.booking.on_set %}
   <div class="tab-pane fade" id="pills-onset-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-onset-{{subcat | slugify }}-tab">
     {% assign products = onsetproducts | where: "subcategoria", subcat %}
     <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
@@ -427,7 +427,7 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
             <div>{{ product.description }}</div>
             <div class="border-bottom border-dark my-2"></div>
             {% endif %}
-            <div class="small-text mt-2">{{ page.carrinho }}</div>
+            <div class="small-text mt-2">{{ site.data.booking.carrinho }}</div>
             <div class="border-bottom border-dark my-2"></div>
             <div class="d-flex justify-content-center"> 
               <div class="add-to-cart inner-cart-btn me-2" data-name="{{product.title}}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}">
@@ -487,11 +487,11 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
       <div class="modal-footer border-0 flex-column">
 
         <div class="border-bottom border-dark my-2 w-100"></div>
-        <div class="d-flex w-100 justify-content-between"><div><span>TOTAL (+IVA)</span></div> <span class="total-cart"> / €</span></div>
+        <div class="d-flex w-100 justify-content-between"><div><span>TOTAL (s/IVA)</span></div> <span class="total-cart"> / €</span></div>
         <div class="border-bottom border-dark my-2 w-100"></div>
         <a href="{{site.baseurl}}/checkout"><button class="checkout-btn bold"><span>VER DISPONIBILIDADE</span></button></a>
         <div class="border-bottom border-dark my-2 w-100"></div>
-        <div class="text-center small-text mb-0"><span>{{ page.discounts_pt}}</span></div>
+        <div class="text-center small-text mb-0"><span>{{ site.data.booking.discounts_pt}}</span></div>
       </div>
     </div>
   </div>

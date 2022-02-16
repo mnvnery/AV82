@@ -1,0 +1,72 @@
+---
+layout: rental
+imagem_pt:
+- Câmaras
+- Objetivas
+- Monitores
+- Wireless
+- Live Streaming
+- Outros
+- Media
+- Power
+imagem_eng:
+- Cameras
+- Lenses
+- Monitors
+- Wireless
+- Live Streaming
+- Drone
+- Others
+- Media
+- Power
+audio_pt:
+- Áudio
+audio_eng:
+- Audio
+luz_pt:
+- Luz Contínua
+- Flash
+- Modificadores de Luz
+- Frames
+- Refletores
+light_eng:
+- Continuous Light
+- Flash
+- Light Modifiers
+- Frames
+- Reflectors
+ge_pt:
+- Stabilizers/Gimbals
+- Tripés/Cabeças Fluídas
+- Dollies/Sliders
+- Grip
+- Power
+ge_eng:
+- Stabilizers/Gimbals
+- Tripods/Fluid Heads
+- Dollies/Sliders
+- Grip
+- Power
+on_set:
+- Magliner
+- COM
+on_set_eng:
+- Magliner
+- COM
+cart: "<p>When adding to cart, you'll be able to select your desired dates and receive
+  a price estimate for that time and full list of products. Here you can submit a
+  request for rental. We can't guarantee this product to be available for your required
+  dates. Our team will get in touch to confirm your booking and provide any further
+  details necessary. Payment is taken on site upon collection.</p>"
+carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e calcular
+  uma estimativa do preço total  da reserva. Poderá submeter o seu pedido através
+  de um formulário de reserva. Não podemos garantir que este produto terá disponibilidade
+  para as datas desejadas, mas a nossa equipa entrará em contacto para confirmar o
+  seu pedido e fornecer qualquer informação em falta. O pagamento será efectuado presencialmente.
+  </p>"
+discounts_eng: "<span>Discounts applied based on selected nº of days.<br> 3+ days
+  - <b>25% discount</b> / Week - <b>35% discount</b></span>"
+discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<br>
+  3+ dias - <b>25% desconto</b> / Semana - <b>35% desconto</b></span>"
+
+---

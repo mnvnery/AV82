@@ -237,7 +237,7 @@ function displayCart() {
       + "<div>" + cartArray[i].price + "€/<span class='eng'>DAY</span><span class='pt'>DIA</span></div>"
       + "<div>QTY: <input type='number' class='item-count qty-input' data-name='" + cartArray[i].name + "' min='1' max='" + cartArray[i].max + "' value='" + cartArray[i].count + "'></div>"
       + "<div><span class='eng'>DAYS:</span><span class='pt'>DIAS: </span><input type='number' class='days-count qty-input' min='1' data-name='" + cartArray[i].name + "' value='" + cartArray[i].days + "'></div>"
-      + "<div class='days-total-price'>"+ cartArray[i].totalDays +" €</span></div>" 
+      + "<div class='days-total-price'>"+ cartArray[i].totalDays +"€</span></div>" 
       + "</div>"
       + "</div>"
       + "</div>";
@@ -260,7 +260,7 @@ function displayCart() {
     }
   }
   $('.show-cart').html(output);
-  $('.total-cart').html(shoppingCart.totalCartDays() + "  €");
+  $('.total-cart').html(shoppingCart.totalCartDays() + "€");
   $('.total-count').html(shoppingCart.totalCount());
 }
 
@@ -305,3 +305,4 @@ $('.show-cart').on("change", ".days-count", function(event) {
 
 
 displayCart();
+
