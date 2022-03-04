@@ -25,7 +25,6 @@ sections:
 - type: document
   path: _data/booking.yml
   label: Gear Subcat
-  match: "**/*"
 - type: heading
   label: Projects
 - type: directory

@@ -75,4 +75,5 @@ fields:
       format: html-blocks
   label: About Add To Cart
 pages:
+- _data/booking.yml
 - booking2.html

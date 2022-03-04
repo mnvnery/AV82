@@ -47,14 +47,14 @@ fields:
   label: Category
 - name: subcategory
   type: select
-  default: []
+  default: ''
   config:
     required: false
     options: []
     source:
       type: documents
-      section: product-categories
-      file: booking2.html
+      section: ''
+      file: _data/booking.yml
       path: imagem_eng
   label: Subcategory
   description: Versão ENG
@@ -66,8 +66,8 @@ fields:
     options: []
     source:
       type: documents
-      section: product-categories
-      file: booking2.html
+      section: ''
+      file: _data/booking.yml
       path: imagem_pt
   label: Subcategoria
   description: Versão PT
