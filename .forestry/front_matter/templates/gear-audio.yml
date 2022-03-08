@@ -55,7 +55,7 @@ fields:
     source:
       type: documents
       section: product-categories
-      file: booking2.html
+      file: _data/booking.yml
       path: audio_eng
   label: Sub-Category
 - name: subcategoria
@@ -67,7 +67,7 @@ fields:
     source:
       type: documents
       section: product-categories
-      file: booking2.html
+      file: _data/booking.yml
       path: audio_pt
   label: Subcategoria
 - name: images
