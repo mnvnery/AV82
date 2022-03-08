@@ -203,6 +203,13 @@ button
 .days-total-price
     justify-self: end
 
+.fit-content
+    width: fit-content
+
+#search-box
+    border: none
+    outline: none
+
 @media screen and (min-width: 768px) 
     .full-width.dropdown > .dropdown-menu 
         transform: translate3d(15px, 42px, 0px)
@@ -212,7 +219,17 @@ button
 
     .modal-info-side
         width: 30vw
+
+    .mobile
+        display: none
 @media screen and (max-width: 768px) 
+    .mobile
+        display: block 
+
+    .search-form 
+        float: left 
+        padding: 0.5rem 1rem 0.5rem 0
+
     .cart-grid
         grid-template-columns: 27% 25% 30% 14%
 

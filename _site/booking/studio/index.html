@@ -83,14 +83,8 @@
     </a>
 </div>
 <div class="language-switcher">
-  <a href="/booking-pt"><span class="lang-selector">PT</span></a> / <span class="lang-selector active"> ENG</span>
+  <a href="/booking/estudio"><span class="lang-selector">PT</span></a> / <span class="lang-selector active"> ENG</span>
 </div>
-
-<form action="/search" method="get">
-  <label for="search-box">Search</label>
-  <input type="text" id="search-box" name="query">
-  <input type="submit" value="search">
-</form>
 
 
 
@@ -104,95 +98,115 @@
 
 
 <main class="page-container">
+<div class="search-form mobile">
+    <form action="/search" method="get">
+        <div class="border-bottom  border-black fit-content">
+            <input type="text" id="search-box" name="query">
+            <button type="submit" value="search">
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+    </form>
+</div>
 <button class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart">CART (<span class="total-count"></span>)</button></div>
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" role="tab" aria-controls="pills-studio" aria-selected="true">STUDIO</a>
-  </li>
-  <li class="nav-item dropdown full-width" role="presentation">
-    <a class="nav-link dropdown-toggle h5 active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
-    <ul class="dropdown-menu">
-      <li class="span-mobile">
-        <div class="subnav">IMAGE</div>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link h5 active" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" role="tab" aria-controls="pills-studio" aria-selected="true">STUDIO</a>
+    </li>
+    <li class="nav-item dropdown full-width" role="presentation">
+        <a class="nav-link dropdown-toggle h5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
+        <ul class="dropdown-menu">
+        <li class="span-mobile">
+            <div class="subnav">IMAGE</div>
+            
+            <a class="dropdown-item" href="/booking/gear/#cameras">Cameras</a>
+            
+            
+            <a class="dropdown-item" href="/booking/gear/#lenses">Lenses</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#monitors">Monitors</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#wireless">Wireless</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#live-streaming">Live Streaming</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#drone">Drone</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#others">Others</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#media">Media</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#power">Power</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#filters">Filters</a>
+            
+        </li>
+        <li>
+            <div class="subnav">LIGHT</div>
+            
+            <a class="dropdown-item" href="/booking/gear/#continuous-light">Continuous Light</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#flash">Flash</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#light-modifiers">Light Modifiers</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#frames">Frames</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#reflectors">Reflectors</a>
+            
+        </li>
+        <li>
+            <div class="subnav">G&E</div>
+            
+            <a class="dropdown-item" href="/booking/gear/#stabilizers-gimbals">Stabilizers/Gimbals</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#tripods-fluid-heads">Tripods/Fluid Heads</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#dollies-sliders">Dollies/Sliders</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#grip">Grip</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#power">Power</a>
+            
+        </li>
+        <li>
+            <div class="subnav">AUDIO</div>
+            
+            <a class="dropdown-item" href="/booking/gear/#audio">Audio</a>
+            
+        </li>
+        <li>
+            <div class="subnav">ON SET</div>
+            
+            <a class="dropdown-item" href="/booking/gear/#magliner">Magliner</a>
+            
+            <a class="dropdown-item" href="/booking/gear/#com">COM</a>
+            
+        </li>
         
-          <a class="dropdown-item active" href="#cameras" data-bs-toggle="pill" data-bs-target="#pills-img-cameras" role="tab" aria-controls="pills-img-cameras" aria-selected="false">Cameras</a>
-        
-        
-          <a class="dropdown-item" href="#lenses" data-bs-toggle="pill" data-bs-target="#pills-img-lenses" role="tab" aria-controls="pills-img-lenses" aria-selected="false">Lenses</a>
-        
-          <a class="dropdown-item" href="#monitors" data-bs-toggle="pill" data-bs-target="#pills-img-monitors" role="tab" aria-controls="pills-img-monitors" aria-selected="false">Monitors</a>
-        
-          <a class="dropdown-item" href="#wireless" data-bs-toggle="pill" data-bs-target="#pills-img-wireless" role="tab" aria-controls="pills-img-wireless" aria-selected="false">Wireless</a>
-        
-          <a class="dropdown-item" href="#live-streaming" data-bs-toggle="pill" data-bs-target="#pills-img-live-streaming" role="tab" aria-controls="pills-img-live-streaming" aria-selected="false">Live Streaming</a>
-        
-          <a class="dropdown-item" href="#drone" data-bs-toggle="pill" data-bs-target="#pills-img-drone" role="tab" aria-controls="pills-img-drone" aria-selected="false">Drone</a>
-        
-          <a class="dropdown-item" href="#others" data-bs-toggle="pill" data-bs-target="#pills-img-others" role="tab" aria-controls="pills-img-others" aria-selected="false">Others</a>
-        
-          <a class="dropdown-item" href="#media" data-bs-toggle="pill" data-bs-target="#pills-img-media" role="tab" aria-controls="pills-img-media" aria-selected="false">Media</a>
-        
-          <a class="dropdown-item" href="#power" data-bs-toggle="pill" data-bs-target="#pills-img-power" role="tab" aria-controls="pills-img-power" aria-selected="false">Power</a>
-        
-          <a class="dropdown-item" href="#filters" data-bs-toggle="pill" data-bs-target="#pills-img-filters" role="tab" aria-controls="pills-img-filters" aria-selected="false">Filters</a>
-        
-      </li>
-      <li>
-        <div class="subnav">LIGHT</div>
-        
-          <button class="dropdown-item" href="#continuous-light" data-bs-toggle="pill" data-bs-target="#pills-light-continuous-light" role="tab" aria-controls="pills-light-continuous-light" aria-selected="false">Continuous Light</button>
-        
-          <button class="dropdown-item" href="#flash" data-bs-toggle="pill" data-bs-target="#pills-light-flash" role="tab" aria-controls="pills-light-flash" aria-selected="false">Flash</button>
-        
-          <button class="dropdown-item" href="#light-modifiers" data-bs-toggle="pill" data-bs-target="#pills-light-light-modifiers" role="tab" aria-controls="pills-light-light-modifiers" aria-selected="false">Light Modifiers</button>
-        
-          <button class="dropdown-item" href="#frames" data-bs-toggle="pill" data-bs-target="#pills-light-frames" role="tab" aria-controls="pills-light-frames" aria-selected="false">Frames</button>
-        
-          <button class="dropdown-item" href="#reflectors" data-bs-toggle="pill" data-bs-target="#pills-light-reflectors" role="tab" aria-controls="pills-light-reflectors" aria-selected="false">Reflectors</button>
-        
-      </li>
-      <li>
-        <div class="subnav">G&E</div>
-        
-          <button class="dropdown-item" href="#stabilizers-gimbals" data-bs-toggle="pill" data-bs-target="#pills-ge-stabilizers-gimbals" role="tab" aria-controls="pills-ge-stabilizers-gimbals" aria-selected="false">Stabilizers/Gimbals</button>
-        
-          <button class="dropdown-item" href="#tripods-fluid-heads" data-bs-toggle="pill" data-bs-target="#pills-ge-tripods-fluid-heads" role="tab" aria-controls="pills-ge-tripods-fluid-heads" aria-selected="false">Tripods/Fluid Heads</button>
-        
-          <button class="dropdown-item" href="#dollies-sliders" data-bs-toggle="pill" data-bs-target="#pills-ge-dollies-sliders" role="tab" aria-controls="pills-ge-dollies-sliders" aria-selected="false">Dollies/Sliders</button>
-        
-          <button class="dropdown-item" href="#grip" data-bs-toggle="pill" data-bs-target="#pills-ge-grip" role="tab" aria-controls="pills-ge-grip" aria-selected="false">Grip</button>
-        
-          <button class="dropdown-item" href="#power" data-bs-toggle="pill" data-bs-target="#pills-ge-power" role="tab" aria-controls="pills-ge-power" aria-selected="false">Power</button>
-        
-      </li>
-      <li>
-        <div class="subnav">AUDIO</div>
-        
-          <button class="dropdown-item" href="#audio"  data-bs-toggle="pill" data-bs-target="#pills-audio-audio" role="tab" aria-controls="pills-audio-audio" aria-selected="false">Audio</button>
-        
-      </li>
-      <li>
-        <div class="subnav">ON SET</div>
-        
-          <button class="dropdown-item" href="#magliner" data-bs-toggle="pill" data-bs-target="#pills-onset-magliner" role="tab" aria-controls="pills-onset-magliner" aria-selected="false">Magliner</button>
-        
-          <button class="dropdown-item" href="#com" data-bs-toggle="pill" data-bs-target="#pills-onset-com" role="tab" aria-controls="pills-onset-com" aria-selected="false">COM</button>
-        
-      </li>
-      
-    </ul>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#crew" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#crew" role="tab" aria-controls="pills-crew" aria-selected="false">CREW</a>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#mobility" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#mobility" role="tab" aria-controls="pills-mobility" aria-selected="false">MOBILITY</a>
-  </li>
+        </ul>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link h5" href="/booking/crew">CREW</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link h5" href="/booking/mobility">MOBILITY</a>
+    </li>
+    <div class="search-form ms-2 mt-1 desktop">
+        <form action="/search" method="get">
+        <div class="border-bottom  border-black fit-content">
+            <input type="text" id="search-box" name="query">
+            <button type="submit" value="search">
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+        </form>
+    </div>
 </ul>
 
 <div class="tab-content" id="pills-tabContent">
   <!--STUDIO TAB-->
-  <div class="tab-pane fade" id="studio" role="tabpanel" aria-labelledby="pills-studio-tab">
+  <div class="tab-pane fade active show" id="studio" role="tabpanel" aria-labelledby="pills-studio-tab">
       
       <div class="d-flex flex-column flex-md-row">
         <div class="ps-md-3 pe-md-5 studio-carousel">
@@ -366,174 +380,10 @@
       </div>
       
   </div>
-  <!--CREW TAB-->
-  <div class="tab-pane fade" id="crew" role="tabpanel" aria-labelledby="pills-crew-tab">
-    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/4y4a1563.jpg" alt="1st AC" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#1st-acModal"></div>
-        <div class="product-title mt-2 small-label">1st AC</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="1st AC" data-price="" data-image="/assets/img/4y4a1563.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/2o0b8370.jpg" alt="Art Director" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#art-directorModal"></div>
-        <div class="product-title mt-2 small-label">Art Director</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Art Director" data-price="" data-image="/assets/img/2o0b8370.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/lp5d0248.jpg" alt="Camera Operator" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#camera-operatorModal"></div>
-        <div class="product-title mt-2 small-label">Camera Operator</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Camera Operator" data-price="" data-image="/assets/img/lp5d0248.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/dsc01422-copy-1.jpg" alt="Assistant Director" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#assistant-directorModal"></div>
-        <div class="product-title mt-2 small-label">Assistant Director</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Assistant Director" data-price="" data-image="/assets/img/dsc01422-copy-1.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/4y4a9401.jpg" alt="Director of Photography" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#director-of-photographyModal"></div>
-        <div class="product-title mt-2 small-label">Director of Photography</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Director of Photography" data-price="" data-image="/assets/img/4y4a9401.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/ghettoven-bts33-copy-1.jpg" alt="Director" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#directorModal"></div>
-        <div class="product-title mt-2 small-label">Director</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Director" data-price="" data-image="/assets/img/ghettoven-bts33-copy-1.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/forumviseu_bts-1.jpg" alt="Drone Operator" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#drone-operatorModal"></div>
-        <div class="product-title mt-2 small-label">Drone Operator</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Drone Operator" data-price="" data-image="/assets/img/forumviseu_bts-1.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/forumviseu_bts-165.jpg" alt="Gaffer" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#gafferModal"></div>
-        <div class="product-title mt-2 small-label">Gaffer</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Gaffer" data-price="0" data-image="/assets/img/forumviseu_bts-165.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/4y4a0787.jpg" alt="Gimbal Operator" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#gimbal-operatorModal"></div>
-        <div class="product-title mt-2 small-label">Gimbal Operator</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Gimbal Operator" data-price="" data-image="/assets/img/4y4a0787.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/bts-deeply-13.jpg" alt="Hair & Make-up" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#hair-make-upModal"></div>
-        <div class="product-title mt-2 small-label">Hair & Make-up</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Hair & Make-up" data-price="" data-image="/assets/img/bts-deeply-13.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/31082019_marianafabiao_bts_photo_115.jpg" alt="Photographer" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#photographerModal"></div>
-        <div class="product-title mt-2 small-label">Photographer</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Photographer" data-price="" data-image="/assets/img/31082019_marianafabiao_bts_photo_115.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/de_2021_01_05_aluguerestudio_bts_photo19.jpg" alt="Photography Digital Assistant" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#photography-digital-assistantModal"></div>
-        <div class="product-title mt-2 small-label">Photography Digital Assistant</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Photography Digital Assistant" data-price="" data-image="/assets/img/de_2021_01_05_aluguerestudio_bts_photo19.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/miguelaraujobts-205-copy-1.jpg" alt="Producer" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#producerModal"></div>
-        <div class="product-title mt-2 small-label">Producer</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Producer" data-price="" data-image="/assets/img/miguelaraujobts-205-copy-1.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/lp5d0172-copy-1.jpg" alt="Production Assistant" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#production-assistantModal"></div>
-        <div class="product-title mt-2 small-label">Production Assistant</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Production Assistant" data-price="" data-image="/assets/img/lp5d0172-copy-1.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/forumviseu_bts-6.jpg" alt="Runner" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#runnerModal"></div>
-        <div class="product-title mt-2 small-label">Runner</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Runner" data-price="0" data-image="/assets/img/forumviseu_bts-6.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/2o0b3079.jpg" alt="Stylist" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#stylistModal"></div>
-        <div class="product-title mt-2 small-label">Stylist</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Stylist" data-price="0" data-image="/assets/img/2o0b3079.jpg" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-    </div>
-  </div>
-  <!--MOBILITY TAB-->
-  <div class="tab-pane fade" id="mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">
-    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-      
-      <div class="col m-lg-3">
-        <div><img src="/assets/img/carrinha_01.jpg" alt="Renault Trafic 2018 H1L2 White" class="product-img" data-bs-toggle="modal" data-bs-target="#renault-trafic-2018-h1l2-whiteModal"></div>
-        <div class="product-title mt-2 small-label">Renault Trafic 2018 H1L2 White</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">250 €/DAY</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="Renault Trafic 2018 H1L2 White" data-price="250" data-image="/assets/img/carrinha_01.jpg" data-count="1" data-max="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      
-    </div>
-  </div>
+
   <!--GEAR TABS-->
   
-    <div class="tab-pane fade show active" id="pills-img-cameras" role="tabpanel" aria-labelledby="pills-img-cameras-tab">
+    <div class="tab-pane fade" id="pills-img-cameras" role="tabpanel" aria-labelledby="pills-img-cameras-tab">
       
       <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
           
@@ -16610,27 +16460,13 @@
 <script src="/assets/js/shoppingCart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
-$(document).ready(function() {
-  var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
-  if (hash) {
-      $('.nav-pills .nav-item a[href="#' + hash + '"]').tab('show');
-      $(document).scrollTop(0);
-  } 
-});
-
-
-// Change hash for page-reload
-$('.nav-pills a').on('shown.bs.tab', function (e) {
-    window.location.hash = e.target.hash;
-    $(document).scrollTop(0);
-})
 
 $('.qty-input').on("change", function () {
-  $(this).closest('.modal-dialog').find('.inner-cart-btn').attr('data-count', $(this).val() );
+    $(this).closest('.modal-dialog').find('.inner-cart-btn').attr('data-count', $(this).val() );
 });
 $('.add-to-cart').on("click", function () {
-  $(this).children('.pre-click').hide();
-  $(this).children('.post-click').show();
+    $(this).children('.pre-click').hide();
+    $(this).children('.post-click').show();
 });
 
 const $dropdown = $(".dropdown");
@@ -16639,24 +16475,24 @@ const $dropdownMenu = $(".dropdown-menu");
 const showClass = "show";
 
 $(window).on("load resize", function() {
-  if (this.matchMedia("(min-width: 768px)").matches) {
-    $dropdown.hover(
-      function() {
-        const $this = $(this);
-        $this.addClass(showClass);
-        $this.find($dropdownToggle).attr("aria-expanded", "true");
-        $this.find($dropdownMenu).addClass(showClass);
-      },
-      function() {
-        const $this = $(this);
-        $this.removeClass(showClass);
-        $this.find($dropdownToggle).attr("aria-expanded", "false");
-        $this.find($dropdownMenu).removeClass(showClass);
-      }
-    );
-  } else {
-    $dropdown.off("mouseenter mouseleave");
-  }
+    if (this.matchMedia("(min-width: 768px)").matches) {
+        $dropdown.hover(
+        function() {
+            const $this = $(this);
+            $this.addClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "true");
+            $this.find($dropdownMenu).addClass(showClass);
+        },
+        function() {
+            const $this = $(this);
+            $this.removeClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "false");
+            $this.find($dropdownMenu).removeClass(showClass);
+        }
+        );
+    } else {
+        $dropdown.off("mouseenter mouseleave");
+    }
 });
 
 function handleFirstTab(e) {
