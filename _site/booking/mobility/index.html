@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AV82 STUDIO</title>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+<meta itemprop="description" name="description" content="AV82 é um estúdio de fotografia e vídeo localizado no centro do Porto. Este é um espaço que não só permite a realização de trabalhos fotográficos como também..." />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/assets/js/scripts.js" defer></script>
+<script src="/assets/js/language.js" async></script>
+<link rel="stylesheet" href="https://use.typekit.net/mke7hkk.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<meta property="og:title" content="AV82 STUDIO">
+<meta property="og:description" content="AV82 é um estúdio de fotografia e vídeo localizado no centro do Porto. Este é um espaço que não só permite a realização de trabalhos fotográficos como também o aluguer de material, seja ele de fotografia ou video."> 
+
+    </head>
+    <body>
+            <div class="burger-container">
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="navmenu-container">
+                <div class="img-containers">
+                    <div class="left-img-container">
+                        <img src="/assets/img/rental.webp" alt="" class="navmenu-img left-img">
+                    </div>
+                    <div class="right-img-container">
+                        <img src="/assets/img/production.jpg" alt="" class="navmenu-img right-img">
+                    </div>
+                </div>
+                <div class="line-container">
+                    <div class="line border-white"></div>
+                </div>
+                <nav class="navmenu">
+                    <h2 class="rental-title"><a href="/rental">RENTAL</a></h2>
+                    <h2 class="prod-title"><a href="/film">PRODUCTION</a></h2>
+                </nav>
+            </div>
+            <div class="about-container about-container-white">
+                <div class="content-flex">
+                    <div class="about-intro eng">
+                        <p>AV82 is a film and photography production studio based in Porto, Portugal.</p><p>We are part of a growing community of artists and creators, which offers tailored solutions for each project and client.</p><p>We offer a full range of film, TV and photography production services, and support for filming locations.</p>
+                        <br class="desktop"><br>
+                        <a href="/team" class="team-link"><u>Meet the Team</u></a>
+                    </div>
+                    <div class="about-address">
+                        <p>Avenida da Boavista, 82<br>Porto, Portugal</p>
+                        <br class="desktop"><br>
+                        <div>
+                            <a href="mailto:geral@av82studio.com" class="mailto">geral@av82studio.com</a><br>
+                            + 351 912558439
+                            
+                        </div>
+                        <br class="desktop"><br>
+                        <div class="social-icons"><a href="https://www.instagram.com/av82studio/" target="_blank"><i class="ri-instagram-fill"></i></a><a href="https://www.linkedin.com/company/av82studio" target="_blank"><i class="ri-linkedin-box-fill"></i></a></div>
+                    </div>
+                    <div class="contact-form form-white">
+                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="text" id="name" name="name" placeholder="Name">
+                            <input type="email" id="email" name="email" placeholder="Email"><br>
+                            <textarea id="subject" name="subject" placeholder="Message" style="height:150px; width: 100%;"></textarea>
+                            <input class="submit-btn" type="submit" value="SUBMIT">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <h2 class="about-btn"><span class="arrow-up"><i class="ri-arrow-up-line"></i></span><span class="arrow-down"><i class="ri-arrow-down-line"></i></span>ABOUT</h2>
+            <div class="nav-logo">
+    <a href="/">
+        <img src="/assets/img/logo_preto.png" alt="" class="logo-img">
+        <img src="/assets/img/logo_mobile_preto.png" alt="" class="logo-mobile-img">
+    </a>
+</div>
+<div class="language-switcher">
+    <a href="/booking/transporte"><span class="lang-selector">PT</span></a> / <span class="lang-selector active"> ENG</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="page-container">
+    <div class="search-form mobile">
+        <form action="/search" method="get">
+            <div class="border-bottom  border-black fit-content">
+                <input type="text" id="search-box" name="query">
+                <button type="submit" value="search">
+                    <i class="ri-search-line"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+<button class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart">CART (<span class="total-count"></span>)</button></div>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link h5" href="/booking/studio">STUDIO</a>
+  </li>
+  <li class="nav-item dropdown full-width" role="presentation">
+    <a class="nav-link dropdown-toggle h5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
+    <ul class="dropdown-menu">
+      <li class="span-mobile">
+        <div class="subnav">IMAGE</div>
+        
+          <a class="dropdown-item" href="/booking/gear/#cameras">Cameras</a>
+        
+        
+          <a class="dropdown-item" href="/booking/gear/#lenses">Lenses</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#monitors">Monitors</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#wireless">Wireless</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#live-streaming">Live Streaming</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#drone">Drone</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#others">Others</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#media">Media</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#power">Power</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#filters">Filters</a>
+        
+      </li>
+      <li>
+        <div class="subnav">LIGHT</div>
+        
+          <a class="dropdown-item" href="/booking/gear/#continuous-light">Continuous Light</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#flash">Flash</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#light-modifiers">Light Modifiers</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#frames">Frames</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#reflectors">Reflectors</a>
+        
+      </li>
+      <li>
+        <div class="subnav">G&E</div>
+        
+          <a class="dropdown-item" href="/booking/gear/#stabilizers-gimbals">Stabilizers/Gimbals</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#tripods-fluid-heads">Tripods/Fluid Heads</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#dollies-sliders">Dollies/Sliders</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#grip">Grip</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#power">Power</a>
+        
+      </li>
+      <li>
+        <div class="subnav">AUDIO</div>
+        
+          <a class="dropdown-item" href="/booking/gear/#audio">Audio</a>
+        
+      </li>
+      <li>
+        <div class="subnav">ON SET</div>
+        
+          <a class="dropdown-item" href="/booking/gear/#magliner">Magliner</a>
+        
+          <a class="dropdown-item" href="/booking/gear/#com">COM</a>
+        
+      </li>
+      
+    </ul>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link h5" href="/booking/crew">CREW</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link h5 active" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#mobility" role="tab" aria-controls="pills-mobility" aria-selected="true">MOBILITY</a>
+  </li>
+    <div class="search-form ms-2 mt-1 desktop">
+        <form action="/search" method="get">
+        <div class="border-bottom  border-black fit-content">
+            <input type="text" id="search-box" name="query">
+            <button type="submit" value="search">
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+        </form>
+    </div>
+</ul>
+
+<div class="tab-content" id="pills-tabContent"> 
+  <!--MOBILITY TAB-->
+  <div class="tab-pane fade active show" id="mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">
+    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
+      
+      <div class="col m-lg-3">
+        <div><img src="/assets/img/carrinha_01.jpg" alt="Renault Trafic 2018 H1L2 White" class="product-img" data-bs-toggle="modal" data-bs-target="#renault-trafic-2018-h1l2-whiteModal"></div>
+        <div class="product-title mt-2 small-label">Renault Trafic 2018 H1L2 White</div>
+        <div class="d-flex justify-content-between mt-2 product-container">
+          <div class="small-label">250 €/DAY</div>
+          <div class="addToCart add-to-cart small-label me-2" data-name="Renault Trafic 2018 H1L2 White" data-price="250" data-image="/assets/img/carrinha_01.jpg" data-count="1" data-max="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
+        </div> 
+      </div>
+      
+    </div>
+  </div>
+</div> 
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="renault-trafic-2018-h1l2-whiteModal" tabindex="-1" aria-labelledby="renault-trafic-2018-h1l2-whiteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-3 pe-md-5">
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="d-flex flex-column flex-md-row">
+          <div class="d-flex align-items-center ps-md-3 pe-md-5">
+            
+              <!-- Carousel -->
+              <div id="renault-trafic-2018-h1l2-whiteCarousel" class="modalCarousel carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  
+                  <div class="carousel-item active">
+                    <img src="/assets/img/carrinha_01.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_12.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_14.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_13.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_17.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_15.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/carrinha_02.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/carrinha_03.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_04.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/carrinha_05.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/carrinha_06.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_07.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_09.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_10.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                  <div class="carousel-item">
+                    <img src="/assets/img/Carrinha_11.webp" class="d-block w-100" alt="...">
+                  </div>
+                  
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#renault-trafic-2018-h1l2-whiteCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#renault-trafic-2018-h1l2-whiteCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- Carousel End -->
+              
+            
+          </div>
+          <div class="modal-info-side">
+            <div></div>
+            <div class="border-bottom border-dark my-2"></div>
+            <h5 class="text-uppercase"><b>Renault Trafic 2018 H1L2 White</b></h5>
+            <div class="border-bottom border-dark my-2"></div>
+            <div class="d-flex justify-content-between bold">
+              <div>250 €/DAY</div>
+              <div>QTY: <input type="number" class="qty-input" step="1" min="1" max="1" name="qty" value="1" title="QTY" inputmode="numeric" autocomplete="off"></div>
+            </div>
+            <div class="border-bottom border-dark my-2"></div>
+            
+            <div><p>Runner Included (12h)</p></div>
+            <div class="border-bottom border-dark my-2"></div>
+            
+            <div class="small-text mt-2"><p>When adding to cart, you'll be able to select your desired dates and receive a price estimate for that time and full list of products. Here you can submit a request for rental. We can't guarantee this product to be available for your required dates. Our team will get in touch to confirm your booking and provide any further details necessary. Payment is taken on site upon collection.</p></div>
+            <div class="border-bottom border-dark my-2"></div>
+            <div class="d-flex justify-content-center">
+              <div class="add-to-cart inner-cart-btn me-2" data-name="Renault Trafic 2018 H1L2 White" data-price="250" data-image="/assets/img/carrinha_01.jpg" data-count="1" data-max="1">
+                <span class="post-click">
+                  <span>ADDED TO CART <i class='ri-check-line'></i></span>
+                </span>
+                <span class="pre-click">
+                  <span>ADD TO CART</span>
+                </span>  
+              </div>
+            </div>
+            <div class="border-bottom border-dark my-2"></div>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal right fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <button type="button" class="btn-close cart-close-btn p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body">
+        
+        <div class="pb-2 d-flex justify-content-between">
+          <div><span class="eng">Cart</span><span class="pt">Cesto</span> (<span class="total-count"></span>)</div>
+          <button class="clear-cart"><span class="eng">Clear All</span><span class="pt">Limpar Cesto</span></button>
+        </div>
+        <div class="border-bottom border-dark w-100"></div>
+        <div class="show-cart">
+
+        </div>
+      </div>
+      <div class="modal-footer border-0 flex-column">
+
+        <div class="border-bottom border-dark my-2 w-100"></div>
+        <div class="d-flex w-100 justify-content-between"><div><span>TOTAL (excl. VAT)</span></div> <span class="total-cart"> / €</span></div>
+        <div class="border-bottom border-dark my-2 w-100"></div>
+        <a href="/checkout"><button class="checkout-btn bold"><span>CHECK AVAILABILITY</span></button></a>
+        <div class="border-bottom border-dark my-2 w-100"></div>
+        <div class="text-center small-text mb-0"><span><span>Discounts applied based on selected nº of days.<br> 3+ days - <b>25% discount</b> / Week - <b>35% discount</b></span></span></div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="/assets/js/shoppingCart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+
+$('.qty-input').on("change", function () {
+  $(this).closest('.modal-dialog').find('.inner-cart-btn').attr('data-count', $(this).val() );
+});
+$('.add-to-cart').on("click", function () {
+  $(this).children('.pre-click').hide();
+  $(this).children('.post-click').show();
+});
+
+const $dropdown = $(".dropdown");
+const $dropdownToggle = $(".dropdown-toggle");
+const $dropdownMenu = $(".dropdown-menu");
+const showClass = "show";
+
+$(window).on("load resize", function() {
+  if (this.matchMedia("(min-width: 768px)").matches) {
+    $dropdown.hover(
+      function() {
+        const $this = $(this);
+        $this.addClass(showClass);
+        $this.find($dropdownToggle).attr("aria-expanded", "true");
+        $this.find($dropdownMenu).addClass(showClass);
+      },
+      function() {
+        const $this = $(this);
+        $this.removeClass(showClass);
+        $this.find($dropdownToggle).attr("aria-expanded", "false");
+        $this.find($dropdownMenu).removeClass(showClass);
+      }
+    );
+  } else {
+    $dropdown.off("mouseenter mouseleave");
+  }
+});
+
+function handleFirstTab(e) {
+    if (e.keyCode === 9) { // the "I am a keyboard user" key
+        document.body.classList.add('user-is-tabbing');
+        window.removeEventListener('keydown', handleFirstTab);
+    }
+}
+
+window.addEventListener('keydown', handleFirstTab);
+</script>
+
+    </body>
+</html>

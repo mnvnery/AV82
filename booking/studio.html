@@ -1,87 +1,7 @@
 ---
 layout: rental_eng
-imagem_pt:
-- Câmaras
-- Objetivas
-- Monitores
-- Wireless
-- Outros
-- Live Streaming
-- Outros
-- Media
-- Power
-imagem_eng:
-- Cameras
-- Lenses
-- Monitors
-- Wireless
-- Live Streaming
-- Drone
-- Others
-- Media
-- Power
-audio_pt:
-- Microfones
-- Gravadores de Som
-- Outros
-audio_eng:
-- Microphones
-- Sound Recorders
-- Others
-luz_pt:
-- Luz Contínua
-- Flash
-- Modificadores de Luz
-- Panos
-- Frames
-- Refletores
-light_eng:
-- Continuous Light
-- Flash
-- Light Modifiers
-- Cloths
-- Frames
-- Reflectors
-ge_pt:
-- Rigs
-- Stabilizers/Gimbals
-- Tripés/Cabeças Fluídas
-- Dollies/Sliders
-- Grip
-- Power
-- Outros
-ge_eng:
-- Rigs
-- Stabilizers/Gimbals
-- Tripods/Fluid Heads
-- Dollies/Sliders
-- Grip
-- Power
-- Others
-on_set:
-- Magliner
-- COM
-on_set_eng:
-- Magliner
-- COM
-cart: "<p>When adding to cart, you'll be able to select your desired dates and receive
-  a price estimate for that time and full list of products. Here you can submit a
-  request for rental. We can't guarantee this product to be available for your required
-  dates. Our team will get in touch to confirm your booking and provide any further
-  details necessary. Payment is taken on site upon collection.</p>"
-carrinho: "<p>Ao adicionar ao carrinho, poderá seleccionar as datas desejadas e calcular
-  uma estimativa do preço total  da reserva. Poderá submeter o seu pedido através
-  de um formulário de reserva. Não podemos garantir que este produto terá disponibilidade
-  para as datas desejadas, mas a nossa equipa entrará em contacto para confirmar o
-  seu pedido e fornecer qualquer informação em falta. O pagamento será efectuado presencialmente.
-  </p>"
-discounts_eng: "<span>Discounts applied based on selected nº of days.<br>
-3+ days - <b>25% discount</b> / Week - <b>35% discount</b></span>"
-discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<br>
-3+ dias - <b>25% desconto</b> / Semana - <b>35% desconto</b></span>"
-
-
 ---
+
 <div class="nav-logo">
     <a href="{{ site.baseurl }}/">
         <img src="{{site.baseurl}}/assets/img/logo_preto.png" alt="" class="logo-img">
@@ -89,14 +9,8 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
     </a>
 </div>
 <div class="language-switcher">
-  <a href="{{ site.baseurl }}/booking-pt"><span class="lang-selector">PT</span></a> / <span class="lang-selector active"> ENG</span>
+  <a href="{{ site.baseurl }}/booking/estudio"><span class="lang-selector">PT</span></a> / <span class="lang-selector active"> ENG</span>
 </div>
-
-<form action="/search" method="get">
-  <label for="search-box">Search</label>
-  <input type="text" id="search-box" name="query">
-  <input type="submit" value="search">
-</form>
 
 {% assign gearProducts = site.products | where: "type", "Gear" %}
 {% assign studioProducts = site.products | where: "type", "Studio" %}
@@ -110,61 +24,81 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
 {% assign onsetproducts = site.products | where: "category", "On Set" %}
 
 <main class="page-container">
+<div class="search-form mobile">
+    <form action="/search" method="get">
+        <div class="border-bottom  border-black fit-content">
+            <input type="text" id="search-box" name="query">
+            <button type="submit" value="search">
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+    </form>
+</div>
 <button class="cart-btn h5" data-bs-toggle="modal" data-bs-target="#cart">CART (<span class="total-count"></span>)</button></div>
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" role="tab" aria-controls="pills-studio" aria-selected="true">STUDIO</a>
-  </li>
-  <li class="nav-item dropdown full-width" role="presentation">
-    <a class="nav-link dropdown-toggle h5 active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
-    <ul class="dropdown-menu">
-      <li class="span-mobile">
-        <div class="subnav">IMAGE</div>
-        {% for subcat in site.data.booking.imagem_eng  limit: 1 %}
-          <a class="dropdown-item active" href="#{{ subcat | slugify }}" data-bs-toggle="pill" data-bs-target="#pills-img-{{ subcat | slugify }}" role="tab" aria-controls="pills-img-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
-        {% endfor %}
-        {% for subcat in site.data.booking.imagem_eng offset: 1 %}
-          <a class="dropdown-item" href="#{{ subcat | slugify }}" data-bs-toggle="pill" data-bs-target="#pills-img-{{ subcat | slugify }}" role="tab" aria-controls="pills-img-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</a>
-        {% endfor %}
-      </li>
-      <li>
-        <div class="subnav">LIGHT</div>
-        {% for subcat in site.data.booking.light_eng %}
-          <button class="dropdown-item" href="#{{ subcat | slugify }}" data-bs-toggle="pill" data-bs-target="#pills-light-{{ subcat | slugify }}" role="tab" aria-controls="pills-light-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
-        {% endfor %}
-      </li>
-      <li>
-        <div class="subnav">G&E</div>
-        {% for subcat in site.data.booking.ge_eng %}
-          <button class="dropdown-item" href="#{{ subcat | slugify }}" data-bs-toggle="pill" data-bs-target="#pills-ge-{{ subcat | slugify }}" role="tab" aria-controls="pills-ge-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
-        {% endfor %}
-      </li>
-      <li>
-        <div class="subnav">AUDIO</div>
-        {% for subcat in site.data.booking.audio_eng %}
-          <button class="dropdown-item" href="#{{ subcat | slugify }}"  data-bs-toggle="pill" data-bs-target="#pills-audio-{{ subcat | slugify }}" role="tab" aria-controls="pills-audio-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
-        {% endfor %}
-      </li>
-      <li>
-        <div class="subnav">ON SET</div>
-        {% for subcat in site.data.booking.on_set_eng %}
-          <button class="dropdown-item" href="#{{ subcat | slugify }}" data-bs-toggle="pill" data-bs-target="#pills-onset-{{ subcat | slugify }}" role="tab" aria-controls="pills-onset-{{ subcat | slugify }}" aria-selected="false">{{ subcat }}</button>
-        {% endfor %}
-      </li>
-      
-    </ul>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#crew" id="pills-crew-tab" data-bs-toggle="pill" data-bs-target="#crew" role="tab" aria-controls="pills-crew" aria-selected="false">CREW</a>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a class="nav-link h5" href="#mobility" id="pills-mobility-tab" data-bs-toggle="pill" data-bs-target="#mobility" role="tab" aria-controls="pills-mobility" aria-selected="false">MOBILITY</a>
-  </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link h5 active" href="#studio" id="pills-studio-tab" data-bs-toggle="pill" data-bs-target="#studio" role="tab" aria-controls="pills-studio" aria-selected="true">STUDIO</a>
+    </li>
+    <li class="nav-item dropdown full-width" role="presentation">
+        <a class="nav-link dropdown-toggle h5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">GEAR</a>
+        <ul class="dropdown-menu">
+        <li class="span-mobile">
+            <div class="subnav">IMAGE</div>
+            {% for subcat in site.data.booking.imagem_eng  limit: 1 %}
+            <a class="dropdown-item" href="{{site.baseurl}}/booking/gear/#{{ subcat | slugify }}">{{ subcat }}</a>
+            {% endfor %}
+            {% for subcat in site.data.booking.imagem_eng offset: 1 %}
+            <a class="dropdown-item" href="{{site.baseurl}}/booking/gear/#{{ subcat | slugify }}">{{ subcat }}</a>
+            {% endfor %}
+        </li>
+        <li>
+            <div class="subnav">LIGHT</div>
+            {% for subcat in site.data.booking.light_eng %}
+            <a class="dropdown-item" href="{{site.baseurl}}/booking/gear/#{{ subcat | slugify }}">{{ subcat }}</a>
+            {% endfor %}
+        </li>
+        <li>
+            <div class="subnav">G&E</div>
+            {% for subcat in site.data.booking.ge_eng %}
+            <a class="dropdown-item" href="{{site.baseurl}}/booking/gear/#{{ subcat | slugify }}">{{ subcat }}</a>
+            {% endfor %}
+        </li>
+        <li>
+            <div class="subnav">AUDIO</div>
+            {% for subcat in site.data.booking.audio_eng %}
+            <a class="dropdown-item" href="{{site.baseurl}}/booking/gear/#{{ subcat | slugify }}">{{ subcat }}</a>
+            {% endfor %}
+        </li>
+        <li>
+            <div class="subnav">ON SET</div>
+            {% for subcat in site.data.booking.on_set_eng %}
+            <a class="dropdown-item" href="{{site.baseurl}}/booking/gear/#{{ subcat | slugify }}">{{ subcat }}</a>
+            {% endfor %}
+        </li>
+        
+        </ul>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link h5" href="{{site.baseurl}}/booking/crew">CREW</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link h5" href="{{site.baseurl}}/booking/mobility">MOBILITY</a>
+    </li>
+    <div class="search-form ms-2 mt-1 desktop">
+        <form action="/search" method="get">
+        <div class="border-bottom  border-black fit-content">
+            <input type="text" id="search-box" name="query">
+            <button type="submit" value="search">
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+        </form>
+    </div>
 </ul>
 
 <div class="tab-content" id="pills-tabContent">
   <!--STUDIO TAB-->
-  <div class="tab-pane fade" id="studio" role="tabpanel" aria-labelledby="pills-studio-tab">
+  <div class="tab-pane fade active show" id="studio" role="tabpanel" aria-labelledby="pills-studio-tab">
       {% for product in studioMain %}
       <div class="d-flex flex-column flex-md-row">
         <div class="ps-md-3 pe-md-5 studio-carousel">
@@ -242,39 +176,10 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
       </div>
       {% endfor %}
   </div>
-  <!--CREW TAB-->
-  <div class="tab-pane fade" id="crew" role="tabpanel" aria-labelledby="pills-crew-tab">
-    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-      {% for product in crewProducts %}
-      <div class="col m-lg-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img object-fit-cover" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-        <div class="product-title mt-2 small-label">{{product.title}}</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">REQUEST BUDGET</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  <!--MOBILITY TAB-->
-  <div class="tab-pane fade" id="mobility" role="tabpanel" aria-labelledby="pills-mobility-tab">
-    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-      {% for product in mobilityProducts %}
-      <div class="col m-lg-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-        <div class="product-title mt-2 small-label">{{product.title}}</div>
-        <div class="d-flex justify-content-between mt-2 product-container">
-          <div class="small-label">{{ product.price_day }} €/DAY</div>
-          <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="1"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-        </div> 
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+
   <!--GEAR TABS-->
   {% for subcat in site.data.booking.imagem_eng limit: 1 %}
-    <div class="tab-pane fade show active" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
+    <div class="tab-pane fade" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
       {% assign products = imgproducts | where: "subcategory", subcat %}
       <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
           {% for product in products %}
@@ -509,27 +414,13 @@ discounts_pt: "<span>Descontos aplicados com base no nº de dias selecionados.<b
 <script src="{{site.baseurl}}/assets/js/shoppingCart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
-$(document).ready(function() {
-  var hash = location.hash.replace(/^#/, '');  // ^ means starting, meaning only match the first hash
-  if (hash) {
-      $('.nav-pills .nav-item a[href="#' + hash + '"]').tab('show');
-      $(document).scrollTop(0);
-  } 
-});
-
-
-// Change hash for page-reload
-$('.nav-pills a').on('shown.bs.tab', function (e) {
-    window.location.hash = e.target.hash;
-    $(document).scrollTop(0);
-})
 
 $('.qty-input').on("change", function () {
-  $(this).closest('.modal-dialog').find('.inner-cart-btn').attr('data-count', $(this).val() );
+    $(this).closest('.modal-dialog').find('.inner-cart-btn').attr('data-count', $(this).val() );
 });
 $('.add-to-cart').on("click", function () {
-  $(this).children('.pre-click').hide();
-  $(this).children('.post-click').show();
+    $(this).children('.pre-click').hide();
+    $(this).children('.post-click').show();
 });
 
 const $dropdown = $(".dropdown");
@@ -538,24 +429,24 @@ const $dropdownMenu = $(".dropdown-menu");
 const showClass = "show";
 
 $(window).on("load resize", function() {
-  if (this.matchMedia("(min-width: 768px)").matches) {
-    $dropdown.hover(
-      function() {
-        const $this = $(this);
-        $this.addClass(showClass);
-        $this.find($dropdownToggle).attr("aria-expanded", "true");
-        $this.find($dropdownMenu).addClass(showClass);
-      },
-      function() {
-        const $this = $(this);
-        $this.removeClass(showClass);
-        $this.find($dropdownToggle).attr("aria-expanded", "false");
-        $this.find($dropdownMenu).removeClass(showClass);
-      }
-    );
-  } else {
-    $dropdown.off("mouseenter mouseleave");
-  }
+    if (this.matchMedia("(min-width: 768px)").matches) {
+        $dropdown.hover(
+        function() {
+            const $this = $(this);
+            $this.addClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "true");
+            $this.find($dropdownMenu).addClass(showClass);
+        },
+        function() {
+            const $this = $(this);
+            $this.removeClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "false");
+            $this.find($dropdownMenu).removeClass(showClass);
+        }
+        );
+    } else {
+        $dropdown.off("mouseenter mouseleave");
+    }
 });
 
 function handleFirstTab(e) {
