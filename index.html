@@ -1,8 +1,12 @@
 ---
 layout: black
-showreel: "/assets/img/showreel_v3.mp4"
+showreel: "686212344"
 ---
-<video class="showreel" crossorigin="anonymous" preload="auto" muted autoplay loop playsinline><source src="{{ site.baseurl }}{{ page.showreel }}" type="video/mp4"></video>
+<div class="vimeo-wrapper">
+    <iframe src="https://player.vimeo.com/video/{{page.showreel}}?background=1&autoplay=1&loop=1&byline=0&title=0"
+            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<div class="dummy-header"></div>
 <i id="index-arrow" class="ri-arrow-down-line index-arrow"></i>
 <div class="line-flex">
     <div class="logo-line"></div>
