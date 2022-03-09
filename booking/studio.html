@@ -176,116 +176,12 @@ layout: rental_eng
       </div>
       {% endfor %}
   </div>
-
-  <!--GEAR TABS-->
-  {% for subcat in site.data.booking.imagem_eng limit: 1 %}
-    <div class="tab-pane fade" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
-      {% assign products = imgproducts | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-          {% for product in products %}
-          <div class="col m-lg-3">
-            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-            <div class="product-title mt-2 small-label">{{ product.title }}</div>
-            <div class="d-flex justify-content-between mt-2 product-container">
-              <div class="small-label">{{ product.price_day }} €/DAY</div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-            </div> 
-          </div>
-          {% endfor %}
-        </div>
-    </div>
-  {% endfor %}
-  {% for subcat in site.data.booking.imagem_eng offset: 1 %}
-  <div class="tab-pane fade" id="pills-img-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-img-{{subcat | slugify }}-tab">
-    {% assign products = imgproducts | where: "subcategory", subcat %}
-    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-        {% for product in products %}
-        <div class="col m-lg-3">
-          <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-          <div class="product-title mt-2 small-label">{{ product.title }}</div>
-          <div class="d-flex justify-content-between mt-2 product-container">
-            <div class="small-label">{{ product.price_day }} €/DAY</div>
-            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-          </div> 
-        </div>
-        {% endfor %}
-      </div>
-  </div>
-{% endfor %}
-  {% for subcat in site.data.booking.audio_eng %}
-    <div class="tab-pane fade" id="pills-audio-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-audio-{{subcat | slugify }}-tab">
-      {% assign products = audioproducts | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-          {% for product in products %}
-          <div class="col m-lg-3">
-            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-            <div class="product-title mt-2 small-label">{{ product.title }}</div>
-            <div class="d-flex justify-content-between mt-2 product-container">
-              <div class="small-label">{{ product.price_day }} €/DAY</div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-            </div> 
-          </div>
-          {% endfor %}
-        </div>
-    </div>
-  {% endfor %}
-  {% for subcat in site.data.booking.light_eng %}
-    <div class="tab-pane fade" id="pills-light-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-light-{{subcat | slugify }}-tab">
-      {% assign products = lightproducts | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-          {% for product in products %}
-          <div class="col m-lg-3">
-            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-            <div class="product-title mt-2 small-label">{{ product.title }}</div>
-            <div class="d-flex justify-content-between mt-2 product-container">
-              <div class="small-label">{{ product.price_day }} €/DAY</div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-            </div> 
-          </div>
-          {% endfor %}
-        </div>
-    </div>
-  {% endfor %}
-  {% for subcat in site.data.booking.ge_eng %}
-    <div class="tab-pane fade" id="pills-ge-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-ge-{{subcat | slugify }}-tab">
-      {% assign products = geproducts | where: "subcategory", subcat %}
-      <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-          {% for product in products %}
-          <div class="col m-lg-3">
-            <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-            <div class="product-title mt-2 small-label">{{ product.title }}</div>
-            <div class="d-flex justify-content-between mt-2 product-container">
-              <div class="small-label">{{ product.price_day }} €/DAY</div>
-              <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-            </div> 
-          </div>
-          {% endfor %}
-        </div>
-    </div>
-  {% endfor %}
-  {% for subcat in site.data.booking.on_set_eng %}
-  <div class="tab-pane fade" id="pills-onset-{{ subcat | slugify }}" role="tabpanel" aria-labelledby="pills-onset-{{subcat | slugify }}-tab">
-    {% assign products = onsetproducts | where: "subcategory", subcat %}
-    <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
-        {% for product in products %}
-        <div class="col m-lg-3">
-          <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-          <div class="product-title mt-2 small-label">{{ product.title }}</div>
-          <div class="d-flex justify-content-between mt-2 product-container">
-            <div class="small-label">{{ product.price_day }} €/DAY</div>
-            <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
-          </div> 
-        </div>
-        {% endfor %}
-      </div>
-  </div>
-{% endfor %}
 </div> 
 
 
 <!-- Button trigger modal -->
 
-{% for product in site.products %}
+{% for product in studioProducts %}
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="{{product.title | slugify }}Modal" tabindex="-1" aria-labelledby="{{product.title | slugify }}ModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
