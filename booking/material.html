@@ -202,7 +202,7 @@ layout: rental_pt
 </div> 
 
 
-{% for product in site.products %}
+{% for product in gearProducts %}
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="{{product.title | slugify }}Modal" tabindex="-1" aria-labelledby="{{product.title | slugify }}ModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
