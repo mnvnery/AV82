@@ -115,7 +115,7 @@ function displayCart() {
     let cartArray = shoppingCart.listCart();
     let output = "";
     for(let i in cartArray) {
-        output += '<div class="cart-item checkout-grid align-items-baseline border-bottom border-dark pb-2"><div><input class="w-100 p-0" type="text" name="products[]" disabled value="' + cartArray[i].name + '"/></div><div>' + cartArray[i].count + '</div><div>' + cartArray[i].days + '</div><input class="w-100 border-top" type="hidden" name="products[]" value="' + cartArray[i].count + 'x ' + cartArray[i].name + ' / duração: ' + cartArray[i].days + ' dias"/></div>'
+        output += '<div class="cart-item checkout-grid align-items-baseline border-bottom border-dark pb-2"><div><input class="w-100 p-0" type="text" name="products[]" disabled value="' + cartArray[i].name + '"/></div><div>' + cartArray[i].count + '</div><div>' + cartArray[i].days + '</div><input class="w-100 border-top d-none" name="products[]" value=" ' + cartArray[i].count + 'x ' + cartArray[i].name + ' / duração: ' + cartArray[i].days + ' dia(s)"/></div>'
     }
 
     $('.allcontent').html(output);
