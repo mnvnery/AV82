@@ -43,12 +43,14 @@ ge_pt:
 - Dollies/Sliders
 - Grip
 - Power
+- Efeitos
 ge_eng:
 - Stabilizers/Gimbals
 - Tripods/Fluid Heads
 - Dollies/Sliders
 - Grip
 - Power
+- Effects
 on_set:
 - Magliner
 - COM
