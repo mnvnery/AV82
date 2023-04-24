@@ -92,5 +92,5 @@ collections:
         widget: relation
         collection: pages
         file: rental_subcat
-        search_fields: ["light_eng"]
+        search_fields: ["light_eng.*"]
         value_field: "light_eng"
