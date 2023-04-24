@@ -19,20 +19,20 @@ collections:
           - name: layout
             label: layout
             widget: hidden
-          - {label: intro_pt , name: Intro PT , widget: markdown, modes: [rich_text] }
-          - {label: intro_eng , name: Intro ENG , widget: markdown, modes: [rich_text] }
-          - {label: studio_pt , name: Estúdio PT , widget: markdown, modes: [rich_text] }
-          - {label: studio_eng , name: Studio ENG , widget: markdown, modes: [rich_text] }
-          - {label: studio_img , name: Studio Img , widget: image }
-          - {label: material_pt , name: Material PT , widget: markdown, modes: [rich_text] }
-          - {label: material_eng , name: Material ENG , widget: markdown, modes: [rich_text] }
-          - {label: material_img , name: Material Img , widget: image }
-          - {label: crew_pt , name: Equipa PT , widget: markdown, modes: [rich_text] }
-          - {label: crew_eng , name: Crew ENG , widget: markdown, modes: [rich_text] }
-          - {label: crew_img , name: Crew Img , widget: image }
-          - {label: transport_pt , name: Transporte PT , widget: markdown, modes: [rich_text] }
-          - {label: transport_eng , name: Mobility ENG , widget: markdown, modes: [rich_text] }
-          - {label: mobility_img , name: Mobility Img , widget: image }
+          - {name: intro_pt , label: Intro PT , widget: markdown, modes: [rich_text] }
+          - {name: intro_eng , label: Intro ENG , widget: markdown, modes: [rich_text] }
+          - {name: studio_pt , label: Estúdio PT , widget: markdown, modes: [rich_text] }
+          - {name: studio_eng , label: Studio ENG , widget: markdown, modes: [rich_text] }
+          - {name: studio_img , label: Studio Img , widget: image }
+          - {name: material_pt , label: Material PT , widget: markdown, modes: [rich_text] }
+          - {name: material_eng , label: Material ENG , widget: markdown, modes: [rich_text] }
+          - {name: material_img , label: Material Img , widget: image }
+          - {name: crew_pt , label: Equipa PT , widget: markdown, modes: [rich_text] }
+          - {name: crew_eng , label: Crew ENG , widget: markdown, modes: [rich_text] }
+          - {name: crew_img , label: Crew Img , widget: image }
+          - {name: transport_pt , label: Transporte PT , widget: markdown, modes: [rich_text] }
+          - {name: transport_eng , label: Mobility ENG , widget: markdown, modes: [rich_text] }
+          - {name: mobility_img , label: Mobility Img , widget: image }
       - label: Rental Subcat
         name: rental_subcat
         file: '_data/booking.yml'
