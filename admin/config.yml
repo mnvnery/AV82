@@ -51,8 +51,8 @@ collections:
           - {name: ge_eng, label: G&E ENG, description: Versão ENG, widget: list}
           - {name: on_set, label: ON SET PT, description: Versão PT, widget: list}
           - {name: on_set_eng, label: ON SET ENG, description: Versão ENG, widget: list}
-          - {label: carrinho , name: Carrinho Explicação , widget: markdown, modes: [rich_text] }
-          - {label: cart , name: About Add To Cart , widget: markdown, modes: [rich_text] }
+          - {name: carrinho , label: Carrinho Explicação , widget: markdown, modes: [rich_text] }
+          - {name: cart , label: About Add To Cart , widget: markdown, modes: [rich_text] }
       - label: Team
         name: team
         file: 'team.html'
