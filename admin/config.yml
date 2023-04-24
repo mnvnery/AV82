@@ -72,7 +72,7 @@ collections:
               - {name: retrato, label: Retrato, widget: image}
   - label: "Gear - Light"
     name: "gear-light"
-    folder: '_products/gear'
+    folder: '_products/Gear'
     create: true
     extension: html
     slug: '{{slug}}'
@@ -91,6 +91,6 @@ collections:
         name: subcategory
         widget: relation
         collection: pages
-        file: '_data/booking.yml'
+        file: rental_subcat
         search_fields: ["light_eng"]
         value_field: "light_eng"
