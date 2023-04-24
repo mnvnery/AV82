@@ -1,0 +1,94 @@
+backend:
+  name: git-gateway
+  branch: master 
+
+
+media_folder: "assets/img"
+
+
+collections:
+  - label: Páginas
+    name: pages
+    files: 
+      - label: 'Rental'
+        name: rental
+        file: 'rental.html'
+        editor:
+          preview: false
+        fields:
+          - name: layout
+            label: layout
+            widget: hidden
+          - {label: intro_pt , name: Intro PT , widget: markdown, modes: [rich_text] }
+          - {label: intro_eng , name: Intro ENG , widget: markdown, modes: [rich_text] }
+          - {label: studio_pt , name: Estúdio PT , widget: markdown, modes: [rich_text] }
+          - {label: studio_eng , name: Studio ENG , widget: markdown, modes: [rich_text] }
+          - {label: studio_img , name: Studio Img , widget: image }
+          - {label: material_pt , name: Material PT , widget: markdown, modes: [rich_text] }
+          - {label: material_eng , name: Material ENG , widget: markdown, modes: [rich_text] }
+          - {label: material_img , name: Material Img , widget: image }
+          - {label: crew_pt , name: Equipa PT , widget: markdown, modes: [rich_text] }
+          - {label: crew_eng , name: Crew ENG , widget: markdown, modes: [rich_text] }
+          - {label: crew_img , name: Crew Img , widget: image }
+          - {label: transport_pt , name: Transporte PT , widget: markdown, modes: [rich_text] }
+          - {label: transport_eng , name: Mobility ENG , widget: markdown, modes: [rich_text] }
+          - {label: mobility_img , name: Mobility Img , widget: image }
+      - label: Rental Subcat
+        name: rental_subcat
+        file: '_data/booking.yml'
+        extension: yml
+        editor:
+          preview: false
+        fields:
+          - {name: layout, label: layout, widget: hidden}
+          - {name: imagem_pt, label: IMAGEM, description: Versão PT, widget: list}
+          - {name: imagem_eng, label: IMAGE, description: Versão ENG, widget: list}
+          - {name: audio_pt, label: ÁUDIO, description: Versão PT, widget: list}
+          - {name: audio_eng, label: AUDIO, description: Versão ENG, widget: list}
+          - {name: luz_pt, label: LUZ, description: Versão PT, widget: list}
+          - {name: light_eng, label: LIGHT, description: Versão ENG, widget: list}
+          - {name: ge_pt, label: G&E PT, description: Versão PT, widget: list}
+          - {name: ge_eng, label: G&E ENG, description: Versão ENG, widget: list}
+          - {name: on_set, label: ON SET PT, description: Versão PT, widget: list}
+          - {name: on_set_eng, label: ON SET ENG, description: Versão ENG, widget: list}
+          - {label: carrinho , name: Carrinho Explicação , widget: markdown, modes: [rich_text] }
+          - {label: cart , name: About Add To Cart , widget: markdown, modes: [rich_text] }
+      - label: Team
+        name: team
+        file: 'team.html'
+        editor:
+          preview: false
+        fields:
+          - {name: layout, label: layout, widget: hidden}
+          - name: team_members
+            label: Team Members
+            widget: list
+            fields:
+              - {name: name, label: Nome, widget: string}
+              - {name: roles_eng, label: Roles, description: ENG, widget: list}
+              - {name: roles_pt, label: Funções, description: PT, widget: list}
+              - {name: retrato, label: Retrato, widget: image}
+  - label: "Gear - Light"
+    name: "gear-light"
+    folder: '_products/gear'
+    create: true
+    extension: html
+    slug: '{{slug}}'
+    editor:
+          preview: false
+    filter:
+      field: category
+      value: Light
+    fields:
+      - {label: 'Name', name: 'title', widget: 'string'}
+      - {label: 'Nome', name: 'title_pt', wiget: 'string'}
+      - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
+      - {label: Descrição, name: description_pt, widget: markdown, modes: [rich_text], description: em pt. se for igual à versão inglesa, deixar vazio.}
+      - {name: category, label: Category, widget: "hidden", default: "Light"}
+      - label: "Sub-category"
+        name: subcategory
+        widget: relation
+        collection: pages
+        file: rental_subcat
+        search_fields: ["rental_subcat.*.light_eng"]
+        value_field: "rental_subcat.*.light_eng"
