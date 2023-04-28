@@ -7,6 +7,115 @@ media_folder: "assets/img"
 
 
 collections:
+  - name: film
+    label: Film
+    folder: _film
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: layout
+        name: layout
+        widget: hidden
+        default: film-project
+        required: true
+        hint: ""
+      - label: Title
+        name: title
+        widget: string
+        required: true
+        hint: ""
+        default: ""
+      - label: Category
+        name: category
+        required: false
+        widget: select
+        hint: ""
+        default: ""
+        options:
+          - films
+          - commercial
+          - fashion
+          - music
+        multiple: false
+      - label: Synopsis
+        name: synopsis
+        widget: markdown
+        required: false
+        hint: ""
+        default: ""
+        buttons:
+          - bold
+          - italic
+          - link
+      - label: Sinopse
+        name: sinopse
+        widget: markdown
+        required: false
+        hint: ""
+        default: ""
+        buttons:
+          - bold
+          - italic
+          - link
+      - label: Credits
+        name: credits
+        required: false
+        widget: markdown
+        hint: ""
+        default: ""
+        buttons:
+          - bold
+          - italic
+          - link
+      - label: Créditos
+        name: creditos
+        required: false
+        widget: markdown
+        hint: ""
+        default: ""
+        buttons:
+          - bold
+          - italic
+          - link
+      - label: Video Embed
+        name: video_embed
+        required: false
+        widget: markdown
+        hint: "Selecionar Tamanho: Responsive, Reproduzir     este vídeo
+          automaticamente e Ativar repetição deste vídeo.     Tudo o resto
+          desligado."
+        default: ""
+        buttons:
+          - code
+      - label: Stills
+        name: image_gallery
+        required: false
+        widget: image
+        hint: ""
+        default: ""
+        allow_multiple: true
+      - label: Video Thumbnail
+        name: video_thumbnail
+        required: true
+        widget: file
+        hint: O video que aparece quando se faz hover sobre o still. Em mp4 e o mais
+          pequeno possivel.
+        default: ""
+        allow_multiple: false
+      - label: Still Thumbnail
+        name: still_thumbnail
+        required: true
+        widget: image
+        hint: ""
+        default: ""
+        allow_multiple: false
+      - label: Large
+        name: large
+        required: false
+        widget: boolean
+        hint: Ligar se quiserem fazer highlight deste projeto.
+        default: ""
+    identifier_field: title
   - label: Páginas
     name: pages
     files: 
@@ -19,20 +128,20 @@ collections:
           - name: layout
             label: layout
             widget: hidden
-          - {label: intro_pt , name: Intro PT , widget: markdown, modes: [rich_text] }
-          - {label: intro_eng , name: Intro ENG , widget: markdown, modes: [rich_text] }
-          - {label: studio_pt , name: Estúdio PT , widget: markdown, modes: [rich_text] }
-          - {label: studio_eng , name: Studio ENG , widget: markdown, modes: [rich_text] }
-          - {label: studio_img , name: Studio Img , widget: image }
-          - {label: material_pt , name: Material PT , widget: markdown, modes: [rich_text] }
-          - {label: material_eng , name: Material ENG , widget: markdown, modes: [rich_text] }
-          - {label: material_img , name: Material Img , widget: image }
-          - {label: crew_pt , name: Equipa PT , widget: markdown, modes: [rich_text] }
-          - {label: crew_eng , name: Crew ENG , widget: markdown, modes: [rich_text] }
-          - {label: crew_img , name: Crew Img , widget: image }
-          - {label: transport_pt , name: Transporte PT , widget: markdown, modes: [rich_text] }
-          - {label: transport_eng , name: Mobility ENG , widget: markdown, modes: [rich_text] }
-          - {label: mobility_img , name: Mobility Img , widget: image }
+          - {name: intro_pt , label: Intro PT , widget: markdown, modes: [rich_text] }
+          - {name: intro_eng , label: Intro ENG , widget: markdown, modes: [rich_text] }
+          - {name: studio_pt , label: Estúdio PT , widget: markdown, modes: [rich_text] }
+          - {name: studio_eng , label: Studio ENG , widget: markdown, modes: [rich_text] }
+          - {name: studio_img , label: Studio Img , widget: image }
+          - {name: material_pt , label: Material PT , widget: markdown, modes: [rich_text] }
+          - {name: material_eng , label: Material ENG , widget: markdown, modes: [rich_text] }
+          - {name: material_img , label: Material Img , widget: image }
+          - {name: crew_pt , label: Equipa PT , widget: markdown, modes: [rich_text] }
+          - {name: crew_eng , label: Crew ENG , widget: markdown, modes: [rich_text] }
+          - {name: crew_img , label: Crew Img , widget: image }
+          - {name: transport_pt , label: Transporte PT , widget: markdown, modes: [rich_text] }
+          - {name: transport_eng , label: Mobility ENG , widget: markdown, modes: [rich_text] }
+          - {name: mobility_img , label: Mobility Img , widget: image }
       - label: Rental Subcat
         name: rental_subcat
         file: '_data/booking.yml'
@@ -51,8 +160,10 @@ collections:
           - {name: ge_eng, label: G&E ENG, description: Versão ENG, widget: list}
           - {name: on_set, label: ON SET PT, description: Versão PT, widget: list}
           - {name: on_set_eng, label: ON SET ENG, description: Versão ENG, widget: list}
-          - {label: carrinho , name: Carrinho Explicação , widget: markdown, modes: [rich_text] }
-          - {label: cart , name: About Add To Cart , widget: markdown, modes: [rich_text] }
+          - {name: carrinho , label: Carrinho Explicação , widget: markdown, modes: [rich_text] }
+          - {name: cart , label: About Add To Cart , widget: markdown, modes: [rich_text] }
+          - {name: discounts_pt , label: Carrinho Explicação , widget: markdown, modes: [rich_text] }
+          - {name: discounts_eng , label: About Add To Cart , widget: markdown, modes: [rich_text] }
       - label: Team
         name: team
         file: 'team.html'
@@ -68,9 +179,23 @@ collections:
               - {name: roles_eng, label: Roles, description: ENG, widget: list}
               - {name: roles_pt, label: Funções, description: PT, widget: list}
               - {name: retrato, label: Retrato, widget: image}
+      - file: index.html
+          label: Home
+          name: home
+          fields:
+            - label: Template Key
+              name: templateKey
+              widget: hidden
+              default: index-page
+            - label: Showreel
+              name: showreel
+              required: true
+              widget: string
+              hint: ""
+              default: ""
   - label: "Gear - Light"
     name: "gear-light"
-    folder: '_products/gear'
+    folder: '_products/Gear'
     create: true
     extension: html
     slug: '{{slug}}'
@@ -87,8 +212,23 @@ collections:
       - {name: category, label: Category, widget: "hidden", default: "Light"}
       - label: "Sub-category"
         name: subcategory
-        widget: relation
-        collection: pages
+        widget: list
+        collection: 'pages'
         file: rental_subcat
-        search_fields: ["rental_subcat.*.light_eng"]
-        value_field: "rental_subcat.*.light_eng"
+        search_fields: ["rental_subcat.light_eng"]
+        value_field: "rental_subcat.light_eng"
+      - name: images
+        label: Images 
+        widget: image
+        media_library:
+            config:
+              multiple: true
+      - {name: price_day, widget: number, label: 'Price/day', required: true, default: 0}
+      - {name: available_quantity, widget: number, label: 'Available Quantity', default: 1, required: true, description: Limite de items para adicionar ao carrinho}
+      - {name: recommended, label: Recommended, widget: relation,  description: PT}
+      - {name:, label:, widget:}
+      - {name: type, label: Type, widget: hidden, default: Gear}
+      - {name: layout, label: layout, widget: hidden, default: white}
+
+
+
