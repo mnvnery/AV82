@@ -93,11 +93,6 @@ collections:
         default: film-project
         required: true
         hint: ""
-      - label: Published
-        hint: desligar caso queiram guardar como draft.
-        name: published
-        widget: boolean
-        default: true
       - label: Title
         name: title
         widget: string
@@ -211,11 +206,6 @@ collections:
         widget: hidden
         default: photo-project
         required: true
-      - label: Published
-        hint: desligar caso queiram guardar como draft.
-        name: published
-        widget: boolean
-        default: true
       - label: Title
         name: title
         widget: string
@@ -288,11 +278,6 @@ collections:
     editor:
           preview: false
     fields:
-      - label: Published
-        hint: desligar caso queiram guardar como draft.
-        name: published
-        widget: boolean
-        default: true
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
@@ -320,11 +305,6 @@ collections:
     editor:
           preview: false
     fields:
-      - label: Published
-        hint: desligar caso queiram guardar como draft.
-        name: published
-        widget: boolean
-        default: true
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
@@ -348,11 +328,6 @@ collections:
     editor:
           preview: false
     fields:
-      - label: Published
-        hint: desligar caso queiram guardar como draft.
-        name: published
-        widget: boolean
-        default: true
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
@@ -375,11 +350,6 @@ collections:
     editor:
           preview: false
     fields:
-      - label: Published
-        hint: desligar caso queiram guardar como draft.
-        name: published
-        widget: boolean
-        default: true
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
