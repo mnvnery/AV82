@@ -285,7 +285,7 @@ collections:
           preview: false
     fields:
       - {label: 'Name', name: 'title', widget: 'string'}
-      - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: 'false'}
+      - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
       - {label: Descrição, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {name: category, label: Category, widget: 'select', options: ['Light','Image', 'Audio', 'G&E', 'On Set'] }
@@ -312,7 +312,7 @@ collections:
           preview: false
     fields:
       - {label: 'Name', name: 'title', widget: 'string'}
-      - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: 'false'}
+      - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
       - {label: Descrição, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {name: type, label: Type, widget: 'hidden', default: 'Studio' }
@@ -335,7 +335,7 @@ collections:
           preview: false
     fields:
       - {label: 'Name', name: 'title', widget: 'string'}
-      - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: 'false'}
+      - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
       - {label: Descrição, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {name: type, label: Type, widget: 'hidden', default: 'Mobility' }
@@ -357,9 +357,9 @@ collections:
           preview: false
     fields:
       - {label: 'Name', name: 'title', widget: 'string'}
-      - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: 'false'}
+      - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
-      - {label: Descrição, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: 'false'}
+      - {label: Descrição, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {name: type, label: Type, widget: 'hidden', default: 'Crew' }
       - name: images
         label: Images 
