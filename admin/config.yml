@@ -7,6 +7,115 @@ media_folder: "assets/img"
 
 
 collections:
+  - name: film
+    label: Film
+    folder: _film
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: layout
+        name: layout
+        widget: hidden
+        default: film-project
+        required: true
+        hint: ""
+      - label: Title
+        name: title
+        widget: string
+        required: true
+        hint: ""
+        default: ""
+      - label: Category
+        name: category
+        required: false
+        widget: select
+        hint: ""
+        default: ""
+        options:
+          - films
+          - commercial
+          - fashion
+          - music
+        multiple: false
+      - label: Synopsis
+        name: synopsis
+        widget: markdown
+        required: false
+        hint: ""
+        default: ""
+        buttons:
+          - bold
+          - italic
+          - link
+      - label: Sinopse
+        name: sinopse
+        widget: markdown
+        required: false
+        hint: ""
+        default: ""
+        buttons:
+          - bold
+          - italic
+          - link
+      - label: Credits
+        name: credits
+        required: false
+        widget: markdown
+        hint: ""
+        default: ""
+        buttons:
+          - bold
+          - italic
+          - link
+      - label: Créditos
+        name: creditos
+        required: false
+        widget: markdown
+        hint: ""
+        default: ""
+        buttons:
+          - bold
+          - italic
+          - link
+      - label: Video Embed
+        name: video_embed
+        required: false
+        widget: markdown
+        hint: "Selecionar Tamanho: Responsive, Reproduzir     este vídeo
+          automaticamente e Ativar repetição deste vídeo.     Tudo o resto
+          desligado."
+        default: ""
+        buttons:
+          - code
+      - label: Stills
+        name: image_gallery
+        required: false
+        widget: image
+        hint: ""
+        default: ""
+        allow_multiple: true
+      - label: Video Thumbnail
+        name: video_thumbnail
+        required: true
+        widget: file
+        hint: O video que aparece quando se faz hover sobre o still. Em mp4 e o mais
+          pequeno possivel.
+        default: ""
+        allow_multiple: false
+      - label: Still Thumbnail
+        name: still_thumbnail
+        required: true
+        widget: image
+        hint: ""
+        default: ""
+        allow_multiple: false
+      - label: Large
+        name: large
+        required: false
+        widget: boolean
+        hint: Ligar se quiserem fazer highlight deste projeto.
+        default: ""
+    identifier_field: title
   - label: Páginas
     name: pages
     files: 
@@ -70,6 +179,20 @@ collections:
               - {name: roles_eng, label: Roles, description: ENG, widget: list}
               - {name: roles_pt, label: Funções, description: PT, widget: list}
               - {name: retrato, label: Retrato, widget: image}
+      - file: index.html
+          label: Home
+          name: home
+          fields:
+            - label: Template Key
+              name: templateKey
+              widget: hidden
+              default: index-page
+            - label: Showreel
+              name: showreel
+              required: true
+              widget: string
+              hint: ""
+              default: ""
   - label: "Gear - Light"
     name: "gear-light"
     folder: '_products/Gear'
@@ -89,8 +212,24 @@ collections:
       - {name: category, label: Category, widget: "hidden", default: "Light"}
       - label: "Sub-category"
         name: subcategory
-        widget: relation
-        collection: pages
+        widget: list
+        collection: 'pages'
         file: rental_subcat
-        search_fields: ["light_eng.*"]
-        value_field: "light_eng"
+        search_fields: ["rental_subcat.light_eng"]
+        value_field: "rental_subcat.light_eng"
+      - name: images
+        label: Images 
+        widget: image
+        media_library:
+            config:
+              multiple: true
+      - {name: price_day, widget: number, label: 'Price/day', required: true, default: 0}
+      - {name: available_quantity, widget: number, label: 'Available Quantity', default: 1, required: true, description: Limite de items para adicionar ao carrinho}
+      - {name: recommended, label: Recommended, widget: relation,  description: PT}
+      - {name:, label:, widget:}
+      - {name: type, label: Type, widget: hidden, default: Gear}
+      - {name: layout, label: layout, widget: hidden, default: white}
+
+
+
+
