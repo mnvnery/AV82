@@ -299,7 +299,7 @@ collections:
               multiple: true
       - {name: price_day, widget: number, label: 'Price/day', required: false, default: 0}
       - {name: available_quantity, widget: number, label: 'Available Quantity', default: 1, required: false, hint: Limite de items para adicionar ao carrinho}
-      - {name: recommended, label: Recommended, widget: relation, collection: "gear", search_fields: ['title'], value_field: 'products/Gear/ {{filename}}.{{extension}}', required: false}
+      - {name: recommended, label: Recommended, widget: relation, collection: "gear", search_fields: ['title'], value_field: '_products/Gear/{{filename}}.{{extension}}', display_fields: ['title'], required: false}
       - {name: type, label: Type, widget: hidden, default: Gear}
       - {name: layout, label: layout, widget: hidden, default: white}
   - label: "Studio"
