@@ -51,6 +51,8 @@ collections:
       - file: index.html
         label: Home
         name: home
+        editor:
+          preview: false
         fields:
           - label: Template Key
             name: templateKey
@@ -62,6 +64,20 @@ collections:
             widget: string
             hint: ""
             default: ""
+      - file: photo.html
+        label: Photo Order
+        name: photo_order
+        editor:
+          preview: false
+        fields:
+          - {name: project_order, label: Project Order, widget: relation, collection: "photo", search_fields: ['title'], value_field: '_photo/{{filename}}.{{extension}}', display_fields: ['title'], required: false, multiple: true}
+      - file: film.html
+        label: Film Order
+        name: film_order
+        editor:
+          preview: false
+        fields:
+          - {name: project_order, label: Project Order, widget: relation, collection: "film", search_fields: ['title'], value_field: '_film/{{filename}}.{{extension}}', display_fields: ['title'], required: false, multiple: true}
   - name: film
     label: Film
     extension: html
