@@ -21,10 +21,10 @@ layout: white-clean
     <h2 class="photo-title inside-title"><i class="ri-arrow-down-line"></i></span> {{page.title}}</h2>
     <div class="project-container">
         {% if page.description %}
-        <div class="about-intro project-description">{{ page.description }}</div>
+        <div class="about-intro project-description">{{ page.description | markdownify }}</div>
         {% endif %}
         <div class="about-address credits">
-        {{ page.credits }}
+        {{ page.credits | markdownify }}
         </div>
     </div>
 </div>

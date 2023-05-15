@@ -163,7 +163,7 @@ layout: rental_pt
                 </div>
                 <div class="border-bottom border-dark my-2"></div>
                 {% if product.description != '' %}
-                <div>{{ product.description }}</div>
+                <div>{{ product.description | markdownify }}</div>
                 <div class="border-bottom border-dark my-2"></div>
                 {% endif %}
                 <div class="small-text mt-2">{{ site.data.booking.carrinho }}</div>

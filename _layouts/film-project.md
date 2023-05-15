@@ -30,7 +30,7 @@ layout: black-clean
             <div class="about-intro project-description">{{ page.synopsis }}</div>
             {% endif %}
             <div class="about-address credits">
-            {{ page.credits }}
+            {{ page.credits | markdownify }}
             </div>
         </div>
     </div>
