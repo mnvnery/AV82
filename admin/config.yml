@@ -33,28 +33,6 @@ collections:
           - {name: transport_pt , label: Transporte PT , widget: markdown, modes: [rich_text] }
           - {name: transport_eng , label: Mobility ENG , widget: markdown, modes: [rich_text] }
           - {name: mobility_img , label: Mobility Img , widget: image }
-      - label: Rental Subcat
-        name: rental_subcat
-        file: '_data/booking.yml'
-        extension: yml
-        editor:
-          preview: false
-        fields:
-          - {name: layout, label: layout, widget: hidden}
-          - {name: imagem_pt, label: IMAGEM, hint: Versão PT, widget: list}
-          - {name: imagem_eng, label: IMAGE, hint: Versão ENG, widget: list}
-          - {name: audio_pt, label: ÁUDIO, hint: Versão PT, widget: list}
-          - {name: audio_eng, label: AUDIO, hint: Versão ENG, widget: list}
-          - {name: luz_pt, label: LUZ, hint: Versão PT, widget: list}
-          - {name: light_eng, label: LIGHT, hint: Versão ENG, widget: list}
-          - {name: ge_pt, label: G&E PT, hint: Versão PT, widget: list}
-          - {name: ge_eng, label: G&E ENG, hint: Versão ENG, widget: list}
-          - {name: on_set, label: ON SET PT, hint: Versão PT, widget: list}
-          - {name: on_set_eng, label: ON SET ENG, hint: Versão ENG, widget: list}
-          - {name: carrinho , label: Carrinho Explicação , widget: markdown, modes: [rich_text] }
-          - {name: cart , label: About Add To Cart , widget: markdown, modes: [rich_text] }
-          - {name: discounts_pt , label: Carrinho Explicação , widget: markdown, modes: [rich_text] }
-          - {name: discounts_eng , label: About Add To Cart , widget: markdown, modes: [rich_text] }
       - label: Team
         name: team
         file: 'team.html'
