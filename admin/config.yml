@@ -1,5 +1,3 @@
-local_backend: true
-
 backend:
   name: git-gateway
   branch: master 
@@ -277,23 +275,20 @@ collections:
             widget: string
             hint: ""
             default: ""
-  - label: "Gear - Light"
-    name: "gear-light"
+  - label: "Gear"
+    name: "gear"
     folder: '_products/Gear'
     create: true
     extension: html
     slug: '{{slug}}'
     editor:
           preview: false
-    filter:
-      field: category
-      value: Light
     fields:
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string'}
       - {label: 'Description', name: description, widget: markdown, modes: [rich_text] }
       - {label: Descrição, name: description_pt, widget: markdown, modes: [rich_text], description: em pt. se for igual à versão inglesa, deixar vazio.}
-      - {name: category, label: Category, widget: "hidden", default: "Light"}
+      - {name: category, label: Category, widget: 'select', options: ['Light','Image', 'Audio', 'G&E', 'On Set'] }
       - name: images
         label: Images 
         widget: image
@@ -305,7 +300,3 @@ collections:
       - {name: recommended, label: Recommended, widget: relation, collection: "_products", search_fields: ['title'], value_field: 'title'}
       - {name: type, label: Type, widget: hidden, default: Gear}
       - {name: layout, label: layout, widget: hidden, default: white}
-
-
-
-
