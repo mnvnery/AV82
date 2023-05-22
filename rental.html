@@ -107,7 +107,7 @@ mobility_img: /assets/img/Carrinha_01.webp
 
   <div class="text-wrapper-container">
       <div class="text-wrapper category-intro">
-          <span class="eng">{{ page.intro_eng }}</span><span class="pt">{{ page.intro_pt }}</span>
+          <span class="eng">{{ page.intro_eng | markdownify }}</span><span class="pt">{{ page.intro_pt | markdownify}}</span>
           <span class="eng"><h4><a href="{{ site.baseurl }}/booking/gear" class="booking-link">SEE FULL LIST <i class="ri-arrow-right-line"></i></a></h4></span><span class="pt"><h4><a href="{{ site.baseurl }}/booking/material" class="booking-link">VER LISTA COMPLETA <i class="ri-arrow-right-line"></i></a></h4></span></a>
       </div>
       <div class="text-wrapper category-studio">
@@ -150,7 +150,7 @@ mobility_img: /assets/img/Carrinha_01.webp
       <div class="text-wrapper category-gear">
           <h3 class="category-title"><span class="eng">GEAR</span><span class="pt">MATERIAL</span></h3>
           <video class="rental-mobile-img" crossorigin="anonymous" preload="metadata" muted autoplay loop playsinline><source src="{{ site.baseurl }}/assets/img/gear.mp4" type="video/mp4"></video>
-          <span class="eng">{{ page.material_eng }}</span><span class="pt">{{ page.material_pt }}</span>
+          <span class="eng">{{ page.material_eng | markdownify }}</span><span class="pt">{{ page.material_pt | markdownify}}</span>
           <div class="space-bottom"></div>
           <span class="eng"><a href="{{ site.baseurl }}/booking/gear" class="booking-link">SEE FULL LIST</a></span><span class="pt"><a href="{{ site.baseurl }}/booking/material" class="booking-link">VER LISTA COMPLETA</a></span></a>
       </div>
@@ -158,7 +158,7 @@ mobility_img: /assets/img/Carrinha_01.webp
       <div class="text-wrapper category-crew">
           <h3 class="category-title"><span class="eng">CREW</span><span class="pt">EQUIPA</span></h3>
           <img class="rental-mobile-img" src="{{ site.baseurl }}{{page.crew_img}}" alt="crew">
-          <div class="eng">{{ page.crew_eng }}</div><div class="pt">{{ page.crew_pt }}</div>
+          <div class="eng">{{ page.crew_eng | markdownify }}</div><div class="pt">{{ page.crew_pt | markdownify }}</div>
           <div class="space-bottom"></div>
           <span class="eng"><a href="{{ site.baseurl }}/booking/crew" class="booking-link">HIRE NOW</a></span><span class="pt"><a href="{{ site.baseurl }}/booking/equipa" class="booking-link">CONTRATA JÁ</a></span></a>
       </div>
@@ -166,7 +166,7 @@ mobility_img: /assets/img/Carrinha_01.webp
       <div class="text-wrapper category-mobility extra-margin">
           <h3 class="category-title"><span class="eng">MOBILITY</span><span class="pt">TRANSPORTE</span></h3>
           <img class="rental-mobile-img" src="{{ site.baseurl }}{{page.mobility_img}}" alt="mobility">
-          <div class="eng">{{ page.transport_eng }}</div><div class="pt">{{ page.transport_pt }}</div>
+          <div class="eng">{{ page.transport_eng | markdownify }}</div><div class="pt">{{ page.transport_pt | markdownify }}</div>
           <div class="space-bottom"></div>
           <span class="eng"><a href="{{ site.baseurl }}/booking/mobility" class="booking-link">BOOK NOW</a></span><span class="pt"><a href="{{ site.baseurl }}/booking/transporte" class="booking-link">RESERVA JÁ</a></span></a>
       </div>
