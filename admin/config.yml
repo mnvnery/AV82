@@ -333,7 +333,7 @@ collections:
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description',required: false, name: description, widget: markdown, modes: [rich_text] }
-      - {label: Descrição,required: false, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
+      - {label: Descrição,required: false, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio.}
       - {name: type, label: Type, widget: 'hidden', default: 'Mobility' }
       - name: images
         label: Images 
