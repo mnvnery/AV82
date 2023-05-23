@@ -283,7 +283,7 @@ collections:
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description, required: false, widget: markdown, modes: [rich_text] }
-      - {label: Descrição, name: description_pt, required: false, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
+      - {label: Descrição, name: description_pt, required: false, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio.}
       - {name: category, label: Category, widget: 'select', options: ['Light','Image', 'Audio', 'G&E', 'On Set'] }
       - {name: subcategory, label: Sub-Category, widget: 'select', options: ['Cameras', 'Lenses', 'Monitors', 'Wireless', 'Live Streaming', 'Drone', 'Others', 'Media', 'Power', 'Filters', 'Audio', 'Continuous Light', 'Flash', 'Light Modifiers', 'Frames', 'Reflectors', 'Stabilizers/Gimbals', 'Tripods/Fluid Heads', 'Dollies/Sliders', 'Grip', 'Power', 'Effects', 'Magliner', 'COM' ] }
       - {name: subcategoria, label: Sub-Categoria, widget: 'select', options: ['Câmaras', 'Objetivas', 'Monitores', 'Wireless', 'Live Streaming', 'Outros', 'Media', 'Power', 'Filtros','Áudio', 'Luz Contínua', 'Flash', 'Modificadores de Luz', 'Frames', 'Refletores', 'Stabilizers/Gimbals', 'Tripés/Cabeças Fluídas', 'Dollies/Sliders', 'Grip', 'Power', 'Efeitos', 'Magliner', 'COM'] }
