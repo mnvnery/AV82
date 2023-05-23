@@ -295,7 +295,7 @@ collections:
               multiple: true
       - {name: price_day, widget: number, label: 'Price/day', required: false, default: 0}
       - {name: available_quantity, widget: number, label: 'Available Quantity', default: 1, required: false, hint: Limite de items para adicionar ao carrinho}
-      - {name: recommended, label: Recommended, required: false, widget: relation, collection: "gear", search_fields: ['title'], value_field: '_products/Gear/{{filename}}.{{extension}}', display_fields: ['title'], required: false, multiple: true}
+      - {name: recommended, label: Recommended, required: false, widget: relation, collection: "gear", search_fields: ['title'], value_field: '_products/Gear/{{filename}}.{{extension}}', display_fields: ['title'], multiple: true}
       - {name: type, label: Type, widget: hidden, default: Gear}
       - {name: layout, label: layout, widget: hidden, default: white}
   - label: "Studio"
@@ -310,7 +310,7 @@ collections:
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', required: false, name: description, widget: markdown, modes: [rich_text] }
-      - {label: Descrição, required: false, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
+      - {label: Descrição, required: false, name: description_pt, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio.}
       - {name: type, label: Type, widget: 'hidden', default: 'Studio' }
       - name: images
         label: Images 
@@ -355,7 +355,7 @@ collections:
       - {label: 'Name', name: 'title', widget: 'string'}
       - {label: 'Nome', name: 'title_pt', wiget: 'string', hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
       - {label: 'Description', name: description,required: false, widget: markdown, modes: [rich_text] }
-      - {label: Descrição, name: description_pt,required: false, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio., required: false}
+      - {label: Descrição, name: description_pt,required: false, widget: markdown, modes: [rich_text], hint: em pt. se for igual à versão inglesa, deixar vazio.}
       - {name: type, label: Type, widget: 'hidden', default: 'Crew' }
       - name: images
         label: Images 
