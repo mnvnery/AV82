@@ -171,10 +171,9 @@ collections:
       - label: Stills
         name: stills
         required: false
-        widget: image
-        media_library:
-            config:
-              multiple: true
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - label: Video Thumbnail
         name: video_thumbnail
         required: true
@@ -261,10 +260,8 @@ collections:
       - label: Stills
         name: stills
         required: false
-        widget: image
-        media_library:
-            config:
-              multiple: true
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - label: Thumbnail
         name: thumbnail
         required: true
