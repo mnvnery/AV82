@@ -103,7 +103,11 @@ layout: rental_eng
     <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
         {% for product in products %}
         <div class="col m-lg-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        {% if product.images.size > 1 %}
+                <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% else %}
+                <div><img src="{{site.baseurl}}{{ product.images }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% endif %}
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} €/DAY</div>
@@ -120,8 +124,15 @@ layout: rental_eng
 <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
     {% for product in products %}
     <div class="col m-lg-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
-        <div class="product-title mt-2 small-label">{{ product.title }}</div>
+        {% if product.images.size > 1 %}
+        {% if product.images.size > 1 %}
+                <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% else %}
+                <div><img src="{{site.baseurl}}{{ product.images }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% endif %}
+        {% else %}
+            <div><img src="{{site.baseurl}}{{ product.images }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        {% endif %}        <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
         <div class="small-label">{{ product.price_day }} €/DAY</div>
         <div class="addToCart add-to-cart small-label me-2" data-name="{{ product.title }}" data-price="{{product.price_day}}" data-image="{{product.images[0]}}" data-count="1" data-max="{% if product.available_quantity %}{{ product.available_quantity}}{% else %}1{% endif %}"><span class="pre-click">ADD</span><span class="post-click">ADDED</span></div>
@@ -137,7 +148,11 @@ layout: rental_eng
     <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
         {% for product in products %}
         <div class="col m-lg-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        {% if product.images.size > 1 %}
+                <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% else %}
+                <div><img src="{{site.baseurl}}{{ product.images }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% endif %}
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} €/DAY</div>
@@ -154,7 +169,11 @@ layout: rental_eng
     <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
         {% for product in products %}
         <div class="col m-lg-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        {% if product.images.size > 1 %}
+                <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% else %}
+                <div><img src="{{site.baseurl}}{{ product.images }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% endif %}
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} €/DAY</div>
@@ -171,7 +190,11 @@ layout: rental_eng
     <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
         {% for product in products %}
         <div class="col m-lg-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        {% if product.images.size > 1 %}
+                <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% else %}
+                <div><img src="{{site.baseurl}}{{ product.images }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% endif %}
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
             <div class="small-label">{{ product.price_day }} €/DAY</div>
@@ -188,7 +211,11 @@ layout: rental_eng
 <div class="row gx-4 gy-4 mt-md-4 pb-5 mb-5">
     {% for product in products %}
     <div class="col m-lg-3">
-        <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+        {% if product.images.size > 1 %}
+                <div><img src="{{site.baseurl}}{{ product.images[0] }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% else %}
+                <div><img src="{{site.baseurl}}{{ product.images }}" alt="{{ product.title }}" class="product-img" data-bs-toggle="modal" data-bs-target="#{{product.title | slugify }}Modal"></div>
+            {% endif %}
         <div class="product-title mt-2 small-label">{{ product.title }}</div>
         <div class="d-flex justify-content-between mt-2 product-container">
         <div class="small-label">{{ product.price_day }} €/DAY</div>
