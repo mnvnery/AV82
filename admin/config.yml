@@ -223,19 +223,11 @@ collections:
         required: false
         widget: markdown
         modes: [rich_text]
-        buttons:
-          - bold
-          - italic
-          - link
       - label: Créditos
         name: credits_pt
         required: false
         widget: markdown
         modes: [rich_text]
-        buttons:
-          - bold
-          - italic
-          - link
       - label: Stills
         name: stills
         required: false
