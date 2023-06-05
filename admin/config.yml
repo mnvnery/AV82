@@ -115,13 +115,11 @@ collections:
         multiple: false
       - label: Synopsis
         name: synopsis
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
         required: false
       - label: Sinopse
         name: sinopse
         widget: markdown
-        modes: [rich_text]
         required: false
       - label: Credits
         name: credits
