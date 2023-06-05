@@ -118,23 +118,11 @@ collections:
         widget: markdown
         modes: [rich_text]
         required: false
-        hint: ""
-        default: ""
-        buttons:
-          - bold
-          - italic
-          - link
       - label: Sinopse
         name: sinopse
         widget: markdown
         modes: [rich_text]
         required: false
-        hint: ""
-        default: ""
-        buttons:
-          - bold
-          - italic
-          - link
       - label: Credits
         name: credits
         required: false
@@ -225,18 +213,11 @@ collections:
         widget: markdown
         modes: [rich_text]
         required: false
-        buttons:
-          - bold
-          - italic
-          - link
       - label: Descrição
         name: description_pt
         widget: markdown
         modes: [rich_text]
-        buttons:
-          - bold
-          - italic
-          - link
+        required: false
       - label: Credits
         name: credits
         required: false
