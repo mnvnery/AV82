@@ -119,13 +119,12 @@ collections:
         required: false
       - label: Sinopse
         name: sinopse
-        widget: markdown
+        widget: richtext
         required: false
       - label: Credits
         name: credits
         required: false
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
         hint: ""
         default: ""
         buttons:
@@ -208,24 +207,20 @@ collections:
         multiple: false
       - label: Description
         name: description
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
         required: false
       - label: Descrição
         name: description_pt
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
         required: false
       - label: Credits
         name: credits
         required: false
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
       - label: Créditos
         name: credits_pt
         required: false
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
       - label: Stills
         name: stills
         required: false
