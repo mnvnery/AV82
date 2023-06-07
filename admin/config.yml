@@ -4,6 +4,11 @@ backend:
 
 
 media_folder: "assets/img"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dge6hbvi9
+    api_key: 651197598474812
 
 publish_mode: editorial_workflow
 
@@ -154,9 +159,10 @@ collections:
       - label: Stills
         name: stills
         required: false
-        widget: "list"
-        summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        widget: image
+        media_library:
+          config:
+            multiple: true
       - label: Video Thumbnail
         name: video_thumbnail
         required: true
