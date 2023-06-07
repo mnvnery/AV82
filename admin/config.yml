@@ -5,10 +5,9 @@ backend:
 
 media_folder: "assets/img"
 media_library:
-  name: cloudinary
+  name: uploadcare
   config:
-    cloud_name: dge6hbvi9
-    api_key: 651197598474812
+    publicKey: 092b0cc3737bb8de5c3f
 
 publish_mode: editorial_workflow
 
@@ -209,7 +208,7 @@ collections:
         options:
           - fashion
           - commercial
-          - portraita
+          - portraits
         multiple: false
       - label: Description
         name: description
@@ -230,9 +229,10 @@ collections:
       - label: Stills
         name: stills
         required: false
-        widget: list
-        summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        widget: image
+        media_library:
+          config:
+            multiple: true
       - label: Thumbnail
         name: thumbnail
         required: true
