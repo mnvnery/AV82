@@ -4,10 +4,6 @@ backend:
 
 
 media_folder: "assets/img"
-media_library:
-  name: uploadcare
-  config:
-    publicKey: 092b0cc3737bb8de5c3f
 
 publish_mode: editorial_workflow
 
@@ -138,14 +134,7 @@ collections:
       - label: Créditos
         name: creditos
         required: false
-        widget: markdown
-        modes: [rich_text]
-        hint: ""
-        default: ""
-        buttons:
-          - bold
-          - italic
-          - link
+        widget: richtext
       - label: Video Embed
         name: video_embed
         required: false
@@ -158,10 +147,9 @@ collections:
       - label: Stills
         name: stills
         required: false
-        widget: image
-        media_library:
-          config:
-            multiple: true
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - label: Video Thumbnail
         name: video_thumbnail
         required: true
@@ -229,10 +217,9 @@ collections:
       - label: Stills
         name: stills
         required: false
-        widget: image
-        media_library:
-          config:
-            multiple: true
+        widget: list
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - label: Thumbnail
         name: thumbnail
         required: true
