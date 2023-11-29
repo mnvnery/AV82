@@ -80,6 +80,18 @@ collections:
           preview: false
         fields:
           - {name: project_order, label: Project Order, widget: relation, collection: "film", search_fields: ['title'], value_field: '_film/{{filename}}.{{extension}}', display_fields: ['title'], required: false, multiple: true}
+      - file: locs.html
+        name: locs
+        label: Locs
+        editor:
+          preview: false
+        fields:
+          - name: images
+            label: Imagens
+            widget: list
+            fields:
+              - {name: img , label: Imagem , widget: image }
+              - {name: info , label: Info , widget: string, required: false }
   - name: film
     label: Film
     extension: html
@@ -115,31 +127,16 @@ collections:
         multiple: false
       - label: Synopsis
         name: synopsis
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
         required: false
-        hint: ""
-        default: ""
-        buttons:
-          - bold
-          - italic
-          - link
       - label: Sinopse
         name: sinopse
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
         required: false
-        hint: ""
-        default: ""
-        buttons:
-          - bold
-          - italic
-          - link
       - label: Credits
         name: credits
         required: false
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
         hint: ""
         default: ""
         buttons:
@@ -149,14 +146,7 @@ collections:
       - label: Créditos
         name: creditos
         required: false
-        widget: markdown
-        modes: [rich_text]
-        hint: ""
-        default: ""
-        buttons:
-          - bold
-          - italic
-          - link
+        widget: richtext
       - label: Video Embed
         name: video_embed
         required: false
@@ -218,43 +208,24 @@ collections:
         options:
           - fashion
           - commercial
-          - portraita
+          - portraits
         multiple: false
       - label: Description
         name: description
-        widget: markdown
-        modes: [rich_text]
+        widget: richtext
         required: false
-        buttons:
-          - bold
-          - italic
-          - link
       - label: Descrição
         name: description_pt
-        widget: markdown
-        modes: [rich_text]
-        buttons:
-          - bold
-          - italic
-          - link
+        widget: richtext
+        required: false
       - label: Credits
         name: credits
         required: false
-        widget: markdown
-        modes: [rich_text]
-        buttons:
-          - bold
-          - italic
-          - link
+        widget: richtext
       - label: Créditos
         name: credits_pt
         required: false
-        widget: markdown
-        modes: [rich_text]
-        buttons:
-          - bold
-          - italic
-          - link
+        widget: richtext
       - label: Stills
         name: stills
         required: false
