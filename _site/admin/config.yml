@@ -25,16 +25,16 @@ collections:
           - {name: intro_eng , label: Intro ENG , widget: markdown, modes: [rich_text] }
           - {name: studio_pt , label: Estúdio PT , widget: markdown, modes: [rich_text] }
           - {name: studio_eng , label: Studio ENG , widget: markdown, modes: [rich_text] }
-          - {name: studio_img , label: Studio Img , widget: image }
+          - {name: studio_img , label: Studio Img , widget: image, hint: 'tamanho máx recomendado: 500kb-1MB' }
           - {name: material_pt , label: Material PT , widget: markdown, modes: [rich_text] }
           - {name: material_eng , label: Material ENG , widget: markdown, modes: [rich_text] }
-          - {name: material_img , label: Material Img , widget: image }
+          - {name: material_img , label: Material Img , widget: image, hint: 'tamanho máx recomendado: 500kb-1MB' }
           - {name: crew_pt , label: Equipa PT , widget: markdown, modes: [rich_text] }
           - {name: crew_eng , label: Crew ENG , widget: markdown, modes: [rich_text] }
-          - {name: crew_img , label: Crew Img , widget: image }
+          - {name: crew_img , label: Crew Img , widget: image, hint: 'tamanho máx recomendado: 500kb-1MB' }
           - {name: transport_pt , label: Transporte PT , widget: markdown, modes: [rich_text] }
           - {name: transport_eng , label: Mobility ENG , widget: markdown, modes: [rich_text] }
-          - {name: mobility_img , label: Mobility Img , widget: image }
+          - {name: mobility_img , label: Mobility Img , widget: image, hint: 'tamanho máx recomendado: 500kb-1MB' }
       - label: Team
         name: team
         file: 'team.html'
@@ -49,7 +49,7 @@ collections:
               - {name: name, label: Nome, widget: string}
               - {name: roles_eng, label: Roles, hint: ENG, widget: list}
               - {name: roles_pt, label: Funções, hint: PT, widget: list}
-              - {name: retrato, label: Retrato, widget: image}
+              - {name: retrato, label: Retrato, widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'}
       - file: index.html
         label: Home
         name: home
@@ -90,7 +90,7 @@ collections:
             label: Imagens
             widget: list
             fields:
-              - {name: img , label: Imagem , widget: image }
+              - {name: img , label: Imagem , widget: image, hint: 'tamanho máx recomendado: 500kb-1MB' }
               - {name: info , label: Info , widget: string, required: false }
   - name: film
     label: Film
@@ -161,7 +161,7 @@ collections:
         required: false
         widget: "list"
         summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        field: {label: Image, name: image, widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'}
       - label: Video Thumbnail
         name: video_thumbnail
         required: true
@@ -172,7 +172,7 @@ collections:
       - label: Still Thumbnail
         name: still_thumbnail
         required: true
-        widget: image
+        widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'
         allow_multiple: false
       - label: Large
         name: large
@@ -231,11 +231,11 @@ collections:
         required: false
         widget: list
         summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        field: {label: Image, name: image, widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'}
       - label: Thumbnail
         name: thumbnail
         required: true
-        widget: image
+        widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'
         allow_multiple: false
     identifier_field: title
   - label: "Gear"
@@ -259,7 +259,7 @@ collections:
         required: false
         widget: list
         summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        field: {label: Image, name: image, widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'}
       - {name: price_day, widget: number, label: 'Price/day', required: false, default: 0}
       - {name: available_quantity, widget: number, label: 'Available Quantity', default: 1, required: false, hint: Limite de items para adicionar ao carrinho}
       - {name: recommended, label: Recommended, required: false, widget: relation, collection: "gear", search_fields: ['title'], value_field: '_products/Gear/{{filename}}.{{extension}}', display_fields: ['title'], multiple: true}
@@ -284,7 +284,7 @@ collections:
         required: false
         widget: list
         summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        field: {label: Image, name: image, widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'}
       - {name: price_day, widget: number, label: 'Price/day', required: true, default: 0}
       - {name: recommended, label: Recommended,required: false, widget: relation, collection: "_products/Studio", search_fields: ['title'], value_field: 'title'}
       - {name: layout, label: layout, widget: hidden, default: white}
@@ -307,7 +307,7 @@ collections:
         required: false
         widget: list
         summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        field: {label: Image, name: image, widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'}
       - {name: price_day, widget: number, label: 'Price/day', required: false, default: 0}
       - {name: layout, label: layout, widget: hidden, default: white}
   - label: "Crew"
@@ -329,6 +329,6 @@ collections:
         required: false
         widget: list
         summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        field: {label: Image, name: image, widget: image, hint: 'tamanho máx recomendado: 500kb-1MB'}
       - {name: price_day, widget: number, label: 'Price/day', required: false, default: 0}
       - {name: layout, label: layout, widget: hidden, default: white}

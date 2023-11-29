@@ -1,10 +1,18 @@
 ---
 layout: white
 images:
-  - img: /assets/img/2B 3.webp
+  - img: /assets/img/Portraits/abraco-2021-1.webp
     info: Teste
-  - img: /assets/img/alma_gemea_inverno_4.jpg
+  - img: /assets/img/Portraits/abraco-2021-2.webp
     info: Outro teste
+  - img: /assets/img/Portraits/abraco-2021-6.webp
+    info: Teste
+  - img: /assets/img/Portraits/abraco-2021-4.webp
+    info: Outro teste
+  - img: /assets/img/Portraits/abraco-2021-5.webp
+    info: Teste
+  - img: /assets/img/Portraits/abraco-2021-3.webp
+    info: Teste
 ---
 <style>
   body, html {
@@ -48,10 +56,10 @@ images:
 </div>
 
 <div class="locations-grid">
-    {% for img in page.images %}
+    {% for item in page.images %}
       <div class="thumbnail-container">
-        <img src="{{site.baseurl}}{{ img }}" class="photo-img" >
-        <span class="project-title-hover small-text">{{ project.title }}</span>
+        <img src="{{site.baseurl}}{{ item.img }}" class="photo-img" >
+        <span class="project-title-hover small-text">{{ item.info }}</span>
       </div>
     {% endfor %}    
 </div>
