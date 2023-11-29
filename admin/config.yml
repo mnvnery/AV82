@@ -80,6 +80,18 @@ collections:
           preview: false
         fields:
           - {name: project_order, label: Project Order, widget: relation, collection: "film", search_fields: ['title'], value_field: '_film/{{filename}}.{{extension}}', display_fields: ['title'], required: false, multiple: true}
+      - file: locs.html
+        name: locs
+        label: Locs
+        editor:
+          preview: false
+        fields:
+          - name: images
+            label: Imagens
+            widget: list
+            fields:
+              - {name: img , label: Imagem , widget: image }
+              - {name: info , label: Info , widget: string, required: false }
   - name: film
     label: Film
     extension: html

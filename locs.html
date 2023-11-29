@@ -1,0 +1,87 @@
+---
+layout: white
+---
+<style>
+  body, html {
+      overflow-x: visible;
+  }
+</style>
+<div class="nav-logo">
+  <a href="{{ site.baseurl }}/">
+    <img src="{{site.baseurl}}/assets/img/logo_preto.png" alt="" class="logo-img">
+    <img src="{{site.baseurl}}/assets/img/logo_mobile_preto.png" alt="" class="logo-mobile-img">
+  </a>
+</div>
+
+<div class="prod-navigation black">
+  <div class="selection-flex">
+      <h1 class="selection-title">
+        <a href="{{site.baseurl}}/film">
+          <span class="eng">FILM</span>
+          <span class="pt">VÍDEO</span>
+        </a>
+      </h1>
+      <h1 class="selection-title">
+        <a href="{{site.baseurl}}/film">
+          <span class="eng">PHOTO</span>
+          <span class="pt">FOTOGRAFIA</span>
+        </a>
+      </h1>
+      <h1 class="selection-title active">
+        <span class="eng">LOCS</span>
+        <span class="pt">LOCS</span>
+      </h1>
+  </div>
+  <!--
+  <div class="filters">
+      <span class="all-btn underline"><span class="eng">All</span><span class="pt">Todos</span>,</span>
+      <span class="commercial-btn"><span class="eng">Commercial</span><span class="pt">Comercial</span>,</span>
+      <span class="fashion-btn"><span class="eng">Fashion</span><span class="pt">Moda</span>,</span>
+      <span class="portraits-btn"><span class="eng">Portraits</span><span class="pt">Retratos</span></span>
+  </div>
+  -->
+</div>
+
+<div class="locations-grid">
+    {% for img in page.images %}
+      <div class="thumbnail-container">
+        <img src="{{site.baseurl}}{{ img }}" class="photo-img" >
+        <span class="project-title-hover small-text">{{ project.title }}</span>
+      </div>
+    {% endfor %}    
+</div>
+
+<script>
+$('.thumbnail-container').hover(function() {
+  $(this).children('.project-title-hover').toggle();
+});
+window.onload = function () {
+var images = document.getElementsByTagName('img');
+
+for( var i=0; i<images.length;i++){
+  if(images[i].naturalWidth < images[i].naturalHeight) {
+      $(images[i]).parent().addClass('portrait');  
+  }
+}
+}
+
+$('.all-btn').click(function() {
+  $('.fashion, .commercial, .portraits').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
+});
+$('.commercial-btn').click(function() {
+  $('.fashion, .portraits').css('opacity', '0.2');
+  $('.commercial').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
+});
+$('.portraits-btn').click(function() {
+  $('.fashion, .commercial').css('opacity', '0.2');
+  $('.portraits').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
+});
+$('.fashion-btn').click(function() {
+  $('.commercial, .portraits').css('opacity', '0.2');
+  $('.fashion').css('opacity', '1');
+  $(this).addClass('underline').siblings().removeClass('underline');;
+});
+</script>
