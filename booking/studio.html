@@ -14,7 +14,7 @@ layout: rental_eng
 
 {% assign gearProducts = site.products | where: "type", "Gear" %}
 {% assign studioProducts = site.products | where: "type", "Studio" %}
-{% assign studioMain = site.products | where: "title", "Studio Full Day (10h)" %}
+{% assign studioMain = site.products | where: "main", true %}
 {% assign mobilityProducts = site.products | where: "type", "Mobility" %}
 {% assign crewProducts = site.products | where: "type", "Crew" %}
 {% assign geproducts = site.products | where: "category", "G&E" %}
@@ -99,7 +99,7 @@ layout: rental_eng
 <div class="tab-content" id="pills-tabContent">
   <!--STUDIO TAB-->
   <div class="tab-pane fade active show" id="studio" role="tabpanel" aria-labelledby="pills-studio-tab">
-      {% for product in studioMain %}
+      {% for product in studioMain limit: 1 %}
       <div class="d-flex flex-column flex-md-row">
         <div class="ps-md-3 pe-md-5 studio-carousel">
             <!-- Carousel -->
