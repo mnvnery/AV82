@@ -286,8 +286,8 @@ collections:
         summary: '{{fields.image}}'
         field: {label: Image, name: image, widget: image}
       - {name: price_day, widget: number, label: 'Price/day', required: true, default: 0}
-      - {name: main, widget: boolean, label: 'Main', default: false, required: falsel, hint: 'apenas um elemento pode ser main, aparecerá maior na página, o resto vem como extras'}
-      - {name: recommended, label: Recommended,required: false, widget: relation, collection: "_products/Studio", search_fields: ['title'], value_field: 'title'}
+      - {name: main, widget: boolean, label: 'Main', default: false, required: false, hint: 'apenas um elemento pode ser main, aparecerá maior na página, o resto vem como extras'}
+      - {name: recommended, label: Recommended, required: false, widget: relation, collection: "_products/Studio", search_fields: ['title'], value_field: 'title'}
       - {name: layout, label: layout, widget: hidden, default: white}
   - label: "Mobility"
     name: "mobility"
