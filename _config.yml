@@ -20,7 +20,8 @@ collections:
   products:
     output: true
 
-
+# Google Analytics
+google_analytics: G-WJL8WYFE56
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
